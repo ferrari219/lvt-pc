@@ -1,0 +1,5359 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi" />
+	<title>[PC]리바트몰 퍼블리싱</title>
+	<link rel="stylesheet" href="./assets/css/style.css?ver=20210106" />
+
+	<style type="text/css">
+		/* base */
+		body,
+		div,
+		dl,
+		dt,
+		dd,
+		ul,
+		ol,
+		li,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		pre,
+		code,
+		form,
+		fieldset,
+		legend,
+		textarea,
+		p,
+		blockquote,
+		th,
+		td,
+		input,
+		select,
+		textarea,
+		button {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			width: 100%;
+		}
+
+		body {
+			overflow-y: scroll;
+			padding: 0 1em;
+			-webkit-text-size-adjust: none;
+			color: #373737;
+			font-size: 16px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: normal;
+			font-size: 100%;
+		}
+
+		input,
+		select,
+		textarea,
+		button,
+		label {
+			font-size: 16px;
+			vertical-align: middle;
+		}
+
+		input,
+		select {
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+
+		fieldset,
+		img,
+		iframe {
+			border: 0 none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		th,
+		td {
+			text-align: left;
+		}
+
+		em,
+		address {
+			font-style: normal;
+		}
+
+		a,
+		a:hover,
+		a:active,
+		a:focus,
+		label {
+			text-decoration: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		menu,
+		li {
+			list-style: none;
+		}
+
+		button {
+			padding: 0;
+			margin: 0;
+			border: 0;
+			cursor: pointer;
+			vertical-align: middle;
+		}
+
+		button,
+		input[type='radio'],
+		input[type='checkbox'],
+		select {
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+			outline: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+			cursor: pointer;
+		}
+
+		input[type='text'],
+		input[type='password'],
+		input[type='email'],
+		input[type='url'],
+		input[type='date'],
+		input[type='tel'] {
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		caption {
+			width: 0;
+			height: 0;
+			font-size: 0;
+			line-height: 0;
+			overflow: hidden;
+			visibility: hidden;
+		}
+
+		hr,
+		legend {
+			display: none;
+		}
+
+		i,
+		em,
+		address {
+			font-style: normal;
+		}
+
+		label {
+			cursor: pointer;
+		}
+
+		table {
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+
+		table.dataTable.no-footer {
+			padding-top: 10px;
+		}
+
+		body,
+		html,
+		table td,
+		table th {
+			font-family: 'Roboto', 'Noto Sans KR', 'Noto+Sans', '맑은 고딕', sans-serif;
+		}
+
+		h1 {
+			width: 100%;
+			height: 2em;
+			line-height: 2em;
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		table {
+			border-bottom: 1px solid #ddd;
+		}
+
+		th {
+			background: #eee;
+			text-align: center;
+		}
+
+		th,
+		td {
+			padding: 8px 5px;
+			border-top: 1px solid #e1e1e1;
+			border-left: 1px solid #f7f7f7;
+			font-size: 14px;
+		}
+
+		.complete {
+			background: #fdfabf;
+			font-weight: 700;
+			color: #085e77;
+			text-align: center;
+		}
+
+		.update {
+			background: #0788da;
+			font-weight: 700;
+			color: #fff;
+			text-align: center;
+		}
+
+		.plan {
+			background: #f9f9f9;
+			font-weight: normal;
+			color: #d9d9d9;
+			text-align: center;
+		}
+
+		.delete td {
+			text-decoration: line-through;
+		}
+
+		.pcs:after {
+			content: ' pcs';
+		}
+
+		.cur:before {
+			content: '$';
+		}
+
+		.per:after {
+			content: '%';
+		}
+
+		.help {
+			margin-top: 1em;
+			font-size: 12px;
+			color: #ccc;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		table th,
+		table td {
+			vertical-align: middle;
+		}
+
+		table thead th {
+			text-align: center !important;
+			border-bottom: 1px solid #ccc;
+			border-left: 1px solid #ddd;
+		}
+
+		table.fold-table>tbody>tr.view td,
+		table.fold-table>tbody>tr.view th {
+			cursor: pointer;
+		}
+
+		table.fold-table>tbody>tr.view td:first-child,
+		table.fold-table>tbody>tr.view th:first-child {
+			position: relative;
+			padding-left: 20px;
+		}
+
+		table.fold-table>tbody>tr.view td:first-child:before,
+		table.fold-table>tbody>tr.view th:first-child:before {
+			position: absolute;
+			top: 50%;
+			left: 5px;
+			width: 12px;
+			height: 20px;
+			margin-top: -9px;
+			font-family: 'iconset' !important;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: '\eb61';
+			transition: all 0.3s ease;
+		}
+
+		table.fold-table>tbody>tr:hover {
+			color: #333;
+			background: #f7f7f7;
+			-webkit-transition: all 0.1s;
+			transition: all 0.1s;
+		}
+
+		table.fold-table>tbody>tr.view.open,
+		table.fold-table>tbody>tr.view.open>td {
+			background: #666;
+			border: 1px solid #666;
+			color: white;
+		}
+
+		table.fold-table>tbody>tr.view td:first-child {
+			font-weight: 600;
+		}
+
+		table.fold-table>tbody>tr.view.open td:first-child:before,
+		table.fold-table>tbody>tr.view.open th:first-child:before {
+			transform: rotate(-180deg);
+			transform-origin: 50% 50%;
+			color: #fff;
+		}
+
+		table.fold-table>tbody>tr.fold {
+			display: none;
+		}
+
+		table.fold-table>tbody>tr.fold.open {
+			display: table-row;
+		}
+
+		table.fold-table>tbody>tr.fold.open>td {
+			padding: 0;
+		}
+
+		.fold-content {
+			margin: -1px 0;
+			padding: 0;
+		}
+
+		.fold-content>table {
+			position: relative;
+		}
+
+		.fold-content>table {
+			position: relative;
+			border: 1px solid #666;
+			border-bottom: 2px solid #666;
+		}
+
+		table tr td:first-child,
+		table tr th:first-child {
+			border-left: none;
+		}
+
+		.fold-content>table tr {
+			background-color: #fff;
+		}
+
+		.fold-content>table tr:hover {
+			background-color: #f7f7f7;
+		}
+
+		table tr td:nth-child(1) {
+			width: 13%;
+		}
+
+		table tr td:nth-child(2) {
+			width: 13%;
+		}
+
+		table tr td:nth-child(3) {
+			width: 13%;
+		}
+
+		table tr td:nth-child(4) {
+			width: 10%;
+		}
+
+		table tr td:nth-child(5) {
+			width: 15%;
+		}
+
+		table tr td:nth-child(6) {
+			width: 26%;
+		}
+
+		table tr td:nth-child(7) {
+			width: 10%;
+			text-align: center;
+		}
+
+		.header {
+			position: relative;
+		}
+
+		.legend-list {
+			position: absolute;
+			right: 0;
+			top: 15px;
+			text-align: right;
+			font-size: 13px;
+			color: #777;
+		}
+
+		.legend-list li {
+			display: inline-flex;
+			margin-right: 10px;
+			align-items: center;
+			vertical-align: middle;
+		}
+
+		.legend-list li span {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+			border: 1px solid #ccc;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h1>[PC] 리바트몰 퍼블리싱 목록</h1>
+		<ul class="legend-list">
+			<li><span class="complete"></span>완료</li>
+			<li><span class="update"></span>업데이트</li>
+		</ul>
+	</div>
+	<table cellpadding="0" cellspacing="0" width="100%" id="tableWorksht" class="fold-table">
+		<thead>
+			<tr>
+				<th>분류</th>
+				<th>1 Depth</th>
+				<th>2 Depth</th>
+				<th>3 Depth</th>
+				<th>Page Name</th>
+				<th>File Name</th>
+				<th>완료/업데이트일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>0.공통</td>
+				<td>퍼블리싱 가이드</td>
+				<td></td>
+				<td></td>
+				<td>퍼블리싱 가이드</td>
+				<td>
+					<a href="html/guide/ui.html" target="_blank">ui.html</a>
+				</td>
+				<td>2020-04-27</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>오픈준비중</td>
+				<td></td>
+				<td></td>
+				<td>오픈준비중</td>
+				<td>
+					<a href="html/open.html" target="_blank">open.html</a>
+				</td>
+				<td>2020-11-23</td>
+			</tr>
+			<tr>
+				<td>통합몰</td>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td>통합몰 메인/커뮤니티 통합</td>
+				<td>
+					<a href="html/common/index.html" target="_blank">index.html</a>
+				</td>
+				<td>2021-11-10</td>
+			</tr>
+			<tr>
+				<td>통합몰</td>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td>삼성브랜드관</td>
+				<td>
+					<a href="html/common/index_삼성브랜드관.html" target="_blank">index_삼성브랜드관.html</a>
+				</td>
+				<td>2021-09-17</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td>[이전 버전] 통합몰 메인/커뮤니티 통합<br />(Home, 해외브랜드 포함)</td>
+				<td>
+					<a href="html/common/index_홈해외브랜드포함.html" target="_blank">index_홈해외브랜드포함.html</a>
+				</td>
+				<td>2020-11-06</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td>index_윙배너샘플</td>
+				<td>
+					<a href="html/common/index_윙배너샘플.html" target="_blank">index_윙배너샘플.html</a>
+				</td>
+				<td>2021-05-11</td>
+			</tr>
+			<tr>
+				<td>폐쇄몰</td>
+				<td>메인</td>
+				<td></td>
+				<td></td>
+				<td>폐쇄몰 메인</td>
+				<td>
+					<a href="html/common/index_closed.html" target="_blank">index_closed.html</a>
+				</td>
+				<td>2020-10-29</td>
+			</tr>
+			<tr class="view">
+				<td>모듈/공통(common)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/common/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 모듈/공통 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td>모듈/공통</td>
+									<td>제품유닛</td>
+									<td></td>
+									<td></td>
+									<td>제품유닛</td>
+									<td>
+										<a href="html/common/unit.html" target="_blank">unit.html</a>
+									</td>
+									<td>2021-02-04</td>
+								</tr>
+								<!-- <tr>
+										<td></td>
+										<td>jpg 입력 샘플</td>
+										<td></td>
+										<td></td>
+										<td>EXIF 세로형 이미지 입력 샘플</td>
+										<td>
+											<a href="html/common/exif.html" target="_blank">exif.html</a>
+										</td>
+										<td>2020-08-18</td>
+									</tr> -->
+								<tr>
+									<td></td>
+									<td>퓨전 360 상품 목록</td>
+									<td></td>
+									<td></td>
+									<td>퓨전 360 상품 목록</td>
+									<td>
+										<a href="html/common/퓨전360_상품목록.html" target="_blank">퓨전360_상품목록.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>VR Showroom 목록</td>
+									<td></td>
+									<td></td>
+									<td>VR Showroom 목록</td>
+									<td>
+										<a href="html/common/vr_showroom.html" target="_blank">vr_showroom.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>리바트 LIVE 목록</td>
+									<td></td>
+									<td></td>
+									<td>리바트 LIVE 목록</td>
+									<td>
+										<a href="html/common/live_list.html" target="_blank">live_list.html</a>
+									</td>
+									<td>2021-01-19</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>메인 모듈</td>
+									<td>리바트몰(공통)</td>
+									<td></td>
+									<td>1.키비주얼, 2.띠배너</td>
+									<td>
+										<a href="html/common/모듈_1.키비주얼_2.띠배너.html"
+											target="_blank">모듈_1.키비주얼_2.띠배너.html</a>
+									</td>
+									<td>2021-11-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>3.베스트, 4.신상품</td>
+									<td>
+										<a href="html/common/모듈_3.베스트_4.신상품.html"
+											target="_blank">모듈_3.베스트_4.신상품.html</a>
+									</td>
+									<td>2021-02-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>5.입점상품, 6.공동구매, 7.추천상품</td>
+									<td>
+										<a href="html/common/모듈_5.입점상품_6.공동구매_7.추천상품.html"
+											target="_blank">모듈_5.입점상품_6.공동구매_7.추천상품.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>8.타임세일, 9.MD추천상품</td>
+									<td>
+										<a href="html/common/모듈_8.타임세일_9.MD추천상품.html"
+											target="_blank">모듈_8.타임세일_9.MD추천상품.html</a>
+									</td>
+									<td>2021-05-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>10.기획전, 11.미디어쇼핑</td>
+									<td>
+										<a href="html/common/모듈_10.기획전_11.미디어쇼핑.html"
+											target="_blank">모듈_10.기획전_11.미디어쇼핑.html</a>
+									</td>
+									<td>2021-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>12.베스트리뷰, 13.카테고리링크, 14.키워드링크.html</td>
+									<td>
+										<a href="html/common/모듈_12.베스트리뷰_13.카테고리링크_14.키워드링크.html"
+											target="_blank">모듈_12.베스트리뷰_13.카테고리링크_14.키워드링크.html</a>
+									</td>
+									<td>2020-08-14</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>15.공지사항, 16.VR TOUR</td>
+									<td>
+										<a href="html/common/모듈_15.공지사항_16.VRTOUR.html"
+											target="_blank">모듈_15.공지사항_16.VRTOUR.html</a>
+									</td>
+									<td>2020-11-09</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>17.특화배너, 18.공간솔루션</td>
+									<td>
+										<a href="html/common/모듈_17.특화배너_18.공간솔루션.html"
+											target="_blank">모듈_17.특화배너_18.공간솔루션.html</a>
+									</td>
+									<td>2020-11-17</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>19.인스타그램, 20.오픈하우스</td>
+									<td>
+										<a href="html/common/모듈_19.인스타그램_20.오픈하우스.html"
+											target="_blank">모듈_19.인스타그램_20.오픈하우스.html</a>
+									</td>
+									<td>2021-10-22</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>21.고수의집들이, 22.매거진</td>
+									<td>
+										<a href="html/common/모듈_21.고수의집들이_22.매거진.html"
+											target="_blank">모듈_21.고수의집들이_22.매거진.html</a>
+									</td>
+									<td>2021-09-15</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>23.리바트스토리, 24.우리동네리뷰</td>
+									<td>
+										<a href="html/common/모듈_23.리바트스토리_24.우리동네리뷰.html"
+											target="_blank">모듈_23.리바트스토리_24.우리동네리뷰.html</a>
+									</td>
+									<td>2021-04-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>25.윙배너, 탑배너</td>
+									<td>
+										<a href="html/common/모듈_25.윙배너_탑배너.html" target="_blank">모듈_25.윙배너_탑배너.html</a>
+									</td>
+									<td>2021-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>26.해외프리미엄브랜드</td>
+									<td>
+										<a href="html/common/모듈_26.해외프리미엄브랜드.html"
+											target="_blank">모듈_26.해외프리미엄브랜드.html</a>
+									</td>
+									<td>2021-06-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>27.통합검색_커뮤니티</td>
+									<td>
+										<a href="html/common/모듈_27.통합검색_커뮤니티.html"
+											target="_blank">모듈_27.통합검색_커뮤니티.html</a>
+									</td>
+									<td>2021-10-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>27.통합검색_커뮤니티</td>
+									<td>
+										<a href="html/common/모듈_28.삼성브랜드관.html" target="_blank">모듈_28.삼성브랜드관.html</a>
+									</td>
+									<td>2021-09-17</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>footer</td>
+									<td></td>
+									<td></td>
+									<td>footer</td>
+									<td>
+										<a href="html/include/footer.html" target="_blank">footer.html</a>
+									</td>
+									<td>2020-12-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>약관</td>
+									<td></td>
+									<td></td>
+									<td>개인정보 처리방침</td>
+									<td>
+										<a href="html/common/약관_개인정보처리방침.html" target="_blank">약관_개인정보처리방침.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>위치정보 이용약관</td>
+									<td>
+										<a href="html/common/약관_위치정보이용약관.html" target="_blank">약관_위치정보이용약관.html</a>
+									</td>
+									<td>2020-11-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이용약관</td>
+									<td>
+										<a href="html/common/약관_이용약관.html" target="_blank">약관_이용약관.html</a>
+									</td>
+									<td>2021-08-10</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>영상정보처리기기 운영/관리방침</td>
+									<td>
+										<a href="html/common/약관_영상정보처리기기운영관리방침.html"
+											target="_blank">약관_영상정보처리기기운영관리방침.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Loading 샘플</td>
+									<td></td>
+									<td></td>
+									<td>전체화면 로딩 샘플</td>
+									<td>
+										<a href="html/common/loading.html" target="_blank">loading.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>백그라운드 퍼센트 로딩</td>
+									<td>
+										<a href="html/common/loading_percent.html"
+											target="_blank">loading_percent.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>레이어 안내창(alert)</td>
+									<td></td>
+									<td></td>
+									<td>안내창(alert)</td>
+									<td>
+										<a href="html/common/alert.html" target="_blank">alert.html</a>
+									</td>
+									<td>2020-06-09</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>내용없음 공통</td>
+									<td></td>
+									<td></td>
+									<td>안내창(alert)</td>
+									<td>
+										<a href="html/common/내용없음.html" target="_blank">내용없음.html</a>
+									</td>
+									<td>2020-06-16</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>submit 이벤트 샘플</td>
+									<td></td>
+									<td></td>
+									<td>Form Submit 이벤트 샘플</td>
+									<td>
+										<a href="html/common/submit이벤트샘플.html" target="_blank">submit이벤트샘플.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>error page</td>
+									<td></td>
+									<td></td>
+									<td>error 404</td>
+									<td>
+										<a href="html/common/error_404.html" target="_blank">error_404.html</a>
+									</td>
+									<td>2020-07-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>error 500</td>
+									<td>
+										<a href="html/common/error_500.html" target="_blank">error_500.html</a>
+									</td>
+									<td>2020-07-23</td>
+								</tr>
+								<tr>
+									<td>전시 공통</td>
+									<td>카테고리</td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/카테고리_메인.html" target="_blank">카테고리_메인.html</a>
+									</td>
+									<td>2021-04-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>필터 클릭시 콘텐츠 가변 영역 샘플</td>
+									<td>
+										<a href="html/common/카테고리_2depth_가변콘텐츠.html"
+											target="_blank">카테고리_2depth_가변콘텐츠.html</a>
+									</td>
+									<td>2021-01-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>2depth</td>
+									<td>
+										<a href="html/common/카테고리_2depth.html" target="_blank">카테고리_2depth.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>3, 4depth</td>
+									<td>
+										<a href="html/common/카테고리_34depth.html" target="_blank">카테고리_34depth.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>검색결과없음</td>
+									<td>
+										<a href="html/common/카테고리_검색결과없음.html" target="_blank">카테고리_검색결과없음.html</a>
+									</td>
+									<td>2020-06-16</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>시리즈_리스트</td>
+									<td>
+										<a href="html/common/카테고리_시리즈_리스트.html" target="_blank">카테고리_시리즈_리스트.html</a>
+									</td>
+									<td>2021-02-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>시리즈_상세상품형</td>
+									<td>
+										<a href="html/common/카테고리_시리즈_상세상품형.html"
+											target="_blank">카테고리_시리즈_상세상품형.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>브랜드_팝업</td>
+									<td>
+										<a href="html/common/카테고리_브랜드_팝업.html" target="_blank">카테고리_브랜드_팝업.html</a>
+									</td>
+									<td>2020-08-20</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>브랜드_팝업</td>
+									<td>
+										<a href="html/common/카테고리_브랜드_팝업_결과없음.html"
+											target="_blank">카테고리_브랜드_팝업_결과없음.html</a>
+									</td>
+									<td>2020-08-20</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>베스트</td>
+									<td></td>
+									<td></td>
+									<td>베스트</td>
+									<td>
+										<a href="html/common/베스트.html" target="_blank">베스트.html</a>
+									</td>
+									<td>2020-06-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>베스트 통합몰</td>
+									<td>
+										<a href="html/common/베스트_통합몰.html" target="_blank">베스트_통합몰.html</a>
+									</td>
+									<td>2020-07-14</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>신상품</td>
+									<td></td>
+									<td></td>
+									<td>신상품</td>
+									<td>
+										<a href="html/common/신상품.html" target="_blank">신상품.html</a>
+									</td>
+									<td>2020-09-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>기획전</td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/기획전_메인.html" target="_blank">기획전_메인.html</a>
+									</td>
+									<td>2021-01-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/기획전_메인_2단.html" target="_blank">기획전_메인_2단.html</a>
+									</td>
+									<td>2020-08-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/common/기획전_상세.html" target="_blank">기획전_상세.html</a>
+									</td>
+									<td>2021-10-15</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/common/기획전_상세_와이드.html" target="_blank">기획전_상세_와이드.html</a>
+									</td>
+									<td>2021-10-15</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>이벤트</td>
+									<td>진행중 이벤트</td>
+									<td></td>
+									<td>이벤트 목록</td>
+									<td>
+										<a href="html/common/이벤트_메인_진행중인이벤트.html"
+											target="_blank">이벤트_메인_진행중인이벤트.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이벤트 상세</td>
+									<td>
+										<a href="html/common/이벤트_상세_진행중.html" target="_blank">이벤트_상세_진행중.html</a>
+									</td>
+									<td>2020-11-05</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이벤트 상세</td>
+									<td>
+										<a href="html/common/이벤트_상세_진행중_약관동의.html"
+											target="_blank">이벤트_상세_진행중_약관동의.html</a>
+									</td>
+									<td>2020-12-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이벤트 상세</td>
+									<td>
+										<a href="html/common/이벤트_상세_진행중_약관고지.html"
+											target="_blank">이벤트_상세_진행중_약관고지.html</a>
+									</td>
+									<td>2020-08-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>종료 이벤트</td>
+									<td></td>
+									<td>이벤트 목록</td>
+									<td>
+										<a href="html/common/이벤트_메인_종료된이벤트.html" target="_blank">이벤트_메인_종료된이벤트.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이벤트 상세</td>
+									<td>
+										<a href="html/common/이벤트_상세_종료.html" target="_blank">이벤트_상세_종료.html</a>
+									</td>
+									<td>2020-08-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>당첨자 발표</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/common/이벤트_메인_당첨자발표_목록.html"
+											target="_blank">이벤트_메인_당첨자발표_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/common/이벤트_당첨자발표_상세.html" target="_blank">이벤트_당첨자발표_상세.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>쿠폰존</td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/쿠폰존_메인_로그인전.html" target="_blank">쿠폰존_메인_로그인전.html</a>
+									</td>
+									<td>2020-11-16</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/쿠폰존_메인_로그인후.html" target="_blank">쿠폰존_메인_로그인후.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/쿠폰존_메인_쿠폰팝업.html" target="_blank">쿠폰존_메인_쿠폰팝업.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 쿠폰존</td>
+									<td><a href="html/common/쿠폰존_쿠폰.html" target="_blank"
+											style="color: red">팝업_쿠폰존_쿠폰.html</a><br /></td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 함께사면_할인쿠폰_사용안내</td>
+									<td>
+										<a href="html/common/쿠폰존_쿠폰2.html" target="_blank">함께사면_할인쿠폰_사용안내.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>베스트후기</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/common/" target="_blank">베스트후기_목록.html</a>
+									</td>
+									<td class="plan"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/common/" target="_blank">베스트후기_상세.html</a>
+									</td>
+									<td class="plan"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>공동구매</td>
+									<td></td>
+									<td></td>
+									<td>공동구매</td>
+									<td>
+										<a href="html/common/공동구매.html" target="_blank">공동구매.html</a>
+									</td>
+									<td>2020-08-10</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>반짝특가(타임세일)</td>
+									<td></td>
+									<td></td>
+									<td>반짝특가(타임세일)</td>
+									<td>
+										<a href="html/common/반짝특가.html" target="_blank">반짝특가.html</a>
+									</td>
+									<td>2020-07-20</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>브랜드샵(입점상품)</td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/common/브랜드샵_메인.html" target="_blank">브랜드샵_메인.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>기본형</td>
+									<td>
+										<a href="html/common/브랜드샵_기본형.html" target="_blank">브랜드샵_기본형.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>관리형</td>
+									<td>
+										<a href="html/common/브랜드샵_관리형.html" target="_blank">브랜드샵_관리형.html</a>
+									</td>
+									<td>2020-08-10</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>1Depth</td>
+									<td>
+										<a href="html/common/브랜드샵_1Depth.html" target="_blank">브랜드샵_1Depth.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>2Depth</td>
+									<td>
+										<a href="html/common/브랜드샵_2Depth.html" target="_blank">브랜드샵_2Depth.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>통합검색</td>
+									<td></td>
+									<td></td>
+									<td>통합검색</td>
+									<td>
+										<a href="html/common/통합검색.html" target="_blank">통합검색.html</a>
+									</td>
+									<td>2021-10-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>결과없음</td>
+									<td>
+										<a href="html/common/통합검색_결과없음.html" target="_blank">통합검색_결과없음.html</a>
+									</td>
+									<td>2020-07-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>결과없음</td>
+									<td>
+										<a href="html/common/통합검색_유사검색_결과없음.html"
+											target="_blank">통합검색_유사검색_결과없음.html</a>
+									</td>
+									<td>2020-07-27</td>
+								</tr>
+								<tr>
+									<td>상품/주문</td>
+									<td>제품 상세</td>
+									<td></td>
+									<td></td>
+									<td>제품 상세(최신 수정 적용)</td>
+									<td>
+										<a href="html/common/제품상세.html" target="_blank">제품상세.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td>상품/주문</td>
+									<td>제품 상세</td>
+									<td></td>
+									<td></td>
+									<td>제품 상세(짧은 상품정보 노출시 상품정보 더보기 버튼 없음 적용)</td>
+									<td>
+										<a href="html/common/제품상세_상품정보더보기버튼없음.html"
+											target="_blank">제품상세_상품정보더보기버튼없음.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td>상품/주문</td>
+									<td>제품 상세</td>
+									<td></td>
+									<td></td>
+									<td>제품 상세(폐쇄몰용 버튼 배열예)</td>
+									<td>
+										<a href="html/common/제품상세_폐쇄몰예제.html" target="_blank">제품상세_폐쇄몰예제.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td>상품/주문</td>
+									<td>제품 상세</td>
+									<td></td>
+									<td></td>
+									<td>제품 상세(메인 virtual 슬라이더)</td>
+									<td>
+										<a href="html/common/제품상세_virtual.html" target="_blank">제품상세_virtual.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>제품 상세(와이드 영역 추가 적용)</td>
+									<td>
+										<a href="html/common/제품상세_와이드상품기술.html" target="_blank">제품상세_와이드상품기술.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>제품 상세(상담신청,장바구니,바로구매)</td>
+									<td>
+										<a href="html/common/제품상세_상담신청_장바구니_바로구매.html"
+											target="_blank">제품상세_상담신청_장바구니_바로구매.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>제품 상세 바로구매</td>
+									<td>
+										<a href="html/common/제품상세_바로구매.html" target="_blank">제품상세_바로구매.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>제품 상세 상담신청</td>
+									<td>
+										<a href="html/common/제품상세_상담신청.html" target="_blank">제품상세_상담신청.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>제품 상세 상담신청</td>
+									<td>
+										<a href="html/common/제품상세_상담신청_품절.html" target="_blank">제품상세_상담신청_품절.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>공동구매</td>
+									<td>
+										<a href="html/common/제품상세_공동구매.html" target="_blank">제품상세_공동구매.html</a>
+									</td>
+									<td>2021-02-15</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>단품세트(플로팅바 적용)</td>
+									<td>
+										<a href="html/common/제품상세_단품세트.html" target="_blank">제품상세_단품세트.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>단품세트 품절</td>
+									<td>
+										<a href="html/common/제품상세_단품세트품절.html" target="_blank">제품상세_단품세트품절.html</a>
+									</td>
+									<td>2020-07-17</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>렌탈(상담신청 팝업)</td>
+									<td>
+										<a href="html/common/제품상세_렌탈.html" target="_blank">제품상세_렌탈.html</a>
+									</td>
+									<td>2020-07-17</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상품옵션</td>
+									<td>
+										<a href="html/common/제품상세_상품옵션.html" target="_blank">제품상세_상품옵션.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상품옵션 N개</td>
+									<td>
+										<a href="html/common/제품상세_상품옵션_N개.html" target="_blank">제품상세_상품옵션_N개.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>타임세일</td>
+									<td>
+										<a href="html/common/제품상세_타임세일.html" target="_blank">제품상세_타임세일.html</a>
+									</td>
+									<td>2020-08-29</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>패키지 옵션 추가(플로팅바 적용)</td>
+									<td>
+										<a href="html/common/제품상세_패키지옵션추가.html" target="_blank">제품상세_패키지옵션추가.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>패키지단품 + 옵션(플로팅바 적용)</td>
+									<td>
+										<a href="html/common/제품상세_패키지단품옵션.html" target="_blank">제품상세_패키지단품옵션.html</a>
+									</td>
+									<td>2021-10-27</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td>장바구니</td>
+									<td></td>
+									<td></td>
+									<td>장바구니</td>
+									<td>
+										<a href="html/common/장바구니.html" target="_blank">장바구니.html</a>
+									</td>
+									<td>2020-07-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>장바구니_상품없음_v01</td>
+									<td>
+										<a href="html/common/장바구니_상품없음_v01.html" target="_blank">장바구니_상품없음_v01.html</a>
+									</td>
+									<td>2020-07-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>장바구니_상품없음_v02</td>
+									<td>
+										<a href="html/common/장바구니_상품없음_v02.html" target="_blank">장바구니_상품없음_v02.html</a>
+									</td>
+									<td>2020-07-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>주문결제</td>
+									<td></td>
+									<td></td>
+									<td>주문결제</td>
+									<td>
+										<a href="html/common/주문결제_메인.html" target="_blank">주문결제_메인.html</a>
+									</td>
+									<td>2021-11-19</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>주문결제</td>
+									<td></td>
+									<td></td>
+									<td>[이전 버전]주문결제</td>
+									<td>
+										<a href="html/common/주문결제_메인_bak.html" target="_blank">주문결제_메인_bak.html</a>
+									</td>
+									<td>2020-11-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>주문결제</td>
+									<td></td>
+									<td></td>
+									<td>주문결제 메인(사은품 단수)</td>
+									<td>
+										<a href="html/common/주문결제_메인_사은품단수.html" target="_blank">주문결제_메인_사은품단수.html</a>
+									</td>
+									<td>2020-07-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>주문결제_선물하기+임직원</td>
+									<td>
+										<a href="html/common/주문결제_선물하기+임직원.html" target="_blank">주문결제_선물하기+임직원.html</a>
+									</td>
+									<td>2020-07-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>주문결제_주문완료</td>
+									<td>
+										<a href="html/common/주문결제_주문완료.html" target="_blank">주문결제_주문완료.html</a>
+									</td>
+									<td>2020-07-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : SNS 공유</td>
+									<td>
+										<a href="html/common/pop_sns공유.html" target="_blank">pop_sns공유.html</a>
+									</td>
+									<td>2020-08-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 청구할인확인안내</td>
+									<td>
+										<a href="html/common/pop_청구할인확인안내.html" target="_blank">pop_청구할인확인안내.html</a>
+									</td>
+									<td>2020-06-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 청구할인혜택</td>
+									<td>
+										<a href="html/common/pop_청구할인혜택.html" target="_blank">pop_청구할인혜택.html</a>
+									</td>
+									<td>2020-07-20</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 전도위험동의</td>
+									<td>
+										<a href="html/common/pop_전도위험 동의.html" target="_blank">pop_전도위험 동의.html</a>
+									</td>
+									<td>2020-06-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 구매제한안내</td>
+									<td>
+										<a href="html/common/pop_구매제한안내.html" target="_blank">pop_구매제한안내.html</a>
+									</td>
+									<td>2020-06-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 소파배송안내</td>
+									<td>
+										<a href="html/common/pop_소파배송안내.html" target="_blank">pop_소파배송안내.html</a>
+									</td>
+									<td>2020-07-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 재입고알림</td>
+									<td>
+										<a href="html/common/pop_재입고알림.html" target="_blank">pop_재입고알림.html</a>
+									</td>
+									<td>2021-04-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 반짝특가 알림 수신 약관 동의</td>
+									<td>
+										<a href="html/common/pop_반짝특가_알림_약관동의.html"
+											target="_blank">pop_반짝특가_알림_약관동의.html</a>
+									</td>
+									<td>2020-09-16</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 레이어 팝업</td>
+									<td>
+										<a href="html/common/레이어_팝업.html" target="_blank">레이어_팝업.html</a>
+									</td>
+									<td>2021-03-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 윈도우 팝업 호출페이지</td>
+									<td>
+										<a href="html/common/윈도우_팝업.html" target="_blank">윈도우_팝업.html</a>
+									</td>
+									<td>2020-09-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 윈도우 팝업</td>
+									<td>
+										<a href="html/common/윈도우_팝업_팝업.html" target="_blank">윈도우_팝업_팝업.html</a>
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송비 조건 안내</td>
+									<td>
+										<a href="html/common/pop_배송비 조건 안내.html" target="_blank">pop_배송비 조건 안내.html</a>
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송지 목록</td>
+									<td>
+										<a href="html/common/pop_배송지 목록.html" target="_blank">pop_배송지 목록.html</a>
+									</td>
+									<td>2021-11-19</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송지 정보 안내</td>
+									<td>
+										<a href="html/common/pop_배송지 정보 안내.html" target="_blank">pop_배송지 정보
+											안내.html</a><br />
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송일 지정 관련 안내</td>
+									<td>
+										<a href="html/common/pop_배송일지정_관련안내.html"
+											target="_blank">pop_배송일지정_관련안내.html</a><br />
+									</td>
+									<td>2021-02-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 사은품 선택</td>
+									<td>
+										<a href="html/common/pop_사은품 선택.html" target="_blank">pop_사은품 선택.html</a>
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 청구할인혜택</td>
+									<td>
+										<a href="html/common/pop_청구할인혜택.html" target="_blank">pop_청구할인혜택.html</a>
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 판매가</td>
+									<td>
+										<a href="html/common/pop_판매가.html" target="_blank">pop_판매가.html</a><br />
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 희망 배송일 선택</td>
+									<td>
+										<a href="html/common/pop_희망 배송일 선택.html" target="_blank">pop_희망 배송일 선택.html</a>
+									</td>
+									<td>2021-03-15</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 희망 배송일 유의사항</td>
+									<td>
+										<a href="html/common/pop_희망 배송일 유의사항.html" target="_blank">pop_희망 배송일
+											유의사항.html</a>
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : H.Point 본인인증</td>
+									<td>
+										<a href="html/common/pop_H.Point 본인인증.html" target="_blank">pop_H.Point
+											본인인증.html</a>
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : H.Point 사용안내</td>
+									<td>
+										<a href="html/common/pop_H.Point 사용안내.html" target="_blank">pop_H.Point
+											사용안내.html</a><br />
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 비회원팝업</td>
+									<td>
+										<a href="html/common/pop_비회원팝업.html" target="_blank">pop_비회원팝업.html</a><br />
+									</td>
+									<td>2020-09-18</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //모듈/공통 -->
+			<tr class="view">
+				<td>회원/로그인(mbr)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/mbr/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 회원/로그인 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td>회원/로그인(mbr)</td>
+									<td>공통</td>
+									<td></td>
+									<td></td>
+									<td>로그인 템플릿</td>
+									<td>
+										<a href="html/mbr/template.html" target="_blank">template.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>에러 페이지</td>
+									<td>
+										<a href="html/mbr/error.html" target="_blank">error.html</a>
+									</td>
+									<td>2020-05-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>00.로그인</td>
+									<td>00.애플로그인</td>
+									<td></td>
+									<td>애플 로그인</td>
+									<td>
+										<a href="html/mbr/00.로그인_00.애플로그인.html" target="_blank">00.로그인_00.애플로그인.html</a>
+									</td>
+									<td>2020-11-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>00.로그인</td>
+									<td>01.H.Point통합회원</td>
+									<td></td>
+									<td>통합 로그인(OTP,리바트,비회원)</td>
+									<td>
+										<a href="html/mbr/00.로그인_01.H.Point통합회원.html"
+											target="_blank">00.로그인_01.H.Point통합회원.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>04-1.비회원 주문번호 찾기</td>
+									<td></td>
+									<td>비회원 주문번호 찾기</td>
+									<td>
+										<a href="html/mbr/00.로그인_04-1.비회원주문번호찾기.html"
+											target="_blank">00.로그인_04-1.비회원주문번호찾기.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>04-2.비회원 주문번호 찾기</td>
+									<td></td>
+									<td>비회원 주문번호 찾기(주문결제정보)</td>
+									<td>
+										<a href="html/mbr/00.로그인_04-2.비회원주문번호찾기.html"
+											target="_blank">00.로그인_04-2.비회원주문번호찾기.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>04-2.비회원 주문번호 찾기</td>
+									<td></td>
+									<td>비회원 주문번호 찾기(주문번호)</td>
+									<td>
+										<a href="html/mbr/00.로그인_04-3.비회원주문번호찾기.html"
+											target="_blank">00.로그인_04-3.비회원주문번호찾기.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>04-3.비회원 팝업</td>
+									<td></td>
+									<td>비회원 팝업</td>
+									<td>
+										<a href="html/mbr/00.로그인_04-3.비회원팝업.html"
+											target="_blank">00.로그인_04-3.비회원팝업.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>05.아이디-비밀번호 찾기</td>
+									<td></td>
+									<td>아이디,비밀번호 찾기(간편회원,사업자회원)</td>
+									<td>
+										<a href="html/mbr/00.로그인_05.아이디비밀번호찾기.html"
+											target="_blank">00.로그인_05.아이디비밀번호찾기.html</a>
+									</td>
+									<td>2020-07-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>07.비밀번호 재설정</td>
+									<td></td>
+									<td>비밀번호 재설정</td>
+									<td>
+										<a href="html/mbr/00.로그인_07.비밀번호재설정.html"
+											target="_blank">00.로그인_07.비밀번호재설정.html</a>
+									</td>
+									<td>2021-03-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>08.휴면해제 팝업</td>
+									<td></td>
+									<td>휴면해제 팝업</td>
+									<td>
+										<a href="html/mbr/00.로그인_08.휴면해제팝업.html"
+											target="_blank">00.로그인_08.휴면해제팝업.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>08-1.휴면해제 비밀번호재설정</td>
+									<td></td>
+									<td>휴면해제 비밀번호재설정</td>
+									<td>
+										<a href="html/mbr/00.로그인_08-1.휴면해제_비밀번호재설정.html"
+											target="_blank">00.로그인_08-1.휴면해제 비밀번호재설정.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>09_1.임직원로그인_인증성공</td>
+									<td></td>
+									<td>임직원로그인_인증성공</td>
+									<td>
+										<a href="html/mbr/00.로그인_09_1.임직원로그인_인증성공.html"
+											target="_blank">00.로그인_09_1.임직원로그인_인증성공.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>09_1.임직원로그인_인증실패</td>
+									<td></td>
+									<td>임직원로그인_인증실패</td>
+									<td>
+										<a href="html/mbr/00.로그인_09_1.임직원로그인_인증실패.html"
+											target="_blank">00.로그인_09_1.임직원로그인_인증실패.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>09_1.임직원로그인_인증확인</td>
+									<td></td>
+									<td>임직원로그인_인증확인</td>
+									<td>
+										<a href="html/mbr/00.로그인_09_1.임직원로그인_인증확인.html"
+											target="_blank">00.로그인_09_1.임직원로그인_인증확인.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>09_1.폐쇄몰로그인_인증</td>
+									<td></td>
+									<td>폐쇄몰로그인_인증</td>
+									<td>
+										<a href="html/mbr/00.로그인_09_1.폐쇄몰로그인_인증.html"
+											target="_blank">00.로그인_09_1.폐쇄몰로그인_인증.html</a>
+									</td>
+									<td>2020-05-08</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td>01.회원가입</td>
+									<td>01.H.Point 통합회원가입</td>
+									<td></td>
+									<td>탭화면3개 포함</td>
+									<td>
+										<a href="html/mbr/01.H.Point통합회원가입.html"
+											target="_blank">01.H.Point통합회원가입.html</a>
+									</td>
+									<td>2020-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>02.통합회원가입&amp;계정통합</td>
+									<td>02.안내팝업</td>
+									<td>약관동의</td>
+									<td>
+										<a href="html/mbr/02.통합회원가입&계정통합_02.안내팝업.html"
+											target="_blank">02.통합회원가입&계정통합_02.안내팝업.html</a>
+									</td>
+									<td>2020-06-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-1.약관동의</td>
+									<td>약관동의</td>
+									<td>
+										<a href="html/mbr/02.통합회원가입&계정통합_03-1.약관동의.html"
+											target="_blank">02.통합회원가입&계정통합_03-1.약관동의.html</a>
+									</td>
+									<td>2020-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-2.약관동의 완료</td>
+									<td>약관동의 완료</td>
+									<td>
+										<a href="html/mbr/02.통합회원가입&계정통합_03-2.약관동의완료.html"
+											target="_blank">02.통합회원가입&계정통합_03-2.약관동의완료.html</a>
+									</td>
+									<td>2020-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>03.동시가입</td>
+									<td>01.메일 인증요청</td>
+									<td>메일 인증요청</td>
+									<td>
+										<a href="html/mbr/03.동시가입_01.인증요청.html" target="_blank">03.동시가입_01.인증요청.html</a>
+									</td>
+									<td>2020-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03.메일 인증 완료</td>
+									<td>메일 인증 완료</td>
+									<td>
+										<a href="html/mbr/03.동시가입_03.메일인증완료.html"
+											target="_blank">03.동시가입_03.메일인증완료.html</a>
+									</td>
+									<td>2020-05-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04.비번 등록</td>
+									<td>비번 등록</td>
+									<td>
+										<a href="html/mbr/03.동시가입_04.비번등록.html" target="_blank">03.동시가입_04.비번등록.html</a>
+									</td>
+									<td>2020-07-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>04.SNS연동가입</td>
+									<td>02.안내팝업</td>
+									<td>안내팝업</td>
+									<td>
+										<a href="html/mbr/04.SNS연동가입_02.안내팝업.html"
+											target="_blank">04.SNS연동가입_02.안내팝업.html</a>
+									</td>
+									<td>2020-05-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-1.필수정보</td>
+									<td>필수정보(이용약관 팝업 포함)</td>
+									<td>
+										<a href="html/mbr/04.SNS연동가입_03-1.필수정보.html"
+											target="_blank">04.SNS연동가입_03-1.필수정보.html</a>
+									</td>
+									<td>2020-08-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04.가입 완료</td>
+									<td>가입 완료</td>
+									<td>
+										<a href="html/mbr/04.SNS연동가입_04.가입완료.html"
+											target="_blank">04.SNS연동가입_04.가입완료.html</a>
+									</td>
+									<td>2021-07-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>05.간편회원가입</td>
+									<td>02.안내팝업</td>
+									<td>안내팝업</td>
+									<td>
+										<a href="html/mbr/05.간편회원가입_02.안내팝업.html"
+											target="_blank">05.간편회원가입_02.안내팝업.html</a>
+									</td>
+									<td>2020-05-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-1.메일 발송</td>
+									<td>메일 발송</td>
+									<td>
+										<a href="html/mbr/05.간편회원가입_03-1.메일발송.html"
+											target="_blank">05.간편회원가입_03-1.메일발송.html</a>
+									</td>
+									<td>2020-06-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-3.메일 인증 완료</td>
+									<td>메일 인증 완료</td>
+									<td>
+										<a href="html/mbr/05.간편회원가입_03-3.메일인증완료.html"
+											target="_blank">05.간편회원가입_03-3.메일인증완료.html</a>
+									</td>
+									<td>2020-05-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04-1.필수정보</td>
+									<td>필수정보(이용약관팝업 포함)</td>
+									<td>
+										<a href="html/mbr/05.간편회원가입_04-1.필수정보.html"
+											target="_blank">05.간편회원가입_04-1.필수정보.html</a>
+									</td>
+									<td>2020-11-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>05.가입 완료</td>
+									<td>가입 완료</td>
+									<td>
+										<a href="html/mbr/05.간편회원가입_05.가입완료.html"
+											target="_blank">05.간편회원가입_05.가입완료.html</a>
+									</td>
+									<td>2021-07-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>06.H.Point계정전환</td>
+									<td>02.전환회원가입팝업</td>
+									<td>전환회원가입팝업</td>
+									<td>
+										<a href="html/mbr/06.H.Point계정전환_02.전환회원가입팝업.html"
+											target="_blank">06.H.Point계정전환_02.전환회원가입팝업.html</a>
+									</td>
+									<td>2020-06-05</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>07.사업자회원가입</td>
+									<td>02.사업자인증</td>
+									<td>사업자 인증</td>
+									<td>
+										<a href="html/mbr/07.사업자회원가입_02.사업자인증.html"
+											target="_blank">07.사업자회원가입_02.사업자인증.html</a>
+									</td>
+									<td>2020-06-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-1.필수정보</td>
+									<td>필수정보(이용약관 팝업)</td>
+									<td>
+										<a href="html/mbr/07.사업자회원가입_03-1.필수정보.html"
+											target="_blank">07.사업자회원가입_03-1.필수정보.html</a>
+									</td>
+									<td>2020-10-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04.가입 완료</td>
+									<td>가입 완료</td>
+									<td>
+										<a href="html/mbr/07.사업자회원가입_04.가입완료.html"
+											target="_blank">07.사업자회원가입_04.가입완료.html</a>
+									</td>
+									<td>2021-07-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>약관 샘플</td>
+									<td>약관 샘플</td>
+									<td>
+										<a href="html/mbr/pop_약관샘플.html" target="_blank">pop_약관샘플.html</a>
+									</td>
+									<td>2020-11-18</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //회원/로그인 -->
+			<tr class="view">
+				<td>마이페이지(mypage)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/mypage/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 마이페이지 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td>마이페이지</td>
+									<td>00.메인</td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/mypage/00.메인.html" target="_blank">00.메인.html</a>
+									</td>
+									<td>2021-03-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>01.주문배송관리</td>
+									<td>주문내역</td>
+									<td></td>
+									<td>목록(이전주문내역 팝업)</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_01.주문내역_목록.html"
+											target="_blank">01.주문배송관리_01.주문내역_목록.html</a>
+									</td>
+									<td>2021-05-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>없음</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_01.주문내역_없음.html"
+											target="_blank">01.주문배송관리_01.주문내역_없음.html</a>
+									</td>
+									<td>2020-12-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이전 주문내역 목록</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_01.이전주문내역_목록.html"
+											target="_blank">01.주문배송관리_01.이전주문내역_목록.html</a>
+									</td>
+									<td>2020-12-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>주문내역 상세</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_상세.html"
+											target="_blank">01.주문배송관리_주문내역_상세.html</a>
+									</td>
+									<td>2021-05-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>주문내역 상세</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_상세_선물하기.html"
+											target="_blank">01.주문배송관리_주문내역_상세_선물하기.html</a>
+									</td>
+									<td>2021-05-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>취소 신청</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_취소신청.html"
+											target="_blank">01.주문배송관리_주문내역_취소신청.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>취소 신청 완료</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_취소신청_완료.html"
+											target="_blank">01.주문배송관리_주문내역_취소신청_완료.html</a>
+									</td>
+									<td>2020-11-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>교환반품신청</td>
+									<td>교환</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_교환반품신청_교환.html"
+											target="_blank">01.주문배송관리_주문내역_교환반품신청_교환.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>교환 완료</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_교환반품신청_교환_완료.html"
+											target="_blank">01.주문배송관리_주문내역_교환반품신청_교환_완료.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>반품</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_교환반품신청_반품.html"
+											target="_blank">01.주문배송관리_주문내역_교환반품신청_반품.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>반품 완료</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_주문내역_교환반품신청_반품_완료.html"
+											target="_blank">01.주문배송관리_주문내역_교환반품신청_반품_완료.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>취소반품교환내역</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_취소반품교환내역_목록.html"
+											target="_blank">01.주문배송관리_취소반품교환내역_목록.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>없음</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_취소반품교환내역_없음.html"
+											target="_blank">01.주문배송관리_취소반품교환내역_없음.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>이전취소반품교환내역</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_이전취소반품교환내역_목록.html"
+											target="_blank">01.주문배송관리_이전취소반품교환내역_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>취소내역</td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_취소내역_상세.html"
+											target="_blank">01.주문배송관리_취소내역_상세.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>반품내역</td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_반품내역_상세.html"
+											target="_blank">01.주문배송관리_반품내역_상세.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>교환내역</td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/mypage/01.주문배송관리_교환내역_상세.html"
+											target="_blank">01.주문배송관리_교환내역_상세.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>02.결제정보관리</td>
+									<td>개인결제창관리</td>
+									<td></td>
+									<td>개인결제창관리</td>
+									<td>
+										<a href="html/mypage/02.결제관리_01.개인결제창관리.html"
+											target="_blank">02.결제관리_01.개인결제창관리.html</a>
+									</td>
+									<td>2020-10-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>결제항목없음</td>
+									<td>
+										<a href="html/mypage/02.결제관리_01.개인결제창관리_결제항목없음.html"
+											target="_blank">02.결제관리_01.개인결제창관리_결제항목없음.html</a>
+									</td>
+									<td>2020-06-19</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>환불계좌관리</td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/mypage/02.결제관리_02.환불계좌관리_상세.html"
+											target="_blank">02.결제관리_02.환불계좌관리_상세.html</a>
+									</td>
+									<td>2020-06-19</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>환불계좌관리</td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/mypage/02.결제관리_02.환불계좌관리_내용없음.html"
+											target="_blank">02.결제관리_02.환불계좌관리_내용없음.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>등록</td>
+									<td>
+										<a href="html/mypage/02.결제관리_02.환불계좌관리_등록.html"
+											target="_blank">02.결제관리_02.환불계좌관리_등록.html</a>
+									</td>
+									<td>2020-06-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>03.관심상품관리</td>
+									<td>찜한상품</td>
+									<td></td>
+									<td>찜한상품</td>
+									<td>
+										<a href="html/mypage/03.관심상품관리_01.찜한상품.html"
+											target="_blank">03.관심상품관리_01.찜한상품.html</a>
+									</td>
+									<td>2020-07-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>없음</td>
+									<td>
+										<a href="html/mypage/03.관심상품관리_01.찜한상품_없음.html"
+											target="_blank">03.관심상품관리_01.찜한상품_없음.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>입고알림</td>
+									<td></td>
+									<td>입고알림</td>
+									<td>
+										<a href="html/mypage/03.관심상품관리_02.입고알림.html"
+											target="_blank">03.관심상품관리_02.입고알림.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>없음</td>
+									<td>
+										<a href="html/mypage/03.관심상품관리_02.입고알림_없음.html"
+											target="_blank">03.관심상품관리_02.입고알림_없음.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>04.내쿠폰함</td>
+									<td></td>
+									<td></td>
+									<td>사용가능한쿠폰</td>
+									<td>
+										<a href="html/mypage/04.내쿠폰함_사용가능한쿠폰.html"
+											target="_blank">04.내쿠폰함_사용가능한쿠폰.html</a>
+									</td>
+									<td>2020-07-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>사용완료/지난쿠폰</td>
+									<td>
+										<a href="html/mypage/04.내쿠폰함_사용완료_지난쿠폰.html"
+											target="_blank">04.내쿠폰함_사용완료_지난쿠폰.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>05.문의내역관리</td>
+									<td>1:1문의</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_01.11문의_목록.html"
+											target="_blank">05.문의내역관리_01.11문의_목록.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>접수</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_01.11문의_접수.html"
+											target="_blank">05.문의내역관리_01.11문의_접수.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>답변완료</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_01.11문의_답변완료.html"
+											target="_blank">05.문의내역관리_01.11문의_답변완료.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>문의 등록</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_01.11문의_문의_등록.html"
+											target="_blank">05.문의내역관리_01.11문의_문의_등록.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>상품문의</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_02.상품문의_목록.html"
+											target="_blank">05.문의내역관리_02.상품문의_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>고객의소리</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_03.고객의소리_목록.html"
+											target="_blank">05.문의내역관리_03.고객의소리_목록.html</a>
+									</td>
+									<td>2020-10-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_03.고객의소리_목록_내용없음.html"
+											target="_blank">05.문의내역관리_03.고객의소리_목록_내용없음.html</a>
+									</td>
+									<td>2020-10-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>접수</td>
+									<td>
+										<a href="html/mypage/05.문의내역관리_03.고객의소리_상세.html"
+											target="_blank">05.문의내역관리_03.고객의소리_상세.html</a>
+									</td>
+									<td>2020-10-21</td>
+								</tr>
+								<!-- <tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>접수</td>
+										<td>
+											<a href="html/mypage/05.문의내역관리_03.고객의소리_접수.html" target="_blank">05.문의내역관리_03.고객의소리_접수.html</a>
+										</td>
+										<td>2020-08-20</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>답변 완료</td>
+										<td>
+											<a href="html/mypage/05.문의내역관리_03.고객의소리_답변완료.html" target="_blank">05.문의내역관리_03.고객의소리_답변완료.html</a>
+										</td>
+										<td>2020-07-21</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>등록</td>
+										<td>
+											<a href="html/mypage/05.문의내역관리_03.고객의소리_등록.html" target="_blank">05.문의내역관리_03.고객의소리_등록.html</a>
+										</td>
+										<td>2020-07-03</td>
+									</tr> -->
+								<tr>
+									<td></td>
+									<td>06.활동내역관리</td>
+									<td>상품리뷰</td>
+									<td></td>
+									<td>등록</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_01.상품리뷰_등록.html"
+											target="_blank">06.활동내역관리_01.상품리뷰_등록.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상품리뷰관리 등록(작성가능한상품리뷰)</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_01.상품리뷰관리_등록_작성가능한상품리뷰.html"
+											target="_blank">06.활동내역관리_01.상품리뷰관리_등록_작성가능한상품리뷰.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상품리뷰관리 등록(작성한상품리뷰)</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_01.상품리뷰관리_등록_작성한상품리뷰.html"
+											target="_blank">06.활동내역관리_01.상품리뷰관리_등록_작성한상품리뷰.html</a>
+									</td>
+									<td>2021-04-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>이벤트참여내역</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_02.이벤트참여내역_목록.html"
+											target="_blank">06.활동내역관리_02.이벤트참여내역_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>A/S예약내역</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_03.AS예약내역_목록.html"
+											target="_blank">06.활동내역관리_03.AS예약내역_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>A/S예약내역</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_03.AS예약내역_목록_내용없음.html"
+											target="_blank">06.활동내역관리_03.AS예약내역_목록_내용없음.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_03.AS예약내역_상세.html"
+											target="_blank">06.활동내역관리_03.AS예약내역_상세.html</a>
+									</td>
+									<td>2020-07-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>이전설치예약내역</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_04.이전설치예약내역_목록.html"
+											target="_blank">06.활동내역관리_04.이전설치예약내역_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_04.이전설치예약내역_목록_내용없음.html"
+											target="_blank">06.활동내역관리_04.이전설치예약내역_목록_내용없음.html</a>
+									</td>
+									<td>2020-08-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>해체조립</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_04.이전설치예약내역_해체조립.html"
+											target="_blank">06.활동내역관리_04.이전설치예약내역_해체조립.html</a>
+									</td>
+									<td>2020-08-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이전설치</td>
+									<td>
+										<a href="html/mypage/06.활동내역관리_04.이전설치예약내역_이전설치.html"
+											target="_blank">06.활동내역관리_04.이전설치예약내역_이전설치.html</a>
+									</td>
+									<td>2020-08-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>07.커뮤니티활동</td>
+									<td>01.등록게시물</td>
+									<td></td>
+									<td>목록(팝업 포함)</td>
+									<td>
+										<a href="html/mypage/07.커뮤니티활동_01.등록게시물_01.목록.html"
+											target="_blank">07.커뮤니티활동_01.등록게시물_01.목록.html</a>
+									</td>
+									<td>2020-08-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>결과 없음</td>
+									<td>
+										<a href="html/mypage/07.커뮤니티활동_01.등록게시물_01.목록_결과없음.html"
+											target="_blank">07.커뮤니티활동_01.등록게시물_목록_결과없음.html</a>
+									</td>
+									<td>2020-08-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>02.관심게시물</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/mypage/07.커뮤니티활동_02.관심게시물_01.목록.html"
+											target="_blank">07.커뮤니티활동_02.관심게시물_01.목록.html</a>
+									</td>
+									<td>2020-08-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>결과 없음</td>
+									<td>
+										<a href="html/mypage/07.커뮤니티활동_02.관심게시물_01.목록_결과없음.html"
+											target="_blank">07.커뮤니티활동_02.관심게시물_01.목록_결과없음.html</a>
+									</td>
+									<td>2020-08-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>08.회원정보관리</td>
+									<td>내정보수정</td>
+									<td></td>
+									<td>통합회원</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_통합회원.html"
+											target="_blank">08.회원정보관리_01.내정보수정_통합회원.html</a>
+									</td>
+									<td>2020-07-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>간편회원</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_간편회원.html"
+											target="_blank">08.회원정보관리_01.내정보수정_간편회원.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>개인회원</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_개인회원.html"
+											target="_blank">08.회원정보관리_01.내정보수정_개인회원.html</a>
+									</td>
+									<td>2020-08-19</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>개인회원</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_애플회원가입시.html"
+											target="_blank">08.회원정보관리_01.내정보수정_애플회원가입시.html</a>
+									</td>
+									<td>2020-10-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>사업자회원</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_사업자회원.html"
+											target="_blank">08.회원정보관리_01.내정보수정_사업자회원.html</a>
+									</td>
+									<td>2020-10-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>비밀번호 변경</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_비밀번호변경.html"
+											target="_blank">08.회원정보관리_01.내정보수정_비밀번호변경.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>회원탈퇴</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_01.내정보수정_회원탈퇴.html"
+											target="_blank">08.회원정보관리_01.내정보수정_회원탈퇴.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>회원등급안내</td>
+									<td></td>
+									<td>회원등급안내</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_02.회원등급안내.html"
+											target="_blank">08.회원정보관리_02.회원등급안내.html</a>
+									</td>
+									<td>2020-11-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>회원등급안내</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_02.회원등급안내_임직원.html"
+											target="_blank">08.회원정보관리_02.회원등급안내_임직원.html</a>
+									</td>
+									<td>2020-07-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>웨딩회원신청</td>
+									<td></td>
+									<td>웨딩회원신청</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_03.웨딩회원신청.html"
+											target="_blank">08.회원정보관리_03.웨딩회원신청.html</a>
+									</td>
+									<td>2020-07-01</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>입력</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_03.웨딩회원신청_입력.html"
+											target="_blank">08.회원정보관리_03.웨딩회원신청_입력.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>신청완료</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_03.웨딩회원신청_신청완료.html"
+											target="_blank">08.회원정보관리_03.웨딩회원신청_신청완료.html</a>
+									</td>
+									<td>2020-07-31</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>승인완료</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_03.웨딩회원신청_승인완료.html"
+											target="_blank">08.회원정보관리_03.웨딩회원신청_승인완료.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>배송지관리</td>
+									<td></td>
+									<td>나의배송지</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_04.배송지관리_나의배송지.html"
+											target="_blank">08.회원정보관리_04.배송지관리_나의배송지.html</a>
+									</td>
+									<td>2020-07-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>최근배송지</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_04.배송지관리_최근배송지.html"
+											target="_blank">08.회원정보관리_04.배송지관리_최근배송지.html</a>
+									</td>
+									<td>2020-07-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>배송지등록수정</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_04.배송지관리_배송지등록수정.html"
+											target="_blank">08.회원정보관리_04.배송지관리_배송지등록수정.html</a>
+									</td>
+									<td>2020-07-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>개인정보 이용현황</td>
+									<td></td>
+									<td>개인정보 수집 및 이용</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_05.개인정보이용현황_개인정보수집및이용.html"
+											target="_blank">08.회원정보관리_05.개인정보이용현황_개인정보수집및이용.html</a>
+									</td>
+									<td>2021-03-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>개인정보의 처리 위탁</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_05.개인정보이용현황_개인정보의처리위탁.html"
+											target="_blank">08.회원정보관리_05.개인정보이용현황_개인정보의처리위탁.html</a>
+									</td>
+									<td>2021-03-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>개인정보의 제3자 제공</td>
+									<td>
+										<a href="html/mypage/08.회원정보관리_05.개인정보이용현황_개인정보의제3자제공.html"
+											target="_blank">08.회원정보관리_05.개인정보이용현황_개인정보의제3자제공.html</a>
+									</td>
+									<td>2021-03-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>09.임직원신청</td>
+									<td></td>
+									<td></td>
+									<td>신청</td>
+									<td>
+										<a href="html/mypage/09.임직원신청.html" target="_blank">09.임직원신청.html</a>
+									</td>
+									<td>2020-12-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>신청내역</td>
+									<td>
+										<a href="html/mypage/09.임직원신청_신청내역.html" target="_blank">09.임직원신청_신청내역.html</a>
+									</td>
+									<td>2020-12-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 증빙서류</td>
+									<td>
+										<a href="html/mypage/pop01_증빙서류.html" target="_blank">pop01_증빙서류.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 주문내역</td>
+									<td>
+										<a href="html/mypage/pop02_주문내역.html" target="_blank">pop02_주문내역.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 구매확정</td>
+									<td>
+										<a href="html/mypage/pop03_구매확정.html" target="_blank">pop03_구매확정.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송안내</td>
+									<td>
+										<a href="html/mypage/pop04_배송안내.html" target="_blank">pop04_배송안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송정보</td>
+									<td>
+										<a href="html/mypage/pop05_배송지정보.html" target="_blank">pop05_배송지정보.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 현금영수증 출력</td>
+									<td>
+										<a href="html/mypage/pop06_현금영수증출력.html" target="_blank">pop06_현금영수증출력.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 배송비쿠폰 안내</td>
+									<td>
+										<a href="html/mypage/pop07_배송비쿠폰안내.html" target="_blank">pop07_배송비쿠폰안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 부분취소불가 안내</td>
+									<td>
+										<a href="html/mypage/pop08_부분취소불가안내.html"
+											target="_blank">pop08_부분취소불가안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 사은품반납 안내</td>
+									<td>
+										<a href="html/mypage/pop09_사은품반납안내.html" target="_blank">pop09_사은품반납안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 사용쿠폰 안내</td>
+									<td>
+										<a href="html/mypage/pop10_사용쿠폰안내.html" target="_blank">pop10_사용쿠폰안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 교환반품 신청안내</td>
+									<td>
+										<a href="html/mypage/pop11_교환반품신청안내.html"
+											target="_blank">pop11_교환반품신청안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 교환반품 불가안내</td>
+									<td>
+										<a href="html/mypage/pop12_교환반품불가안내.html"
+											target="_blank">pop12_교환반품불가안내.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 마케팅을 위한 수집이용동의</td>
+									<td>
+										<a href="html/mypage/pop13_마케팅을위한수집이용동의.html"
+											target="_blank">pop13_마케팅을위한수집이용동의.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 사유안내</td>
+									<td>
+										<a href="html/mypage/pop14_사유안내.html" target="_blank">pop14_사유안내.html</a>
+									</td>
+									<td>2021-04-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 : 20년xx월이전 주문내역</td>
+									<td>
+										<a href="html/mypage/pop15_20년xx월이전_주문내역.html"
+											target="_blank">pop15_20년xx월이전_주문내역.html</a>
+									</td>
+									<td>2020-11-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업 :내정보수정_마케팅정보수신여부</td>
+									<td>
+										<a href="html/mypage/pop16_내정보수정_마케팅정보수신여부.html"
+											target="_blank">pop16_내정보수정_마케팅정보수신여부.html</a>
+									</td>
+									<td>2021-07-06</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //마이페이지 -->
+
+			<tr class="view">
+				<td>고객센터(cscenter)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/cscenter/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 고객센터 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td>고객센터</td>
+									<td>01.메인</td>
+									<td></td>
+									<td></td>
+									<td>메인</td>
+									<td>
+										<a href="html/cscenter/01.메인.html" target="_blank">01.메인.html</a>
+									</td>
+									<td>2021-11-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>02.공지사항</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/cscenter/02.공지사항_목록.html" target="_blank">02.공지사항_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/cscenter/02.공지사항_결과없음.html" target="_blank">02.공지사항_결과없음.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/cscenter/02.공지사항_상세.html" target="_blank">02.공지사항_상세.html</a>
+									</td>
+									<td>2020-07-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>03.자주하는질문</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/cscenter/03.자주하는질문_목록.html" target="_blank">03.자주하는질문_목록.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/cscenter/03.자주하는질문_결과없음.html"
+											target="_blank">03.자주하는질문_결과없음.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/cscenter/03.자주하는질문_상세.html" target="_blank">03.자주하는질문_상세.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>04.간단조치방법</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/cscenter/04.간단조치방법_목록.html" target="_blank">04.간단조치방법_목록.html</a>
+									</td>
+									<td>2020-08-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/cscenter/04.간단조치방법_상세.html" target="_blank">04.간단조치방법_상세.html</a>
+									</td>
+									<td>2020-06-24</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>05.제품사용설명서_목록</td>
+									<td></td>
+									<td></td>
+									<td>제품사용설명서</td>
+									<td>
+										<a href="html/cscenter/05.제품사용설명서_목록.html"
+											target="_blank">05.제품사용설명서_목록.html</a>
+									</td>
+									<td>2020-07-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>05.제품사용설명서_상세</td>
+									<td></td>
+									<td></td>
+									<td>제품사용설명서</td>
+									<td>
+										<a href="html/cscenter/05.제품사용설명서_상세.html"
+											target="_blank">05.제품사용설명서_상세.html</a>
+									</td>
+									<td>2020-08-28</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>06.서비스안내/예약</td>
+									<td>A/S예약</td>
+									<td></td>
+									<td>신청</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_AS예약_신청.html"
+											target="_blank">06.서비스안내예약_AS예약_신청.html</a>
+									</td>
+									<td>2020-09-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>완료</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_AS예약_완료.html"
+											target="_blank">06.서비스안내예약_AS예약_완료.html</a>
+									</td>
+									<td>2020-07-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>이전설치예약</td>
+									<td></td>
+									<td>안내</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_이전설치예약_안내.html"
+											target="_blank">06.서비스안내예약_이전설치예약_안내.html</a>
+									</td>
+									<td>2021-01-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>이전설치예약</td>
+									<td>해체/조립</td>
+									<td>신청</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_이전설치예약_해체조립_신청.html"
+											target="_blank">06.서비스안내예약_이전설치예약_해체조립_신청.html</a>
+									</td>
+									<td>2021-08-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>완료</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_이전설치예약_해체조립_완료.html"
+											target="_blank">06.서비스안내예약_이전설치예약_해체조립_완료.html</a>
+									</td>
+									<td>2020-07-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>이전설치</td>
+									<td>신청</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_이전설치예약_이전설치_신청.html"
+											target="_blank">06.서비스안내예약_이전설치예약_이전설치_신청.html</a>
+									</td>
+									<td>2021-08-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>완료</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_이전설치예약_이전설치_완료.html"
+											target="_blank">06.서비스안내예약_이전설치예약_이전설치_완료.html</a>
+									</td>
+									<td>2020-07-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>서비스요금안내</td>
+									<td></td>
+									<td>서비스요금안내</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_서비스요금안내.html"
+											target="_blank">06.서비스안내예약_서비스요금안내.html</a>
+									</td>
+									<td>2020-07-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>소비자보호안내</td>
+									<td></td>
+									<td>소비자보호안내</td>
+									<td>
+										<a href="html/cscenter/06.서비스안내예약_소비자보호안내.html"
+											target="_blank">06.서비스안내예약_소비자보호안내.html</a>
+									</td>
+									<td>2021-08-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>07.부품구매</td>
+									<td></td>
+									<td></td>
+									<td>전시카테고리 링크</td>
+									<td></td>
+									<td class="plan"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>08.매장찾기</td>
+									<td></td>
+									<td></td>
+									<td>매장찾기</td>
+									<td>
+										<a href="html/cscenter/08.매장찾기_01메인.html" target="_blank">08.매장찾기_01메인.html</a>
+									</td>
+									<td>2021-11-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>위치정보 제공 동의</td>
+									<td>
+										<a href="html/cscenter/pop_위치정보제공동의.html" target="_blank">pop_위치정보제공동의.html</a>
+									</td>
+									<td>2020-11-18</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>매장찾기 결과없음</td>
+									<td>
+										<a href="html/cscenter/08.매장찾기_01메인_결과없음.html"
+											target="_blank">08.매장찾기_01메인_결과없음.html</a>
+									</td>
+									<td>2021-11-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>매장정보</td>
+									<td>
+										<a href="html/cscenter/08.매장찾기_02매장정보.html"
+											target="_blank">08.매장찾기_02매장정보.html</a>
+									</td>
+									<td>2020-10-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>직원안내</td>
+									<td>
+										<a href="html/cscenter/08.매장찾기_02매장정보_01.직원안내.html"
+											target="_blank">08.매장찾기_02매장정보_01.직원안내.html</a>
+									</td>
+									<td>2020-11-02</td>
+								</tr>
+								<!-- <tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>팝업</td>
+										<td>
+											<a href="html/cscenter/" target="_blank">08.매장찾기_팝업_직원안내.html</a>
+										</td>
+										<td class="plan"></td>
+									</tr> -->
+								<!-- <tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>팝업</td>
+									<td>
+										<a href="html/cscenter/pop04_상담및방문예약.html"
+											target="_blank">08.매장찾기_팝업_상담및방문예약.html</a>
+									</td>
+									<td>2020-06-29</td>
+								</tr> -->
+								<tr>
+									<td></td>
+									<td>09.카탈로그자료실</td>
+									<td></td>
+									<td></td>
+									<td>안내</td>
+									<td>
+										<a href="html/cscenter/09.카탈로그자료실.html" target="_blank">09.카탈로그자료실.html</a>
+									</td>
+									<td>2020-07-06</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>10.1:1문의</td>
+									<td></td>
+									<td></td>
+									<td>안내</td>
+									<td>
+										<a href="html/cscenter/10.11문의_안내.html" target="_blank">10.11문의_안내.html</a>
+									</td>
+									<td>2020-06-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>등록</td>
+									<td>
+										<a href="html/cscenter/10.11문의_등록.html" target="_blank">10.11문의_등록.html</a>
+									</td>
+									<td>2020-07-21</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>11.고객의소리</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/cscenter/11.고객의소리_목록.html" target="_blank">11.고객의소리_목록.html</a>
+									</td>
+									<td>2021-08-09</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/cscenter/11.고객의소리_상세.html" target="_blank">11.고객의소리_상세.html</a>
+									</td>
+									<td>2020-10-21</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>등록</td>
+									<td>
+										<a href="html/cscenter/11.고객의소리_등록.html" target="_blank">11.고객의소리_등록.html</a>
+									</td>
+									<td>2020-10-21</td>
+								</tr>
+
+								<!-- <tr>
+										<td></td>
+										<td>12.칭찬마당</td>
+										<td></td>
+										<td></td>
+										<td>목록</td>
+										<td>
+											<a href="html/cscenter/12.칭찬마당_목록.html" target="_blank">12.칭찬마당_목록.html</a>
+										</td>
+										<td>2020-07-06</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>상세</td>
+										<td>
+											<a href="html/cscenter/12.칭찬마당_상세.html" target="_blank">12.칭찬마당_상세.html</a>
+										</td>
+										<td>2020-07-08</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>등록</td>
+										<td>
+											<a href="html/cscenter/12.칭찬마당_등록.html" target="_blank">12.칭찬마당_등록.html</a>
+										</td>
+										<td>2020-06-26</td>
+									</tr> -->
+								<tr>
+									<td></td>
+									<td>13.제휴 및 대리점개설</td>
+									<td></td>
+									<td></td>
+									<td>안내</td>
+									<td>
+										<a href="html/cscenter/13.제휴및대리점개설_안내.html"
+											target="_blank">13.제휴및대리점개설_안내.html</a>
+									</td>
+									<td>2020-07-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>대리점 개설 접수.html</td>
+									<td>
+										<a href="html/cscenter/13.대리점개설_접수.html" target="_blank">13.대리점개설_접수.html</a>
+									</td>
+									<td>2020-06-29</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>14.리바트몰 입점문의</td>
+									<td></td>
+									<td></td>
+									<td>리바트몰 입점신청</td>
+									<td>
+										<a href="html/cscenter/14.리바트몰입점문의_입점신청.html"
+											target="_blank">14.리바트몰입점문의_입점신청.html</a>
+									</td>
+									<td>2020-07-17</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>15.상담및방문예약신청</td>
+									<td></td>
+									<td></td>
+									<td>상담및방문예약신청</td>
+									<td>
+										<a href="html/cscenter/15.상담및방문예약신청.html" target="_blank">15.상담및방문예약신청.html</a>
+									</td>
+									<td>2021-11-12</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td>팝업</td>
+									<td></td>
+									<td></td>
+									<td>팝업</td>
+									<td>
+										<a href="html/cscenter/pop01_매장검색.html"
+											target="_blank">pop01_매장검색.html</a><br />
+										<a href="html/cscenter/pop02_주문내역.html"
+											target="_blank">pop02_주문내역.html</a><br />
+										<a href="html/cscenter/pop03_상품검색.html"
+											target="_blank">pop03_상품검색.html</a><br />
+										<a href="html/cscenter/pop04_상담및방문예약.html"
+											target="_blank">pop04_상담및방문예약.html</a>
+									</td>
+									<td class="plan"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //고객센터 -->
+			<tr class="view">
+				<td>Community</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/community/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 커뮤니티 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td>커뮤니티</td>
+									<td>00.공통</td>
+									<td>글등록</td>
+									<td></td>
+									<td>글쓰기 선택</td>
+									<td>
+										<a href="html/community/00.글쓰기_선택.html" target="_blank">00.글쓰기_선택.html</a>
+									</td>
+									<td>2021-05-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>글쓰기</td>
+									<td>
+										<a href="html/community/00.글쓰기.html" target="_blank">00.글쓰기.html</a>
+									</td>
+									<td>2021-05-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>글쓰기 매거진</td>
+									<td>
+										<a href="html/community/00.글쓰기_매거진.html" target="_blank">00.글쓰기_매거진.html</a>
+									</td>
+									<td>2020-08-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>글쓰기 : 이미지 태그 팝업 결과없음</td>
+									<td>
+										<a href="html/community/00.글쓰기_태그결과없음.html"
+											target="_blank">00.글쓰기_태그결과없음.html</a>
+									</td>
+									<td>2020-08-07</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세(필터 팝업)</td>
+									<td>
+										<a href="html/community/01.필터_팝업.html" target="_blank">01.필터_팝업.html</a>
+									</td>
+									<td>2021-04-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>02.오픈하우스</td>
+									<td>랜선집들이</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/community/02.오픈하우스_랜선집들이_목록.html"
+											target="_blank">02.오픈하우스_랜선집들이_목록.html</a>
+									</td>
+									<td>2021-10-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/community/02.오픈하우스_랜선집들이_상세.html"
+											target="_blank">02.오픈하우스_랜선집들이_상세.html</a>
+									</td>
+									<td>2021-07-06</td>
+								</tr>
+								<!-- <tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/community/02.오픈하우스_랜선집들이_상세_와이드.html"
+											target="_blank">02.오픈하우스_랜선집들이_상세_와이드.html</a>
+									</td>
+									<td>2020-10-27</td>
+								</tr> -->
+								<tr>
+									<td></td>
+									<td></td>
+									<td>고수의집들이</td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/community/02.오픈하우스_고수의집들이_목록.html"
+											target="_blank">02.오픈하우스_고수의집들이_목록.html</a>
+									</td>
+									<td>2021-10-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/community/02.오픈하우스_고수의집들이_상세.html"
+											target="_blank">02.오픈하우스_고수의집들이_상세.html</a>
+									</td>
+									<td>2021-07-06</td>
+								</tr>
+								<!-- <tr>
+										<td></td>
+										<td>03.매거진</td>
+										<td></td>
+										<td></td>
+										<td>목록</td>
+										<td>
+											<a href="html/community/03.매거진_목록.html" target="_blank">03.매거진_목록.html</a>
+										</td>
+										<td>2020-09-17</td>
+									</tr> -->
+								<tr>
+									<td></td>
+									<td>03.매거진</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/community/03.매거진힌지_메인.html" target="_blank">03.매거진힌지_메인.html</a>
+									</td>
+									<td>2020-12-02</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>03.매거진</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/community/03.매거진힌지_목록.html" target="_blank">03.매거진힌지_목록.html</a>
+									</td>
+									<td>2021-10-22</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/community/03.매거진_상세.html" target="_blank">03.매거진_상세.html</a>
+									</td>
+									<td>2021-07-06</td>
+								</tr>
+								<!-- 노하우 삭제
+									<tr>
+									<td></td>
+									<td>04.노하우</td>
+									<td></td>
+									<td></td>
+									<td>목록</td>
+									<td>
+										<a href="html/community/04.노하우_목록.html" target="_blank">04.노하우_목록.html</a>
+									</td>
+									<td>2020-09-08</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상세</td>
+									<td>
+										<a href="html/community/04.노하우_상세.html" target="_blank">04.노하우_상세.html</a>
+									</td>
+									<td>2020-09-23</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //커뮤니티 -->
+
+			<tr class="view">
+				<td>온라인 전용(on)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/on/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 온라인 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>신청양식</td>
+									<td></td>
+									<td></td>
+									<td>플리마켓 신청</td>
+									<td>
+										<a href="html/on/플리마켓신청.html" target="_blank">플리마켓신청.html</a>
+									</td>
+									<td>2020-08-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>홈클래스 강사 신청</td>
+									<td>
+										<a href="html/on/홈클래스강사신청.html" target="_blank">홈클래스강사신청.html</a>
+									</td>
+									<td>2020-08-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>홈클래스 신청</td>
+									<td>
+										<a href="html/on/홈클래스신청.html" target="_blank">홈클래스신청.html</a>
+									</td>
+									<td>2020-08-12</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //온라인 -->
+			<tr class="view">
+				<td>매장가구(off)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/off/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 매장가구 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드</td>
+									<td></td>
+									<td></td>
+									<td>브랜드 소개</td>
+									<td>
+										<a href="html/off/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-08-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>02.입주박람회</td>
+									<td></td>
+									<td></td>
+									<td>입주아파트</td>
+									<td>
+										<a href="html/off/02.입주박람회.html" target="_blank">02.입주박람회.html</a>
+									</td>
+									<td>2020-11-17</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>입주아파트 결과 없음</td>
+									<td>
+										<a href="html/off/02.입주박람회_결과없음.html" target="_blank">02.입주박람회_결과없음.html</a>
+									</td>
+									<td>2020-08-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>입주등록</td>
+									<td>
+										<a href="html/off/02.입주박람회_입주등록.html" target="_blank">02.입주박람회_입주등록.html</a>
+									</td>
+									<td>2020-08-12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>상담 및 방문예약 팝업</td>
+									<td>
+										<a href="html/off/pop_상담및방문예약.html" target="_blank">pop_상담및방문예약.html</a>
+									</td>
+									<td>2020-08-14</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //매장가구 -->
+			<tr class="view">
+				<td>주방&amp;욕실(kic)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/kic/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 리모델링 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드소개</td>
+									<td></td>
+									<td></td>
+									<td>브랜드 소개</td>
+									<td>
+										<a href="html/kic/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>02.리모델링</td>
+									<td></td>
+									<td></td>
+									<td>리모델링 상담신청</td>
+									<td>
+										<a href="html/kic/02.리모델링_상담신청.html" target="_blank">02.리모델링_상담신청.html</a>
+									</td>
+									<td>2020-11-17</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //리모델링 -->
+			<tr class="view">
+				<td>사무가구(ofc)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/ofc/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 사무가구 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드소개</td>
+									<td></td>
+									<td></td>
+									<td>브랜드 소개</td>
+									<td>
+										<a href="html/ofc/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>02.공간컨설팅</td>
+									<td></td>
+									<td></td>
+									<td>컨설팅 소개</td>
+									<td>
+										<a href="html/ofc/02.공간컨설팅_컨설팅소개.html" target="_blank">02.공간컨설팅_컨설팅소개.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>분석방법</td>
+									<td>
+										<a href="html/ofc/02.공간컨설팅_분석방법.html" target="_blank">02.공간컨설팅_분석방법.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>컨설팅 문의(선택안함 추가)</td>
+									<td>
+										<a href="html/ofc/02.공간컨설팅_컨설팅문의.html" target="_blank">02.공간컨설팅_컨설팅문의.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>03.상담/방문예약</td>
+									<td></td>
+									<td></td>
+									<td>직영쇼룸</td>
+									<td>
+										<a href="html/ofc/03.상담방문예약_직영쇼룸.html" target="_blank">03.상담방문예약_직영쇼룸.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>카탈로그 신청</td>
+									<td>
+										<a href="html/ofc/03.상담방문예약_카탈로그신청.html"
+											target="_blank">03.상담방문예약_카탈로그신청.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>04.컨설팅 사례/실적</td>
+									<td></td>
+									<td></td>
+									<td>컨설팅 사례 목록</td>
+									<td>
+										<a href="html/ofc/04.컨설팅사례실적_컨설팅사례_목록.html"
+											target="_blank">04.컨설팅사례실적_컨설팅사례_목록.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>컨설팅 사례 상세</td>
+									<td>
+										<a href="html/ofc/04.컨설팅사례실적_컨설팅사례_상세.html"
+											target="_blank">04.컨설팅사례실적_컨설팅사례_상세.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>납품 실적</td>
+									<td>
+										<a href="html/ofc/04.컨설팅사례실적_납품실적.html" target="_blank">04.컨설팅사례실적_납품실적.html</a>
+									</td>
+									<td>2020-08-13</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //사무가구 -->
+			<tr class="view">
+				<td>윌리엄스소노마(ws)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/ws/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 윌리엄스소노마 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드소개</td>
+									<td></td>
+									<td></td>
+									<td>브랜드소개</td>
+									<td>
+										<a href="html/ws/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-10-16</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //윌리엄스소노마 -->
+			<tr class="view">
+				<td>포터리반(pb)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/pb/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 포터리반 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드 소개</td>
+									<td></td>
+									<td></td>
+									<td>브랜드 소개</td>
+									<td>
+										<a href="html/pb/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-10-16</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //포터리반 -->
+			<tr class="view">
+				<td>포터리반 키즈(pk)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/pk/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 포터리반 키즈 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드 소개</td>
+									<td></td>
+									<td></td>
+									<td>브랜드 소개</td>
+									<td>
+										<a href="html/pk/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-10-16</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //포터리반 키즈 -->
+			<tr class="view">
+				<td>웨스트엘름(we)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/we/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 웨스트엘름 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>01.브랜드 소개</td>
+									<td></td>
+									<td></td>
+									<td>브랜드 소개</td>
+									<td>
+										<a href="html/we/01.브랜드소개.html" target="_blank">01.브랜드소개.html</a>
+									</td>
+									<td>2020-10-16</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //웨스트엘름 -->
+
+			<tr class="view">
+				<td>기획전 신규기능 추가</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<!-- 기획전 기능 추가 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04_1.기획전상단네비고정</td>
+									<td>
+										<a href="html/exhibition/04_1.기획전상단네비고정.html"
+											target="_blank">04_1.기획전상단네비고정.html</a>
+									</td>
+									<td>2021-06-04</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //기획전 기능 추가 -->
+
+			<tr class="view">
+				<td>오픈이벤트(openevent)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<!-- 오픈이벤트 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>01-1.이리온</td>
+									<td>
+										<a href="html/openevent/01-1.이리온.html" target="_blank">01-1.이리온.html</a>
+									</td>
+									<td>2020-11-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>01-3.100원</td>
+									<td>
+										<a href="html/openevent/01-3.100원.html" target="_blank">01-3.100원.html</a>
+									</td>
+									<td>2020-11-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>01-4.퀴즈</td>
+									<td>
+										<a href="html/openevent/01-4.퀴즈.html" target="_blank">01-4.퀴즈.html</a>
+									</td>
+									<td>2020-11-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>02-1.리빙대전</td>
+									<td>
+										<a href="html/openevent/02-1.리빙대전.html" target="_blank">02-1.리빙대전.html</a>
+									</td>
+									<td>2020-11-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-1.새해맞이 랜선축제</td>
+									<td>
+										<a href="html/openevent/03-1.새해맞이 랜선축제.html" target="_blank">03-1.새해맞이
+											랜선축제.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-2.1000원딜</td>
+									<td>
+										<a href="html/openevent/03-2.1000원딜.html" target="_blank">03-2.1000원딜.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-3.첫구매감사이벤트</td>
+									<td>
+										<a href="html/openevent/03-3.첫구매감사이벤트.html"
+											target="_blank">03-3.첫구매감사이벤트.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03-4.룰렛이벤트</td>
+									<td>
+										<a href="html/openevent/03-4.룰렛이벤트.html" target="_blank">03-4.룰렛이벤트.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04_1.그랜드오픈</td>
+									<td>
+										<a href="html/openevent/04_1.그랜드오픈.html" target="_blank">04_1.그랜드오픈.html</a>
+									</td>
+									<td>2020-11-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04_2.구매사은 이벤트</td>
+									<td>
+										<a href="html/openevent/04_2.구매사은 이벤트.html" target="_blank">04_2.구매사은
+											이벤트.html</a>
+									</td>
+									<td>2020-11-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>05-1.적립금</td>
+									<td>
+										<a href="html/openevent/05-1.적립금.html" target="_blank">05-1.적립금.html</a>
+									</td>
+									<td>2020-11-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>05-2.내돈내산 후기</td>
+									<td>
+										<a href="html/openevent/05-2.내돈내산 후기.html" target="_blank">05-2.내돈내산 후기.html</a>
+									</td>
+									<td>2020-11-24</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>05-3.주간구매왕</td>
+									<td>
+										<a href="html/openevent/05-3.주간구매왕.html" target="_blank">05-3.주간구매왕.html</a>
+									</td>
+									<td>2020-11-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>06-1.리워드신청소</td>
+									<td>
+										<a href="html/openevent/06-1.리워드신청소.html" target="_blank">06-1.리워드신청소.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>06-2.포토상품평 이벤트</td>
+									<td>
+										<a href="html/openevent/06-2.포토상품평 이벤트.html" target="_blank">06-2.포토상품평
+											이벤트.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>06-3.사은품 이벤트</td>
+									<td>
+										<a href="html/openevent/06-3.사은품 이벤트.html" target="_blank">06-3.사은품 이벤트.html</a>
+									</td>
+									<td>2020-11-30</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07-1.소가구 기획전</td>
+									<td>
+										<a href="html/openevent/07-1.소가구 기획전.html" target="_blank">07-1.소가구 기획전.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07-2.컬러풀 기획전</td>
+									<td>
+										<a href="html/openevent/07-2.컬러풀 기획전.html" target="_blank">07-2.컬러풀 기획전.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>08-1.리바트 라이브</td>
+									<td>
+										<a href="html/openevent/08-1.리바트 라이브.html" target="_blank">08-1.리바트 라이브.html</a>
+									</td>
+									<td>2020-11-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>09-1.아듀2020프레일세일</td>
+									<td>
+										<a href="html/openevent/09-1.아듀2020프레일세일.html"
+											target="_blank">09-1.아듀2020프레일세일.html</a>
+									</td>
+									<td>2020-11-27</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>09-2.헤닝 호텔침대 기획전</td>
+									<td>
+										<a href="html/openevent/09-2.헤닝 호텔침대 기획전.html" target="_blank">09-2.헤닝 호텔침대
+											기획전.html</a>
+									</td>
+									<td>2020-11-23</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //오픈이벤트 -->
+
+			<tr class="view">
+				<td>이벤트 템플릿(event)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/event/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 이벤트 템플릿 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>레이어팝업</td>
+									<td></td>
+									<td></td>
+									<td>00.당첨안내 팝업</td>
+									<td>
+										<a href="html/event/00.팝업_당첨안내.html" target="_blank">00.팝업_당첨안내.html</a>
+									</td>
+									<td>2021-03-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>이벤트 모듈</td>
+									<td></td>
+									<td></td>
+									<td>01.퀴즈 이벤트</td>
+									<td>
+										<a href="html/event/01.퀴즈이벤트.html" target="_blank">01.퀴즈이벤트.html</a>
+									</td>
+									<td>2020-08-31</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>02.정보 수집형</td>
+									<td>
+										<a href="html/event/02.정보수집형.html" target="_blank">02.정보수집형.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>03.출석체크</td>
+									<td>
+										<a href="html/event/03.출석체크.html" target="_blank">03.출석체크.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>04.룰렛</td>
+									<td>
+										<a href="html/event/04.룰렛.html" target="_blank">04.룰렛.html</a>
+									</td>
+									<td>2021-01-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>05.댓글</td>
+									<td>
+										<a href="html/event/05.댓글.html" target="_blank">05.댓글.html</a>
+									</td>
+									<td>2021-08-03</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>06.쿠폰이벤트</td>
+									<td>
+										<a href="html/event/06.쿠폰이벤트.html" target="_blank">06.쿠폰이벤트.html</a>
+									</td>
+									<td>2020-09-16</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07.구매사은이벤트_금액달성형</td>
+									<td>
+										<a href="html/event/07.구매사은이벤트_금액달성형.html"
+											target="_blank">07.구매사은이벤트_금액달성형.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07.구매사은이벤트-상품설정형</td>
+									<td>
+										<a href="html/event/07.구매사은이벤트_상품설정형.html"
+											target="_blank">07.구매사은이벤트_상품설정형.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07.구매사은이벤트-구매왕이벤트</td>
+									<td>
+										<a href="html/event/07.구매사은이벤트_구매왕이벤트.html"
+											target="_blank">07.구매사은이벤트_구매왕이벤트.html</a>
+									</td>
+									<td>2020-09-25</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07.구매사은이벤트-구매사은 신청</td>
+									<td>
+										<a href="html/event/07.구매사은이벤트_구매사은신청.html"
+											target="_blank">07.구매사은이벤트_구매사은신청.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>07.구매사은이벤트-카테고리형</td>
+									<td>
+										<a href="html/event/07.구매사은이벤트_카테고리형.html"
+											target="_blank">07.구매사은이벤트_카테고리형.html</a>
+									</td>
+									<td>2020-09-24</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>08.럭키드로우</td>
+									<td>
+										<a href="html/event/08.럭키드로우.html" target="_blank">08.럭키드로우.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>09.리뷰</td>
+									<td>
+										<a href="html/event/09.리뷰.html" target="_blank">09.리뷰.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>10.비밀번호</td>
+									<td>
+										<a href="html/event/10.비밀번호.html" target="_blank">10.비밀번호.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>11.수신동의</td>
+									<td>
+										<a href="html/event/11.수신동의.html" target="_blank">11.수신동의.html</a>
+									</td>
+									<td>2020-09-04</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //이벤트 템플릿 -->
+
+			<tr class="view">
+				<td>이메일 템플릿(email)</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="html/email/readme.html" target="_blank">Readme · 작업내역</a></td>
+			</tr>
+			<!-- 이메일 템플릿 -->
+			<tr class="fold">
+				<td colspan="8">
+					<div class="fold-content">
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>회원</td>
+									<td></td>
+									<td></td>
+									<td>가입완료</td>
+									<td>
+										<a href="html/email/이메일_회원가입완료.html" target="_blank">이메일_회원가입완료.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>휴면회원전환</td>
+									<td>
+										<a href="html/email/이메일_휴면회원전환.html" target="_blank">이메일_휴면회원전환.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>회원탈퇴</td>
+									<td>
+										<a href="html/email/이메일_회원탈퇴.html" target="_blank">이메일_회원탈퇴.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>축하</td>
+									<td></td>
+									<td></td>
+									<td>생일축하쿠폰</td>
+									<td>
+										<a href="html/email/이메일_생일축하쿠폰.html" target="_blank">이메일_생일축하쿠폰.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>결혼기념일쿠폰</td>
+									<td>
+										<a href="html/email/이메일_결혼기념일쿠폰.html" target="_blank">이메일_결혼기념일쿠폰.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>주문완료</td>
+									<td></td>
+									<td></td>
+									<td>주문내역</td>
+									<td>
+										<a href="html/email/이메일_주문완료_주문내역.html" target="_blank">이메일_주문완료_주문내역.html</a>
+									</td>
+									<td>2021-08-11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>주문취소</td>
+									<td>
+										<a href="html/email/이메일_주문완료_주문취소.html" target="_blank">이메일_주문완료_주문취소.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>교환신청</td>
+									<td>
+										<a href="html/email/이메일_주문완료_교환신청.html" target="_blank">이메일_주문완료_교환신청.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>반품신청(환불)</td>
+									<td>
+										<a href="html/email/이메일_주문완료_반품신청.html" target="_blank">이메일_주문완료_반품신청.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>기타</td>
+									<td></td>
+									<td></td>
+									<td>마케팅정보수신동의안내</td>
+									<td>
+										<a href="html/email/이메일_마케팅정보수신동의안내.html"
+											target="_blank">이메일_마케팅정보수신동의안내.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>기타</td>
+									<td></td>
+									<td></td>
+									<td>개인정보 이용내역 통지 안내</td>
+									<td>
+										<a href="html/email/이메일_개인정보이용내역통지안내.html"
+											target="_blank">이메일_개인정보이용내역통지안내.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>기타</td>
+									<td></td>
+									<td></td>
+									<td>개인정보수집동의안내</td>
+									<td>
+										<a href="html/email/이메일_개인정보수집동의안내.html" target="_blank">이메일_개인정보수집동의안내.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>신고 및 제안</td>
+									<td>
+										<a href="html/email/이메일_신고및제안.html" target="_blank">이메일_신고및제안.html</a>
+									</td>
+									<td>2020-10-26</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<!-- //이메일 템플릿 -->
+		</tbody>
+	</table>
+	<p class="help">* class="plan" 을 제외한 td 의 가장 최근 날짜와 날짜가 속한 그룹에 update 클래스가 자동으로 부여됨</p>
+
+	<script src="./assets/js/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$('.fold-table tr.view').on('click', function () {
+				$(this).toggleClass('open').next('.fold').toggleClass('open');
+			});
+		});
+
+		// 마지막에 작업한 날짜 update 클래스 추가 및 그룹 view tr 에도 update 클래스 추가
+		var updateDates = [];
+		// 올바른 날짜 문자열 형식인지 체크. 2000-3-4 같은 형식까지 포함
+		function checkValidDateFormat(str) {
+			var datatimeRegexp = /[0-9]{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])/;
+			if (!datatimeRegexp.test(str)) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		// 날짜 데이터를 입력받아 문자열로 반환
+		function getFormatDate(date) {
+			var year = date.getFullYear();
+			var month = 1 + date.getMonth();
+			month = month >= 10 ? month : '0' + month;
+			var day = date.getDate();
+			day = day >= 10 ? day : '0' + day;
+			return year + '-' + month + '-' + day;
+		}
+
+		// td 에서 날짜 형식 문자열을 배열로 할당해 max date 찾기
+		$('#tableWorksht tbody tr').each(function () {
+			if (!$(this).hasClass('fold')) {
+				var $td = $(this).find('td:last-child');
+				if (!$td.hasClass('plan')) {
+					if (checkValidDateFormat($td.text())) {
+						updateDates.push(new Date($td.text()));
+					}
+				}
+			}
+		});
+		var maxDate = new Date(Math.max.apply(null, updateDates));
+		// max date td 에 update 클래스 부여하고 상위 그룹 tr 에도 update 클래스 부여
+		$('#tableWorksht tbody tr').each(function () {
+			if (!$(this).hasClass('fold')) {
+				var $td = $(this).find('td:last-child');
+				if (!$td.hasClass('plan')) {
+					if (checkValidDateFormat($td.text())) {
+						if (new Date($td.text()) >= maxDate) {
+							$td.addClass('update');
+							if ($td.closest('.fold').length) {
+								$td.closest('.fold').prev('.view').children('td:first-child').addClass('update');
+							}
+						} else {
+							$td.addClass('complete');
+						}
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

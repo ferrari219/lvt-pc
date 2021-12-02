@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>Alert 샘플</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<style>
+			.padding {
+				padding: 20px;
+			}
+		</style>
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+	</head>
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container padding">
+					<h1 class="title">
+						Alert 샘플
+					</h1>
+				</div>
+			</div>
+		</section>
+		<main role="main">
+			<section class="section">
+				<div class="container">
+					<button class="button is-primary modal-button" data-target="modal-alert-1" aria-haspopup="true">alert 링크</button>
+					<button class="button is-primary modal-button-js" data-target="modal-alert-2" aria-haspopup="true">alert 링크 동적 호출</button>
+				</div>
+			</section>
+		</main>
+
+		<script>
+			var jsPopup = '<div id="modal-alert-1" class="modal modal-alert is-active">';
+			jsPopup += '	<div class="modal-background"></div>';
+			jsPopup += '	<div class="modal-card">';
+			jsPopup += '	<header class="modal-card-head">';
+			jsPopup += '	<button type="button" class="delete is-large" aria-label="close"></button>';
+			jsPopup += '	</header>';
+			jsPopup += '	<section class="modal-card-body">';
+			jsPopup += '	<p class="word-wrap">';
+			jsPopup += '	예약 구매상품은 희망배송일과 관계없이 지정된 배송일부터 순차 배송됩니다.';
+			jsPopup += '	</p>';
+			jsPopup += '	<div class="button-area">';
+			jsPopup += '	<button type="button" class="button is-small is-dark button-modal-close">취소</button>';
+			jsPopup += '	<button type="button" class="button is-small is-primary">확인</button>';
+			jsPopup += '	</div>';
+			jsPopup += '	</section>';
+			jsPopup += '	</div>';
+			jsPopup += '	</div>';
+			$(document).on('click', '.modal-button-js', function () {
+				$('html').append(jsPopup);
+				$('#' + $(this).data('target')).addClass('is-active');
+			});
+		</script>
+		<!-- S : Alert 레이어 팝업 -->
+		<div id="modal-alert-1" class="modal modal-alert is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+				<section class="modal-card-body">
+					<p class="word-wrap">
+						예약 구매상품은 희망배송일과 관계없이 지정된 배송일부터 순차 배송됩니다.
+					</p>
+					<div class="button-area">
+						<button type="button" class="button is-small is-dark button-modal-close">취소</button>
+						<button type="button" class="button is-small is-primary">확인</button>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- E : Alert 레이어 팝업 -->
+	</body>
+</html>
