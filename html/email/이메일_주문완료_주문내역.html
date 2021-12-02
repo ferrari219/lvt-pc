@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>이메일 주문내역</title>
+	</head>
+	<body>
+		<!-- S : 이메일 뉴스레터 -->
+		<xmeta http-equiv="Content-Type" content="text/html;charset=utf-8">
+			<xmeta http-equiv="Content-Script-Type" content="text/javascript">
+				<xmeta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, minimal-ui">
+					<xmeta name="apple-mobile-web-app-capable" content="yes">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; background-color: #f6f6f6;" bgcolor="#f6f6f6">
+							<tbody>
+								<tr>
+									<td align="center">
+										<!-- 아웃룩용 max-width 핵 -->
+										<!--[if (gte mso 9)|(IE)]>
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr><td width="780">
+                                        <![endif]-->
+										<div style="max-width: 600px; margin: 0 auto; word-break: keep-all !important;">
+											<table
+												align="left"
+												border="0"
+												cellpadding="0"
+												cellspacing="0"
+												style="max-width: 600px; margin-bottom: 20px; font-family: '맑은고딕', Malgun Gothic, '돋움', Dotum, Helvetica, 'Apple SD Gothic Neo', Sans-serif; background-color: #fff; -webkit-text-size-adjust: 100%; text-align: left;"
+												bgcolor="#fff"
+											>
+												<tbody>
+													<tr>
+														<td style="width: 5%"></td>
+														<td>
+															<!-- S : Email Body -->
+															<table border="0" cellpadding="0" cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td height="35"></td>
+																	</tr>
+																	<!-- Header -->
+																	<tr>
+																		<td height="54" align="center">
+																			<a href="#"><img src="https://static.hyundailivart.co.kr/assets/images/email/logo.png" alt="HYUNDAI LIVART" width="150" height="54" style="vertical-align: top" /></a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="16"></td>
+																	</tr>
+																	<tr>
+																		<td align="center">
+																			<a href="#" style="display: inline-block; vertical-align: middle; font-size: 17px; color: #333; line-height: 17px; text-decoration: none">리바트몰</a>
+																			<span style="display: inline-block; vertical-align: middle; width: 1px; height: 13px; background-color: #ddd; margin: 2px 15px 0 15px"></span>
+																			<a href="#" style="display: inline-block; vertical-align: middle; font-size: 17px; color: #333; line-height: 18px; text-decoration: none">커뮤니티</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="50"></td>
+																	</tr>
+																	<!-- //Header -->
+																	<tr>
+																		<td align="center">
+																			<img src="https://static.hyundailivart.co.kr/assets/images/email/icon_order_complete.png" alt="" width="61" height="66" style="vertical-align: top" />
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="30"></td>
+																	</tr>
+																	<tr>
+																		<td style="line-height: 34px; font-size: 25px; color: #333; letter-spacing: -1px; text-align: center">홍*동 고객님, 주문이 완료되었습니다.</td>
+																	</tr>
+																	<tr>
+																		<td height="30"></td>
+																	</tr>
+																	<tr>
+																		<td style="line-height: 22px; font-size: 14px; color: #777; text-align: left">주문번호 20181008GHP112</td>
+																	</tr>
+																	<tr>
+																		<td height="20"></td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<!-- 주문정보 -->
+																			<table border="0" width="100%" cellpadding="0" cellspacing="0" style="width: 100%">
+																				<tbody>
+																					<tr>
+																						<td colspan="2" height="2" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="80" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">상품정보</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">
+																							<table border="0" width="100%" cellpadding="0" cellspacing="0" style="width: 100%">
+																								<tbody>
+																									<tr>
+																										<td width="100" style="vertical-align: top; font-size: 0">
+																											<img src="https://static.hyundailivart.co.kr/assets/images/email/sample.jpg" width="100" alt="" />
+																										</td>
+																										<td style="padding: 0 0 0 12px; vertical-align: middle; font-size: 14px">
+																											리바트 온라인
+																											<span style="display: block; margin: 8px 0 8px 0; font-size: 16px; color: #333">발렌 3인 라텍스 패브릭소파세트 2색 택 1</span>
+
+																											<span style="display: inline-block; margin: -1px 0 0 0; vertical-align: top; font-size: 13px">ㄴ</span>그레이 / 왼쪽 (+30,000원)
+																										</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="80" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">판매가격</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">1,325,000 원</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="80" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">수량</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">1</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="80" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">구매가</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">1,100,000 원</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="80" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">배송정보</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">무료배송</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<!-- //주문정보 -->
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="35"></td>
+																	</tr>
+																	<tr>
+																		<td style="line-height: 22px; font-size: 18px; color: #333; font-weight: bold; text-align: left">결제내역</td>
+																	</tr>
+																	<tr>
+																		<td height="15"></td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<!-- 결제내역 -->
+																			<table border="0" width="100%" cellpadding="0" cellspacing="0" style="width: 100%">
+																				<tbody>
+																					<tr>
+																						<td colspan="2" height="2" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="105" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">최종결제금액</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">1,325,000 원</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="105" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">결제수단</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">신용카드 : 현대카드 ( 1234-5678-7897-9678 / 3개월 무이자 / 2020.10.20 12:41 )</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																					<tr>
+																						<td width="105" style="font-size: 15px; text-align: left; color: #333; padding: 15px 0 15px 0">배송주소</td>
+																						<td style="font-size: 15px; text-align: left; color: #777; padding: 15px 0 15px 0">서울특별시 마포구 양화로 113, 4층</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="1" style="background-color: #ddd" bgcolor="#ddd"></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<!-- //결제내역 -->
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="25"></td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" style="display: block; height: 60px; font-size: 17px; color: #fff; background-color: #2a384d; text-decoration: none; text-align: center; line-height: 60px">주문내역 확인하기</a>
+																		</td>
+																	</tr>
+																	<!-- 거래조건 정보 공지 -->
+																	<tr>
+																		<td>
+																			<table border="0" width="100%" cellpadding="0" cellspacing="0" style="width: 100%">
+																				<tbody>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; padding: 40px 0 15px 0; font-size: 18px; color: #333; letter-spacing: -1px; text-align: left; font-weight: bold;">상품의 공급방법 및 시기 안내</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">1.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							당사가 직접 배송하는 경우, 설치제품 또는 가구제품의 배송기간은 주문후 4~7일 정도 소요됩니다. 
+																							결제 후 SMS, 알림톡 또는 유선을 통해 배송일을 안내드립니다. 단, 주문의 폭주로 인한 택배지연, 수입지연, 천재지변 등의 경우가 발생되었을 때, 
+																							배송이 지연될 수 있으며 이러한 경우 사전에 고객님께 SMS, 메일 혹은 유선을 통한 연락으로 배송지연을 안내드리며 
+																							상담을 통해 배송일을 재조정 하실 수 있습니다.<br/> (가구외 제품의 경우, 주문 후 4~10일 정도 소요됩니다)</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">2.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							장비 사용 및 현장에서 추가 발생하는 비용 (3층 사다리차, 엘리베이터 사용료, 지게차 사용료 등)은 고객님의 부담입니다.<br/> 
+																							①	1, 2층의 경우에도 입구가 협소할 경우에도 장비가 사용될 수 있습니다.<br/>
+																							②	사다리차 진입이 어려워 계단을 통해 수작업을 진행할 경우 수작업비용이 발생 될 수 있습니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">3.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							배송지가 다른 경우에는 주문 분리가 불가하오니 개별 주문해주시기 바랍니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">4.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							브랜드상품(리바트몰내에서 판매 중인 외부 브랜드 상품)은 제조 및 배송을 해당 브랜드에서 진행하므로 주문하신 상품의 배송안내사항을 참고해주십시오.</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; padding: 20px 0 15px 0; font-size: 18px; color: #333; letter-spacing: -1px; text-align: left; font-weight: bold;">구매안전서비스</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left; padding-bottom: 20px;">
+																							전자상거래 등에서의 소비자보호에 관한 법률 제13조 제2항 제10호에 따른 결제대금예치 또는 
+																							같은법 제24조 제1항 각 호에 따른 소비자피해보상보험계약 등을 체결하여 
+																							고객님께서 현금 결제한 금액에 대해 안전거래를 보장하고 있음을 다음과 같이 증명합니다.
+																						</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							서비스제공자 : 엔에이치엔한국사이버결제 주식회사 <br/>
+																							서비스등록번호 : 제 A11-150706-8003호<br/>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; padding: 20px 0 15px 0; font-size: 18px; color: #333; letter-spacing: -1px; text-align: left; font-weight: bold;">상품의 교환/반품 안내</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left; padding-bottom: 10px;">
+																							〈구매 후 교환/반품 방법 안내〉
+																						</td>
+																						<tr>
+																							<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">1.</td>
+																							<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left; padding-bottom: 10px;">
+																								일반 가구(별도 조립 또는 설치가 필요 없는 상품)의 경우 인도 받은 날로부터 7일 이내에 계약에 관한 청약철회가 가능합니다. 
+																								단, 고객님의 책임 있는 사유로 상품이 멸실 되거나 주문제작(시스템 주방 포함)등의 구매에 관한 계약을 체결한 고객님은 아래의 기준에 
+																								의거하여 청약을 철회 할 수 있습니다.</td>
+																						</tr>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<table width="100%" cellpadding="0" cellspacing="0" style="width: 100%; border:1px solid #000; border-collapse: collapse; margin-bottom: 10px;">
+																				<tbody>
+																					<tr>
+																						<td style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">구분</td>
+																						<td style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">대금결제</td>
+																						<td style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">실측</td>
+																						<td style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">주문확정</td>
+																						<td style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">주문제작</td>
+																						<td style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">배송</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 13px; text-align: center; color: #000; vertical-align: middle; padding: 5px; border:1px solid #000;">내용</td>
+																						<td width="200" colspan="2" style="font-size: 13px; text-align: left; color: #000; vertical-align: baseline; padding: 5px; border:1px solid #000;">고객님의 비용발생 없이 철회가능</td>
+																						<td width="300" colspan="3" style="font-size: 13px; text-align: left; color: #000; vertical-align: baseline; padding: 5px; border:1px solid #000;">실측 후 주문 확정에 따른 고객님의 동의를 받은 제작 작업이 착수된 이후(물품 배송 전) 철회시 실손해를 배상. 물품이 배송된 후에는 철회 불가</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<table width="100%" cellpadding="0" cellspacing="0" style="width: 100%;">
+																				<tbody>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">2.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							고객님의 단순 변심, 배송 중 취소, 입구/설치공간 협소로 인한 교환/반품 시 왕복운송비 또는 기타 제반비용이 청구됩니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">3.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							상품이 표시, 광고 내용과 다르거나 계약 내용과 다르게 이행된 경우에는 상품 수령 후 3개월 이내 또는 
+																							그 사실을 알 수 있었던 날로부터 30일 이내에 요청 할 수 있습니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">4.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left; padding-bottom: 10px;">
+																							청약철회는 현대리바트 고객센터로 전화(1577-3332) 또는 인터넷(www.hyundailivart.co.kr)로 신청하는 방법을 이용하시거나 하단의 서식을
+																								작성하여 다음의 주소로 등기우편을 보내주시면 됩니다. (경기도 용인시 처인구 남사읍 경기동로 316)</td>
+																					</tr>
+																					<td colspan="2" style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left; padding-bottom: 10px;">
+																						〈교환/반품 불가 사유〉
+																					</td>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">1.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																						고객에게 책임있는 사유로 상품이 멸실 또는 훼손된 경우 (단, 상품의 내용 확인을 위하여 포장 등을 훼손한 경우에는 청약철회를 할 수 있습니다.)</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">2.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																						고객의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">3.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																						시간의 경과에 의하여 재판매가 곤란할 정도로 상품의 가치가 현저히 감소한 경우</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">4.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																						같은 성능을 지닌 상품으로 복제가 가능한 경우 그 원본인 상품의 포장을 훼손한 경우</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">5.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																						가구 특성상 조립이 된 후에는 상품의 가치가 하락하여 판매가 불가능하므로 조립을 완료한 경우</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">6.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																						고객의 주문 확인 후 제작이 들어가는 주문제작상품 또는 고객의 요청에 의하여 상품 사양이 변경된 경우 (제작이 시작된 이후에는 취소 및 교환/반품이 불가) </td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; padding: 20px 0 15px 0; font-size: 18px; color: #333; letter-spacing: -1px; text-align: left; font-weight: bold;">청약철회의 효력</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">1.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							당사는 청약철회가 있은 후 고객님으로부터 상품을 반환 받은 경우 3영업일 이내에 이미 지급받은 상품의 
+																							대금을 환급합니다. 환급을 지연하는 경우, 공정거래위원회가 정하여 고시하는 지연이자율을 곱하여 산정한 지연이자를 지급합니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">2.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							청약철회의 경우 상품의 반환에 필요한 비용은 고객님이 부담합니다. 다만 상품의 내용이 표시, 
+																							광고 내용과 다르거나 계약내용과 다르게 이행된 경우에는 당사가 부담합니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">3.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							기타 당사의 약관이나 이용안내에 규정되지 않은 교환/반품에 대한 사항 및 품질보증, 
+																							피해보상에 대한 사항은 공정거래위원회가 정하여 고시하는 소비자분쟁해결기준에 정한 바에 따릅니다.</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" style="line-height: 22px; padding: 20px 0 15px 0; font-size: 18px; color: #333; letter-spacing: -1px; text-align: left; font-weight: bold;">
+																							소비자 피해 보상, 재화 등에 대한 불만 및 소비자와 사업자간 분쟁 처리에 관한 사항</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">1.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							소비자 피해보상 및 불만 신청 : 현대리바트 고객센터 1577-3332, 리바트몰 1:1문의, 카카오톡상담</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">2.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							고객님께서 제기하는 정당한 의견이나 불만을 반영하고 그 피해를 보상처리하기 위하여 피해보상처리기구를 설치, 운영합니다</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">3.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							당사는 고객님으로부터 제출되는 불만사항 및 의견은 우선적으로 그 사항을 처리합니다. 다만 신속한 처리가 곤란한 
+																							경우에는 고객님에게 그 사유와 처리일정을 즉시 통보합니다.</td>
+																					</tr>
+																					<tr>
+																						<td width="50" style="font-size: 15px; text-align: left; color: #777; vertical-align: baseline;">4.</td>
+																						<td style="line-height: 22px; font-size: 15px; color: #777; letter-spacing: -1px; text-align: left;">
+																							소비자 피해 분쟁 조정 : 공정거래위원회 또는 시,도지사가 의뢰하는 분쟁조정기관의 조정</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</td>
+																	</tr>
+																	<!-- //거래조건 정보 공지 -->
+																	<!-- footer -->
+																	<tr>
+																		<td height="45"></td>
+																	</tr>
+																	<tr>
+																		<td height="1" style="background-color: #333" bgcolor="#333"></td>
+																	</tr>
+																	<tr>
+																		<td height="35"></td>
+																	</tr>
+																	<tr>
+																		<td height="54" align="center">
+																			<a href="#"><img src="https://static.hyundailivart.co.kr/assets/images/email/logo.png" alt="HYUNDAI LIVART" width="150" height="54" style="vertical-align: top" /></a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="35"></td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<!-- 연락처/주소 -->
+																			<table border="0" cellpadding="0" cellspacing="0">
+																				<tbody>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">대표이사</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">윤기철</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">본사주소</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">경기도 용인시 남사면 경기동로 316</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">서울사무소 주소</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">서울특별시 강남구 압구정로 201</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">영업문의</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">02-3480-8000</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">고객센터</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">1800-5300(평일09시~18시, 토/일/공휴일 휴무)</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">팩스</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">02-6442-8081</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">이메일</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">livartcs@hyundaimall.com</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">사업자등록번호</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">
+																							135-81-32239
+																							<a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1358132239">사업자확인하기 〉</a>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="12"></td>
+																					</tr>
+																					<tr>
+																						<td width="120" style="font-size: 13px; text-align: left; color: #333">통신판매업신고</td>
+																						<td style="font-size: 13px; text-align: left; color: #777">용인-00049</td>
+																					</tr>
+																					<tr>
+																						<td colspan="2" height="20"></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<!-- //연락처/주소 -->
+																			<!-- gray box -->
+																			<!-- 210819 주문완료 메일에만 적용되는 footer -->
+																			<table border="0" cellpadding="0" cellspacing="0" style="background-color: #e1e1e1" bgcolor="#e1e1e1" width="100%">
+																				<tbody>
+																					<tr>
+																						<td height="20" colspan="3"></td>
+																					</tr>
+																					<tr>
+																						<td width="15"></td>
+																						<td>
+																							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																								<tbody>
+																									<tr>
+																										<td style="text-align: left; font-size: 13px; color: #777; line-height: 23px; padding-bottom: 10px;">
+																											본 메일은 발신전용으로 화답하지 않습니다.<br />
+																											문의사항은 고객센터 (1800-5300)로 문의 바랍니다.<br />
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="text-align: center; font-size: 13px; color: #777; line-height: 23px; padding-bottom: 10px;">
+																											<a style="color: #777;" href="https://www.hyundailivart.co.kr/footerTermInfo?type=2">이용약관</a>&nbsp; | &nbsp;
+																											<a style="color: #777;" href="https://www.hyundailivart.co.kr/footerTermInfo?type=1">개인정보처리방침</a>&nbsp; | &nbsp;
+																											<a style="color: #777;" href="https://static.hyundailivart.co.kr/assets/images/email/withdraw.jpg">청약철회신청서 다운로드</a>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="text-align: left; font-size: 13px; color: #777; line-height: 23px">If you don’t want to receive this mail anymore, <a href="#">[click here]</a></td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</td>
+																						<td width="15"></td>
+																					</tr>
+																					<tr>
+																						<td height="20" colspan="3"></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<!-- //gray box -->
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="50"></td>
+																	</tr>
+																</tbody>
+															</table>
+															<!-- E : Email Body -->
+														</td>
+														<td style="width: 5%"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!--[if mso]>
+                                        </td></tr>
+                                        </table>
+                                        <![endif]-->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</xmeta>
+				</xmeta>
+			</xmeta>
+		</xmeta>
+		<!-- E : 이메일 뉴스레터 -->
+	</body>
+</html>
