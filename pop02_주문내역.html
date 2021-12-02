@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>주문내역 팝업</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+
+	<body>
+		<!-- S : 주문내역 popup : 200617 -->
+		<div id="modal-order-history" class="modal is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">주문내역</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+
+				<form action="#">
+					<fieldset>
+						<legend>날짜 기간 조회하기</legend>
+						<div class="modal-card-top-container">
+							<!-- S : 날짜 선택 -->
+							<div class="pop-branch-search date-search">
+								<div class="date-select-wrap">
+									<div class="date-select-month">
+										<ul class="time-select-wrap is-flex">
+											<li>
+												<input type="radio" id="selectMonth01" class="radio time-select" name="selectMonth" checked="" />
+												<label for="selectMonth01" class="label">
+													<span class="txt">1개월</span>
+												</label>
+											</li>
+											<li>
+												<input type="radio" id="selectMonth02" class="radio time-select" name="selectMonth" />
+												<label for="selectMonth02" class="label">
+													<span class="txt">3개월</span>
+												</label>
+											</li>
+											<li>
+												<input type="radio" id="selectMonth03" class="radio time-select" name="selectMonth" />
+												<label for="selectMonth03" class="label">
+													<span class="txt">6개월</span>
+												</label>
+											</li>
+											<li>
+												<input type="radio" id="selectMonth04" class="radio time-select" name="selectMonth" />
+												<label for="selectMonth04" class="label">
+													<span class="txt">1년</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+
+									<div class="datepicker-wrap">
+										<input type="text" class="input datepicker" id="fromDate" value="2020.05.16" readonly="readonly" period-valid-check="true" data-year="button" /> ~
+										<input type="text" class="input datepicker" id="toDate" value="2020-06-15" readonly="readonly" period-valid-check="true" data-year="button" />
+										<button type="submit" class="button is-primary">조회하기</button>
+									</div>
+								</div>
+							</div>
+							<!-- E : 날짜 선택 -->
+						</div>
+					</fieldset>
+				</form>
+
+				<section class="modal-card-body scrollbar-container">
+					<h3 class="hidden">주문내역</h3>
+					<!-- S : 검색 결과 -->
+					<div class="order-history-table-wrap">
+						<!--  scrollbar-container -->
+						<table class="table is-bordered order-history-table">
+							<caption>
+								선택, 주문일(주문번호), 상풍명, 최종결제금액, 주문상태 항목이 있는 주문내역 검색 결과
+							</caption>
+							<colgroup>
+								<!-- 200618 콜 width값 변경 -->
+								<col style="width: 8%" />
+								<col style="width: 20%" />
+								<col style="" />
+								<col style="width: 14%" />
+								<col style="width: 10%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">주문일(주문번호)</th>
+									<th scope="col">상품명</th>
+									<th scope="col">최종결제금액</th>
+									<th scope="col">주문상태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="radio-wrap">
+										<div class="radio">
+											<input type="radio" name="order-history" id="order-history-01" />
+											<label for="order-history-01"></label>
+										</div>
+									</td>
+									<td>
+										<div class="date-order-number-wrap">
+											<span class="date">2002.10.20</span>
+											<div class="order-number">(<span>20201020_0000019</span>)</div>
+										</div>
+									</td>
+									<td>
+										<div class="items-info-wrap">
+											<!-- 200618 img-size-100, mr2 클래스 추가 -->
+											<span class="img-size-100 mr2">
+												<img class="img" src="../../assets/images/common/sample_100.jpg" alt="" />
+											</span>
+
+											<div class="section-contents-item">
+												<span class="section-contents-item__brand">세컨드컨테이너</span>
+												<p class="section-contents-item__name">
+													<strong class="section-contents-item__name--event">[NEW컬러출시예약구매]</strong>
+													<span class="section-contents-item__name--text text-ellipsis-2">라떼는없던할인 뉴 레가토 리클라이너 소파 참편한 쇼파 방방뛰어 쇼파파파파퐈 드러누어 쇼파파파</span>
+												</p>
+												<!-- 선택 옵션 -->
+												<ul class="section-contents-item__options">
+													<li>
+														<div class="section-contents-item__options--titwrap is-flex">
+															<p class="section-contents-item__options--title">후아 리프트업 테이블후아 리프트업 테이블후아 리프트업 테이블</p>
+															<ul>
+																<li class="section-contents-item__options--subwrap is-flex">
+																	<p class="section-contents-item__options--sub">블랙 / 가죽 / 팔걸이 좌측 (+30,000)</p>
+																</li>
+															</ul>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="price final-price is-bold">99,999,999<span class="won is-normal">원</span></div>
+									</td>
+									<td>
+										<span class="order-state">결제완료</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="radio-wrap">
+										<div class="radio">
+											<input type="radio" name="order-history" id="order-history-02" />
+											<label for="order-history-02"></label>
+										</div>
+									</td>
+									<td>
+										<div class="date-order-number-wrap">
+											<span class="date">2002.10.20</span>
+											<div class="order-number">(<span>20201020_0000019</span>)</div>
+										</div>
+									</td>
+									<td>
+										<div class="items-info-wrap">
+											<span class="img-size-100 mr2">
+												<img class="img" src="../../assets/images/common/sample_100.jpg" alt="" />
+											</span>
+
+											<div class="section-contents-item">
+												<span class="section-contents-item__brand">세컨드컨테이너</span>
+												<p class="section-contents-item__name">
+													<strong class="section-contents-item__name--event">[NEW컬러출시예약구매]</strong>
+													<span class="section-contents-item__name--text text-ellipsis-2">라떼는없던할인 뉴 레가토 리클라이너 소파 참편한 쇼파 방방뛰어 쇼파파파파퐈 드러누어 쇼파파파</span>
+												</p>
+												<!-- 선택 옵션 -->
+												<ul class="section-contents-item__options">
+													<li>
+														<div class="section-contents-item__options--titwrap is-flex">
+															<p class="section-contents-item__options--title">후아 리프트업 테이블후아 리프트업 테이블후아 리프트업 테이블</p>
+															<ul>
+																<li class="section-contents-item__options--subwrap is-flex">
+																	<p class="section-contents-item__options--sub">블랙 / 가죽 / 팔걸이 좌측 (+30,000)</p>
+																</li>
+															</ul>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="price final-price is-bold">99,999,999<span class="won is-normal">원</span></div>
+									</td>
+									<td>
+										<span class="order-state">결제완료</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- E : 검색 결과 -->
+				</section>
+				<div class="modal-card-foot">
+					<button type="button" class="button is-dark">취소</button>
+					<button type="button" class="button is-primary">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- E : 주문내역 popup -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/jquery-ui.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+
+		<script>
+			$(function () {
+				// S : datepicker 처리
+				// datepicker 적용
+				if ($('.datepicker-wrap .datepicker').length > 0) {
+					// 달력 : datepicker 기본 세팅
+					$.datepicker.setDefaults({
+						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						dateFormat: 'yy.mm.dd',
+						showMonthAfterYear: true,
+						yearSuffix: '년',
+					});
+					$.each($('.datepicker-wrap .datepicker'), function () {
+						var $this = $(this);
+						if ($(this).data('year') == 'button') {
+							$this.datepicker({
+								beforeShow: function () {
+									setTimeout(function () {
+										drawChangeYear($this);
+									}, 0);
+								},
+								onChangeMonthYear: function (y, m, ins) {
+									setTimeout(function () {
+										drawChangeYear($this);
+									}, 0);
+								},
+							});
+						} else {
+							$this.datepicker();
+						}
+					});
+				}
+				// datepicker : 연도 버튼 컨트롤
+				function drawChangeYear(datebox) {
+					var prevStr = '<a class="ui-datepicker-prev ui-corner-all ws-year" id="wsPrevYear" style="left: 0px">이전 년</a>';
+					var nextStr = '<a class="ui-datepicker-next ui-corner-all ws-year" id="wsNextYear" style="right: 0px;">다음 년</a>';
+					$('.ui-datepicker-header').prepend(prevStr);
+					$('.ui-datepicker-header').prepend(nextStr);
+
+					$('#wsPrevYear').on('click', function (e) {
+						e.preventDefault();
+						$.datepicker._adjustDate($(datebox), -1, 'Y');
+					});
+					$('#wsNextYear').on('click', function (e) {
+						e.preventDefault();
+						$.datepicker._adjustDate($(datebox), 1, 'Y');
+					});
+				}
+
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+			});
+			// 커스텀 스크롤
+			$('.scrollbar-container').scrollbar();
+		</script>
+	</body>
+</html>
