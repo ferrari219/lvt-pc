@@ -1,0 +1,370 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon2-comm-head-name: 'icon2-comm-head';
+$icon2-comm-head-x: 0px;
+$icon2-comm-head-y: 0px;
+$icon2-comm-head-offset-x: 0px;
+$icon2-comm-head-offset-y: 0px;
+$icon2-comm-head-width: 40px;
+$icon2-comm-head-height: 34px;
+$icon2-comm-head-total-width: 140px;
+$icon2-comm-head-total-height: 129px;
+$icon2-comm-head-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-comm-head: (0px, 0px, 0px, 0px, 40px, 34px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-comm-head', );
+$icon2-comm-image-name: 'icon2-comm-image';
+$icon2-comm-image-x: 50px;
+$icon2-comm-image-y: 0px;
+$icon2-comm-image-offset-x: -50px;
+$icon2-comm-image-offset-y: 0px;
+$icon2-comm-image-width: 40px;
+$icon2-comm-image-height: 34px;
+$icon2-comm-image-total-width: 140px;
+$icon2-comm-image-total-height: 129px;
+$icon2-comm-image-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-comm-image: (50px, 0px, -50px, 0px, 40px, 34px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-comm-image', );
+$icon2-comm-line-name: 'icon2-comm-line';
+$icon2-comm-line-x: 0px;
+$icon2-comm-line-y: 44px;
+$icon2-comm-line-offset-x: 0px;
+$icon2-comm-line-offset-y: -44px;
+$icon2-comm-line-width: 40px;
+$icon2-comm-line-height: 34px;
+$icon2-comm-line-total-width: 140px;
+$icon2-comm-line-total-height: 129px;
+$icon2-comm-line-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-comm-line: (0px, 44px, 0px, -44px, 40px, 34px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-comm-line', );
+$icon2-comm-text-name: 'icon2-comm-text';
+$icon2-comm-text-x: 50px;
+$icon2-comm-text-y: 44px;
+$icon2-comm-text-offset-x: -50px;
+$icon2-comm-text-offset-y: -44px;
+$icon2-comm-text-width: 40px;
+$icon2-comm-text-height: 34px;
+$icon2-comm-text-total-width: 140px;
+$icon2-comm-text-total-height: 129px;
+$icon2-comm-text-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-comm-text: (50px, 44px, -50px, -44px, 40px, 34px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-comm-text', );
+$icon2-comm-video-name: 'icon2-comm-video';
+$icon2-comm-video-x: 100px;
+$icon2-comm-video-y: 0px;
+$icon2-comm-video-offset-x: -100px;
+$icon2-comm-video-offset-y: 0px;
+$icon2-comm-video-width: 40px;
+$icon2-comm-video-height: 34px;
+$icon2-comm-video-total-width: 140px;
+$icon2-comm-video-total-height: 129px;
+$icon2-comm-video-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-comm-video: (100px, 0px, -100px, 0px, 40px, 34px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-comm-video', );
+$icon2-comm-youtube-name: 'icon2-comm-youtube';
+$icon2-comm-youtube-x: 100px;
+$icon2-comm-youtube-y: 44px;
+$icon2-comm-youtube-offset-x: -100px;
+$icon2-comm-youtube-offset-y: -44px;
+$icon2-comm-youtube-width: 40px;
+$icon2-comm-youtube-height: 34px;
+$icon2-comm-youtube-total-width: 140px;
+$icon2-comm-youtube-total-height: 129px;
+$icon2-comm-youtube-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-comm-youtube: (100px, 44px, -100px, -44px, 40px, 34px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-comm-youtube', );
+$icon2-facebook-name: 'icon2-facebook';
+$icon2-facebook-x: 0px;
+$icon2-facebook-y: 109px;
+$icon2-facebook-offset-x: 0px;
+$icon2-facebook-offset-y: -109px;
+$icon2-facebook-width: 20px;
+$icon2-facebook-height: 20px;
+$icon2-facebook-total-width: 140px;
+$icon2-facebook-total-height: 129px;
+$icon2-facebook-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-facebook: (0px, 109px, 0px, -109px, 20px, 20px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-facebook', );
+$icon2-kakao-name: 'icon2-kakao';
+$icon2-kakao-x: 60px;
+$icon2-kakao-y: 109px;
+$icon2-kakao-offset-x: -60px;
+$icon2-kakao-offset-y: -109px;
+$icon2-kakao-width: 20px;
+$icon2-kakao-height: 19px;
+$icon2-kakao-total-width: 140px;
+$icon2-kakao-total-height: 129px;
+$icon2-kakao-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-kakao: (60px, 109px, -60px, -109px, 20px, 19px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-kakao', );
+$icon2-naver-name: 'icon2-naver';
+$icon2-naver-x: 30px;
+$icon2-naver-y: 109px;
+$icon2-naver-offset-x: -30px;
+$icon2-naver-offset-y: -109px;
+$icon2-naver-width: 20px;
+$icon2-naver-height: 20px;
+$icon2-naver-total-width: 140px;
+$icon2-naver-total-height: 129px;
+$icon2-naver-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-naver: (30px, 109px, -30px, -109px, 20px, 20px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-naver', );
+$icon2-payco-name: 'icon2-payco';
+$icon2-payco-x: 0px;
+$icon2-payco-y: 88px;
+$icon2-payco-offset-x: 0px;
+$icon2-payco-offset-y: -88px;
+$icon2-payco-width: 45px;
+$icon2-payco-height: 11px;
+$icon2-payco-total-width: 140px;
+$icon2-payco-total-height: 129px;
+$icon2-payco-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-payco: (0px, 88px, 0px, -88px, 45px, 11px, 140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', 'icon2-payco', );
+$icon2-comm-head-2x-name: 'icon2-comm-head@2x';
+$icon2-comm-head-2x-x: 0px;
+$icon2-comm-head-2x-y: 0px;
+$icon2-comm-head-2x-offset-x: 0px;
+$icon2-comm-head-2x-offset-y: 0px;
+$icon2-comm-head-2x-width: 80px;
+$icon2-comm-head-2x-height: 68px;
+$icon2-comm-head-2x-total-width: 280px;
+$icon2-comm-head-2x-total-height: 258px;
+$icon2-comm-head-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-comm-head-2x: (0px, 0px, 0px, 0px, 80px, 68px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-comm-head@2x', );
+$icon2-comm-image-2x-name: 'icon2-comm-image@2x';
+$icon2-comm-image-2x-x: 100px;
+$icon2-comm-image-2x-y: 0px;
+$icon2-comm-image-2x-offset-x: -100px;
+$icon2-comm-image-2x-offset-y: 0px;
+$icon2-comm-image-2x-width: 80px;
+$icon2-comm-image-2x-height: 68px;
+$icon2-comm-image-2x-total-width: 280px;
+$icon2-comm-image-2x-total-height: 258px;
+$icon2-comm-image-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-comm-image-2x: (100px, 0px, -100px, 0px, 80px, 68px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-comm-image@2x', );
+$icon2-comm-line-2x-name: 'icon2-comm-line@2x';
+$icon2-comm-line-2x-x: 0px;
+$icon2-comm-line-2x-y: 88px;
+$icon2-comm-line-2x-offset-x: 0px;
+$icon2-comm-line-2x-offset-y: -88px;
+$icon2-comm-line-2x-width: 80px;
+$icon2-comm-line-2x-height: 68px;
+$icon2-comm-line-2x-total-width: 280px;
+$icon2-comm-line-2x-total-height: 258px;
+$icon2-comm-line-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-comm-line-2x: (0px, 88px, 0px, -88px, 80px, 68px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-comm-line@2x', );
+$icon2-comm-text-2x-name: 'icon2-comm-text@2x';
+$icon2-comm-text-2x-x: 100px;
+$icon2-comm-text-2x-y: 88px;
+$icon2-comm-text-2x-offset-x: -100px;
+$icon2-comm-text-2x-offset-y: -88px;
+$icon2-comm-text-2x-width: 80px;
+$icon2-comm-text-2x-height: 68px;
+$icon2-comm-text-2x-total-width: 280px;
+$icon2-comm-text-2x-total-height: 258px;
+$icon2-comm-text-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-comm-text-2x: (100px, 88px, -100px, -88px, 80px, 68px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-comm-text@2x', );
+$icon2-comm-video-2x-name: 'icon2-comm-video@2x';
+$icon2-comm-video-2x-x: 200px;
+$icon2-comm-video-2x-y: 0px;
+$icon2-comm-video-2x-offset-x: -200px;
+$icon2-comm-video-2x-offset-y: 0px;
+$icon2-comm-video-2x-width: 80px;
+$icon2-comm-video-2x-height: 68px;
+$icon2-comm-video-2x-total-width: 280px;
+$icon2-comm-video-2x-total-height: 258px;
+$icon2-comm-video-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-comm-video-2x: (200px, 0px, -200px, 0px, 80px, 68px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-comm-video@2x', );
+$icon2-comm-youtube-2x-name: 'icon2-comm-youtube@2x';
+$icon2-comm-youtube-2x-x: 200px;
+$icon2-comm-youtube-2x-y: 88px;
+$icon2-comm-youtube-2x-offset-x: -200px;
+$icon2-comm-youtube-2x-offset-y: -88px;
+$icon2-comm-youtube-2x-width: 80px;
+$icon2-comm-youtube-2x-height: 68px;
+$icon2-comm-youtube-2x-total-width: 280px;
+$icon2-comm-youtube-2x-total-height: 258px;
+$icon2-comm-youtube-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-comm-youtube-2x: (200px, 88px, -200px, -88px, 80px, 68px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-comm-youtube@2x', );
+$icon2-facebook-2x-name: 'icon2-facebook@2x';
+$icon2-facebook-2x-x: 0px;
+$icon2-facebook-2x-y: 218px;
+$icon2-facebook-2x-offset-x: 0px;
+$icon2-facebook-2x-offset-y: -218px;
+$icon2-facebook-2x-width: 40px;
+$icon2-facebook-2x-height: 40px;
+$icon2-facebook-2x-total-width: 280px;
+$icon2-facebook-2x-total-height: 258px;
+$icon2-facebook-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-facebook-2x: (0px, 218px, 0px, -218px, 40px, 40px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-facebook@2x', );
+$icon2-kakao-2x-name: 'icon2-kakao@2x';
+$icon2-kakao-2x-x: 120px;
+$icon2-kakao-2x-y: 218px;
+$icon2-kakao-2x-offset-x: -120px;
+$icon2-kakao-2x-offset-y: -218px;
+$icon2-kakao-2x-width: 40px;
+$icon2-kakao-2x-height: 38px;
+$icon2-kakao-2x-total-width: 280px;
+$icon2-kakao-2x-total-height: 258px;
+$icon2-kakao-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-kakao-2x: (120px, 218px, -120px, -218px, 40px, 38px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-kakao@2x', );
+$icon2-naver-2x-name: 'icon2-naver@2x';
+$icon2-naver-2x-x: 60px;
+$icon2-naver-2x-y: 218px;
+$icon2-naver-2x-offset-x: -60px;
+$icon2-naver-2x-offset-y: -218px;
+$icon2-naver-2x-width: 40px;
+$icon2-naver-2x-height: 40px;
+$icon2-naver-2x-total-width: 280px;
+$icon2-naver-2x-total-height: 258px;
+$icon2-naver-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-naver-2x: (60px, 218px, -60px, -218px, 40px, 40px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-naver@2x', );
+$icon2-payco-2x-name: 'icon2-payco@2x';
+$icon2-payco-2x-x: 0px;
+$icon2-payco-2x-y: 176px;
+$icon2-payco-2x-offset-x: 0px;
+$icon2-payco-2x-offset-y: -176px;
+$icon2-payco-2x-width: 90px;
+$icon2-payco-2x-height: 22px;
+$icon2-payco-2x-total-width: 280px;
+$icon2-payco-2x-total-height: 258px;
+$icon2-payco-2x-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$icon2-payco-2x: (0px, 176px, 0px, -176px, 90px, 22px, 280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', 'icon2-payco@2x', );
+$icon2-width: 140px;
+$icon2-height: 129px;
+$icon2-image: '../images/sprites/icon2.png?ver=2021/101/25';
+$icon2-sprites: ($icon2-comm-head, $icon2-comm-image, $icon2-comm-line, $icon2-comm-text, $icon2-comm-video, $icon2-comm-youtube, $icon2-facebook, $icon2-kakao, $icon2-naver, $icon2-payco, );
+$icon2: (140px, 129px, '../images/sprites/icon2.png?ver=2021/101/25', $icon2-sprites, );
+$retina-spritesheet-width: 280px;
+$retina-spritesheet-height: 258px;
+$retina-spritesheet-image: '../images/sprites/icon2@2x.png?ver=2021/101/25';
+$retina-spritesheet-sprites: ($icon2-comm-head-2x, $icon2-comm-image-2x, $icon2-comm-line-2x, $icon2-comm-text-2x, $icon2-comm-video-2x, $icon2-comm-youtube-2x, $icon2-facebook-2x, $icon2-kakao-2x, $icon2-naver-2x, $icon2-payco-2x, );
+$retina-spritesheet: (280px, 258px, '../images/sprites/icon2@2x.png?ver=2021/101/25', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$icon2-comm-head-group-name: 'icon2-comm-head';
+$icon2-comm-head-group: ('icon2-comm-head', $icon2-comm-head, $icon2-comm-head-2x, );
+$icon2-comm-image-group-name: 'icon2-comm-image';
+$icon2-comm-image-group: ('icon2-comm-image', $icon2-comm-image, $icon2-comm-image-2x, );
+$icon2-comm-line-group-name: 'icon2-comm-line';
+$icon2-comm-line-group: ('icon2-comm-line', $icon2-comm-line, $icon2-comm-line-2x, );
+$icon2-comm-text-group-name: 'icon2-comm-text';
+$icon2-comm-text-group: ('icon2-comm-text', $icon2-comm-text, $icon2-comm-text-2x, );
+$icon2-comm-video-group-name: 'icon2-comm-video';
+$icon2-comm-video-group: ('icon2-comm-video', $icon2-comm-video, $icon2-comm-video-2x, );
+$icon2-comm-youtube-group-name: 'icon2-comm-youtube';
+$icon2-comm-youtube-group: ('icon2-comm-youtube', $icon2-comm-youtube, $icon2-comm-youtube-2x, );
+$icon2-facebook-group-name: 'icon2-facebook';
+$icon2-facebook-group: ('icon2-facebook', $icon2-facebook, $icon2-facebook-2x, );
+$icon2-kakao-group-name: 'icon2-kakao';
+$icon2-kakao-group: ('icon2-kakao', $icon2-kakao, $icon2-kakao-2x, );
+$icon2-naver-group-name: 'icon2-naver';
+$icon2-naver-group: ('icon2-naver', $icon2-naver, $icon2-naver-2x, );
+$icon2-payco-group-name: 'icon2-payco';
+$icon2-payco-group: ('icon2-payco', $icon2-payco, $icon2-payco-2x, );
+$retina-groups: ($icon2-comm-head-group, $icon2-comm-image-group, $icon2-comm-line-group, $icon2-comm-text-group, $icon2-comm-video-group, $icon2-comm-youtube-group, $icon2-facebook-group, $icon2-kakao-group, $icon2-naver-group, $icon2-payco-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

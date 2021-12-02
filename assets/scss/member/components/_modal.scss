@@ -1,0 +1,149 @@
+$modal-z: 40 !default;
+
+$modal-background-background-color: bulmaRgba($scheme-invert, 0.86) !default;
+
+$modal-content-width: 780px !default;
+$modal-content-margin-mobile: 20px !default;
+$modal-content-spacing-mobile: 160px !default;
+$modal-content-spacing-tablet: 40px !default;
+
+$modal-close-dimensions: 40px !default;
+$modal-close-right: 20px !default;
+$modal-close-top: 20px !default;
+
+$modal-card-spacing: 40px !default;
+
+$modal-card-head-background-color: $white !default;
+$modal-card-head-border-bottom: 1px solid #333 !default;
+$modal-card-head-padding: 15px !default;
+$modal-card-head-radius: 0 !default;
+
+$modal-card-title-color: $text-strong !default;
+$modal-card-title-line-height: 1 !default;
+$modal-card-title-size: $size-4 !default;
+
+$modal-card-foot-radius: 0 !default;
+$modal-card-foot-border-top: 1px solid #333 !default;
+
+$modal-card-body-background-color: $scheme-main !default;
+$modal-card-body-padding: 15px !default;
+
+.modal {
+	@extend %overlay;
+
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	z-index: $modal-z;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+
+	// Modifiers
+	&.is-active {
+		display: flex;
+	}
+	&-full {
+		padding: 0;
+		.modal-card {
+			max-height: calc(100vh);
+
+			// Responsiveness
+			@include tablet {
+				max-height: calc(100vh - #{$modal-content-spacing-tablet});
+			}
+		}
+	}
+}
+
+.modal-background {
+	@extend %overlay;
+	background-color: $modal-background-background-color;
+}
+.modal-background-unclose {
+	@extend %overlay;
+	background-color: $modal-background-background-color;
+}
+.modal-content,
+.modal-card {
+	margin: 0 $modal-content-margin-mobile;
+	max-height: calc(100vh - #{$modal-content-spacing-mobile});
+	overflow: auto;
+	position: relative;
+	width: 100%;
+
+	// Responsiveness
+	@include tablet {
+		margin: 0 auto;
+		max-height: calc(100vh - #{$modal-content-spacing-tablet});
+		width: $modal-content-width;
+	}
+}
+
+.modal-close {
+	@extend %delete;
+
+	background: none;
+	height: $modal-close-dimensions;
+	position: fixed;
+	right: $modal-close-right;
+	top: $modal-close-top;
+	width: $modal-close-dimensions;
+}
+
+.modal-card {
+	display: flex;
+	flex-direction: column;
+	max-height: calc(100vh - #{$modal-card-spacing});
+	overflow: hidden;
+	-ms-overflow-y: visible;
+}
+
+.modal-card-head,
+.modal-card-foot {
+	align-items: center;
+	background-color: $modal-card-head-background-color;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: flex-start;
+	padding: $modal-card-head-padding;
+	position: relative;
+}
+
+.modal-card-head {
+	border-bottom: $modal-card-head-border-bottom;
+	border-top-left-radius: $modal-card-head-radius;
+	border-top-right-radius: $modal-card-head-radius;
+}
+
+.modal-card-title {
+	color: $modal-card-title-color;
+	flex-grow: 1;
+	flex-shrink: 0;
+	font-size: $modal-card-title-size;
+	font-weight: 600;
+	line-height: $modal-card-title-line-height;
+}
+
+.modal-card-foot {
+	border-bottom-left-radius: $modal-card-foot-radius;
+	border-bottom-right-radius: $modal-card-foot-radius;
+	border-top: $modal-card-foot-border-top;
+
+	.button {
+		&:not(:last-child) {
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.modal-card-body {
+	@include overflow-touch;
+
+	background-color: $modal-card-body-background-color;
+	flex-grow: 1;
+	flex-shrink: 1;
+	overflow: auto;
+	padding: $modal-card-body-padding;
+}

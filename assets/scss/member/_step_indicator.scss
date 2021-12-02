@@ -1,0 +1,131 @@
+.step-indicator {
+	width: auto;
+	height: 70px;
+	margin: 20px auto;
+	font-weight: 400;
+	@include tablet {
+		margin-bottom: 4rem;
+	}
+	.steps {
+		padding: 0;
+		li {
+			list-style-type: none;
+			width: 25%;
+			float: left;
+			font-size: 14px;
+			position: relative;
+			text-align: center;
+			text-transform: uppercase;
+			color: #999;
+			&.active {
+				color: #333;
+				font-weight: bold;
+				i {
+					width: 25px;
+					height: 25px;
+					margin-top: 12px;
+					outline: 5px solid #fff;
+					// border: 5px solid #fff;
+					background-color: #243745;
+					color: #fff;
+					line-height: 21px;
+					// 반응형
+					@include tablet {
+						width: 42px;
+						height: 42px;
+						margin-top: 21px;
+						outline: 10px solid #fff;
+						line-height: 39px;
+					}
+					&::before {
+						margin-top: -7px;
+						margin-left: 5px;
+						// 반응형
+						@include tablet {
+							margin-top: -14px;
+							margin-left: 8px;
+						}
+					}
+				}
+			}
+			i {
+				display: block;
+				position: relative;
+				width: 31px;
+				height: 31px;
+				line-height: 1;
+				text-align: center;
+				margin: 7px auto 10px;
+				border-radius: 50%;
+				background-color: #fff;
+				color: #eee;
+				font-size: 19px;
+				&:before {
+					display: block;
+					// margin-top: -17px;
+					// vertical-align: middle;
+					line-height: 1;
+					// 반응형
+					@include tablet {
+						margin-top: -34px;
+					}
+				}
+				// 반응형
+				@include tablet {
+					width: 48px;
+					height: 48px;
+					margin-top: 44px;
+					font-size: 34px;
+				}
+				&::after {
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					content: '';
+					width: 25px;
+					height: 25px;
+					margin: -12.5px 0 0 -12.5px;
+					// border: 1px solid #243745;
+					border-radius: 25px;
+					background-color: transparent;
+				}
+			}
+			&::before {
+				width: 100%;
+				height: 1px;
+				content: '';
+				position: absolute;
+				background-color: #eee;
+				top: 38px;
+				left: -50%;
+				z-index: -1;
+				// 반응형
+				@include tablet {
+					top: 48px;
+					height: 2px;
+				}
+			}
+			&:first-child {
+				&::before {
+					display: none;
+				}
+			}
+			&.complete {
+				color: #333;
+				i {
+					border-color: #fff;
+					color: #243745;
+				}
+				+ li:before {
+					background-color: #243745;
+				}
+			}
+		}
+		&.steps--3 {
+			li {
+				width: 33.333%;
+			}
+		}
+	}
+}

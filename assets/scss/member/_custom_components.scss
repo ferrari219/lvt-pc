@@ -1,0 +1,153 @@
+// 로그인/회원가입 메시지 박스
+.msg-box {
+	padding: 1.5rem;
+
+	&-title {
+		margin-bottom: 0.5rem !important;
+		font-size: $size-normal;
+		font-weight: 600;
+		word-break: keep-all;
+		word-wrap: break-word;
+	}
+
+	&-desc {
+		word-break: keep-all;
+		word-wrap: break-word;
+	}
+
+	&-fullwidth {
+		margin: 2rem -2rem 1rem;
+	}
+
+	&-blue {
+		padding: 3rem;
+		background-color: #f3f9ff;
+		color: #385ea3;
+		text-align: center;
+
+		.dot-list {
+			color: #727272;
+			text-align: left;
+			word-break: keep-all;
+			word-wrap: break-word;
+		}
+
+		&__desc {
+			margin-bottom: 2rem;
+			color: #333;
+			font-size: $size-normal;
+		}
+
+		&__dl {
+			display: table;
+			width: 100%;
+			margin-top: -1px;
+			border-top: 1px solid #e3ecf6;
+			border-bottom: 1px solid #e3ecf6;
+			color: #777;
+			font-size: $size-normal;
+
+			dt,
+			dd {
+				display: table-cell;
+				padding: 1rem;
+				text-align: left;
+				vertical-align: middle;
+			}
+
+			dt {
+				width: 20%;
+			}
+
+			dd {
+				width: 80%;
+				color: #333;
+
+				span {
+					color: #777;
+				}
+			}
+		}
+
+		.section-responsive-link {
+			display: inline-block;
+			margin-top: 2rem;
+			margin-bottom: 0;
+			color: #333;
+		}
+	}
+
+	&-tabwidth {
+		margin: -0.5rem -1rem 2rem;
+		padding: 2rem 3rem;
+	}
+
+	&-yellow {
+		border: 1px solid #fff6ce;
+		background-color: #fffeeb;
+		color: #ff5050;
+	}
+
+	.dot-list {
+		text-align: left;
+		word-break: keep-all;
+		word-wrap: break-word;
+	}
+}
+
+.help {
+	padding: 0 1.2rem;
+	margin-top: 0.6rem;
+	font-size: 1.4rem;
+}
+
+p.is-danger,
+span.is-danger,
+div.is-danger,
+em.is-danger,
+i.is-danger,
+strong.is-danger,
+p.color-danger,
+span.color-danger,
+div.color-danger,
+em.color-danger,
+i.color-danger,
+strong.color-danger {
+	color: $red;
+	font-weight: normal;
+}
+
+h4.is-primary,
+p.is-primary,
+span.is-primary,
+div.is-primary,
+em.is-primary,
+i.is-primary,
+strong.is-primary,
+p.color-primary,
+span.color-primary,
+div.color-primary,
+em.color-primary,
+i.color-primary,
+strong.color-primary {
+	color: $black;
+	font-weight: normal;
+}
+
+p.is-normal,
+span.is-normal,
+div.is-normal,
+em.is-normal,
+i.is-normal,
+strong.is-normal {
+	font-weight: normal;
+}
+
+p.is-bold,
+span.is-bold,
+div.is-bold,
+em.is-bold,
+i.is-bold,
+strong.is-bold {
+	font-weight: bold;
+}
