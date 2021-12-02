@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>배송지 목록 팝업</title>
+	<meta name="robots" content="index,follow" />
+	<meta name="referrer" contents="always" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+	<meta name="description"
+		content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+	<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+	<meta property="og:site_name" content="리바트몰" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+	<meta property="og:description"
+		content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+	<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+	<!-- S : 배송지 목록 popup -->
+	<div id="modal-delivery-destination-list" class="modal is-active">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">배송지 목록</p>
+				<button type="button" class="delete is-large" aria-label="close"></button>
+			</header>
+
+			<section>
+				<h3 class="hidden">배송지 목록</h3>
+
+				<!-- S : 탭 네비 -->
+				<div class="tabs is-toggle is-fullwidth popup-tab mt4">
+					<ul role="tablist" aria-label="Tabs">
+						<li class="is-active">
+							<button id="delivery-tab-1" class="tab" role="tab" aria-controls="delivery-tabpanel-1"
+								aria-selected="true" tabindex="0">
+								<span>나의 배송지</span>
+							</button>
+						</li>
+						<li>
+							<button id="delivery-tab-2" class="tab" role="tab" aria-controls="delivery-tabpanel-2"
+								aria-selected="false" tabindex="-1">
+								<span>최근 배송지</span>
+							</button>
+						</li>
+						<li>
+							<button id="delivery-tab-3" class="tab" role="tab" aria-controls="delivery-tabpanel-3"
+								aria-selected="false" tabindex="-1">
+								<span>신규등록</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<!-- E : 탭 네비 -->
+				<!--200623 mb2 클래스 추가-->
+				<div class="modal-card-body scrollbar-container">
+					<!-- S : 나의 배송지 -->
+					<div id="delivery-tabpanel-1" class="tabpanel" role="tabpanel" aria-labelledby="delivery-tab-1"
+						tabindex="0">
+						<div class="pop-address-list radio-list">
+							<!-- radio -->
+							<div class="radio">
+								<input type="radio" name="radio-d" id="radio-10-1" checked="" />
+								<label for="radio-10-1">
+									<strong class="pop-address-list__tit">기본배송지</strong>
+									<div class="is-flex space-between">
+										<div class="pop-address-list-cont">
+											<p class="pop-address-list-cont__user"><span>리바트</span><span
+													class="pop-address-list-cont__user--tel">010-1111-1111</span></p>
+											<p class="pop-address-list-cont__addr">(06043) 서울시 강남구 강남대로136길 11 <span
+													class="pop-address-list-cont__rest-addr">제일빌딩 2층</span></p>
+											<!--200623 pop-address-list-cont__rest-addr 클래스 추가-->
+										</div>
+
+										<div class="pop-address-list-button">
+											<!-- 200623 수정버튼 a태그로 수정 -->
+											<button type="button" class="button is-small">선택</button>
+											<button type="button" class="button is-small">수정</button>
+											<!-- <div class="pop-address-list-button__edit is-flex">
+													<a href="#" class="button is-small">수정</a>
+													<a href="#" class="button is-small">삭제</a>
+												</div> -->
+										</div>
+									</div>
+								</label>
+							</div>
+							<!-- //radio -->
+
+							<!-- radio -->
+							<div class="radio">
+								<input type="radio" name="radio-d" id="radio-10-2" />
+								<label for="radio-10-2">
+									<div class="is-flex space-between">
+										<div class="pop-address-list-cont">
+											<p class="pop-address-list-cont__user"><span>[사무실] 리바트</span><span
+													class="pop-address-list-cont__user--tel">010-1111-1111</span></p>
+											<p class="pop-address-list-cont__addr">(06043) 서울특별시 강남구 강남대로 566 신영와코루빌딩 4층
+												<span class="pop-address-list-cont__rest-addr">제일빌딩 2층</span></p>
+											<!--200623 pop-address-list-cont__rest-addr 클래스 추가-->
+										</div>
+
+										<div class="pop-address-list-button">
+											<!-- 200623 수정버튼 a태그로 수정 -->
+											<button type="button" class="button is-small">선택</button>
+											<div class="pop-address-list-button__edit is-flex">
+												<a href="#" class="button is-small">수정</a>
+												<a href="#" class="button is-small">삭제</a>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<!-- //radio -->
+
+							<!-- radio -->
+							<div class="radio">
+								<input type="radio" name="radio-d" id="radio-10-3" checked="" />
+								<label for="radio-10-3">
+									<div class="is-flex space-between">
+										<div class="pop-address-list-cont">
+											<p class="pop-address-list-cont__user"><span>리바트</span><span
+													class="pop-address-list-cont__user--tel">010-1111-1111</span></p>
+											<p class="pop-address-list-cont__addr">(06043) 서울시 강남구 강남대로136길 11 <span
+													class="pop-address-list-cont__rest-addr">제일빌딩 2층</span></p>
+											<!--200623 pop-address-list-cont__rest-addr 클래스 추가-->
+										</div>
+
+										<div class="pop-address-list-button">
+											<!-- 200623 수정버튼 a태그로 수정 -->
+											<button type="button" class="button is-small">선택</button>
+											<div class="pop-address-list-button__edit is-flex">
+												<a href="#" class="button is-small">수정</a>
+												<a href="#" class="button is-small">삭제</a>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<!-- //radio -->
+
+							<!-- radio -->
+							<div class="radio">
+								<input type="radio" name="radio-d" id="radio-10-4" />
+								<label for="radio-10-4">
+									<div class="is-flex space-between">
+										<div class="pop-address-list-cont">
+											<p class="pop-address-list-cont__user"><span>[사무실]리바트</span><span
+													class="pop-address-list-cont__user--tel">010-1111-1111</span></p>
+											<p class="pop-address-list-cont__addr">(06043) 서울특별시 강남구 강남대로 566 신영와코루빌딩
+												<span class="pop-address-list-cont__rest-addr">제일빌딩 2층</span></p>
+											<!--200623 pop-address-list-cont__rest-addr 클래스 추가-->
+										</div>
+
+										<div class="pop-address-list-button">
+											<!-- 200623 수정버튼 a태그로 수정 -->
+											<button type="button" class="button is-small">선택</button>
+											<div class="pop-address-list-button__edit is-flex">
+												<a href="#" class="button is-small">수정</a>
+												<a href="#" class="button is-small">삭제</a>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<!-- //radio -->
+						</div>
+
+						<!--200623 mb2 클래스 추가-->
+						<!-- <div class="modal-card-foot mb2">
+								<button type="button" class="button is-dark">취소</button>
+								<button type="button" class="button is-primary">선택</button>
+							</div> -->
+					</div>
+					<!-- E : 나의 배송지 -->
+
+					<!-- S : 최근배송지 -->
+					<div id="delivery-tabpanel-2" class="tabpanel" role="tabpanel" aria-labelledby="delivery-tab-2"
+						tabindex="0" hidden="">
+						<div class="pop-address-list radio-list">
+							<!-- radio -->
+							<div class="radio">
+								<input type="radio" name="radio-d" id="radio-20-1" checked="" />
+								<label for="radio-20-1">
+									<div class="is-flex space-between">
+										<div class="pop-address-list-cont">
+											<p class="pop-address-list-cont__user"><span>리바트</span><span
+													class="pop-address-list-cont__user--tel">010-1111-1111</span></p>
+											<p class="pop-address-list-cont__addr">(06043) 서울시 강남구 강남대로136길 11 <span
+													class="pop-address-list-cont__rest-addr">제일빌딩 2층</span></p>
+											<!--200623 pop-address-list-cont__rest-addr 클래스 추가-->
+										</div>
+
+										<div class="pop-address-list-button">
+											<!-- 200623 수정버튼 a태그로 수정 -->
+											<button type="button" class="button is-small">선택</button>
+											<div class="pop-address-list-button__edit is-flex">
+												<a href="#" class="button is-small">등록</a>
+												<a href="#" class="button is-small">삭제</a>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<!-- //radio -->
+
+							<!-- radio -->
+							<div class="radio">
+								<input type="radio" name="radio-d" id="radio-20-2" />
+								<label for="radio-20-2">
+									<div class="is-flex space-between">
+										<div class="pop-address-list-cont">
+											<p class="pop-address-list-cont__user"><span>[사무실]리바트</span><span
+													class="pop-address-list-cont__user--tel">010-1111-1111</span></p>
+											<p class="pop-address-list-cont__addr">(06043) 서울특별시 강남구 강남대로 566 신영와코루빌딩
+												<span class="pop-address-list-cont__rest-addr">제일빌딩 2층</span></p>
+											<!--200623 pop-address-list-cont__rest-addr 클래스 추가-->
+										</div>
+
+										<div class="pop-address-list-button">
+											<!-- 200623 수정버튼 a태그로 수정 -->
+											<button type="button" class="button is-small">선택</button>
+											<div class="pop-address-list-button__edit is-flex">
+												<a href="#" class="button is-small">등록</a>
+												<a href="#" class="button is-small">삭제</a>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<!-- //radio -->
+						</div>
+
+						<!-- S : 기본 배송지로 설정 체크박스 -->
+						<div class="clear">
+							<div class="mypage-checkbox checkbox mt2 fr">
+								<input type="checkbox" name="chk-01" id="chk-01">
+								<label for="chk-01">기본 배송지로 설정</label>
+							</div>
+						</div>
+						<!-- E : 기본 배송지로 설정 체크박스 -->
+
+						<!--200623 mb2 클래스 추가-->
+						<!-- <div class="modal-card-foot mb2">
+								<button type="button" class="button is-dark">취소</button>
+								<button type="button" class="button is-primary">선택</button>
+							</div> -->
+					</div>
+					<!-- E : 최근배송지 -->
+
+					<!-- S : 신규등록 -->
+					<div id="delivery-tabpanel-3" class="tabpanel" role="tabpanel" aria-labelledby="delivery-tab-3"
+						tabindex="0" hidden="">
+						<form action="#">
+							<fieldset>
+								<legend>배송지 등록/수정 영역</legend>
+								<div class="section-contents-cscenter__edit">
+									<div class="table-box table-box-form">
+										<table class="table is-fullwidth">
+											<caption>
+												배송지 등록/수정 입력 및 선택 표
+											</caption>
+											<colgroup>
+												<col style="width: 160px;" />
+												<col />
+											</colgroup>
+											<thead class="sr-only">
+												<tr>
+													<th align scope="col">항목</th>
+													<th align scope="col">입력</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">
+														<label for="receiver" class="label required"><em
+																class="sr-only">필수입력</em>받는분</label>
+													</th>
+													<td>
+														<div class="control">
+															<input type="text" id="receiver"
+																class="input width-middle" />
+														</div>
+														<p class="input-enter-guide is-danger">배송 받으실 분의 이름을 입력해 주세요.
+														</p>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label for="receiveAddr" class="label required"><em
+																class="sr-only">필수입력</em>배송지명</label>
+													</th>
+													<td>
+														<div class="control">
+															<input type="text" id="receiveAddr"
+																class="input width-middle" />
+														</div>
+														<p class="input-enter-guide is-danger">배송지명을 입력해 주세요.</p>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label for="PhoneNumber1" class="label required"><em
+																class="sr-only">필수입력</em>연락처1</label>
+													</th>
+													<td>
+														<div class="multibox-wrap">
+															<div class="control is-flex">
+																<div class="select width-small">
+																	<select id="PhoneNumber1" title="연락처 첫자리 선택">
+																		<option value="0">선택</option>
+																		<option value="1">010</option>
+																		<option value="2">011</option>
+																		<option value="3">016</option>
+																		<option value="4">017</option>
+																		<option value="5">018</option>
+																		<option value="6">019</option>
+																	</select>
+																</div>
+																<input class="input width-small" type="tel"
+																	title="연락처 중간자리 입력" />
+																<input class="input width-small" type="tel"
+																	title="연락처 마지막자리 입력" />
+															</div>
+														</div>
+														<p class="input-enter-guide is-danger">연락처를 입력해 주세요.</p>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label for="PhoneNumber2" class="label">연락처2</label>
+													</th>
+													<td>
+														<div class="multibox-wrap">
+															<div class="control is-flex">
+																<div class="select width-small">
+																	<select id="PhoneNumber2" title="연락처 첫자리 선택">
+																		<option value="0">선택</option>
+																		<option value="1">010</option>
+																		<option value="2">011</option>
+																		<option value="3">016</option>
+																		<option value="4">017</option>
+																		<option value="5">018</option>
+																		<option value="6">019</option>
+																	</select>
+																</div>
+																<input class="input width-small" type="tel"
+																	title="연락처 중간자리 입력" />
+																<input class="input width-small" type="tel"
+																	title="연락처 마지막자리 입력" />
+															</div>
+														</div>
+														<p class="input-enter-guide is-danger">연락처를 입력해 주세요.</p>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<label for="address" class="label">배송지 주소</label>
+													</th>
+													<td>
+														<div class="address-wrap">
+															<div class="control is-flex">
+																<input class="input width-small" type="text"
+																	title="우편번호 입력" />
+																<!-- 070201 우편번호 버튼 태그 수정 -->
+																<button id="address" type="button"
+																	class="button is-primary is-outlined modal-button"
+																	data-target="modal-postcode"
+																	aria-haspopup="true">우편번호 확인</button>
+															</div>
+															<input class="input width-large" type="text"
+																title="주소 입력" />
+															<input class="input width-large" type="text"
+																placeholder="상세 주소 입력" />
+														</div>
+
+														<p class="input-enter-guide is-danger">배송지 주소를 입력해 주세요.</p>
+														<p class="input-enter-guide is-danger">※ 배송 받으실 주소지가 도서산간으로 분류된
+															지역인 경우 배송이 불가합니다.</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<!-- S : 기본 배송지로 설정 체크박스 -->
+									<div class="clear">
+										<div class="mypage-checkbox checkbox mt2 fr">
+											<input type="checkbox" name="chk-02" id="chk-02" />
+											<label for="chk-02">기본 배송지로 설정</label>
+										</div>
+									</div>
+									<!-- E : 기본 배송지로 설정 체크박스 -->
+
+									<!-- S : 버튼리스트 -->
+									<!--200623 mb2 클래스 추가-->
+									<div class="modal-card-foot mb2">
+										<button type="button" class="button is-primary is-outlined is-dark">초기화</button>
+										<button type="submit" class="button is-primary">등록</button>
+									</div>
+									<!-- E : 버튼리스트 -->
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<!-- E : 신규등록 -->
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- E : 배송지 목록 popup -->
+
+	<!-- S : 우편번호 팝업 -->
+	<div id="modal-postcode" class="modal modal-postcode">
+		<div class="modal-background"></div>
+		<div class="modal-content">
+			<!-- 삽입할 위치 -->
+		</div>
+		<button class="modal-close is-large" aria-label="close"></button>
+	</div>
+	<!-- E : 우편번호 팝업 -->
+
+	<!-- script -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+	<script src="../../assets/js/popper.min.js"></script>
+	<script src="../../assets/js/bootstrap-tooltip.js"></script>
+	<script src="../../assets/js/swiper.min.js"></script>
+	<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+	<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+	<script src="../../assets/js/common-ui.js"></script>
+	<script>
+		$(function () {
+			// 커스텀 스크롤
+			$('.scrollbar-container').scrollbar();
+		});
+
+		$(window).resize(function () {
+			// 커스텀 스크롤
+			$('.scrollbar-container').scrollbar();
+		});
+	</script>
+</body>
+
+</html>

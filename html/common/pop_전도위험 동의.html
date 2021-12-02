@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>전도위험 동의 팝업</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+
+	<body>
+		<!-- S : 전도위험 동의 popup -->
+		<div id="modal-hazard-consent" class="modal is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">전도위험 동의</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+
+				<div class="modal-card-body scrollbar-container">
+					<img src="../../assets/images/common/jundo.png" alt="전도위험 동의" />
+					<div class="terms-content sr-only">
+						<p>가. 상품 이동시 유의사항</p>
+						<ul>
+							<li>
+								1) 집안 내 위치 이동 또는 이사로 인한 상품 이동 발생시, 원하시는 위치에 상품 이동 후 고객센터(1800-5300)로 연락 주시면 기사 방문하여 벽고정을 재시공 해야합니다.
+								<br />
+								(※ 안전한 상품 사용을 위하여 반드시 벽고정 재시공 후 사용하여야 합니다.)
+							</li>
+							<li>
+								2) 비용안내
+								<ul class="dot-list">
+									<li>품질보증기간 이내 : 무상</li>
+									<li>품질보증기간 이후 : 유상(기사 방문비)<br />(※ 벽면재시공 작업 기준 비용이며, 상품 이동까지 원하시는 경우 별도 비용 발생될 수 있습니다.)</li>
+								</ul>
+							</li>
+						</ul>
+						<p>나. 전도방지철물 설치/반품 관련 안내 확인</p>
+						<ul>
+							<li>1) 전도방지철물에 대한 설명을 상품 기술서에서 확인하였으며, 고정철물의 설치에 동의하였음을 확인합니다.</li>
+							<li>2) 배송/설치 시 고정철물 설치에 대한 변심 또는 설치 불가사항으로 인한 상품회수 및 반품 비용 발생에 대해 안내를 받고 이에 동의합니다.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="checkbox mt2">
+					<input type="checkbox" name="chk-01" id="chk-01" checked />
+					<label for="chk-01" class="is-size-5">위 내용에 동의합니다.</label>
+				</div>
+
+				<div class="modal-card-foot">
+					<button type="button" class="button is-primary">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- E : 전도위험 동의 popup -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/swiper.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			$(function () {
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+			});
+			$(window).resize(function () {
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+			});
+		</script>
+	</body>
+</html>

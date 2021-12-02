@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>모듈 : 12.베스트리뷰, 13.카테고리, 14.키워드링크</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<style>
+			.__module-title {
+				display: inline-flex;
+				align-items: center;
+				margin-top: 5px;
+				padding: 0.4em;
+				text-align: center;
+				color: #fff;
+				border-top-left-radius: 0.4em;
+				border-top-right-radius: 0.4em;
+				background-color: #ed2650;
+			}
+			.__module-title dt {
+				vertical-align: middle;
+				padding: 0 1em 0 0;
+			}
+			.__module-title dd {
+				vertical-align: middle;
+			}
+			.section-main {
+				border: 2px solid #ed2650;
+			}
+			code {
+				display: inline-block;
+				border-radius: 3px;
+				font-family: 'Courier New', Courier, monospace, sans-serif;
+				font-size: 13px;
+				overflow: hidden;
+				padding: 0 10px 0 0;
+				height: 20px;
+				line-height: 1.1;
+				vertical-align: middle;
+			}
+			code::before {
+				content: 'function ';
+				display: inline-block;
+				padding: 4px;
+				margin-right: 1em;
+				color: #fff;
+				background-color: #28a0e4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- s : #container -->
+		<main id="container" role="main">
+			<dl class="__module-title">
+				<dt>메인베스트리뷰PC1</dt>
+				<dd><code>loadSwiperBestReviewCol4('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인베스트리뷰PC1 -->
+			<section id="main-review" class="section-main section-best-review section-best-review--col4 section-bg">
+				<div class="section-title-wrap">
+					<h3 class="section-title">여기가 후기 맛집</h3>
+					<a href="#" class="section-title__more">여기가 후기 맛집 더보기</a>
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide product-item--medium">
+							<!-- product item -->
+							<div class="product-item">
+								<a href="#">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 
+											<div class="product-item-status">
+												<span class="product-item-status--soldout">일시품절</span>
+											</div>
+											-->
+										<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<!-- <span class="product-item-header__brand">매장가구</span> -->
+											<span class="product-item-header__name"> 리바트솔브 소파 편하네요. 리바트솔브 소파 편하네요. </span>
+											<span class="product-item-header__description"> 리바트 모델 보고 구매한 소파에요 편하고 전동으로 리클라이닝도 되서 완전 편하네요. 편하고 전동으로 리클라이닝도 되서 완전 편하네요. </span>
+										</div>
+										<div class="product-item-body">
+											<div class="product-review-stats-area">
+												<div class="fl">
+													<!-- 별점 -->
+													<span class="stats-rate-wrap">
+														<span class="icon-star1"></span>
+														<span class="stats-rate__num">4.5</span>
+													</span>
+												</div>
+												<div class="fr">
+													<span class="product-item-heart">
+														<i class="icon-heart_red"></i>
+														<span class="product-item-heart__num">1,695</span>
+													</span>
+												</div>
+											</div>
+											<div class="product-item-body__writer">@ dafdag</div>
+										</div>
+									</div>
+								</a>
+								<div class="product-item-related">
+									<ul>
+										<li>
+											<!-- related item -->
+											<div class="related-item">
+												<a href="#">
+													<div class="related-item-image">
+														<img class="image" alt="제품명" src="../../assets/images/common/product_90.jpg" />
+													</div>
+													<div class="related-item-content">
+														<h1 class="related-item-header">
+															<span class="related-item-header__name">솔브4인 리클라이닝 솔브4인 리클라이닝</span>
+														</h1>
+														<span class="related-item-price">
+															<span class="related-item-price__price">988,000<span class="unit">원</span> </span>
+														</span>
+													</div>
+												</a>
+											</div>
+											<!-- //related item -->
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //product item -->
+						</div>
+						<div class="swiper-slide product-item--medium">
+							<!-- product item -->
+							<div class="product-item">
+								<a href="#">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 
+											<div class="product-item-status">
+												<span class="product-item-status--soldout">일시품절</span>
+											</div>
+											-->
+										<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<!-- <span class="product-item-header__brand">매장가구</span> -->
+											<span class="product-item-header__name"> 리바트솔브 소파 편하네요. 리바트솔브 소파 편하네요. </span>
+											<span class="product-item-header__description"> 리바트 모델 보고 구매한 소파에요 편하고 전동으로 리클라이닝도 되서 완전 편하네요. 편하고 전동으로 리클라이닝도 되서 완전 편하네요. </span>
+										</div>
+										<div class="product-item-body">
+											<div class="product-review-stats-area">
+												<div class="fl">
+													<!-- 별점 -->
+													<span class="stats-rate-wrap">
+														<span class="icon-star1"></span>
+														<span class="stats-rate__num">4.5</span>
+													</span>
+												</div>
+												<div class="fr">
+													<span class="product-item-heart">
+														<i class="icon-heart_red"></i>
+														<span class="product-item-heart__num">1,695</span>
+													</span>
+												</div>
+											</div>
+											<div class="product-item-body__writer">@ dafdag</div>
+										</div>
+									</div>
+								</a>
+								<div class="product-item-related">
+									<ul>
+										<li>
+											<!-- related item -->
+											<div class="related-item">
+												<a href="#">
+													<div class="related-item-image">
+														<img class="image" alt="제품명" src="../../assets/images/common/product_90.jpg" />
+													</div>
+													<div class="related-item-content">
+														<h1 class="related-item-header">
+															<span class="related-item-header__name">솔브4인 리클라이닝 솔브4인 리클라이닝</span>
+														</h1>
+														<span class="related-item-price">
+															<span class="related-item-price__price">988,000<span class="unit">원</span> </span>
+														</span>
+													</div>
+												</a>
+											</div>
+											<!-- //related item -->
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //product item -->
+						</div>
+						<div class="swiper-slide product-item--medium">
+							<!-- product item -->
+							<div class="product-item">
+								<a href="#">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 
+											<div class="product-item-status">
+												<span class="product-item-status--soldout">일시품절</span>
+											</div>
+											-->
+										<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<!-- <span class="product-item-header__brand">매장가구</span> -->
+											<span class="product-item-header__name"> 리바트솔브 소파 편하네요. 리바트솔브 소파 편하네요. </span>
+											<span class="product-item-header__description"> 리바트 모델 보고 구매한 소파에요 편하고 전동으로 리클라이닝도 되서 완전 편하네요. 편하고 전동으로 리클라이닝도 되서 완전 편하네요. </span>
+										</div>
+										<div class="product-item-body">
+											<div class="product-review-stats-area">
+												<div class="fl">
+													<!-- 별점 -->
+													<span class="stats-rate-wrap">
+														<span class="icon-star1"></span>
+														<span class="stats-rate__num">4.5</span>
+													</span>
+												</div>
+												<div class="fr">
+													<span class="product-item-heart">
+														<i class="icon-heart_red"></i>
+														<span class="product-item-heart__num">1,695</span>
+													</span>
+												</div>
+											</div>
+											<div class="product-item-body__writer">@ dafdag</div>
+										</div>
+									</div>
+								</a>
+								<div class="product-item-related">
+									<ul>
+										<li>
+											<!-- related item -->
+											<div class="related-item">
+												<a href="#">
+													<div class="related-item-image">
+														<img class="image" alt="제품명" src="../../assets/images/common/product_90.jpg" />
+													</div>
+													<div class="related-item-content">
+														<h1 class="related-item-header">
+															<span class="related-item-header__name">솔브4인 리클라이닝 솔브4인 리클라이닝</span>
+														</h1>
+														<span class="related-item-price">
+															<span class="related-item-price__price">988,000<span class="unit">원</span> </span>
+														</span>
+													</div>
+												</a>
+											</div>
+											<!-- //related item -->
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //product item -->
+						</div>
+					</div>
+					<div class="swiper-controls-wrap swiper-controls--black">
+						<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+						<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 메인베스트리뷰PC1 -->
+
+			<dl class="__module-title">
+				<dt>메인베스트리뷰PC2-3단</dt>
+				<dd><code>loadSwiperBestReviewCol3('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인베스트리뷰PC2-3단 -->
+			<section id="main-review02" class="section-main section-best-review section-bg">
+				<div class="section-title-wrap">
+					<h3 class="section-title">여기가 후기 맛집</h3>
+					<a href="#" class="section-title__more">여기가 후기 맛집 더보기</a>
+				</div>
+				<div class="container">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide product-item--large">
+								<!-- product item -->
+								<div class="product-item">
+									<a href="#">
+										<div class="product-item-image">
+											<!-- 제품품절일때 활성화 
+											<div class="product-item-status">
+												<span class="product-item-status--soldout">일시품절</span>
+											</div>
+											-->
+											<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+										</div>
+										<div class="product-item-content">
+											<div class="product-item-header">
+												<!-- <span class="product-item-header__brand">매장가구</span> -->
+												<span class="product-item-header__name"> 리바트솔브 소파 편하네요. 리바트솔브 소파 편하네요. </span>
+												<span class="product-item-header__description"> 리바트 모델 보고 구매한 소파에요 편하고 전동으로 리클라이닝도 되서 완전 편하네요. 편하고 전동으로 리클라이닝도 되서 완전 편하네요. </span>
+											</div>
+											<div class="product-item-body">
+												<div class="product-review-stats-area">
+													<div class="fl">
+														<!-- 별점 -->
+														<span class="stats-rate-wrap">
+															<span class="icon-star1"></span>
+															<span class="stats-rate__num">4.5</span>
+														</span>
+													</div>
+													<div class="fr">
+														<span class="product-item-heart">
+															<i class="icon-heart_red"></i>
+															<span class="product-item-heart__num">1,695</span>
+														</span>
+													</div>
+												</div>
+												<div class="product-item-body__writer">@ dafdag</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-item-related">
+										<ul>
+											<li>
+												<!-- related item -->
+												<div class="related-item">
+													<a href="#">
+														<div class="related-item-image">
+															<img class="image" alt="제품명" src="../../assets/images/common/product_90.jpg" />
+														</div>
+														<div class="related-item-content">
+															<h1 class="related-item-header">
+																<span class="related-item-header__name">솔브4인 리클라이닝 솔브4인 리클라이닝</span>
+															</h1>
+															<span class="related-item-price">
+																<span class="related-item-price__price">988,000<span class="unit">원</span> </span>
+															</span>
+														</div>
+													</a>
+												</div>
+												<!-- //related item -->
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //product item -->
+							</div>
+							<div class="swiper-slide product-item--large">
+								<!-- product item -->
+								<div class="product-item">
+									<a href="#">
+										<div class="product-item-image">
+											<!-- 제품품절일때 활성화 
+											<div class="product-item-status">
+												<span class="product-item-status--soldout">일시품절</span>
+											</div>
+											-->
+											<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+										</div>
+										<div class="product-item-content">
+											<div class="product-item-header">
+												<!-- <span class="product-item-header__brand">매장가구</span> -->
+												<span class="product-item-header__name"> 리바트솔브 소파 편하네요. 리바트솔브 소파 편하네요. </span>
+												<span class="product-item-header__description"> 리바트 모델 보고 구매한 소파에요 편하고 전동으로 리클라이닝도 되서 완전 편하네요. 편하고 전동으로 리클라이닝도 되서 완전 편하네요. </span>
+											</div>
+											<div class="product-item-body">
+												<div class="product-review-stats-area">
+													<div class="fl">
+														<!-- 별점 -->
+														<span class="stats-rate-wrap">
+															<span class="icon-star1"></span>
+															<span class="stats-rate__num">4.5</span>
+														</span>
+													</div>
+													<div class="fr">
+														<span class="product-item-heart">
+															<i class="icon-heart_red"></i>
+															<span class="product-item-heart__num">1,695</span>
+														</span>
+													</div>
+												</div>
+												<div class="product-item-body__writer">@ dafdag</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-item-related">
+										<ul>
+											<li>
+												<!-- related item -->
+												<div class="related-item">
+													<a href="#">
+														<div class="related-item-image">
+															<img class="image" alt="제품명" src="../../assets/images/common/product_90.jpg" />
+														</div>
+														<div class="related-item-content">
+															<h1 class="related-item-header">
+																<span class="related-item-header__name">솔브4인 리클라이닝 솔브4인 리클라이닝</span>
+															</h1>
+															<span class="related-item-price">
+																<span class="related-item-price__price">988,000<span class="unit">원</span> </span>
+															</span>
+														</div>
+													</a>
+												</div>
+												<!-- //related item -->
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //product item -->
+							</div>
+							<div class="swiper-slide product-item--large">
+								<!-- product item -->
+								<div class="product-item">
+									<a href="#">
+										<div class="product-item-image">
+											<!-- 제품품절일때 활성화 
+											<div class="product-item-status">
+												<span class="product-item-status--soldout">일시품절</span>
+											</div>
+											-->
+											<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+										</div>
+										<div class="product-item-content">
+											<div class="product-item-header">
+												<!-- <span class="product-item-header__brand">매장가구</span> -->
+												<span class="product-item-header__name"> 리바트솔브 소파 편하네요. 리바트솔브 소파 편하네요. </span>
+												<span class="product-item-header__description"> 리바트 모델 보고 구매한 소파에요 편하고 전동으로 리클라이닝도 되서 완전 편하네요. 편하고 전동으로 리클라이닝도 되서 완전 편하네요. </span>
+											</div>
+											<div class="product-item-body">
+												<div class="product-review-stats-area">
+													<div class="fl">
+														<!-- 별점 -->
+														<span class="stats-rate-wrap">
+															<span class="icon-star1"></span>
+															<span class="stats-rate__num">4.5</span>
+														</span>
+													</div>
+													<div class="fr">
+														<span class="product-item-heart">
+															<i class="icon-heart_red"></i>
+															<span class="product-item-heart__num">1,695</span>
+														</span>
+													</div>
+												</div>
+												<div class="product-item-body__writer">@ dafdag</div>
+											</div>
+										</div>
+									</a>
+									<div class="product-item-related">
+										<ul>
+											<li>
+												<!-- related item -->
+												<div class="related-item">
+													<a href="#">
+														<div class="related-item-image">
+															<img class="image" alt="제품명" src="../../assets/images/common/product_90.jpg" />
+														</div>
+														<div class="related-item-content">
+															<h1 class="related-item-header">
+																<span class="related-item-header__name">솔브4인 리클라이닝 솔브4인 리클라이닝</span>
+															</h1>
+															<span class="related-item-price">
+																<span class="related-item-price__price">988,000<span class="unit">원</span> </span>
+															</span>
+														</div>
+													</a>
+												</div>
+												<!-- //related item -->
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //product item -->
+							</div>
+						</div>
+						<div class="swiper-controls-wrap swiper-controls--black">
+							<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+							<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 메인베스트리뷰PC2-3단 -->
+
+			<dl class="__module-title">
+				<dt>메인카테고리PC1</dt>
+				<dd><code>loadSwiperImageCategory('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인카테고리PC1 -->
+			<section id="lstore-category-lists1" class="section-main section-category-lists swiper-control-wrap is-interval">
+				<div class="section-title-wrap">
+					<h3 class="section-title">리바트 온라인 카테고리</h3>
+					<!-- <a href="#" class="section-title__more">더보기</a> -->
+				</div>
+				<!-- Add Arrows & Add Pagination (swiper-control-wrap과 같이 사용)-->
+				<div class="section-category-control-wrap is-liner only-arrow">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<div class="container swiper-container mt4">
+					<!-- li 갯수가 9개 이상일때만 slider 동작 -->
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-01.jpg" alt="침대 이미지" />
+								<span class="name">침실</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-02.jpg" alt="옷장 이미지" />
+								<span class="name">옷장</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-03.jpg" alt="쇼파 이미지" />
+								<span class="name">거실</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-04.jpg" alt="쇼파 이미지" />
+								<span class="name">다이닝</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-05.jpg" alt="학생 책상 이미지" />
+								<span class="name">학생/서재</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-06.jpg" alt="유아 의자 이미지" />
+								<span class="name">유아동가구</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-07.jpg" alt="싱크대 이미지" />
+								<span class="name">싱크대</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="javascript:;">
+								<img class="img" src="../../assets/images/common/category-icon-08.jpg" alt="붙박이장 이미지" />
+								<span class="name">붙박이장</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- E : 메인카테고리PC1  -->
+
+			<dl class="__module-title">
+				<dt>메인핫키워드PC1</dt>
+				<!-- <dd><code>loadSwiperAutoCol4('#아이디')</code></dd> -->
+			</dl>
+			<!-- S : 메인핫키워드PC1 -->
+			<section class="section-main section-hot-keyword">
+				<div class="section-title-wrap">
+					<h3 class="section-title">HOT 키워드</h3>
+					<!-- <a href="#" class="section-title__more">더보기</a> -->
+				</div>
+				<div class="container">
+					<div class="hot-keyword-list">
+						<ul>
+							<li><a href="#">#침대</a></li>
+							<li><a href="#">#매트리스</a></li>
+							<li><a href="#">#어린이 의자</a></li>
+							<li><a href="#">#서랍장</a></li>
+							<li><a href="#">#붙박이장</a></li>
+							<li><a href="#">#가죽소파</a></li>
+							<li><a href="#">#화장대</a></li>
+							<li><a href="#">#2인용 책상</a></li>
+							<li><a href="#">#꼼므 주니어</a></li>
+							<li><a href="#">#책장</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- E : 메인핫키워드PC1 -->
+		</main>
+		<!-- e : #container -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/swiper.min.js"></script>
+		<script src="../../assets/js/common-load-swiper.js"></script>
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<!-- main 영역의 비주얼 UI 관련 -->
+		<script>
+			// 제목 탭 블록
+			$(document).on('click', '.tab-block-item', function (e) {
+				e.preventDefault();
+				$(this).addClass('is-active').siblings().removeClass('is-active');
+			});
+
+			// S : 스와이퍼 슬라이드
+			// 메인베스트리뷰PC1
+			loadSwiperBestReviewCol4('#main-review');
+
+			// 메인베스트리뷰PC2-3단
+			loadSwiperBestReviewCol3('#main-review02');
+
+			// 메인카테고리PC1
+			loadSwiperImageCategory('#lstore-category-lists1');
+
+			// E : 스와이퍼 슬라이드
+		</script>
+	</body>
+</html>

@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>모듈 : 10.기획전, 11.미디어쇼핑</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<style>
+			.__module-title {
+				display: inline-flex;
+				align-items: center;
+				margin-top: 5px;
+				padding: 0.4em;
+				text-align: center;
+				color: #fff;
+				border-top-left-radius: 0.4em;
+				border-top-right-radius: 0.4em;
+				background-color: #ed2650;
+			}
+			.__module-title dt {
+				vertical-align: middle;
+				padding: 0 1em 0 0;
+			}
+			.__module-title dd {
+				vertical-align: middle;
+			}
+			.section-main {
+				border: 2px solid #ed2650;
+			}
+			code {
+				display: inline-block;
+				border-radius: 3px;
+				font-family: 'Courier New', Courier, monospace, sans-serif;
+				font-size: 13px;
+				overflow: hidden;
+				padding: 0 10px 0 0;
+				height: 20px;
+				line-height: 1.1;
+				vertical-align: middle;
+			}
+			code::before {
+				content: 'function ';
+				display: inline-block;
+				padding: 4px;
+				margin-right: 1em;
+				color: #fff;
+				background-color: #28a0e4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- s : #container -->
+		<main id="container" role="main">
+			<dl class="__module-title">
+				<dt>메인기획전PC1-5단</dt>
+				<dd><code>loadSwiperExhibition01('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인기획전PC1-5단-->
+			<section id="main-exhibition" class="section-main section-exhibition">
+				<div class="section-title-wrap">
+					<h3 class="section-title">기획전</h3>
+					<a href="#" class="section-title__more">더보기</a>
+				</div>
+				<div class="container">
+					<ul class="now-list">
+						<li class="item">
+							<p class="img" style="background-image: url(../../assets/images/common/sample-lstore-01.jpg)"></p>
+							<a href="#" class="btn">
+								<span class="brand-tag">리바트</span>
+								<span class="brand-txt">바른 학습습관 뉴루디로 고민해결</span>
+								<span class="brand-day">~ <em>2020.06.31</em></span>
+							</a>
+						</li>
+						<li class="item">
+							<p class="img" style="background-image: url(../../assets/images/common/sample-lstore-02.jpg)"></p>
+							<a href="#" class="btn">
+								<span class="brand-tag">리바트</span>
+								<span class="brand-txt">수저세트부터 고품격 양식기 까지</span>
+								<span class="brand-day">~ <em>2020.06.31</em></span>
+							</a>
+						</li>
+						<li class="item">
+							<p class="img" style="background-image: url(../../assets/images/common/sample-lstore-03.jpg)"></p>
+							<a href="#" class="btn">
+								<span class="brand-tag">리바트</span>
+								<span class="brand-txt">수저세트부터 고품격 양식기 까지</span>
+								<span class="brand-day">~ <em>2020.06.31</em></span>
+							</a>
+						</li>
+						<li class="item">
+							<p class="img" style="background-image: url(../../assets/images/common/sample-lstore-04.jpg)"></p>
+							<a href="#" class="btn">
+								<span class="brand-tag">리바트</span>
+								<span class="brand-txt">수저세트부터 고품격 양식기 까지</span>
+								<span class="brand-day">~ <em>2020.06.31</em></span>
+							</a>
+						</li>
+						<!-- black / white 선택 가능 : 기본은 white 201112 -->
+						<!-- <li class="item black"> -->
+						<!-- <li class="item white"> -->
+						<li class="item white">
+							<p class="img" style="background-image: url(../../assets/images/common/sample-lstore-05.jpg)"></p>
+							<a href="#" class="btn main">
+								<div class="txt-wrap">
+									<span class="event-txt">리바트 여름맞이 할인</span>
+									<strong class="tit">그라함 소파 할인전</strong>
+									<span class="event-txt-sub">이태리 통가죽으로 제작한 변하지 않는 가치</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- E : 메인기획전PC1-5단 -->
+
+			<dl class="__module-title">
+				<dt>메인기획전PC2-배너+상품</dt>
+				<dd><code>loadSwiperCol4('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인기획전PC2-배너+상품  -->
+			<section id="main-exhibition03" class="section-main section-exhibition__wide-banner">
+				<div class="section-title-wrap">
+					<h3 class="section-title">구매가이드</h3>
+				</div>
+
+				<div class="container swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="section-top-banner">
+								<a href="#">
+									<div class="section-top-banner__320"><img src="../../assets/images/common/banner_320.jpg" alt="" /></div>
+								</a>
+							</div>
+							<div class="product-item-medium-lists">
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="section-top-banner">
+								<a href="#">
+									<div class="section-top-banner__320"><img src="../../assets/images/common/banner_320.jpg" alt="" /></div>
+								</a>
+							</div>
+							<div class="product-item-medium-lists">
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+								<!-- product item [medium]-->
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<!-- 제품품절일때 활성화 -->
+										<!-- <div class="product-item-status">
+											<span class="product-item-status--soldout">일시품절</span>
+										</div> -->
+										<!-- 장바구니/바로구매 버튼 -->
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/sample_320_1.jpg" />
+									</div>
+									<div class="product-item-content">
+										<div class="product-item-header">
+											<span class="product-item-header__brand">리바트온라인</span>
+											<a href="#" class="product-item-header__name">로티르 4인 원형식탁 SET 의자 2개</a>
+										</div>
+										<span class="product-item-price">
+											<div class="product-item-price__discount">
+												33<span class="unit">%</span>
+												<i
+													class="ico-tooltip"
+													data-toggle="tooltip"
+													data-html="true"
+													data-placement="bottom"
+													title='
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">415,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">136,000<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">279,000<span class="unit">원</span></dd>
+														</dl>
+													'
+												></i>
+												<!-- //툴팁 -->
+											</div>
+											<div class="product-item-price__price--wrap">
+												<del class="product-item-price__price--del">415,000<span class="unit">원</span></del>
+												<span class="product-item-price__price">279,000<span class="unit">원</span> </span>
+											</div>
+										</span>
+										<div class="product-item-category clear">
+											<!-- 임직원: --brown, new: --black, sale: --red, --mint -->
+											<div class="product-item-tag fl">
+												<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+												<span class="product-item-tag__item product-item-tag__item--orange">BEST</span>
+											</div>
+											<div class="product-review-stats-area fr">
+												<!-- 별점 -->
+												<span class="stats-rate-wrap">
+													<span class="icon-star1"></span>
+													<span class="stats-rate__num">4.5</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //product item [medium]-->
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls-wrap swiper-controls--black">
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 메인기획전PC2-배너+상품 -->
+
+			<dl class="__module-title">
+				<dt>메인기획전PC3-비대칭3단</dt>
+				<dd><code>loadSwiperNewArrival('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인기획전PC3-비대칭3단 -->
+			<section id="main-arrival" class="section-main section-arrival section-bg">
+				<div class="section-title-wrap">
+					<h3 class="section-title">신상품</h3>
+					<a href="#" class="section-title__more">더보기</a>
+				</div>
+				<div class="container swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="float-left">
+								<a href="#"><img src="../../assets/images/common/arrival_left.jpg" alt="HOUSERECIPE 새롭지만 클래식한 것들의 완벽한 균형" /></a>
+							</div>
+							<div class="float-right">
+								<!-- product item -->
+								<div class="product-item fl">
+									<a href="#">
+										<div class="product-item-image product-item-image--circle">
+											<img class="image" alt="제품명" src="../../assets/images/common/product_245.jpg" />
+										</div>
+										<div class="product-item-content">
+											<h1 class="product-item-header">
+												<span class="product-item-header__brand">온라인</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+											</h1>
+											<span class="product-item-price">
+												<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+											</span>
+											<!-- <span class="product-item-cart icon">
+												<i class="icon-cart"></i>
+												<span class="hidden">장바구니</span>
+											</span> -->
+										</div>
+									</a>
+								</div>
+								<!-- //product item -->
+								<!-- product item -->
+								<div class="product-item fl">
+									<a href="#">
+										<div class="product-item-image product-item-image--circle">
+											<img class="image" alt="제품명" src="../../assets/images/common/product_245.jpg" />
+										</div>
+										<div class="product-item-content">
+											<h1 class="product-item-header">
+												<span class="product-item-header__brand">온라인</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+											</h1>
+											<span class="product-item-price">
+												<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+											</span>
+											<!-- <span class="product-item-cart icon">
+												<i class="icon-cart"></i>
+												<span class="hidden">장바구니</span>
+											</span> -->
+										</div>
+									</a>
+								</div>
+								<!-- //product item -->
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="float-left">
+								<a href="#"><img src="../../assets/images/common/arrival_left.jpg" alt="HOUSERECIPE 새롭지만 클래식한 것들의 완벽한 균형" /></a>
+							</div>
+							<div class="float-right">
+								<!-- product item -->
+								<div class="product-item fl">
+									<a href="#">
+										<div class="product-item-image product-item-image--circle">
+											<img class="image" alt="제품명" src="../../assets/images/common/product_245.jpg" />
+										</div>
+										<div class="product-item-content">
+											<h1 class="product-item-header">
+												<span class="product-item-header__brand">온라인</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+											</h1>
+											<span class="product-item-price">
+												<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+											</span>
+											<!-- <span class="product-item-cart icon">
+												<i class="icon-cart"></i>
+												<span class="hidden">장바구니</span>
+											</span> -->
+										</div>
+									</a>
+								</div>
+								<!-- //product item -->
+								<!-- product item -->
+								<div class="product-item fl">
+									<a href="#">
+										<div class="product-item-image product-item-image--circle">
+											<img class="image" alt="제품명" src="../../assets/images/common/product_245.jpg" />
+										</div>
+										<div class="product-item-content">
+											<h1 class="product-item-header">
+												<span class="product-item-header__brand">온라인</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+											</h1>
+											<span class="product-item-price">
+												<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+											</span>
+											<!-- <span class="product-item-cart icon">
+												<i class="icon-cart"></i>
+												<span class="hidden">장바구니</span>
+											</span> -->
+										</div>
+									</a>
+								</div>
+								<!-- //product item -->
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="float-left">
+								<a href="#"><img src="../../assets/images/common/arrival_left.jpg" alt="HOUSERECIPE 새롭지만 클래식한 것들의 완벽한 균형" /></a>
+							</div>
+							<div class="float-right">
+								<!-- product item -->
+								<div class="product-item fl">
+									<a href="#">
+										<div class="product-item-image product-item-image--circle">
+											<img class="image" alt="제품명" src="../../assets/images/common/product_245.jpg" />
+										</div>
+										<div class="product-item-content">
+											<h1 class="product-item-header">
+												<span class="product-item-header__brand">온라인</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+											</h1>
+											<span class="product-item-price">
+												<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+											</span>
+											<!-- <span class="product-item-cart icon">
+												<i class="icon-cart"></i>
+												<span class="hidden">장바구니</span>
+											</span> -->
+										</div>
+									</a>
+								</div>
+								<!-- //product item -->
+								<!-- product item -->
+								<div class="product-item fl">
+									<a href="#">
+										<div class="product-item-image product-item-image--circle">
+											<img class="image" alt="제품명" src="../../assets/images/common/product_245.jpg" />
+										</div>
+										<div class="product-item-content">
+											<h1 class="product-item-header">
+												<span class="product-item-header__brand">온라인</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+											</h1>
+											<span class="product-item-price">
+												<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+											</span>
+											<!-- <span class="product-item-cart icon">
+												<i class="icon-cart"></i>
+												<span class="hidden">장바구니</span>
+											</span> -->
+										</div>
+									</a>
+								</div>
+								<!-- //product item -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 버튼 수정 : 200729 -->
+				<!-- Add Arrows -->
+				<div class="swiper-controls-wrap swiper-controls--black">
+					<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+					<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+				</div>
+				<div class="container">
+					<div class="button-main-detail">
+						<div class="container">
+							<a href="#" class="button-main-detail__btn">
+								<span class="button-main-detail__btn-inner icon">
+									<em>자세히 보기</em>
+									<i class="icon-arrow1"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="paging-box">
+						<!-- Add Pagination -->
+						<div class="swiper-pagination-outer">
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="swiper-pagination-count"><strong class="swiper-pagination-current">01</strong> / <span class="swiper-pagination-total">06</span></div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-prev">PREV</div>
+						<div class="swiper-button-next">NEXT</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 메인기획전PC3-비대칭3단 -->
+
+			<dl class="__module-title">
+				<dt>메인동영상PC1</dt>
+				<dd><code>loadSwiperCol3('#아이디')</code></dd>
+			</dl>
+			<!-- S : 메인동영상PC1 -->
+			<!-- section-bg 클래스 삭제 : 201123 -->
+			<!-- <section id="main-media" class="section-main section-media section-bg"> -->
+			<section id="main-media" class="section-main section-media">
+				<div class="section-title-wrap">
+					<h3 class="section-title">미디어 쇼핑<span class="section-title--small">영상 속 리바트 상품을 소개합니다.</span></h3>
+					<a href="#" class="section-title__more">더보기</a>
+				</div>
+				<div class="container">
+					<div class="float-left">
+						<div class="thumb-video">
+							<a class="button-media-video">
+								<img src="../../assets/images/common/bg_media_2.jpg" alt="" />
+								<i class="icon-play"></i>
+							</a>
+							<div class="embed-container" style="display: none">
+								<iframe
+									width="640"
+									height="360"
+									src="http://play.wecandeo.com/video/v/?key=BOKNS9AQWrH1dvc5D4FzPhy2tsQThTii2bL3RajJxZNL6vXCkscIaRrKGKgfKFPwplFGipd7WMv3b27rE983vAVwieie"
+									frameborder="0"
+									allowfullscreen=""
+									allow="autoplay;fullscreen;"
+								></iframe>
+								<button class="delete is-xlarge button-media-video-close" aria-label="close"></button>
+							</div>
+						</div>
+
+						<!-- <a href="#" class="thumb-video">
+							<img src="../../assets/images/common/bg_media_2.jpg" alt="" />
+							<i class="icon-play"></i>
+						</a> -->
+					</div>
+					<div class="float-right product-item-lists--landscape">
+						<!-- product item [small]-->
+						<div class="product-item product-item--small">
+							<div class="product-item-image">
+								<!-- 제품품절일때 활성화 -->
+								<!-- <div class="product-item-status">
+										<span class="product-item-status--soldout">일시품절</span>
+								</div> -->
+								<!-- 장바구니/바로구매 버튼 -->
+								<!-- <div class="product-item-button-wrap">
+									<button type="button" class="product-item-button__button product-item-button__button--cart">
+										<div class="icon-wrap">
+											<i class="icon-item_cart"></i>
+										</div>
+										<span>장바구니</span>
+									</button>
+									<button type="button" class="product-item-button__button product-item-button__button--buy">
+										<div class="icon-wrap">
+											<i class="icon-item_buy"></i>
+										</div>
+										<span>바로구매</span>
+									</button>
+								</div> -->
+								<a href="#">
+									<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+									<span class="pitem-header-photo__badge">
+										<img class="image" alt="bagde이미지" src="../../assets/images/common/bagde.png">
+									</span>
+								</a>
+							</div>
+							<a href="#">
+								<div class="product-item-content">
+									<div class="product-item-header">
+										<span class="product-item-header__brand">TS퍼니처</span>
+										<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명</span>
+									</div>
+									<span class="product-item-price">
+										<div class="product-item-price__discount">
+											100<span class="unit">%</span>
+											<i class="ico-tooltip"></i>
+											<div class="product-item-price__discount--tooltip">
+												<dl class="clear">
+													<dt class="float-left">판매가</dt>
+													<dd class="float-right">99,999,999<span class="unit">원</span></dd>
+												</dl>
+												<dl class="clear">
+													<dt class="float-left">할인가</dt>
+													<dd class="float-right">9,999,999<span class="unit">원</span></dd>
+												</dl>
+												<dl class="clear">
+													<dt class="float-left">최종금액</dt>
+													<dd class="float-right">90,000,000<span class="unit">원</span></dd>
+												</dl>
+											</div>
+										</div>
+										<div class="product-item-price__price--wrap">
+											<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+											<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+										</div>
+										<!-- 별점 -->
+										<!-- <div class="product-review-stats-area">											
+											<span class="stats-rate-wrap">
+												<span class="icon-star1"></span>
+												<span class="stats-rate__num">4.5</span>
+											</span>
+										</div> -->
+									</span>
+									<!-- <div class="product-item-category">
+										<div class="product-item-tag clear">
+											<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+											<span class="product-item-tag__item product-item-tag__item--red">SALE</span>
+										</div>
+									</div> -->
+								</div>
+							</a>
+						</div>
+						<!-- //product item [small]-->
+						<!-- product item [small]-->
+						<div class="product-item product-item--small">
+							<div class="product-item-image">
+								<!-- 제품품절일때 활성화 -->
+								<!-- <div class="product-item-status">
+										<span class="product-item-status--soldout">일시품절</span>
+								</div> -->
+								<!-- 장바구니/바로구매 버튼 -->
+								<!-- <div class="product-item-button-wrap">
+									<button type="button" class="product-item-button__button product-item-button__button--cart">
+										<div class="icon-wrap">
+											<i class="icon-item_cart"></i>
+										</div>
+										<span>장바구니</span>
+									</button>
+									<button type="button" class="product-item-button__button product-item-button__button--buy">
+										<div class="icon-wrap">
+											<i class="icon-item_buy"></i>
+										</div>
+										<span>바로구매</span>
+									</button>
+								</div> -->
+								<a href="#">
+									<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+									<span class="pitem-header-photo__badge">
+										<img class="image" alt="bagde이미지" src="../../assets/images/common/bagde.png">
+									</span>
+								</a>
+							</div>
+							<a href="#">
+								<div class="product-item-content">
+									<div class="product-item-header">
+										<span class="product-item-header__brand">TS퍼니처</span>
+										<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명</span>
+									</div>
+									<span class="product-item-price">
+										<div class="product-item-price__discount">
+											100<span class="unit">%</span>
+											<i class="ico-tooltip"></i>
+											<div class="product-item-price__discount--tooltip">
+												<dl class="clear">
+													<dt class="float-left">판매가</dt>
+													<dd class="float-right">99,999,999<span class="unit">원</span></dd>
+												</dl>
+												<dl class="clear">
+													<dt class="float-left">할인가</dt>
+													<dd class="float-right">9,999,999<span class="unit">원</span></dd>
+												</dl>
+												<dl class="clear">
+													<dt class="float-left">최종금액</dt>
+													<dd class="float-right">90,000,000<span class="unit">원</span></dd>
+												</dl>
+											</div>
+										</div>
+										<div class="product-item-price__price--wrap">
+											<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+											<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+										</div>
+										<!-- 별점 -->
+										<!-- <div class="product-review-stats-area">
+											<span class="stats-rate-wrap">
+												<span class="icon-star1"></span>
+												<span class="stats-rate__num">4.5</span>
+											</span>
+										</div> -->
+									</span>
+									<!-- <div class="product-item-category">
+										<div class="product-item-tag clear">
+											<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+											<span class="product-item-tag__item product-item-tag__item--red">SALE</span>
+										</div>
+									</div> -->
+								</div>
+							</a>
+						</div>
+						<!-- //product item [small]-->
+						<!-- product item [small]-->
+						<div class="product-item product-item--small">
+							<div class="product-item-image">
+								<!-- 제품품절일때 활성화 -->
+								<!-- <div class="product-item-status">
+										<span class="product-item-status--soldout">일시품절</span>
+								</div> -->
+								<!-- 장바구니/바로구매 버튼 -->
+								<!-- <div class="product-item-button-wrap">
+									<button type="button" class="product-item-button__button product-item-button__button--cart">
+										<div class="icon-wrap">
+											<i class="icon-item_cart"></i>
+										</div>
+										<span>장바구니</span>
+									</button>
+									<button type="button" class="product-item-button__button product-item-button__button--buy">
+										<div class="icon-wrap">
+											<i class="icon-item_buy"></i>
+										</div>
+										<span>바로구매</span>
+									</button>
+								</div> -->
+								<a href="#">
+									<img class="image" alt="제품명" src="../../assets/images/common/product_250.jpg" />
+									<span class="pitem-header-photo__badge">
+										<img class="image" alt="bagde이미지" src="../../assets/images/common/bagde.png">
+									</span>
+								</a>
+							</div>
+							<a href="#">
+								<div class="product-item-content">
+									<div class="product-item-header">
+										<span class="product-item-header__brand">TS퍼니처</span>
+										<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명</span>
+									</div>
+									<span class="product-item-price">
+										<div class="product-item-price__discount">
+											100<span class="unit">%</span>
+											<i class="ico-tooltip"></i>
+											<div class="product-item-price__discount--tooltip">
+												<dl class="clear">
+													<dt class="float-left">판매가</dt>
+													<dd class="float-right">99,999,999<span class="unit">원</span></dd>
+												</dl>
+												<dl class="clear">
+													<dt class="float-left">할인가</dt>
+													<dd class="float-right">9,999,999<span class="unit">원</span></dd>
+												</dl>
+												<dl class="clear">
+													<dt class="float-left">최종금액</dt>
+													<dd class="float-right">90,000,000<span class="unit">원</span></dd>
+												</dl>
+											</div>
+										</div>
+										<div class="product-item-price__price--wrap">
+											<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+											<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+										</div>
+										<!-- 별점 -->
+										<!-- <div class="product-review-stats-area">
+											<span class="stats-rate-wrap">
+												<span class="icon-star1"></span>
+												<span class="stats-rate__num">4.5</span>
+											</span>
+										</div> -->
+									</span>
+									<!-- <div class="product-item-category">
+										<div class="product-item-tag clear">
+											<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+											<span class="product-item-tag__item product-item-tag__item--red">SALE</span>
+										</div>
+									</div> -->
+								</div>
+							</a>
+						</div>
+						<!-- //product item [small]-->
+					</div>
+				</div>
+			</section>
+			<!-- E : 메인동영상PC1 -->
+
+			<!-- <dl class="__module-title">
+				<dt>통합몰 미디어 쇼핑 모듈 - 분류탭 + 와이드 영상 배너 + 4단 상품 유닛</dt>
+				<dd><code>loadSwiperCol3('#아이디')</code></dd>
+			</dl> -->
+			<!-- S : 통합몰 미디어 쇼핑 모듈 - 분류탭 + 와이드 영상 배너 + 4단 상품 유닛 -->
+			<!-- <section id="main-media02" class="section-main section-media-2 section-bg">
+				<div class="section-title-wrap">
+					<h3 class="section-title">미디어 쇼핑</h3>
+					<a href="#" class="section-title__more">더보기</a>
+				</div>
+				<div class="tab-block">
+					<ul class="inner container">
+						<li class="tab-block-item is-active">
+							<a href="#" class="tab-block-item__btn">오늘 점심은 파스타!</a>
+						</li>
+						<li class="tab-block-item">
+							<a href="#" class="tab-block-item__btn">우스토프 컬렉션</a>
+						</li>
+					</ul>
+				</div>
+				<div class="fullcover-banner" style="background-image: url(../../assets/images/common/bg_media.jpg);">
+					<a href="#" class="fullcover-banner-item icon">
+						<i class="icon-media_play"></i>
+						<span class="fullcover-banner-item__text">영상속 상품 구매하기</span>
+					</a>
+				</div>
+				<div class="container">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="product-item product-item--medium">
+									<div class="product-item-image">
+										<div class="product-item-button-wrap">
+											<button type="button" class="product-item-button__button product-item-button__button--cart">
+												<div class="icon-wrap">
+													<i class="icon-item_cart"></i>
+												</div>
+												<span>장바구니</span>
+											</button>
+											<button type="button" class="product-item-button__button product-item-button__button--buy">
+												<div class="icon-wrap">
+													<i class="icon-item_buy"></i>
+												</div>
+												<span>바로구매</span>
+											</button>
+										</div>
+										<img class="image" alt="제품명" src="../../assets/images/common/product_320.jpg" />
+									</div>
+									<a href="#">
+										<div class="product-item-content">
+											<div class="product-item-header">
+												<span class="product-item-header__brand">TS퍼니처</span>
+												<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명</span>
+											</div>
+											<span class="product-item-price">
+												<div class="product-item-price__discount">
+													100<span class="unit">%</span>
+													<i class="ico-tooltip"></i>
+													<div class="product-item-price__discount--tooltip">
+														<dl class="clear">
+															<dt class="float-left">판매가</dt>
+															<dd class="float-right">99,999,999<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">할인가</dt>
+															<dd class="float-right">9,999,999<span class="unit">원</span></dd>
+														</dl>
+														<dl class="clear">
+															<dt class="float-left">최종금액</dt>
+															<dd class="float-right">90,000,000<span class="unit">원</span></dd>
+														</dl>
+													</div>
+												</div>
+												<div class="product-item-price__price--wrap">
+													<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+													<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+												</div>
+											</span>
+											<div class="product-item-category">
+												<div class="product-item-tag clear">
+													<span class="product-item-tag__item product-item-tag__item--black">NEW</span>
+													<span class="product-item-tag__item product-item-tag__item--red">SALE</span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls-wrap swiper-controls--black">
+						<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+						<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+					</div>
+				</div>
+			</section> -->
+			<!-- E : 통합몰 미디어 쇼핑 모듈 - 분류탭 + 와이드 영상 배너 + 4단 상품 유닛 -->
+		</main>
+		<!-- e : #container -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/swiper.min.js"></script>
+		<script src="../../assets/js/common-load-swiper.js"></script>
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<!-- main 영역의 비주얼 UI 관련 -->
+		<script>
+			// 제목 탭 블록
+			$(document).on('click', '.tab-block-item', function (e) {
+				e.preventDefault();
+				$(this).addClass('is-active').siblings().removeClass('is-active');
+			});
+
+			// S : 스와이퍼 슬라이드
+			// 기획전 - 3단 배너 + 중간 빅 배너(slide)
+			// loadSwiperExhibition01('#main-exhibition');
+
+			// 메인기획전PC2-배너+상품
+			loadSwiperExhibition04('#main-exhibition03');
+
+			// 메인기획전PC3-비대칭3단
+			loadSwiperNewArrival('#main-arrival');
+
+			// 통합몰 미디어 쇼핑 빅 영상 이미지 + 3단 상품 유닛
+			//loadSwiperMediaShopping('#main-media');
+
+			// 통합몰 미디어 쇼핑 분류탭 + 와이드 영상 배너 + 4단 상품 유닛
+			// loadSwiperCol4('#main-media02');
+
+			// E : 스와이퍼 슬라이드
+		</script>
+	</body>
+</html>

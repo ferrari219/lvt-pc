@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>모듈 : 윙배너, 탑배너</title>
+	<meta name="robots" content="index,follow" />
+	<meta name="referrer" contents="always" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+	<style>
+		.__module-title {
+			display: inline-flex;
+			align-items: center;
+			margin-top: 5px;
+			padding: 0.4em;
+			text-align: center;
+			color: #fff;
+			border-top-left-radius: 0.4em;
+			border-top-right-radius: 0.4em;
+			background-color: #ed2650;
+		}
+
+		.__module-title dt {
+			vertical-align: middle;
+			padding: 0 1em 0 0;
+		}
+
+		.__module-title dd {
+			vertical-align: middle;
+		}
+
+		.section-main {
+			border: 2px solid #ed2650;
+		}
+
+		hr.br {
+			height: 10px;
+			background-color: transparent;
+			border: none;
+		}
+
+		code {
+			display: inline-block;
+			border-radius: 3px;
+			font-family: 'Courier New', Courier, monospace, sans-serif;
+			font-size: 13px;
+			overflow: hidden;
+			padding: 0 10px 0 0;
+			height: 20px;
+			line-height: 1.1;
+			vertical-align: middle;
+		}
+
+		code::before {
+			content: 'function ';
+			display: inline-block;
+			padding: 4px;
+			margin-right: 1em;
+			color: #fff;
+			background-color: #28a0e4;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- s : #container -->
+	<main id="container" role="main">
+		<div style="position: relative; margin-bottom: 360px">
+			<dl class="__module-title">
+				<dt>WING Banner</dt>
+				<dd><code>loadSwiperSingle('#아이디')</code> : 윙배너의 경우에 상단 부터의 높이 값은 키비주얼 모듈에 따라 수동으로 수정하는 것을 권장</dd>
+			</dl>
+			<!-- S : WING Banner -->
+			<div id="main-wingbanner" class="wing-banner">
+				<div class="swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="#">
+								<img src="../../assets/images/common/sample_wing_240.png" alt="" />
+							</a>
+						</li>
+						<!-- <li class="swiper-slide">
+							<a href="#">
+								<img src="../../assets/images/common/sample_wing_240.png" alt="" />
+							</a>
+						</li> -->
+					</ul>
+				</div>
+				<div class="swiper-controls-wrap">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+			<!-- E : WING Banner  -->
+		</div>
+
+		<dl class="__module-title">
+			<dt>TOP Banner Type 1</dt>
+		</dl>
+		<!-- S : TOP Banner Type 1 -->
+		<div class="top-banner">
+			<div class="top-banner-default">
+				<button class="button-open-top-banner">
+					<img src="../../assets/images/common/topbanner_01.jpg"
+						alt="스타일별 식탁의자, 식탁에 포인트를 주는 LIVART kitchen 솔루션을 만나보세요!" />
+					<i class="icons-plus"></i>
+				</button>
+			</div>
+			<div class="top-banner-area" style="display: none">
+				<a href="#">
+					<img src="../../assets/images/common/topbanner_02.jpg"
+						alt="LIVART KITCHEN 20% OFF SALE 04.05 ~ 04.18 식탁할인 20% OFF" />
+				</a>
+			</div>
+		</div>
+		<!-- E : TOP Banner Type 1 -->
+
+		<hr class="br" />
+
+		<dl class="__module-title">
+			<dt>TOP Banner Type 2</dt>
+		</dl>
+		<!-- S : TOP Banner Type 2 -->
+		<section id="dev_top-banner" class="top-banner">
+			<div class="top-banner-list is-active" style="background-color: #0d0d3f">
+				<div class="container">
+					<a href="#">
+						<img src="../../assets/images/common/sample_top_001.jpg" alt="" />
+					</a>
+					<!-- color 기본은 black, 어두운 배경의 경우 white 를 지정 가능 -->
+					<button class="button-close-top-banner is-color-white">
+						<i class="ico-cross"></i>
+						<span>오늘하루닫기</span>
+					</button>
+				</div>
+			</div>
+
+			<hr class="br" />
+
+			<div class="top-banner-list is-active"
+				style="background-image: url(../../assets/images/common/sample_top_bg.jpg)">
+				<div class="container">
+					<a href="#">
+						<img src="../../assets/images/common/sample_top_001.jpg" alt="" />
+					</a>
+					<a href="#">
+						<img src="../../assets/images/common/sample_top_002.jpg" alt="" />
+					</a>
+					<!-- color 기본은 black, 어두운 배경의 경우 white 를 지정 가능 -->
+					<button class="button-close-top-banner is-color-white">
+						<i class="ico-cross"></i>
+						<span>오늘하루닫기</span>
+					</button>
+				</div>
+			</div>
+
+			<hr class="br" />
+
+			<div class="top-banner-list is-active">
+				<div class="container">
+					<a href="#">
+						<img src="../../assets/images/common/sample_top_001.jpg" alt="" />
+					</a>
+					<a href="#">
+						<img src="../../assets/images/common/sample_top_002.jpg" alt="" />
+					</a>
+					<a href="#">
+						<img src="../../assets/images/common/sample_top_003.jpg" alt="" />
+					</a>
+					<button class="button-close-top-banner">
+						<i class="ico-cross"></i>
+						<span>오늘하루닫기</span>
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- E : TOP Banner Type 2 -->
+
+		<!-- 테스트를 위한 코드 -->
+		<div style="width:1366px;height:5000px;margin:0 auto;background:#eee;"></div>
+	</main>
+	<!-- e : #container -->
+
+	<!-- s : #footer -->
+	<footer id="footer"></footer>
+	<!-- e: #footer -->
+
+	<!-- script -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/swiper.min.js"></script>
+	<script src="../../assets/js/common-load-swiper.js"></script>
+	<script src="../../assets/js/popper.min.js"></script>
+	<script src="../../assets/js/bootstrap-tooltip.js"></script>
+	<script src="../../assets/js/common-ui.js"></script>
+	<!-- main 영역의 비주얼 UI 관련 -->
+	<script>
+		// WING Banner
+		// 윙배너 로딩
+		// 윙배너 스크롤 픽스 추가 : 201019
+		loadSwiperSingle('#main-wingbanner');
+		setWingBannerScroll('#main-wingbanner', 1017);
+		$(window).on('scroll', function () {
+			setWingBannerScroll('#main-wingbanner', 1017);
+		});
+	</script>
+</body>
+
+</html>

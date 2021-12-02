@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>모듈 : 27. 통합검색</title>
+	<meta name="robots" content="index,follow" />
+	<meta name="referrer" contents="always" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+	<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+	<link rel="stylesheet" href="../../assets/css/twentytwenty.css" media="all" />
+	<style>
+		.__module-title {
+			display: inline-flex;
+			align-items: center;
+			margin-top: 5px;
+			padding: 0.4em;
+			text-align: center;
+			color: #fff;
+			border-top-left-radius: 0.4em;
+			border-top-right-radius: 0.4em;
+			background-color: #ed2650;
+		}
+
+		.__module-title dt {
+			vertical-align: middle;
+			padding: 0 1em 0 0;
+		}
+
+		.__module-title dd {
+			vertical-align: middle;
+		}
+
+		.container {
+			width: 100%;
+		}
+
+		.search-result {
+			width: 1366px;
+			margin: 0 auto;
+		}
+
+		.section-main {
+			border: 2px solid #ed2650;
+		}
+
+		code {
+			display: inline-block;
+			border-radius: 3px;
+			font-family: 'Courier New', Courier, monospace, sans-serif;
+			font-size: 13px;
+			overflow: hidden;
+			padding: 0 10px 0 0;
+			height: 20px;
+			line-height: 1.1;
+			vertical-align: middle;
+		}
+
+		code::before {
+			content: 'function ';
+			display: inline-block;
+			padding: 4px;
+			margin-right: 1em;
+			color: #fff;
+			background-color: #28a0e4;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- s : #container -->
+	<main id="container" role="main">
+		<dl class="__module-title">
+			<dt>통합검색_커뮤니티 대칭형PC1</dt>
+			<!-- <dd><code>loadSwiperAutoCol4('#아이디')</code></dd> -->
+		</dl>
+		<div class="container section-main">
+			<!-- S : 통합검색PC1 -->
+			<section class="search-result">
+				<div class="search-result-tabs">
+					<div class="search-result-tabs-tabpanel section-contents-wrap clear">
+						<!-- S : LNB -->
+						<aside class="left-menu section-category-left float-left">
+							<!-- S : 카테고리 -->
+							<section class="left-menu-section">
+								<a href="#collapsible-panel1" data-action="collapse" class="is-active">
+									<h3 class="panel-heading">카테고리<i></i></h3>
+								</a>
+								<div id="collapsible-panel1" class="is-collapsible is-active">
+									<!-- LNB 카테고리 -->
+									<nav class="lnb" role="navigation">
+										<ul class="lnb-list">
+											<li class="lnb-list-item">
+												<span class="lnb-list-item__head">
+													<a href="#">침실</a><button class="lnb-list-item__btn is-active"><i
+															class="ico-down_arrow"></i></button>
+												</span>
+												<div class="lnb-list-item__content is-active">
+													<ul>
+														<li><a href="#">침대/매트세트</a></li>
+														<li><a href="#">침대</a></li>
+														<li><a href="#">매트리스</a></li>
+														<li><a href="#">침실소가구</a></li>
+													</ul>
+												</div>
+											</li>
+											<li class="lnb-list-item">
+												<span class="lnb-list-item__head">
+													<a href="#">옷장</a><button class="lnb-list-item__btn"><i
+															class="ico-down_arrow"></i></button>
+												</span>
+												<div class="lnb-list-item__content">
+													<ul>
+														<li><a href="#">꼼므시리즈</a></li>
+														<li><a href="#">쮸(ZZOO) - 소파</a></li>
+														<li><a href="#">책상</a></li>
+														<li><a href="#">책장</a></li>
+													</ul>
+												</div>
+											</li>
+											<li class="lnb-list-item">
+												<span class="lnb-list-item__head">
+													<a href="#">거실/소파</a><button class="lnb-list-item__btn"><i
+															class="ico-down_arrow"></i></button>
+												</span>
+												<div class="lnb-list-item__content">
+													<ul>
+														<li><a href="#">꼼므시리즈</a></li>
+														<li><a href="#">쮸(ZZOO) - 소파</a></li>
+														<li><a href="#">책상</a></li>
+														<li><a href="#">책장</a></li>
+													</ul>
+												</div>
+											</li>
+											<li class="lnb-list-item">
+												<span class="lnb-list-item__head">
+													<a href="#">다이닝</a><button class="lnb-list-item__btn"><i
+															class="ico-down_arrow"></i></button>
+												</span>
+												<div class="lnb-list-item__content">
+													<ul>
+														<li><a href="#">꼼므시리즈</a></li>
+														<li><a href="#">쮸(ZZOO) - 소파</a></li>
+														<li><a href="#">책상</a></li>
+														<li><a href="#">책장</a></li>
+													</ul>
+												</div>
+											</li>
+											<li class="lnb-list-item">
+												<span class="lnb-list-item__head">
+													<a href="#">학생/서재</a><button class="lnb-list-item__btn"><i
+															class="ico-down_arrow"></i></button>
+												</span>
+												<div class="lnb-list-item__content">
+													<ul>
+														<li><a href="#">꼼므시리즈</a></li>
+														<li><a href="#">쮸(ZZOO) - 소파</a></li>
+														<li><a href="#">책상</a></li>
+														<li><a href="#">책장</a></li>
+													</ul>
+												</div>
+											</li>
+											<li class="lnb-list-item">
+												<span class="lnb-list-item__head">
+													<a href="#">하위메뉴 없는 메뉴</a>
+												</span>
+											</li>
+										</ul>
+									</nav>
+									<!-- //Accordion -->
+								</div>
+							</section>
+							<!-- E : 카테고리 -->
+							<!-- S : 브랜드 -->
+							<section class="left-menu-section lnb-brand">
+								<a href="#collapsible-panel2" data-action="collapse" class="is-active">
+									<h3 class="panel-heading">브랜드<i></i></h3>
+								</a>
+								<div id="collapsible-panel2" class="is-collapsible is-active">
+									<div class="panel-block">
+										<!-- <div class="lnb-brand-search">
+                                                <input type="text" class="lnb-brand-search-input" title="브랜드 검색" placeholder="검색어를 입력해 주세요" />
+                                                <button class="ico-search"><span class="hidden">검색</span></button>
+                                            </div> -->
+										<div class="lnb-brand-checkbox-list maxheight">
+											<div class="scrollbar-container">
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-01" id="lnb-brand-01"
+														checked="" />
+													<label for="lnb-chk-10">리바트</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-02" id="lnb-brand-02" />
+													<label for="lnb-chk-11">H.MONDO</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-03" id="lnb-brand-03" />
+													<label for="lnb-chk-12">리바트 하움</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-04" id="lnb-brand-04" />
+													<label for="lnb-chk-13">FM디자인</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-05" id="lnb-brand-05" />
+													<label for="lnb-chk-11">H.MONDO</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-06" id="lnb-brand-06" />
+													<label for="lnb-chk-12">리바트 하움</label>
+												</div>
+												<div class="checkbox">
+													<input type="checkbox" name="lnb-brand-07" id="lnb-brand-07" />
+													<label for="lnb-chk-13">FM디자인</label>
+												</div>
+											</div>
+										</div>
+
+										<button class="button lnb-brand-button modal-button mt3"
+											data-target="modal-lnb-brand" aria-haspopup="true">더보기</button>
+									</div>
+								</div>
+							</section>
+							<!-- E : 브랜드 -->
+							<!-- S : 혜택 -->
+							<section class="left-menu-section">
+								<a href="#collapsible-panel3" data-action="collapse" class="is-active">
+									<h3 class="panel-heading">혜택<i></i></h3>
+								</a>
+								<div id="collapsible-panel3" class="is-collapsible is-active">
+									<!-- Wrapper Div to be able to collapse/expand Panel's content -->
+									<div class="panel-block">
+										<div class="lnb-brand-checkbox-list">
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-chk-20" id="lnb-chk-20" checked="" />
+												<label for="lnb-chk-20">세일</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-chk-20" id="lnb-chk-21" />
+												<label for="lnb-chk-21">증정(사은품)</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-chk-20" id="lnb-chk-22" />
+												<label for="lnb-chk-22">쿠폰</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-chk-20" id="lnb-chk-23" />
+												<label for="lnb-chk-23">패키지</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- E : 혜택 -->
+							<!-- S : 가격 -->
+							<section class="left-menu-section lnb-price">
+								<a href="#collapsible-panel4" data-action="collapse" class="is-active">
+									<h3 class="panel-heading">가격<i></i></h3>
+								</a>
+								<div id="collapsible-panel4" class="is-collapsible is-active">
+									<div id="slider-range" class="mb2"></div>
+									<div class="panel-block">
+										<div class="lnb-price-range">
+											<input type="text" value="200,000" readonly id="price-range__from" />
+											<span>~</span>
+											<input type="text" value="1,200,000" readonly id="price-range__to" />
+										</div>
+									</div>
+									<div class="row text-right mt1">
+										<button type="button" class="link" id="applyPriceRange">적용하기</button>
+									</div>
+								</div>
+							</section>
+							<!-- E : 가격 -->
+						</aside>
+						<!-- E : LNB -->
+						<!-- S : 탭 컨텐츠 -->
+						<div class="search-result-tabs-content float-right">
+
+							<!-- S : 커뮤니티 -->
+							<section id="search-result-openhouse section-contents-wrap" class="search-result-promition">
+								<div class="container container--fixed">
+									<h4 class="search-result-title">커뮤니티</h4>
+
+									<!-- 마크업 교체 : 200820 -->
+									<div class="grid-item-lists grid-item-lists__350 comm-list-openhouse">
+										<!-- product item -->
+										<div class="product-item">
+											<a href="#">
+												<div class="item-tag">
+													<span class="item-tag__item item-tag__item--blue">PRO</span>
+												</div>
+												<div class="product-item-image">
+													<img class="image" alt="제품명"
+														src="https://static.hyundailivart.co.kr/upload_mall/board/ME00000029/B200027354/B200027354_mnImgPathFile_20210622140223066.jpg/dims/quality/60/autorotate/on/resize/500/cropcenter/420x300" />
+												</div>
+												<div class="product-item-content">
+													<h1 class="product-item-header">
+														<span class="product-item-header__name">부산 명지엘크루블루오션 리바트 리첸 주방
+															인테리어</span>
+													</h1>
+													<div class="product-item-body">
+														<div class="hash-tag-lists">
+															<span class="hash-tag__name">#강남구</span>
+															<span class="hash-tag__name">#더샵</span>
+															<span class="hash-tag__name">#아이방</span>
+														</div>
+														<div class="product-review-stats-area">
+															<div class="fl">
+																<div class="product-item-body__writer">
+																	<div
+																		class="product-item-body__writer--level flower">
+																	</div>
+																	<span>리바트키친 플러스 센트럴F/D점</span>
+																</div>
+															</div>
+															<div class="fr">
+																<div class="product-item-comm-wrap">
+																	<span class="product-item-comm">
+																		<i class="ico-talkblank"></i>
+																		<span class="product-item-comm__num">999</span>
+																	</span>
+																</div>
+																<div class="product-item-heart-wrap">
+																	<a href="#" onClick="heart(this);return false;">
+																		<span class="product-item-heart">
+																			<i class="ico-like"></i>
+																			<span
+																				class="product-item-heart__num">1,695</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- //product item -->
+										<!-- product item -->
+										<div class="product-item">
+											<a href="#">
+												<div class="item-tag">
+													<span class="item-tag__item item-tag__item--red">BEST</span>
+												</div>
+												<div class="product-item-image">
+													<img class="image" alt="제품명"
+														src="../../assets/images/common/sample_325.jpg" />
+												</div>
+												<div class="product-item-content">
+													<h1 class="product-item-header">
+														<span class="product-item-header__name">리바트와 함께해서 더욱 행복한
+															애기방을 소개합니다. 리바트와 함께해서 더욱 행복한 애기방을 소개합니다.</span>
+													</h1>
+													<div class="product-item-body">
+														<div class="hash-tag-lists">
+															<span class="hash-tag__name">#강남구</span>
+															<span class="hash-tag__name">#더샵</span>
+															<span class="hash-tag__name">#아이방</span>
+														</div>
+														<div class="product-review-stats-area">
+															<div class="fl">
+																<div class="product-item-body__writer">
+																	<div class="product-item-body__writer--level tree">
+																	</div>
+																	<span>maria0091maria0091maria0091maria0091maria0091maria0091maria0091maria0091</span>
+																</div>
+															</div>
+															<div class="fr">
+																<div class="product-item-comm-wrap">
+																	<span class="product-item-comm">
+																		<i class="ico-talkblank"></i>
+																		<span class="product-item-comm__num">999</span>
+																	</span>
+																</div>
+																<div class="product-item-heart-wrap">
+																	<a href="#" onClick="heart(this);return false;">
+																		<span class="product-item-heart">
+																			<i class="ico-like"></i>
+																			<span
+																				class="product-item-heart__num">1,695</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- //product item -->
+										<!-- product item -->
+										<div class="product-item">
+											<a href="#">
+												<div class="item-tag">
+													<span class="item-tag__item"></span>
+												</div>
+												<div class="product-item-image thumb-video">
+													<img class="image" alt="제품명"
+														src="../../assets/images/common/sample_325.jpg" />
+												</div>
+												<div class="product-item-content">
+													<h1 class="product-item-header">
+														<span class="product-item-header__name">리바트와 함께해서 더욱 행복한
+															애기방을 소개합니다. 리바트와 함께해서 더욱 행복한 애기방을 소개합니다.</span>
+													</h1>
+													<div class="product-item-body">
+														<div class="hash-tag-lists">
+															<span class="hash-tag__name">#강남구</span>
+															<span class="hash-tag__name">#더샵</span>
+															<span class="hash-tag__name">#아이방</span>
+														</div>
+														<div class="product-review-stats-area">
+															<div class="fl">
+																<div class="product-item-body__writer">
+																	<div class="product-item-body__writer--level tree">
+																	</div>
+																	<span>maria0091maria0091maria0091maria0091maria0091maria0091maria0091maria0091</span>
+																</div>
+															</div>
+															<div class="fr">
+																<div class="product-item-comm-wrap">
+																	<span class="product-item-comm">
+																		<i class="ico-talkblank"></i>
+																		<span class="product-item-comm__num">999</span>
+																	</span>
+																</div>
+																<div class="product-item-heart-wrap">
+																	<a href="#" onClick="heart(this);return false;">
+																		<span class="product-item-heart">
+																			<i class="ico-like"></i>
+																			<span
+																				class="product-item-heart__num">1,695</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- //product item -->
+										<!-- product item -->
+										<div class="product-item">
+											<a href="#">
+												<div class="item-tag">
+													<span class="item-tag__item item-tag__item--black">HINGE</span>
+												</div>
+												<div class="product-item-image">
+													<img class="image" alt="제품명"
+														src="https://static.hyundailivart.co.kr/upload_mall/board/ME00000045/B200027039/B200027039_MnImgPath.jpg/dims/quality/60/autorotate/on/resize/500/cropcenter/420x300" />
+												</div>
+												<div class="product-item-content">
+													<h1 class="product-item-header">
+														<span class="product-item-header__name">[지구를 위한 걸음] 지속 가능한 삶에 더
+															가까이, 아로마티카 제로스테이션</span>
+													</h1>
+													<div class="product-item-body">
+														<div class="hash-tag-lists">
+															<span class="hash-tag__name">플레이스</span>
+														</div>
+														<div class="product-review-stats-area">
+															<div class="fl">
+																<div class="product-item-body__writer">
+																	<span>매거진 힌지</span>
+																</div>
+															</div>
+															<div class="fr">
+																<div class="product-item-comm-wrap">
+																	<span class="product-item-comm">
+																		<i class="ico-talkblank"></i>
+																		<span class="product-item-comm__num">999</span>
+																	</span>
+																</div>
+																<div class="product-item-heart-wrap">
+																	<a href="#" onClick="heart(this);return false;">
+																		<span class="product-item-heart">
+																			<i class="ico-like"></i>
+																			<span
+																				class="product-item-heart__num">1,695</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- //product item -->
+										<!-- product item -->
+										<div class="product-item">
+											<a href="#">
+												<div class="item-tag">
+													<span class="item-tag__item item-tag__item--black">HINGE</span>
+												</div>
+												<div class="product-item-image">
+													<img class="image" alt="제품명"
+														src="https://static.hyundailivart.co.kr/upload_mall/board/ME00000045/B200024387/B200024387_MnImgPath.jpg/dims/quality/60/autorotate/on/resize/500/cropcenter/420x300" />
+												</div>
+												<div class="product-item-content">
+													<h1 class="product-item-header">
+														<span class="product-item-header__name">[그 여자가 사는 집] 편집숍을
+															오픈했습니다.</span>
+													</h1>
+													<div class="product-item-body">
+														<div class="hash-tag-lists">
+															<span class="hash-tag__name">라이프스타일</span>
+														</div>
+														<div class="product-review-stats-area">
+															<div class="fl">
+																<div class="product-item-body__writer">
+																	<span>매거진 힌지</span>
+																</div>
+															</div>
+															<div class="fr">
+																<div class="product-item-comm-wrap">
+																	<span class="product-item-comm">
+																		<i class="ico-talkblank"></i>
+																		<span class="product-item-comm__num">999</span>
+																	</span>
+																</div>
+																<div class="product-item-heart-wrap">
+																	<a href="#" onClick="heart(this);return false;">
+																		<span class="product-item-heart">
+																			<i class="ico-like"></i>
+																			<span
+																				class="product-item-heart__num">1,695</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- //product item -->
+										<!-- product item -->
+										<div class="product-item">
+											<a href="#">
+												<div class="item-tag">
+													<span class="item-tag__item item-tag__item--black">HINGE</span>
+												</div>
+												<div class="product-item-image">
+													<img class="image" alt="제품명"
+														src="https://static.hyundailivart.co.kr/upload_mall/board/ME00000045/B200024135/B200024135_MnImgPath.jpg/dims/quality/60/autorotate/on/resize/500/cropcenter/420x300" />
+												</div>
+												<div class="product-item-content">
+													<h1 class="product-item-header">
+														<span class="product-item-header__name">[신진탐색] 이 그림을 마음껏 퍼가세요, 단
+															출처는 밝혀주십시오.</span>
+													</h1>
+													<div class="product-item-body">
+														<div class="hash-tag-lists">
+															<span class="hash-tag__name">비하인드</span>
+														</div>
+														<div class="product-review-stats-area">
+															<div class="fl">
+																<div class="product-item-body__writer">
+																	<span>매거진 힌지</span>
+																</div>
+															</div>
+															<div class="fr">
+																<div class="product-item-comm-wrap">
+																	<span class="product-item-comm">
+																		<i class="ico-talkblank"></i>
+																		<span class="product-item-comm__num">999</span>
+																	</span>
+																</div>
+																<div class="product-item-heart-wrap">
+																	<a href="#" onClick="heart(this);return false;">
+																		<span class="product-item-heart">
+																			<i class="ico-like"></i>
+																			<span
+																				class="product-item-heart__num">1,695</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- //product item -->
+									</div>
+								</div>
+								<!-- 200706 pagination 공통 스타일로 재정의 -->
+								<!-- S : pagination -->
+								<div class="pagination-wrap">
+									<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+										<a href="#" class="pagination-first"><i class="ico-chevron-left-thin"></i><i
+												class="ico-chevron-left-thin"></i><span class="sr-only">처음 목록</span></a>
+										<a href="#" class="pagination-previous"><i
+												class="ico-chevron-left-thin"></i><span class="sr-only">이전
+												페이지
+												목록</span></a>
+										<ul class="pagination-list">
+											<li><a href="#" class="pagination-link" aria-label="100 페이지로 가기">1</a></li>
+											<li><a href="#" class="pagination-link" aria-label="101 페이지로 가기">2</a></li>
+											<li>
+												<a href="#" class="pagination-link is-current" aria-label="현재 102"
+													aria-current="페이지">3</a>
+											</li>
+											<li><a href="#" class="pagination-link" aria-label="103 페이지로 가기">4</a></li>
+											<li><a href="#" class="pagination-link" aria-label="104 페이지로 가기">5</a></li>
+										</ul>
+										<a href="#" class="pagination-next"><i class="ico-chevron-right-thin"></i><span
+												class="sr-only">다음 페이지
+												목록</span></a>
+										<a href="#" class="pagination-last"><i class="ico-chevron-right-thin"></i><i
+												class="ico-chevron-right-thin"></i><span class="sr-only">마지막
+												목록</span></a>
+									</nav>
+								</div>
+								<!-- E : pagination -->
+							</section>
+							<!-- E : 커뮤니티 -->
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- S :브랜드 팝업 -->
+		<div id="modal-lnb-brand" class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">브랜드</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+				<!-- S : 자음으로 선택 -->
+				<div class="brand-popup">
+					<div class="brand-popup-select">
+						<button type="button" id="viewBrandAll" class="button is-primary">전체</button>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-10" id="pop-chk-10" />
+							<label for="pop-chk-10">리바트 브랜드만 보기</label>
+						</div>
+					</div>
+					<div class="brand-popup-button-list">
+						<!-- S : 한글 -->
+						<div>
+							<button type="button" class="button">ㄱ</button>
+							<button type="button" class="button">ㄴ</button>
+							<button type="button" class="button">ㄷ</button>
+							<button type="button" class="button">ㄹ</button>
+							<button type="button" class="button">ㅁ</button>
+							<button type="button" class="button">ㅂ</button>
+							<button type="button" class="button">ㅅ</button>
+							<button type="button" class="button">ㅇ</button>
+							<button type="button" class="button">ㅈ</button>
+							<button type="button" class="button">ㅊ</button>
+							<button type="button" class="button">ㅋ</button>
+							<button type="button" class="button">ㅌ</button>
+							<button type="button" class="button">ㅍ</button>
+							<button type="button" class="button">ㅎ</button>
+						</div>
+						<!-- E : 한글 -->
+						<!-- S : 영문 -->
+						<div>
+							<button type="button" class="button">A</button>
+							<button type="button" class="button">B</button>
+							<button type="button" class="button">C</button>
+							<button type="button" class="button">E</button>
+							<button type="button" class="button">F</button>
+							<button type="button" class="button">G</button>
+							<button type="button" class="button">H</button>
+							<button type="button" class="button">I</button>
+							<button type="button" class="button">J</button>
+							<button type="button" class="button">K</button>
+							<button type="button" class="button">L</button>
+							<button type="button" class="button">M</button>
+							<button type="button" class="button">N</button>
+							<button type="button" class="button">O</button>
+							<button type="button" class="button">P</button>
+							<button type="button" class="button">Q</button>
+							<button type="button" class="button">R</button>
+							<button type="button" class="button">S</button>
+							<button type="button" class="button">T</button>
+							<button type="button" class="button">U</button>
+							<button type="button" class="button">V</button>
+							<button type="button" class="button">W</button>
+							<button type="button" class="button">X</button>
+							<button type="button" class="button">Y</button>
+							<button type="button" class="button">Z</button>
+						</div>
+						<!-- E : 영문 -->
+					</div>
+				</div>
+
+				<!-- E : 자음으로 선택 -->
+				<div class="brand-popup-info">
+					<span class="brand-popup-info-select">
+						<!--ㄹ-->
+					</span>
+					<span class="brand-popup-info-align">가나다순</span>
+				</div>
+				<div class="modal-card-body brand-modal-card-body">
+					<!-- S : 체크박스 리스트 -->
+					<div class="brand-popup-box">
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-21" checked="" />
+							<label for="pop-chk-21">리바트</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-22" />
+							<label for="pop-chk-22">리바트</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-23" />
+							<label for="pop-chk-23">리바트</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-24" />
+							<label for="pop-chk-24">리바트</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-25" />
+							<label for="pop-chk-25">H.MONDO</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-26" />
+							<label for="pop-chk-26">H.MONDO</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-27" />
+							<label for="pop-chk-27">H.MONDO</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-28" />
+							<label for="pop-chk-28">H.MONDO</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-29" />
+							<label for="pop-chk-29">리바트 하움</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-30" />
+							<label for="pop-chk-30">리바트 하움</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-31" />
+							<label for="pop-chk-31">리바트 하움</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-32" />
+							<label for="pop-chk-32">리바트 하움</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-33" />
+							<label for="pop-chk-33">리첸</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-34" />
+							<label for="pop-chk-34">리첸</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-35" />
+							<label for="pop-chk-35">리첸</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-36" />
+							<label for="pop-chk-36">리첸</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-37" />
+							<label for="pop-chk-37">리바트 엔슬립</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-38" />
+							<label for="pop-chk-38">리바트 엔슬립</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-39" />
+							<label for="pop-chk-39">리바트 엔슬립</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-40" />
+							<label for="pop-chk-40">리바트 엔슬립</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-41" />
+							<label for="pop-chk-41">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-42" />
+							<label for="pop-chk-42">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-43" />
+							<label for="pop-chk-43">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-44" />
+							<label for="pop-chk-44">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-45" />
+							<label for="pop-chk-45">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-46" />
+							<label for="pop-chk-46">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-47" />
+							<label for="pop-chk-47">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-48" />
+							<label for="pop-chk-48">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-49" />
+							<label for="pop-chk-49">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-50" />
+							<label for="pop-chk-50">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-51" />
+							<label for="pop-chk-51">FM디자인</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" name="pop-chk-20" id="pop-chk-52" />
+							<label for="pop-chk-52">FM디자인</label>
+						</div>
+					</div>
+					<!-- E : 체크박스 리스트 -->
+				</div>
+				<footer class="modal-card-foot mt1 mb2">
+					<button type="button" class="button button-modal-close is-dark">취소</button>
+					<button type="button" class="button is-primary" id="addFilterBrandPopup">확인</button>
+				</footer>
+			</div>
+		</div>
+		<!-- E : 브랜드 팝업 -->
+	</main>
+	<!-- E : #container -->
+
+	<!-- S : #footer -->
+	<footer id="footer"></footer>
+
+	<!-- script -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/swiper.min.js"></script>
+	<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+	<script src="../../assets/js/jquery-ui.js"></script>
+	<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+	<script src="../../assets/js/popper.min.js"></script>
+	<script src="../../assets/js/bootstrap-tooltip.js"></script>
+	<script src="../../assets/js/masonry.pkgd.min.js"></script>
+	<script src="../../assets/js/jquery.event.move.js"></script>
+	<script src="../../assets/js/jquery.twentytwenty.js"></script>
+	<!-- masonry 이미지 모두 로딩된 후에 실행하도록 추가 : 200925 -->
+	<script src="../../assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="../../assets/js/common-ui.js"></script>
+	<script>
+		// 제목 탭 블록
+		$(document).on('click', '.tab-block-item', function (e) {
+			e.preventDefault();
+			$(this).addClass('is-active').siblings().removeClass('is-active');
+		});
+		// 20200702 tab script 추가
+		$(document).on('click', '.tab-block-item', function (e) {
+			e.preventDefault();
+			$(this).addClass('is-active').siblings().removeClass('is-active');
+		});
+
+		// S : 통합검색 작동 UI
+		function removeComma(str) {
+			n = parseInt(str.replace(/,/g, ''));
+			return n;
+		}
+		// 20200703 script 수정
+		$(document)
+			.on('click', '.product-item-heart', function (e) {
+				e.preventDefault();
+				var num = parseInt(removeComma($(this).children('.product-item-heart__num').text()));
+				console.log(num);
+				var txtNum;
+				if ($(this).hasClass('is-active')) {
+					$(this).removeClass('is-active');
+					num = num <= 0 ? 0 : num - 1;
+				} else {
+					$(this).addClass('is-active');
+					num = num + 1;
+				}
+				txtNum = num.toLocaleString();
+				$(this).children('.product-item-heart__num').text(txtNum);
+			})
+			.on('mouseover', '.review-link-list li a', function (e) {
+				$(this).closest('.review-link-list').find('a').removeClass('is-active').children('.review-link-text').hide();
+				$(this).addClass('is-active');
+				$(this).children('.review-link-text').css({ display: 'block' });
+			});
+		// E : 통합검색 작동 UI
+
+		// S : LNB UI
+		// LNB 아코디언 이벤트 : 20200528
+		$('.lnb-list-item__btn').each(function () {
+			$(this).append('<span class="sr-only">메뉴펼치기</span>');
+		});
+		$('.lnb-list-item__content').each(function () {
+			if ($(this).hasClass('is-active')) {
+				$(this).attr({ 'aria-expanded': 'true' });
+			} else {
+				$(this).attr({ 'aria-expanded': 'false' }).css({ display: 'none' });
+			}
+		});
+		$('.lnb-list-item__btn').on('click', function (event) {
+			event = event || window.event;
+			event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+			if ($(this).hasClass('is-active')) {
+				$(this)
+					.closest('.lnb-list')
+					.find('.lnb-list-item__content')
+					.each(function () {
+						if ($(this).hasClass('is-active')) {
+							$(this).attr({ 'aria-expanded': 'false' }).removeClass('is-active').delay(10).slideUp('fast');
+						}
+					});
+				$(this).removeClass('is-active');
+				$(this).find('.sr-only').text('메뉴펼치기');
+			} else {
+				$(this).closest('.lnb-list').find('.lnb-list-item__btn').removeClass('is-active').find('.sr-only').text('메뉴펼치기');
+				$(this).addClass('is-active');
+				$(this).closest('.lnb-list').find('.lnb-list-item__content').removeClass('is-active').delay(10).slideUp('fast');
+				$(this).parent().next('.lnb-list-item__content').attr({ 'aria-expanded': 'true' }).addClass('is-active').stop().slideDown('fast');
+				$(this).find('.sr-only').text('메뉴접기');
+			}
+		});
+		// LNB 가격 슬라이드
+		$(function () {
+			$('#slider-range').slider({
+				range: true,
+				min: 0,
+				max: 1000000,
+				step: 100,
+				values: [0, 1000000],
+				slide: function (event, ui) {
+					// $('#amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
+					$('#price-range__from').val(ui.values[0].toLocaleString());
+					$('#price-range__to').val(ui.values[1].toLocaleString());
+				},
+			});
+			$('#price-range__from').val($('#slider-range').slider('values', 0).toLocaleString());
+			$('#price-range__to').val($('#slider-range').slider('values', 1).toLocaleString());
+		});
+		// 브랜드 체크박스 스크롤 : 20200528
+		$(document).ready(function () {
+			$('.scrollbar-container').scrollbar();
+		});
+		// E : LNB UI
+
+		// S : 스와이퍼 Slider
+		// 기획전 스와이프
+		var swiperMedia = new Swiper('#search-result-plan .swiper-container', {
+			loop: true,
+			navigation: {
+				nextEl: '#search-result-plan .swiper-button-next',
+				prevEl: '#search-result-plan .swiper-button-prev',
+			},
+			paginationClickable: true,
+			spaceBetween: 30,
+			slidesPerView: 4,
+			pagination: {
+				el: '#search-result-plan .swiper-pagination',
+				type: 'fraction',
+			},
+		});
+
+		// 이벤트 스와이프 : 200629
+		var swiperEvent = new Swiper('#search-result-event .swiper-container', {
+			loop: true,
+			navigation: {
+				nextEl: '#search-result-event .swiper-button-next',
+				prevEl: '#search-result-event .swiper-button-prev',
+			},
+			paginationClickable: true,
+			spaceBetween: 30,
+			slidesPerView: 4,
+			pagination: {
+				el: '#search-result-event .swiper-pagination',
+				type: 'fraction',
+			},
+		});
+		// E : 스와이퍼 Slider
+
+		// S : 카테고리 필터 동작 UI
+		// 체크해서 검색리스트 목록 추가
+		function addFilterList(target, name) {
+			var listItem =
+				'<li class="section-category-item__relation--list relation-list" data-target="' + target + '"><span class="search-text">' + name + '</span><button type="button" class="btn-del"><i class="icon-del"></i><span class="sr-only">삭제</span></button></li>';
+			$('#categoryChkList').append(listItem);
+		}
+		// 체크해제해서 검색리스트 목록 제거
+		function delFilterList(target) {
+			$('#categoryChkList')
+				.find('[data-target=' + target + ']')
+				.remove();
+		}
+
+		// 브랜드팝업 확인 버튼 추가
+		$(document).on('click', '#addFilterBrandPopup', function () {
+			$(this)
+				.closest('.modal-card')
+				.children('.modal-card-body')
+				.find('input[type=checkbox]')
+				.each(function () {
+					var thisName = $(this).next('label').text(),
+						thisTarget = $(this).attr('id'),
+						isChecked = $(this).prop('checked');
+					isChecked ? addFilterList(thisTarget, thisName) : delFilterList(thisTarget);
+				});
+		});
+		// 가격 슬라이드 적용 버튼
+		$(document).on('click', '#applyPriceRange', function (e) {
+			e.preventDefault();
+			var thisVal = $('#price-range__from').val() + ' ~ ' + $('#price-range__to').val();
+			var thisTarget = $(this).attr('id');
+			var thisExist = $('#categoryChkList').find('[data-target=' + thisTarget + ']');
+			if (thisExist.length > 0 || !thisExist === undefined) {
+				$('#categoryChkList')
+					.find('[data-target=' + thisTarget + ']')
+					.children('.search-text')
+					.text(thisVal);
+			} else {
+				addFilterList(thisTarget, thisVal);
+			}
+		});
+		// E : 카테고리 필터 동작 UI
+
+		// 브랜드검색 팝업 자음 & 알파벳 선택
+		$(document).on('click', '.brand-popup-button-list button', function () {
+			var selectText = $(this).text(),
+				addTxtPoint = $('.brand-popup-info-select'),
+				check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/; // 한글체크
+
+			check_kor.test(selectText) ? addTxtPoint.text(selectText).css('margin-left', -10) : addTxtPoint.text(selectText).css('margin-left', 0);
+			// 클릭시 브랜드팝업 내 버튼 is-active 처리 : 200619
+			$(this).closest('.brand-popup-button-list').find('.button').removeClass('is-active');
+			$(this).addClass('is-active');
+		});
+		// 브랜드검색 팝업 전체 보기 버튼
+		$(document).on('click', '#viewBrandAll', function () {
+			var blurPoint = $('.brand-popup-button-list'),
+				removeTxtPoint = $('.brand-popup-info-select');
+
+			removeTxtPoint.text('').css('margin-left', '');
+			blurPoint.find('button').blur();
+		});
+
+		// GNB 카테고리 메뉴 클릭
+		// class 할당 수정 : 200914
+		$(document).on('click', '.fullmenu__btn', function () {
+			if ($(this).hasClass('is-active')) {
+				$(this).removeClass('is-active');
+				$(this).closest('.gnb-category-wrap').find('.fullmenu-wrap').removeClass('open');
+				$(this).children('span').text('풀메뉴 열기');
+			} else {
+				$(this).addClass('is-active');
+				$(this).closest('.gnb-category-wrap').find('.fullmenu-wrap').addClass('open');
+				$(this).children('span').text('풀메뉴 닫기');
+			}
+		});
+
+		// GNB 카테고리 메뉴 리스트 // 200911, 마우스 click에서 mouseover로 변경
+		$(document).on('mouseover', '.fullmenu-tabs-wrap [role="gnbtab"]', function (event) {
+			// event = event || window.event;
+			// event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+			// 선택된 탭 활성화
+			$(this).closest('[role="tablist"]').find('[aria-selected="true"]').attr({
+				tabindex: '-1',
+				'aria-selected': 'false',
+			});
+			$(this).parent().addClass('is-active').siblings().removeClass('is-active');
+			$(this)
+				.attr({
+					tabindex: '0',
+					'aria-selected': 'true',
+				})
+				.focus();
+			// 연관된 탭 패널 활성화
+			$('#' + $(this).attr('aria-controls'))
+				.removeAttr('hidden')
+				.attr('tabindex', '0')
+				.addClass('is-active')
+				// 기존 탭 패널 비활성화
+				.siblings('.tabpanel')
+				.attr({ tabindex: '-1', hidden: '' })
+				.removeClass('is-active');
+		});
+		let tabFocus = 0;
+		$('[role="tablist"]').on('keydown', function (event) {
+			event = event || window.event;
+			var tabs = $(this).closest('[role="tablist"]').find('[role="tab"]');
+			var keycode = event.keyCode || event.which;
+			// Move right
+			if (keycode === 39 || keycode === 37) {
+				if (keycode === 39) {
+					tabFocus++;
+					if (tabFocus >= tabs.length) {
+						tabFocus = 0;
+					}
+				} else if (keycode === 37) {
+					tabFocus--;
+					if (tabFocus < 0) {
+						tabFocus = tabs.length - 1;
+					}
+				}
+				tabs[tabFocus].setAttribute('tabindex', 0);
+				tabs[tabFocus].focus();
+			}
+		});
+	</script>
+</body>
+
+</html>

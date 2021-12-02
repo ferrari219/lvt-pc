@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>H.Point 본인인증 팝업</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+
+	<body>
+		<!-- S : H.Point 본인인증 popup -->
+		<div id="modal-hpoint-confirm" class="modal is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">H.Point 본인인증</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+
+				<!-- S : 인증번호 발송전-->
+				<section class="modal-card-body">
+					<h3 class="hidden">H.Point 본인인증</h3>
+
+					<div class="pop-hpoint-confirm mt2 mb2">
+						<p class="is-size-5">10만 포인트 이상 사용 시, 휴대폰 인증이 필요합니다.<br />휴대폰 인증을 진행해 주세요.</p>
+					</div>
+				</section>
+
+				<div class="modal-card-foot border-top-line">
+					<button type="submit" class="button is-primary">인증번호 발송</button>
+				</div>
+				<!-- E : 인증번호 발송전-->
+
+				<!-- S : 인증번호 발송후-->
+				<section class="modal-card-body">
+					<h3 class="hidden">H.Point 본인인증</h3>
+
+					<div class="pop-hpoint-confirm mt2 mb2">
+						<p class="is-size-5">H.Point 통합회원 번호로 인증번호가 발송되었습니다. <br />인증번호를 입력해 주세요.</p>
+
+						<form action="#">
+							<fieldset>
+								<legend>인증번호 입력</legend>
+								<div class="field is-grouped mt3">
+									<div class="control">
+										<!--인증번호-->
+										<input class="input" type="text" placeholder="인증번호 입력" title="인증번호" style="width: 300px;" />
+										<!--타이머-->
+										<span class="limit-count is-danger" id="ViewTimer">02:00</span>
+									</div>
+									<div class="control">
+										<button type="submit" class="button is-primary is-outlined">인증번호 재발송</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</section>
+
+				<div class="modal-card-foot border-top-line">
+					<button type="submit" class="button is-primary">확인</button>
+				</div>
+				<!-- E : 인증번호 발송후-->
+			</div>
+		</div>
+		<!-- E : H.Point 본인인증 popup -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/swiper.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			// H.Point 카운트다운 타이머
+			var timer_time2 = 2 * 60; //(초)
+			function count_timer2() {
+				// 1초씩 카운트
+				el = 'ViewTimer';
+				var timermsg;
+				var min = '0' + Math.floor(timer_time2 / 60);
+				var sec = '0' + Math.floor(timer_time2 % 60);
+				var timermsg = min + ':' + sec.slice(-2);
+				document.getElementById(el).innerHTML = timermsg;
+				timer_time2--;
+				if (timer_time2 < 0) {
+					// 시간 종료
+					clearInterval(timer_id2); // 타이머 해제
+				}
+			}
+			window.onload = function TimerStart2() {
+				timer_id2 = setInterval(count_timer2, 1000);
+			};
+		</script>
+	</body>
+</html>
