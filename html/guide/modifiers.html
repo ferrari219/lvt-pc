@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.0</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<style>
+			.padd {
+				display: inline-block;
+				margin: 0 1px;
+				padding: 0.5em;
+				border: 1px solid #eee;
+			}
+			.contents {
+				padding: 0 0 1.5rem;
+			}
+			.button {
+				border-width: 1px;
+			}
+			.table-container {
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				overflow-y: hidden;
+				max-width: 100%;
+				margin-bottom: 1.5rem;
+			}
+			.notification {
+				background-color: #f5f5f5;
+				border-radius: 4px;
+				padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+				position: relative;
+			}
+			.bd-color {
+				border-radius: 2px;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+				display: inline-block;
+				height: 24px;
+				margin-right: 8px;
+				width: 24px;
+			}
+			.notification.is-primary {
+				background-color: #00d1b2;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						Modifiers
+					</h1>
+					<p class="subtitle">
+						기본 사용법, 반응형, 색상 사전 정의 사용
+					</p>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="tabs is-centered">
+				<ul>
+					<li><a href="sample.html">샘플</a></li>
+					<li><a href="../common/unit.html">UNIT</a></li>
+					<li><a href="ui.html">UI요소</a></li>
+					<li class="is-active"><a href="modifiers.html">기본</a></li>
+					<li><a href="layout.html">Layout</a></li>
+					<li><a href="form.html">Form</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="demo.html">아이콘웹폰트</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">버튼 컬러 Option</h2>
+				<p class="subtitle is-4">
+					is-primary, is-link, is-info, is-success, is-warning, is-danger : 컬러
+				</p>
+				<div class="columns">
+					<div class="column">
+						<a class="button is-primary">
+							Button is-primary
+						</a>
+						<a class="button is-light">
+							Button is-light
+						</a>
+						<a class="button is-dark">
+							Button is-dark
+						</a>
+						<a class="button is-danger">
+							Button is-danger
+						</a>
+						<a class="button is-link">
+							Button is-link
+						</a>
+						<a class="button is-info">
+							Button is-info
+						</a>
+						<a class="button is-success">
+							Button is-success
+						</a>
+						<a class="button is-warning">
+							Button is-warning
+						</a>
+					</div>
+				</div>
+				<p class="subtitle is-4">
+					is-small, is-medium, is-large : 사이즈
+				</p>
+				<div class="columns">
+					<div class="column">
+						<a class="button is-small">
+							Button is-small
+						</a>
+						<a class="button">
+							Button
+						</a>
+						<a class="button is-medium">
+							Button is-medium
+						</a>
+						<a class="button is-large">
+							Button is-large
+						</a>
+					</div>
+				</div>
+				<p class="subtitle is-4">red 글자 색상, 배경 색상 : color-red, bg-red</p>
+				<div class="columns">
+					<div class="column">
+						<span class="color-red padd">
+							color-red
+						</span>
+						<span class="bg-red padd">
+							bg-red
+						</span>
+					</div>
+				</div>
+				<p class="subtitle is-4">
+					글자 색상, bold, 링크 : is-primary, is-danger, is-bold, is-normal, link
+				</p>
+				<div class="columns">
+					<div class="column">
+						<span class="is-primary padd">
+							폰트색상 is-primary
+						</span>
+						<span class="is-danger padd">
+							폰트색상 is-danger
+						</span>
+						<span class="is-bold padd">
+							폰트두께 is-bold
+						</span>
+						<span class="is-normal padd">
+							폰트두께 is-normal
+						</span>
+
+						<a href="#" class="link">텍스트 링크 .link</a>
+					</div>
+				</div>
+				<p class="subtitle is-4">
+					is-outlined, is-loading, [disabled] : 스타일과 상태
+				</p>
+				<div class="columns">
+					<div class="column">
+						<a class="button is-primary is-outlined">
+							Button is-primary is-outlined
+						</a>
+						<a class="button is-loading">
+							Button is-loading
+						</a>
+						<a class="button" disabled>
+							Button
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Helpers</h2>
+				<p class="subtitle is-4">
+					아래의 클래스로 스타일 변경 가능
+				</p>
+				<div class="table-container">
+					<table class="table is-bordered">
+						<tbody>
+							<tr>
+								<th scope="row">말줄임 ...</th>
+								<td><code>text-ellipsis</code></td>
+								<td>반응형시 말줄임 ... 표시</td>
+							</tr>
+							<tr>
+								<th scope="row">단어 단위 줄바꿈</th>
+								<td><code>word-wrap</code></td>
+								<td>단어 단위 줄바꿈</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="4">글자 정렬</th>
+								<td><code>has-text-centered</code> <code>text-center</code></td>
+								<td>text-align : center</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left</code> <code>text-left</code></td>
+								<td>text-align : left</td>
+							</tr>
+							<tr>
+								<td><code>has-text-right</code> <code>text-right</code></td>
+								<td>text-align : right</td>
+							</tr>
+							<tr>
+								<td><code>has-text-justified</code></td>
+								<td>text-align : justify</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="3">Float</th>
+								<td><code>is-clearfix</code> <code>clear</code></td>
+								<td>Fixes an element's floating children</td>
+							</tr>
+							<tr>
+								<td><code>is-pulled-left</code> <code>fl</code> <code>float-left</code></td>
+								<td>float : left</td>
+							</tr>
+							<tr>
+								<td><code>is-pulled-right</code> <code>fr</code> <code>float-right</code></td>
+								<td>float : right</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="2">Spacing</th>
+								<td><code>is-marginless</code></td>
+								<td>Removes any <strong>margin</strong></td>
+							</tr>
+							<tr>
+								<td><code>is-paddingless</code></td>
+								<td>Removes any <strong>padding</strong></td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="7">Other</th>
+								<td><code>is-overlay</code></td>
+								<td>Completely covers the first positioned parent</td>
+							</tr>
+							<tr>
+								<td><code>is-clipped</code></td>
+								<td>Adds overflow <strong>hidden</strong></td>
+							</tr>
+							<tr>
+								<td><code>is-radiusless</code></td>
+								<td>Removes any <strong>radius</strong></td>
+							</tr>
+							<tr>
+								<td><code>is-shadowless</code></td>
+								<td>Removes any <strong>shadow</strong></td>
+							</tr>
+							<tr>
+								<td><code>is-unselectable</code></td>
+								<td>Prevents the text from being <strong>selectable</strong></td>
+							</tr>
+							<tr>
+								<td><code>is-invisible</code></td>
+								<td>Adds visibility <strong>hidden</strong></td>
+							</tr>
+							<tr>
+								<td><code>is-sr-only</code> <code>sr-only</code></td>
+								<td>Hide elements <strong>visually</strong> but keep the element available to be announced by a <strong>screen reader</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">반응형 Helpers</h2>
+				<p class="subtitle is-4">
+					Show
+				</p>
+				<div class="table-container">
+					<table class="table is-bordered">
+						<thead>
+							<tr>
+								<th>
+									Class
+								</th>
+								<th>
+									Mobile<br />
+									Up to <code>768px</code>
+								</th>
+								<th>
+									Tablet<br />
+									Between <code>769px</code> and <code>1023px</code>
+								</th>
+								<th>
+									Desktop<br />
+									Between <code>1024px</code> and <code>1215px</code>
+								</th>
+								<th>
+									Widescreen<br />
+									Between <code>1216px</code> and <code>1407px</code>
+								</th>
+								<th>
+									FullHD<br />
+									<code>1408px</code> and above
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-mobile</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-tablet-only</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-desktop-only</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-widescreen-only</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<th colspan="5">
+									<p>Classes to display <strong>up to</strong> or <strong>from</strong> a specific breakpoint</p>
+								</th>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-touch</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-tablet</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-desktop</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-widescreen</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-flex-fullhd</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">flex</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="subtitle is-4">
+					Hide
+				</p>
+				<div class="table-container">
+					<table class="table is-bordered">
+						<thead>
+							<tr>
+								<th>
+									Class
+								</th>
+								<th>
+									Mobile<br />
+									Up to <code>768px</code>
+								</th>
+								<th>
+									Tablet<br />
+									Between <code>769px</code> and <code>1023px</code>
+								</th>
+								<th>
+									Desktop<br />
+									Between <code>1024px</code> and <code>1215px</code>
+								</th>
+								<th>
+									Widescreen<br />
+									Between <code>1216px</code> and <code>1407px</code>
+								</th>
+								<th>
+									FullHD<br />
+									<code>1408px</code> and above
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-mobile</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-tablet-only</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-desktop-only</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-widescreen-only</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+							</tr>
+							<tr>
+								<th colspan="5">
+									<p>Classes to hide <strong>up to</strong> or <strong>from</strong> a specific breakpoint</p>
+								</th>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-touch</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-tablet</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-desktop</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-widescreen</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="is-narrow">
+									<code>is-hidden-fullhd</code>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">visible</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">hidden</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Typography</h2>
+				<p class="subtitle is-4">
+					Size
+				</p>
+				<div class="contents">
+					<table class="table is-bordered">
+						<thead>
+							<tr>
+								<th>
+									Class
+								</th>
+								<th>
+									Font-size
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>is-size-1</code></td>
+								<td><code>3rem</code></td>
+							</tr>
+							<tr>
+								<td><code>is-size-2</code></td>
+								<td><code>2.5rem</code></td>
+							</tr>
+							<tr>
+								<td><code>is-size-3</code></td>
+								<td><code>2rem</code></td>
+							</tr>
+							<tr>
+								<td><code>is-size-4</code></td>
+								<td><code>1.5rem</code></td>
+							</tr>
+							<tr>
+								<td><code>is-size-5</code></td>
+								<td><code>1.25rem</code></td>
+							</tr>
+							<tr>
+								<td><code>is-size-6</code></td>
+								<td><code>1rem</code></td>
+							</tr>
+							<tr>
+								<td><code>is-size-7</code></td>
+								<td><code>0.75rem</code></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="subtitle is-4">
+					반응형 size
+				</p>
+				<div class="table-container">
+					<table class="table is-bordered">
+						<thead>
+							<tr>
+								<th>
+									Class
+								</th>
+								<th>
+									Mobile<br />
+									Up to <code>768px</code>
+								</th>
+								<th>
+									Tablet<br />
+									Between <code>769px</code> and <code>1023px</code>
+								</th>
+								<th>
+									Desktop<br />
+									Between <code>1024px</code> and <code>1215px</code>
+								</th>
+								<th>
+									Widescreen<br />
+									Between <code>1216px</code> and <code>1407px</code>
+								</th>
+								<th>
+									FullHD<br />
+									<code>1408px</code> and above
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>is-size-1-mobile</code></td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>is-size-1-tablet</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>is-size-1-touch</code></td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>is-size-1-desktop</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>is-size-1-widescreen</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>is-size-1-fullhd</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary"><code>3rem</code></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="subtitle is-4">
+					텍스트 정렬
+				</p>
+				<div class="contents">
+					<table class="table is-bordered">
+						<thead>
+							<tr>
+								<th>
+									Class
+								</th>
+								<th>
+									Alignment
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>has-text-centered</code></td>
+								<td>Makes the text <strong>centered</strong></td>
+							</tr>
+							<tr>
+								<td><code>has-text-justified</code></td>
+								<td>Makes the text <strong>justified</strong></td>
+							</tr>
+							<tr>
+								<td><code>has-text-left</code></td>
+								<td>Makes the text aligned to the <strong>left</strong></td>
+							</tr>
+							<tr>
+								<td><code>has-text-right</code></td>
+								<td>Makes the text aligned to the <strong>right</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="subtitle is-4">
+					반응형 텍스트 정렬
+				</p>
+				<div class="table-container">
+					<table class="table is-bordered">
+						<thead>
+							<tr>
+								<th>
+									Class
+								</th>
+								<th>
+									Mobile<br />
+									Up to <code>768px</code>
+								</th>
+								<th>
+									Tablet<br />
+									Between <code>769px</code> and <code>1023px</code>
+								</th>
+								<th>
+									Desktop<br />
+									Between <code>1024px</code> and <code>1215px</code>
+								</th>
+								<th>
+									Widescreen<br />
+									Between <code>1216px</code> and <code>1407px</code>
+								</th>
+								<th>
+									FullHD<br />
+									<code>1408px</code> and above
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>has-text-left-mobile</code></td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-tablet</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-tablet-only</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-touch</code></td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-desktop</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-desktop-only</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-widescreen</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-widescreen-only</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+							</tr>
+							<tr>
+								<td><code>has-text-left-fullhd</code></td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification">unchanged</p>
+								</td>
+								<td class="is-narrow">
+									<p class="notification is-primary">left-aligned</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

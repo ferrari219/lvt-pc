@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.01</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<link rel="stylesheet" href="../../assets/css/twentytwenty.css" media="all" />
+
+		<style>
+			.contents {
+				padding: 0 0 1.5rem;
+			}
+			.button {
+				border-width: 1px;
+			}
+			.table-container {
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				overflow-y: hidden;
+				max-width: 100%;
+				margin-bottom: 1.5rem;
+			}
+			.notification {
+				background-color: #f5f5f5;
+				border-radius: 4px;
+				padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+				position: relative;
+			}
+			.bd-color {
+				border-radius: 2px;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+				display: inline-block;
+				height: 24px;
+				margin-right: 8px;
+				width: 24px;
+			}
+			.notification.is-primary {
+				background-color: #00d1b2;
+				color: #fff;
+			}
+
+			/* Scroll progress */
+			.header-fixed {
+				position: fixed;
+				top: 100px;
+				left: 0;
+				right: 0;
+				z-index: 9997;
+				min-width: 980px;
+				padding: 22px;
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				background-color: #f4f4f4;
+			}
+			.bar-progress {
+				display: block;
+				position: absolute;
+				top: 63px;
+				left: 0;
+				z-index: 9998;
+				width: 0%;
+				height: 6px;
+				background-color: #00bcd4;
+				transition: width 0.4s ease-out;
+				transform: rotateZ(0deg);
+			}
+		</style>
+	</head>
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">샘플</h1>
+					<p class="subtitle">리바트 프로젝트 샘플 요소</p>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="tabs is-centered">
+				<ul>
+					<li class="is-active"><a href="sample.html">샘플</a></li>
+					<li><a href="../common/unit.html">UNIT</a></li>
+					<li><a href="ui.html">UI요소</a></li>
+					<li><a href="modifiers.html">기본</a></li>
+					<li><a href="layout.html">Layout</a></li>
+					<li><a href="form.html">Form</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="demo.html">아이콘웹폰트</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main role="main">
+			<section class="section">
+				<div class="container">
+					<h2 class="title">Scroll Progress Bar</h2>
+					<p class="subtitle is-4">스크롤에 따라 진행 표시</p>
+
+					<div class="header-fixed">
+						<p>샘플 헤더 fixed</p>
+						<div class="bar-progress"></div>
+					</div>
+				</div>
+			</section>
+
+			<div class="columns">
+				<div class="column">
+					<!-- 인테리어 전후 비교 샘플 -->
+					<section class="section">
+						<h2 class="title">인테리어 전후 비교</h2>
+						<p class="subtitle is-4">인테리어 전후 비교 스크립트 및 예시</p>
+
+						<div class="twetwe-item">
+							<div class="twentytwenty-container">
+								<img src="../../assets/images/guide/sample-before.jpg" />
+								<img src="../../assets/images/guide/sample-after.jpg" />
+							</div>
+							<div class="twetwe-item-text">
+								<a href="#">
+									<strong class="twetwe-item-text__title">노답 33평에 펼쳐진 순백의 마법</strong>
+									<span class="twetwe-item-text__desc">
+										<span>아파트</span>
+										<span>33평</span>
+										<span>파트너스 시공사례</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- //인테리어 전후 비교 샘플 -->
+				</div>
+				<div class="column">
+					<!-- AS신청 캘린더 샘플 -->
+					<section class="section">
+						<form action="" id="form">
+							<h2 class="title">캘린더 샘플</h2>
+							<p class="subtitle is-4">AS신청 캘린더 샘플</p>
+
+							<div id="calendar" class="cal_area"></div>
+							<ul class="dot-list mt2">
+								<li class="word-wrap">방문 예정일로부터 D-00일 이내 취소시 취소 위약금이 발생됩니다.</li>
+							</ul>
+						</form>
+					</section>
+					<!-- //AS신청 캘린더 샘플 -->
+				</div>
+			</div>
+
+			<div class="container">
+				<!-- 표준 datepicker 샘플 -->
+				<section class="section">
+					<h2 class="title">Datepicker 샘플</h2>
+					<p><code>datepicker</code></p>
+
+					<form action="">
+						<fieldset>
+							<legend>날짜 기간 조회하기</legend>
+							<div class="date-select-wrap">
+								<div class="date-select-month">
+									<ul class="time-select-wrap is-flex">
+										<li>
+											<input type="radio" id="selectMonth01" class="radio time-select" name="selectMonth" checked />
+											<label for="selectMonth01" class="label">
+												<span class="txt">1개월</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="selectMonth02" class="radio time-select" name="selectMonth" />
+											<label for="selectMonth02" class="label">
+												<span class="txt">3개월</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="selectMonth03" class="radio time-select" name="selectMonth" />
+											<label for="selectMonth03" class="label">
+												<span class="txt">6개월</span>
+											</label>
+										</li>
+										<li>
+											<input type="radio" id="selectMonth04" class="radio time-select" name="selectMonth" />
+											<label for="selectMonth04" class="label">
+												<span class="txt">1년</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="datepicker-wrap">
+									<input type="text" class="input datepicker" id="fromDate" value="2020.05.16" readonly="readonly" period-valid-check="true" data-year="button" /> ~
+									<input type="text" class="input datepicker" id="toDate" value="2020-06-15" readonly="readonly" period-valid-check="true" data-year="button" />
+									<button type="submit" class="button is-primary">조회하기</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</section>
+
+				<!-- 셀렉트 styling 샘플 -->
+				<!-- <section class="section">
+					<h2 class="title">Select 스타일링 샘플</h2>
+
+					<div class="select" style="min-width: 200px;">
+						<select id="select-beast" class="demo-default" placeholder="Select ...">
+							<option value="">Select ...</option>
+							<option value="1">1111</option>
+							<option value="2">2222</option>
+							<option value="3">33333333333333333333333</option>
+							<option value="4">444444</option>
+							<option value="5">55555</option>
+							<option value="6">66666</option>
+						</select>
+					</div>
+
+					<code id="value-select"></code>
+					<button type="button" class="button button-check-change is-small is-primary">옵션 확인</button>
+					<input type="number" id="change-select" class="input is-small" style="width: 50px;" />
+					<button type="button" class="button button-select-change is-small is-primary">옵션 변경</button>
+				</section> -->
+				<!-- //셀렉트 styling 샘플 -->
+			</div>
+
+			<section class="section">
+				<div class="container">
+					<h2 class="title">LNB 구조</h2>
+					<p class="subtitle is-4">카테고리 LNB 구조</p>
+
+					<!-- S : LNB -->
+					<aside class="left-menu section-category-left float-left">
+						<!-- S : 카테고리 -->
+						<section class="left-menu-section">
+							<a href="#collapsible-panel1" data-action="collapse" class="is-active">
+								<h3 class="panel-heading">카테고리<i></i></h3>
+							</a>
+							<div id="collapsible-panel1" class="is-collapsible is-active">
+								<!-- LNB 카테고리 -->
+								<nav class="lnb" role="navigation">
+									<ul class="lnb-list">
+										<li class="lnb-list-item">
+											<span class="lnb-list-item__head">
+												<a href="#">침실</a><button class="lnb-list-item__btn is-active"><i class="ico-down_arrow"></i></button>
+											</span>
+											<div class="lnb-list-item__content is-active">
+												<ul>
+													<li><a href="#">침대/매트세트</a></li>
+													<li><a href="#">침대</a></li>
+													<li><a href="#">매트리스</a></li>
+													<li><a href="#">침실소가구</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="lnb-list-item">
+											<span class="lnb-list-item__head">
+												<a href="#">옷장</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+											</span>
+											<div class="lnb-list-item__content">
+												<ul>
+													<li><a href="#">꼼므시리즈</a></li>
+													<li><a href="#">쮸(ZZOO) - 소파</a></li>
+													<li><a href="#">책상</a></li>
+													<li><a href="#">책장</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="lnb-list-item">
+											<span class="lnb-list-item__head">
+												<a href="#">거실/소파</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+											</span>
+											<div class="lnb-list-item__content">
+												<ul>
+													<li><a href="#">꼼므시리즈</a></li>
+													<li><a href="#">쮸(ZZOO) - 소파</a></li>
+													<li><a href="#">책상</a></li>
+													<li><a href="#">책장</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="lnb-list-item">
+											<span class="lnb-list-item__head">
+												<a href="#">다이닝</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+											</span>
+											<div class="lnb-list-item__content">
+												<ul>
+													<li><a href="#">꼼므시리즈</a></li>
+													<li><a href="#">쮸(ZZOO) - 소파</a></li>
+													<li><a href="#">책상</a></li>
+													<li><a href="#">책장</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="lnb-list-item">
+											<span class="lnb-list-item__head">
+												<a href="#">학생/서재</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+											</span>
+											<div class="lnb-list-item__content">
+												<ul>
+													<li><a href="#">꼼므시리즈</a></li>
+													<li><a href="#">쮸(ZZOO) - 소파</a></li>
+													<li><a href="#">책상</a></li>
+													<li><a href="#">책장</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="lnb-list-item">
+											<span class="lnb-list-item__head">
+												<a href="#">하위메뉴 없는 메뉴</a>
+											</span>
+										</li>
+									</ul>
+								</nav>
+								<!-- //Accordion -->
+							</div>
+						</section>
+						<!-- E : 카테고리 -->
+						<!-- S : 브랜드 -->
+						<section class="left-menu-section lnb-brand">
+							<a href="#collapsible-panel2" data-action="collapse" class="is-active">
+								<h3 class="panel-heading">브랜드<i></i></h3>
+							</a>
+							<div id="collapsible-panel2" class="is-collapsible is-active">
+								<!-- Wrapper Div to be able to collapse/expand Panel's content -->
+								<div class="panel-block">
+									<div class="lnb-brand-search">
+										<input type="text" class="lnb-brand-search-input" title="브랜드 검색" placeholder="검색어를 입력해 주세요" />
+										<button class="ico-search"><span class="hidden">검색</span></button>
+									</div>
+
+									<div class="lnb-brand-checkbox-list maxheight mt2">
+										<div class="scrollbar-container">
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-01" id="lnb-brand-01" checked="" />
+												<label for="lnb-chk-10">리바트</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-02" id="lnb-brand-02" />
+												<label for="lnb-chk-11">H.MONDO</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-03" id="lnb-brand-03" />
+												<label for="lnb-chk-12">리바트 하움</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-04" id="lnb-brand-04" />
+												<label for="lnb-chk-13">FM디자인</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-05" id="lnb-brand-05" />
+												<label for="lnb-chk-11">H.MONDO</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-06" id="lnb-brand-06" />
+												<label for="lnb-chk-12">리바트 하움</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" name="lnb-brand-07" id="lnb-brand-07" />
+												<label for="lnb-chk-13">FM디자인</label>
+											</div>
+										</div>
+									</div>
+
+									<button class="button lnb-brand-button modal-button mt3" data-target="modal-lnb-brand" aria-haspopup="true">더보기</button>
+								</div>
+							</div>
+						</section>
+						<!-- E : 브랜드 -->
+						<!-- S : 혜택 -->
+						<section class="left-menu-section">
+							<a href="#collapsible-panel3" data-action="collapse" class="is-active">
+								<h3 class="panel-heading">혜택<i></i></h3>
+							</a>
+							<div id="collapsible-panel3" class="is-collapsible is-active">
+								<!-- Wrapper Div to be able to collapse/expand Panel's content -->
+								<div class="panel-block">
+									<div class="lnb-brand-checkbox-list">
+										<div class="checkbox">
+											<input type="checkbox" name="lnb-chk-20" id="lnb-chk-20" checked="" />
+											<label for="lnb-chk-20">세일</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" name="lnb-chk-20" id="lnb-chk-21" />
+											<label for="lnb-chk-21">증정(사은품)</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" name="lnb-chk-20" id="lnb-chk-22" />
+											<label for="lnb-chk-22">쿠폰</label>
+										</div>
+										<div class="checkbox">
+											<input type="checkbox" name="lnb-chk-20" id="lnb-chk-23" />
+											<label for="lnb-chk-23">패키지</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- E : 혜택 -->
+						<!-- S : 가격 -->
+						<section class="left-menu-section lnb-price">
+							<a href="#collapsible-panel4" data-action="collapse" class="is-active">
+								<h3 class="panel-heading">가격<i></i></h3>
+							</a>
+							<div id="collapsible-panel4" class="is-collapsible is-active">
+								<div id="slider-range" class="mb2"></div>
+								<div class="panel-block">
+									<div class="lnb-price-range">
+										<input type="text" value="200,000" readonly id="price-range__from" />
+										<span>~</span>
+										<input type="text" value="1,200,000" readonly id="price-range__to" />
+									</div>
+								</div>
+								<div class="row text-right mt1">
+									<button type="button" class="link" id="applyPriceRange">적용하기</button>
+								</div>
+							</div>
+						</section>
+						<!-- E : 가격 -->
+					</aside>
+					<!-- E : LNB -->
+				</div>
+			</section>
+
+			<!-- S :브랜드 팝업 -->
+			<div id="modal-lnb-brand" class="modal">
+				<div class="modal-background"></div>
+				<div class="modal-card">
+					<header class="modal-card-head">
+						<p class="modal-card-title">브랜드</p>
+						<button type="button" class="delete is-large" aria-label="close"></button>
+					</header>
+					<!-- S : 자음으로 선택 -->
+					<div class="brand-popup">
+						<div class="brand-popup-select">
+							<button type="button" id="viewBrandAll" class="button is-primary">전체</button>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-10" id="pop-chk-10" />
+								<label for="pop-chk-10">리바트 브랜드만 보기</label>
+							</div>
+						</div>
+						<div class="brand-popup-button-list">
+							<!-- S : 한글 -->
+							<div>
+								<button type="button" class="button">ㄱ</button>
+								<button type="button" class="button">ㄴ</button>
+								<button type="button" class="button">ㄷ</button>
+								<button type="button" class="button">ㄹ</button>
+								<button type="button" class="button">ㅁ</button>
+								<button type="button" class="button">ㅂ</button>
+								<button type="button" class="button">ㅅ</button>
+								<button type="button" class="button">ㅇ</button>
+								<button type="button" class="button">ㅈ</button>
+								<button type="button" class="button">ㅊ</button>
+								<button type="button" class="button">ㅋ</button>
+								<button type="button" class="button">ㅌ</button>
+								<button type="button" class="button">ㅍ</button>
+								<button type="button" class="button">ㅎ</button>
+							</div>
+							<!-- E : 한글 -->
+							<!-- S : 영문 -->
+							<div>
+								<button type="button" class="button">A</button>
+								<button type="button" class="button">B</button>
+								<button type="button" class="button">C</button>
+								<button type="button" class="button">E</button>
+								<button type="button" class="button">F</button>
+								<button type="button" class="button">G</button>
+								<button type="button" class="button">H</button>
+								<button type="button" class="button">I</button>
+								<button type="button" class="button">J</button>
+								<button type="button" class="button">K</button>
+								<button type="button" class="button">L</button>
+								<button type="button" class="button">M</button>
+								<button type="button" class="button">N</button>
+								<button type="button" class="button">O</button>
+								<button type="button" class="button">P</button>
+								<button type="button" class="button">Q</button>
+								<button type="button" class="button">R</button>
+								<button type="button" class="button">S</button>
+								<button type="button" class="button">T</button>
+								<button type="button" class="button">U</button>
+								<button type="button" class="button">V</button>
+								<button type="button" class="button">W</button>
+								<button type="button" class="button">X</button>
+								<button type="button" class="button">Y</button>
+								<button type="button" class="button">Z</button>
+							</div>
+							<!-- E : 영문 -->
+						</div>
+					</div>
+
+					<!-- E : 자음으로 선택 -->
+					<div class="brand-popup-info">
+						<span class="brand-popup-info-select"><!--ㄹ--></span>
+						<span class="brand-popup-info-align">가나다순</span>
+					</div>
+					<div class="modal-card-body brand-modal-card-body">
+						<div class="content">
+							<!-- S : 체크박스 리스트 -->
+							<div class="brand-popup-box">
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-21" checked="" />
+									<label for="pop-chk-21">리바트</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-22" />
+									<label for="pop-chk-22">리바트</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-23" />
+									<label for="pop-chk-23">리바트</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-24" />
+									<label for="pop-chk-24">리바트</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-25" />
+									<label for="pop-chk-25">H.MONDO</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-26" />
+									<label for="pop-chk-26">H.MONDO</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-27" />
+									<label for="pop-chk-27">H.MONDO</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-28" />
+									<label for="pop-chk-28">H.MONDO</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-29" />
+									<label for="pop-chk-29">리바트 하움</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-30" />
+									<label for="pop-chk-30">리바트 하움</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-31" />
+									<label for="pop-chk-31">리바트 하움</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-32" />
+									<label for="pop-chk-32">리바트 하움</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-33" />
+									<label for="pop-chk-33">리첸</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-34" />
+									<label for="pop-chk-34">리첸</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-35" />
+									<label for="pop-chk-35">리첸</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-36" />
+									<label for="pop-chk-36">리첸</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-37" />
+									<label for="pop-chk-37">리바트 엔슬립</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-38" />
+									<label for="pop-chk-38">리바트 엔슬립</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-39" />
+									<label for="pop-chk-39">리바트 엔슬립</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-40" />
+									<label for="pop-chk-40">리바트 엔슬립</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-41" />
+									<label for="pop-chk-41">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-42" />
+									<label for="pop-chk-42">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-43" />
+									<label for="pop-chk-43">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-44" />
+									<label for="pop-chk-44">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-45" />
+									<label for="pop-chk-45">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-46" />
+									<label for="pop-chk-46">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-47" />
+									<label for="pop-chk-47">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-48" />
+									<label for="pop-chk-48">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-49" />
+									<label for="pop-chk-49">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-50" />
+									<label for="pop-chk-50">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-51" />
+									<label for="pop-chk-51">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="pop-chk-20" id="pop-chk-52" />
+									<label for="pop-chk-52">FM디자인</label>
+								</div>
+							</div>
+							<!-- E : 체크박스 리스트 -->
+						</div>
+					</div>
+					<footer class="modal-card-foot mt1 mb2">
+						<button type="button" class="button button-modal-close is-dark">취소</button>
+						<button type="button" class="button is-primary" id="addFilterBrandPopup">확인</button>
+					</footer>
+				</div>
+			</div>
+			<!-- E : 브랜드 팝업 -->
+		</main>
+
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+
+		<script src="../../assets/js/jquery-ui.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/jquery.event.move.js"></script>
+		<script src="../../assets/js/jquery.twentytwenty.js"></script>
+		<!-- <script src="../../assets/js/selectize.min.js"></script> -->
+		<script src="../../assets/js/custom_calendar.js"></script>
+		<!-- <script src="../../assets/js/common-ui.js"></script> -->
+		<script>
+			// 윈도 스크롤에 따른 페이지 로딩 이펙트
+			$(window).scroll(function () {
+				var wintop = $(window).scrollTop(),
+					docheight = $('main').height(),
+					winheight = $(window).height();
+				var totalScroll = (wintop / (docheight - winheight)) * 100;
+				$('.bar-progress').css('width', totalScroll + '%');
+			});
+
+			$(function () {
+				// before after 비교 스크립트
+				$('.twentytwenty-container').twentytwenty();
+
+				// LNB 아코디언 이벤트
+				// 카테고리 LNB 이벤트 작동
+				// 초기화
+				$('.lnb-list-item__btn').each(function () {
+					$(this).append('<span class="sr-only">메뉴펼치기</span>');
+				});
+				$('.lnb-list-item__content').each(function () {
+					if ($(this).hasClass('is-active')) {
+						$(this).attr({ 'aria-expanded': 'true' });
+					} else {
+						$(this).attr({ 'aria-expanded': 'false' }).css({ display: 'none' });
+					}
+				});
+				$('.lnb-list-item__btn').on('click', function (event) {
+					event = event || window.event;
+					event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+					if ($(this).hasClass('is-active')) {
+						$(this)
+							.closest('.lnb-list')
+							.find('.lnb-list-item__content')
+							.each(function () {
+								if ($(this).hasClass('is-active')) {
+									$(this).attr({ 'aria-expanded': 'false' }).removeClass('is-active').delay(10).slideUp('fast');
+								}
+							});
+						$(this).removeClass('is-active');
+						$(this).find('.sr-only').text('메뉴펼치기');
+					} else {
+						$(this).closest('.lnb-list').find('.lnb-list-item__btn').removeClass('is-active').find('.sr-only').text('메뉴펼치기');
+						$(this).addClass('is-active');
+						$(this).closest('.lnb-list').find('.lnb-list-item__content').removeClass('is-active').delay(10).slideUp('fast');
+						$(this).parent().next('.lnb-list-item__content').attr({ 'aria-expanded': 'true' }).addClass('is-active').stop().slideDown('fast');
+						$(this).find('.sr-only').text('메뉴접기');
+					}
+				});
+
+				// LNB 가격 슬라이드
+				$('#slider-range').slider({
+					range: true,
+					min: 0,
+					max: 1000000,
+					step: 100,
+					values: [0, 1000000],
+					slide: function (event, ui) {
+						// $('#amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
+						$('#price-range__from').val(ui.values[0].toLocaleString());
+						$('#price-range__to').val(ui.values[1].toLocaleString());
+					},
+				});
+				$('#price-range__from').val($('#slider-range').slider('values', 0).toLocaleString());
+				$('#price-range__to').val($('#slider-range').slider('values', 1).toLocaleString());
+
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+
+				// 브랜드검색 팝업 자음 & 알파벳 선택
+				$(document).on('click', '.brand-popup-button-list button', function () {
+					var selectText = $(this).text(),
+						addTxtPoint = $('.brand-popup-info-select'),
+						check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/; // 한글체크
+
+					check_kor.test(selectText) ? addTxtPoint.text(selectText).css('margin-left', -10) : addTxtPoint.text(selectText).css('margin-left', 0);
+					// 클릭시 브랜드팝업 내 버튼 is-active 처리 : 200619
+					$(this).closest('.brand-popup-button-list').find('.button').removeClass('is-active');
+					$(this).addClass('is-active');
+				});
+				// 브랜드검색 팝업 전체 보기 버튼
+				$(document).on('click', '#viewBrandAll', function () {
+					var blurPoint = $('.brand-popup-button-list'),
+						removeTxtPoint = $('.brand-popup-info-select');
+
+					removeTxtPoint.text('').css('margin-left', '');
+					blurPoint.find('button').blur();
+				});
+
+				// S : datepicker 처리
+				// datepicker 적용
+				if ($('.datepicker-wrap .datepicker').length > 0) {
+					// 달력 : datepicker 기본 세팅
+					$.datepicker.setDefaults({
+						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						dateFormat: 'yy.mm.dd',
+						showMonthAfterYear: true,
+						yearSuffix: '년',
+					});
+					$.each($('.datepicker-wrap .datepicker'), function () {
+						var $this = $(this);
+						if ($(this).data('year') == 'button') {
+							$this.datepicker({
+								beforeShow: function () {
+									setTimeout(function () {
+										drawChangeYear($this);
+									}, 0);
+								},
+								onChangeMonthYear: function (y, m, ins) {
+									setTimeout(function () {
+										drawChangeYear($this);
+									}, 0);
+								},
+							});
+						} else {
+							$this.datepicker();
+						}
+					});
+				}
+				// datepicker : 연도 버튼 컨트롤
+				function drawChangeYear(datebox) {
+					var prevStr = '<a class="ui-datepicker-prev ui-corner-all ws-year" id="wsPrevYear" style="left: 0px">이전 년</a>';
+					var nextStr = '<a class="ui-datepicker-next ui-corner-all ws-year" id="wsNextYear" style="right: 0px;">다음 년</a>';
+					$('.ui-datepicker-header').prepend(prevStr);
+					$('.ui-datepicker-header').prepend(nextStr);
+
+					$('#wsPrevYear').on('click', function (e) {
+						e.preventDefault();
+						$.datepicker._adjustDate($(datebox), -1, 'Y');
+					});
+					$('#wsNextYear').on('click', function (e) {
+						e.preventDefault();
+						$.datepicker._adjustDate($(datebox), 1, 'Y');
+					});
+				}
+				// E : datepicker 처리
+
+				// S : 셀렉트 styling 샘플
+				/*
+				var $select = $('#select-beast').selectize({
+					create: true,
+					// sortField: 'text',
+				});
+				var select = $select[0].selectize;
+
+				$('.button-select-change').on('click', function () {
+					var val = $('#change-select').val();
+					console.log('#change-select : ', val);
+					select.setValue(val, '');
+				});
+				$('.button-check-change').on('click', function () {
+					$('#value-select').text($('#select-beast').val());
+					console.log('getvalue : ', select.getValue());
+				});
+				*/
+				// E : 셀렉트 styling 샘플
+
+				// S : 캘린더 UI
+
+				// ajax data 샘플
+				/*
+				var eventData = [
+					{ date: '2019-12-25', badge: false, title: 'Christmas Day', body: 'Christmas Lunch', footer: 'all night', status: '100%', classname: 'grad100' },
+					{ date: '2019-12-26', badge: false, title: 'Boxing Day', body: 'Boxing Day Lunch', footer: 'all night', status: '100%', classname: 'grad100' },
+					{ date: '2019-12-31', badge: false, title: 'New Years Eve', body: 'Bringing in the New Year of 2020', footer: 'all night', status: '75%', classname: 'grad75' },
+				];
+				*/
+
+				$('#calendar').custom_calendar({
+					cell_border: false,
+					language: 'kr',
+					today: true,
+					show_days: true,
+					weekstartson: 0,
+					nav_icon: {
+						prev: '<i class="ico-chevron-left-thin"></i>',
+						next: '<i class="ico-chevron-right-thin"></i>',
+					},
+					action: function () {
+						return myDateFunction(this.id, false);
+					},
+					ajax: {
+						url: '/html/guide/sample.ajax',
+						modal: true,
+					},
+				});
+				$(document).on('click', '.custom_calendar .dow-clickable', function () {
+					$('.custom_calendar .dow-clickable').removeClass('is-active');
+					$(this).addClass('is-active');
+				});
+
+				function myDateFunction(id, fromModal) {
+					var date = $('#' + id).data('date');
+					var hasEvent = $('#' + id).data('hasEvent');
+					console.log('date :', date);
+					console.log('예약가능 :', hasEvent);
+					return true;
+				}
+				// E : 캘린더 UI
+			});
+		</script>
+	</body>
+</html>

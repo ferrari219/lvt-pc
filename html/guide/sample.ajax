@@ -1,0 +1,38 @@
+[
+  {
+    date: '2020-06-23',
+    badge: true,
+    title: '예약가능',
+    classname: 'clickable',
+  },
+  {
+    date: '2020-06-24',
+    badge: false,
+    title: '예약불가능',
+    classname: 'disabled',
+  },
+  {
+    date: '2020-06-25',
+    badge: true,
+    title: '예약가능',
+    classname: 'clickable',
+  },
+  {
+    date: '2020-06-26',
+    badge: true,
+    title: '예약가능',
+    classname: 'clickable',
+  },
+  {
+    date: '2020-06-27',
+    badge: true,
+    title: '예약가능',
+    classname: 'clickable',
+  },
+  {
+    date: '2020-06-30',
+    badge: true,
+    title: '예약가능',
+    classname: 'clickable',
+  },
+]

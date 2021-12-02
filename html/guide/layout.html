@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.0</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script>
+			// 커스텀 스크롤 두번 선언해야 함
+			$(document).ready(function () {
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+			});
+			$(window).resize(function () {
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+			});
+		</script>
+		<style>
+			.contents {
+				margin-bottom: 1.5rem;
+			}
+			.bd-snippet-preview {
+				padding: 1.5rem;
+				border: 2px solid #ff3860;
+				border-radius: 4px;
+				padding: 1.5rem;
+			}
+			.button {
+				border-width: 1px;
+			}
+			.scrollbar-container-wrap {
+				border: 1px solid #ccc;
+				padding: 20px;
+			}
+			.scrollbar-container {
+				max-height: 300px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						Layout
+					</h1>
+					<p class="subtitle">
+						레이아웃 요소
+					</p>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="tabs is-centered">
+				<ul>
+					<li><a href="sample.html">샘플</a></li>
+					<li><a href="../common/unit.html">UNIT</a></li>
+					<li><a href="ui.html">UI요소</a></li>
+					<li><a href="modifiers.html">기본</a></li>
+					<li class="is-active"><a href="layout.html">Layout</a></li>
+					<li><a href="form.html">Form</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="demo.html">아이콘웹폰트</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Container</h2>
+				<p class="subtitle is-4">
+					통상 .navbar, .hero, .section, .footer 같은 곳에 .container 를 바로 아래에 위치
+				</p>
+				<div class="contents">
+					$desktop : maximum width 는 960px.<br />
+					$widescreen : maximum width 는 1152px.<br />
+					$fullhd : maximum width 는 1344px.<br />
+					960, 1152, 1344 는 12와 16 둘다 나누기가 가능해서 선택됨
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">커스텀 스크롤바</h2>
+				<div class="contents">
+					<!-- 커스텀 스크롤 -->
+					<div class="scrollbar-container-wrap">
+						<div class="scrollbar-container">
+							<p class="permanent">
+								팝업에 스크롤 주려면 modal-card-body 클래스 scrollbar-container 추가하면됨 <br />
+								Simple outer scrollbar can be used as CSS base for custom outer scrollbars. This example shows nested scrollbars functionality: nested scrollbar styles do not interfere
+								with parent scrollbar styles, i.e. different scrollbars can be safely used inside each other.
+							</p>
+							<div class="inner-content scrollbar-dynamic">
+								<div style="padding: 10px;">
+									<h4>
+										This container is an example of nested Dynamic scrollbar with padding.
+									</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque
+										aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
+										posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est
+										congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget
+										nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+									</p>
+								</div>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet
+								tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero
+								dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus
+								congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis
+								augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet
+								tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero
+								dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus
+								congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis
+								augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet
+								tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero
+								dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus
+								congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis
+								augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+							</p>
+						</div>
+					</div>
+
+					<!-- //커스텀 스크롤 -->
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Media Object</h2>
+				<p class="subtitle is-4">
+					미디어 객체는 반복 가능하고 중첩 가능한 내용을 위한 완벽한 UI 요소입니다.
+				</p>
+				<div class="bd-snippet-preview contents">
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">
+								<img src="../../assets/images/common/128x128.gif" />
+							</p>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<p>
+									<strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+									<br />
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio
+									quis feugiat facilisis.
+								</p>
+							</div>
+							<nav class="level is-mobile">
+								<div class="level-left">
+									<a class="level-item">
+										<span class="icon is-small"
+											><svg
+												class="svg-inline--fa fa-reply fa-w-16"
+												aria-hidden="true"
+												data-prefix="fas"
+												data-icon="reply"
+												role="img"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 512 512"
+												data-fa-i2svg=""
+											>
+												<path
+													fill="currentColor"
+													d="M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+												></path></svg
+											><!-- <i class="fas fa-reply"></i> --></span
+										>
+									</a>
+									<a class="level-item">
+										<span class="icon is-small"
+											><svg
+												class="svg-inline--fa fa-retweet fa-w-20"
+												aria-hidden="true"
+												data-prefix="fas"
+												data-icon="retweet"
+												role="img"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 640 512"
+												data-fa-i2svg=""
+											>
+												<path
+													fill="currentColor"
+													d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"
+												></path></svg
+											><!-- <i class="fas fa-retweet"></i> --></span
+										>
+									</a>
+									<a class="level-item">
+										<span class="icon is-small"
+											><svg
+												class="svg-inline--fa fa-heart fa-w-16"
+												aria-hidden="true"
+												data-prefix="fas"
+												data-icon="heart"
+												role="img"
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 512 512"
+												data-fa-i2svg=""
+											>
+												<path
+													fill="currentColor"
+													d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+												></path></svg
+											><!-- <i class="fas fa-heart"></i> --></span
+										>
+									</a>
+								</div>
+							</nav>
+						</div>
+						<div class="media-right">
+							<button class="delete"></button>
+						</div>
+					</article>
+				</div>
+
+				<div class="bd-snippet-preview contents">
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">
+								<img src="../../assets/images/common/128x128.gif" />
+							</p>
+						</figure>
+						<div class="media-content">
+							<div class="field">
+								<p class="control">
+									<textarea class="textarea" placeholder="Add a comment..."></textarea>
+								</p>
+							</div>
+							<nav class="level">
+								<div class="level-left">
+									<div class="level-item">
+										<a class="button is-info">Submit</a>
+									</div>
+								</div>
+								<div class="level-right">
+									<div class="level-item">
+										<label class="checkbox"> <input type="checkbox" /> Press enter to submit </label>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</article>
+				</div>
+
+				<p class="subtitle is-4">
+					미디어 객체는 반복 가능하고 중첩 가능한 내용을 위한 완벽한 UI 요소입니다.
+				</p>
+
+				<div class="bd-snippet-preview">
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">
+								<img src="../../assets/images/common/128x128.gif" />
+							</p>
+						</figure>
+						<div class="media-content">
+							<div class="content">
+								<p>
+									<strong>Barbara Middleton</strong>
+									<br />
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor
+									blandit rutrum. Nunc in tempus turpis.
+									<br />
+									<small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+								</p>
+							</div>
+
+							<article class="media">
+								<figure class="media-left">
+									<p class="image is-48x48">
+										<img src="../../assets/images/common/96x96.gif" />
+									</p>
+								</figure>
+								<div class="media-content">
+									<div class="content">
+										<p>
+											<strong>Sean Brown</strong>
+											<br />
+											Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam
+											blandit nisl a nulla sagittis, a lobortis leo feugiat.
+											<br />
+											<small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+										</p>
+									</div>
+
+									<article class="media">
+										Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+									</article>
+
+									<article class="media">
+										Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non,
+										porta aliquet tortor.
+									</article>
+								</div>
+							</article>
+
+							<article class="media">
+								<figure class="media-left">
+									<p class="image is-48x48">
+										<img src="../../assets/images/common/96x96.gif" />
+									</p>
+								</figure>
+								<div class="media-content">
+									<div class="content">
+										<p>
+											<strong>Kayli Eunice </strong>
+											<br />
+											Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum
+											ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
+											<br />
+											<small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+										</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</article>
+					<article class="media">
+						<figure class="media-left">
+							<p class="image is-64x64">
+								<img src="../../assets/images/common/128x128.gif" />
+							</p>
+						</figure>
+						<div class="media-content">
+							<div class="field">
+								<p class="control">
+									<textarea class="textarea" placeholder="Add a comment..."></textarea>
+								</p>
+							</div>
+							<div class="field">
+								<p class="control">
+									<button class="button">Post comment</button>
+								</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

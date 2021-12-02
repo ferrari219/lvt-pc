@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.0</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<style>
+			.button,
+			.file-cta,
+			.file-name,
+			.input,
+			.pagination-ellipsis,
+			.pagination-link,
+			.pagination-next,
+			.pagination-previous,
+			.select select,
+			.textarea {
+				border-width: 1px;
+			}
+
+			.bd-snippet-preview,
+			.bd-example {
+				margin-bottom: 1.5rem;
+				padding: 1.5rem;
+				border: 1px solid #e1e1e1;
+				background-color: #fff;
+			}
+
+			.mb3 {
+				margin-bottom: 3rem;
+			}
+
+			.mb4 {
+				margin-bottom: 4rem;
+			}
+
+			.subtitle + p {
+				font-size: 0.9rem;
+				margin-top: -1rem;
+				margin-bottom: 1.5rem;
+				color: #999;
+			}
+
+			.box {
+				background-color: #fff;
+				border-radius: 6px;
+				box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+				color: #4a4a4a;
+				display: block;
+				padding: 1.25rem;
+			}
+		</style>
+		<style type="text/css">
+			svg:not(:root).svg-inline--fa {
+				overflow: visible;
+			}
+			.svg-inline--fa {
+				display: inline-block;
+				font-size: inherit;
+				height: 1em;
+				overflow: visible;
+				vertical-align: -0.125em;
+			}
+			.svg-inline--fa.fa-lg {
+				vertical-align: -0.225em;
+			}
+			.svg-inline--fa.fa-w-1 {
+				width: 0.0625em;
+			}
+			.svg-inline--fa.fa-w-2 {
+				width: 0.125em;
+			}
+			.svg-inline--fa.fa-w-3 {
+				width: 0.1875em;
+			}
+			.svg-inline--fa.fa-w-4 {
+				width: 0.25em;
+			}
+			.svg-inline--fa.fa-w-5 {
+				width: 0.3125em;
+			}
+			.svg-inline--fa.fa-w-6 {
+				width: 0.375em;
+			}
+			.svg-inline--fa.fa-w-7 {
+				width: 0.4375em;
+			}
+			.svg-inline--fa.fa-w-8 {
+				width: 0.5em;
+			}
+			.svg-inline--fa.fa-w-9 {
+				width: 0.5625em;
+			}
+			.svg-inline--fa.fa-w-10 {
+				width: 0.625em;
+			}
+			.svg-inline--fa.fa-w-11 {
+				width: 0.6875em;
+			}
+			.svg-inline--fa.fa-w-12 {
+				width: 0.75em;
+			}
+			.svg-inline--fa.fa-w-13 {
+				width: 0.8125em;
+			}
+			.svg-inline--fa.fa-w-14 {
+				width: 0.875em;
+			}
+			.svg-inline--fa.fa-w-15 {
+				width: 0.9375em;
+			}
+			.svg-inline--fa.fa-w-16 {
+				width: 1em;
+			}
+			.svg-inline--fa.fa-w-17 {
+				width: 1.0625em;
+			}
+			.svg-inline--fa.fa-w-18 {
+				width: 1.125em;
+			}
+			.svg-inline--fa.fa-w-19 {
+				width: 1.1875em;
+			}
+			.svg-inline--fa.fa-w-20 {
+				width: 1.25em;
+			}
+			.svg-inline--fa.fa-pull-left {
+				margin-right: 0.3em;
+				width: auto;
+			}
+			.svg-inline--fa.fa-pull-right {
+				margin-left: 0.3em;
+				width: auto;
+			}
+			.svg-inline--fa.fa-border {
+				height: 1.5em;
+			}
+			.svg-inline--fa.fa-li {
+				width: 2em;
+			}
+			.svg-inline--fa.fa-fw {
+				width: 1.25em;
+			}
+			.fa-layers svg.svg-inline--fa {
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.fa-layers {
+				display: inline-block;
+				height: 1em;
+				position: relative;
+				text-align: center;
+				vertical-align: -0.125em;
+				width: 1em;
+			}
+			.fa-layers svg.svg-inline--fa {
+				-webkit-transform-origin: center center;
+				transform-origin: center center;
+			}
+			.fa-layers-counter,
+			.fa-layers-text {
+				display: inline-block;
+				position: absolute;
+				text-align: center;
+			}
+			.fa-layers-text {
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				-webkit-transform-origin: center center;
+				transform-origin: center center;
+			}
+			.fa-layers-counter {
+				background-color: #ff253a;
+				border-radius: 1em;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				color: #fff;
+				height: 1.5em;
+				line-height: 1;
+				max-width: 5em;
+				min-width: 1.5em;
+				overflow: hidden;
+				padding: 0.25em;
+				right: 0;
+				text-overflow: ellipsis;
+				top: 0;
+				-webkit-transform: scale(0.25);
+				transform: scale(0.25);
+				-webkit-transform-origin: top right;
+				transform-origin: top right;
+			}
+			.fa-layers-bottom-right {
+				bottom: 0;
+				right: 0;
+				top: auto;
+				-webkit-transform: scale(0.25);
+				transform: scale(0.25);
+				-webkit-transform-origin: bottom right;
+				transform-origin: bottom right;
+			}
+			.fa-layers-bottom-left {
+				bottom: 0;
+				left: 0;
+				right: auto;
+				top: auto;
+				-webkit-transform: scale(0.25);
+				transform: scale(0.25);
+				-webkit-transform-origin: bottom left;
+				transform-origin: bottom left;
+			}
+			.fa-layers-top-right {
+				right: 0;
+				top: 0;
+				-webkit-transform: scale(0.25);
+				transform: scale(0.25);
+				-webkit-transform-origin: top right;
+				transform-origin: top right;
+			}
+			.fa-layers-top-left {
+				left: 0;
+				right: auto;
+				top: 0;
+				-webkit-transform: scale(0.25);
+				transform: scale(0.25);
+				-webkit-transform-origin: top left;
+				transform-origin: top left;
+			}
+			.fa-lg {
+				font-size: 1.33333em;
+				line-height: 0.75em;
+				vertical-align: -0.0667em;
+			}
+			.fa-xs {
+				font-size: 0.75em;
+			}
+			.fa-sm {
+				font-size: 0.875em;
+			}
+			.fa-1x {
+				font-size: 1em;
+			}
+			.fa-2x {
+				font-size: 2em;
+			}
+			.fa-3x {
+				font-size: 3em;
+			}
+			.fa-4x {
+				font-size: 4em;
+			}
+			.fa-5x {
+				font-size: 5em;
+			}
+			.fa-6x {
+				font-size: 6em;
+			}
+			.fa-7x {
+				font-size: 7em;
+			}
+			.fa-8x {
+				font-size: 8em;
+			}
+			.fa-9x {
+				font-size: 9em;
+			}
+			.fa-10x {
+				font-size: 10em;
+			}
+			.fa-fw {
+				text-align: center;
+				width: 1.25em;
+			}
+			.fa-ul {
+				list-style-type: none;
+				margin-left: 2.5em;
+				padding-left: 0;
+			}
+			.fa-ul > li {
+				position: relative;
+			}
+			.fa-li {
+				left: -2em;
+				position: absolute;
+				text-align: center;
+				width: 2em;
+				line-height: inherit;
+			}
+			.fa-border {
+				border: solid 0.08em #eee;
+				border-radius: 0.1em;
+				padding: 0.2em 0.25em 0.15em;
+			}
+			.fa-pull-left {
+				float: left;
+			}
+			.fa-pull-right {
+				float: right;
+			}
+			.fa.fa-pull-left,
+			.fab.fa-pull-left,
+			.fal.fa-pull-left,
+			.far.fa-pull-left,
+			.fas.fa-pull-left {
+				margin-right: 0.3em;
+			}
+			.fa.fa-pull-right,
+			.fab.fa-pull-right,
+			.fal.fa-pull-right,
+			.far.fa-pull-right,
+			.fas.fa-pull-right {
+				margin-left: 0.3em;
+			}
+			.fa-spin {
+				-webkit-animation: fa-spin 2s infinite linear;
+				animation: fa-spin 2s infinite linear;
+			}
+			.fa-pulse {
+				-webkit-animation: fa-spin 1s infinite steps(8);
+				animation: fa-spin 1s infinite steps(8);
+			}
+			@-webkit-keyframes fa-spin {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes fa-spin {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			.fa-rotate-90 {
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+			.fa-rotate-180 {
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+			.fa-rotate-270 {
+				-webkit-transform: rotate(270deg);
+				transform: rotate(270deg);
+			}
+			.fa-flip-horizontal {
+				-webkit-transform: scale(-1, 1);
+				transform: scale(-1, 1);
+			}
+			.fa-flip-vertical {
+				-webkit-transform: scale(1, -1);
+				transform: scale(1, -1);
+			}
+			.fa-flip-horizontal.fa-flip-vertical {
+				-webkit-transform: scale(-1, -1);
+				transform: scale(-1, -1);
+			}
+			:root .fa-flip-horizontal,
+			:root .fa-flip-vertical,
+			:root .fa-rotate-180,
+			:root .fa-rotate-270,
+			:root .fa-rotate-90 {
+				-webkit-filter: none;
+				filter: none;
+			}
+			.fa-stack {
+				display: inline-block;
+				height: 2em;
+				position: relative;
+				width: 2em;
+			}
+			.fa-stack-1x,
+			.fa-stack-2x {
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.svg-inline--fa.fa-stack-1x {
+				height: 1em;
+				width: 1em;
+			}
+			.svg-inline--fa.fa-stack-2x {
+				height: 2em;
+				width: 2em;
+			}
+			.fa-inverse {
+				color: #fff;
+			}
+			.sr-only {
+				border: 0;
+				clip: rect(0, 0, 0, 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+			.sr-only-focusable:active,
+			.sr-only-focusable:focus {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						Elements
+					</h1>
+					<p class="subtitle">
+						Box, Button, icon 등 요소
+					</p>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="tabs is-centered">
+				<ul>
+					<li><a href="sample.html">샘플</a></li>
+					<li><a href="../common/unit.html">UNIT</a></li>
+					<li><a href="ui.html">UI요소</a></li>
+					<li><a href="modifiers.html">기본</a></li>
+					<li><a href="layout.html">Layout</a></li>
+					<li><a href="form.html">Form</a></li>
+					<li class="is-active"><a href="elements.html">Elements</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="demo.html">아이콘웹폰트</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Box</h2>
+				<p class="subtitle is-4">
+					다른 요소를 포함하는 흰색 Box
+				</p>
+				<div class="bd-snippet-preview">
+					<div class="box">
+						<article class="media">
+							<div class="media-left">
+								<figure class="image is-64x64">
+									<img src="../../assets/images/common/128x128.gif" alt="Image" />
+								</figure>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p>
+										<strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+										<br />
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+									</p>
+								</div>
+								<nav class="level is-mobile">
+									<div class="level-left">
+										<a class="level-item" aria-label="reply">
+											<span class="icon is-small">
+												<svg
+													class="svg-inline--fa fa-reply fa-w-16"
+													aria-hidden="true"
+													data-prefix="fas"
+													data-icon="reply"
+													role="img"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 512 512"
+													data-fa-i2svg=""
+												>
+													<path
+														fill="currentColor"
+														d="M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"
+													></path></svg
+												><!-- <i class="fas fa-reply" aria-hidden="true"></i> -->
+											</span>
+										</a>
+										<a class="level-item" aria-label="retweet">
+											<span class="icon is-small">
+												<svg
+													class="svg-inline--fa fa-retweet fa-w-20"
+													aria-hidden="true"
+													data-prefix="fas"
+													data-icon="retweet"
+													role="img"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 640 512"
+													data-fa-i2svg=""
+												>
+													<path
+														fill="currentColor"
+														d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"
+													></path></svg
+												><!-- <i class="fas fa-retweet" aria-hidden="true"></i> -->
+											</span>
+										</a>
+										<a class="level-item" aria-label="like">
+											<span class="icon is-small">
+												<svg
+													class="svg-inline--fa fa-heart fa-w-16"
+													aria-hidden="true"
+													data-prefix="fas"
+													data-icon="heart"
+													role="img"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 512 512"
+													data-fa-i2svg=""
+												>
+													<path
+														fill="currentColor"
+														d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+													></path></svg
+												><!-- <i class="fas fa-heart" aria-hidden="true"></i> -->
+											</span>
+										</a>
+									</div>
+								</nav>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Button</h2>
+				<p class="subtitle is-4">
+					button 은 모든 디자인의 필수 요소로, 페이지의 상호 작용 요소 및 인터렉션을 담당.
+				</p>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button">Anchor</a>
+						<button class="button">Button</button>
+						<input class="button" type="submit" value="Submit input" />
+						<input class="button" type="reset" value="Reset input" />
+					</div>
+				</div>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-white">White</a>
+						<a class="button is-light">Light</a>
+						<a class="button is-dark">Dark</a>
+						<a class="button is-black">Black</a>
+						<a class="button is-text">Text</a>
+					</div>
+				</div>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-primary">Primary</a>
+						<a class="button is-link">Link</a>
+						<a class="button is-info">Info</a>
+						<a class="button is-success">Success</a>
+						<a class="button is-warning">Warning</a>
+						<a class="button is-danger">Danger</a>
+					</div>
+				</div>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-small">Small</a>
+						<a class="button">Default</a>
+						<a class="button is-normal">Normal</a>
+						<a class="button is-medium">Medium</a>
+						<a class="button is-large">Large</a>
+					</div>
+				</div>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons are-small">
+						<a class="button">Small</a>
+						<a class="button">Small</a>
+						<a class="button">Small</a>
+						<a class="button is-normal">Normal</a>
+						<a class="button">Small</a>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Displays
+				</p>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-small is-fullwidth">Small</a>
+						<a class="button is-fullwidth">Normal</a>
+						<a class="button is-medium is-fullwidth">Medium</a>
+						<a class="button is-large is-fullwidth">Large</a>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Styles
+				</p>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-outlined">Outlined</a>
+						<a class="button is-primary is-outlined">Outlined</a>
+						<a class="button is-link is-outlined">Outlined</a>
+						<a class="button is-info is-outlined">Outlined</a>
+						<a class="button is-success is-outlined">Outlined</a>
+						<a class="button is-danger is-outlined">Outlined</a>
+					</div>
+				</div>
+
+				<div class="bd-snippet-preview is-primary">
+					<div class="buttons">
+						<a class="button is-primary is-inverted">Inverted</a>
+						<a class="button is-link is-inverted">Inverted</a>
+						<a class="button is-info is-inverted">Inverted</a>
+						<a class="button is-success is-inverted">Inverted</a>
+						<a class="button is-danger is-inverted">Inverted</a>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Rounded buttons
+				</p>
+
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-rounded">Rounded</a>
+						<a class="button is-primary is-rounded">Rounded</a>
+						<a class="button is-link is-rounded">Rounded</a>
+						<a class="button is-info is-rounded">Rounded</a>
+						<a class="button is-success is-rounded">Rounded</a>
+						<a class="button is-danger is-rounded">Rounded</a>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					States
+				</p>
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button">Normal</a>
+						<a class="button is-primary">Normal</a>
+						<a class="button is-link">Normal</a>
+						<a class="button is-info">Normal</a>
+						<a class="button is-success">Normal</a>
+						<a class="button is-warning">Normal</a>
+						<a class="button is-danger">Normal</a>
+					</div>
+				</div>
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-hovered">Hover</a>
+						<a class="button is-primary is-hovered">Hover</a>
+						<a class="button is-link is-hovered">Hover</a>
+						<a class="button is-info is-hovered">Hover</a>
+						<a class="button is-success is-hovered">Hover</a>
+						<a class="button is-warning is-hovered">Hover</a>
+						<a class="button is-danger is-hovered">Hover</a>
+					</div>
+				</div>
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-focused">Focus</a>
+						<a class="button is-primary is-focused">Focus</a>
+						<a class="button is-link is-focused">Focus</a>
+						<a class="button is-info is-focused">Focus</a>
+						<a class="button is-success is-focused">Focus</a>
+						<a class="button is-warning is-focused">Focus</a>
+						<a class="button is-danger is-focused">Focus</a>
+					</div>
+				</div>
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-active">Active</a>
+						<a class="button is-primary is-active">Active</a>
+						<a class="button is-link is-active">Active</a>
+						<a class="button is-info is-active">Active</a>
+						<a class="button is-success is-active">Active</a>
+						<a class="button is-warning is-active">Active</a>
+						<a class="button is-danger is-active">Active</a>
+					</div>
+				</div>
+				<div class="bd-snippet-preview">
+					<div class="buttons">
+						<a class="button is-loading">Loading</a>
+						<a class="button is-primary is-loading">Loading</a>
+						<a class="button is-link is-loading">Loading</a>
+						<a class="button is-info is-loading">Loading</a>
+						<a class="button is-success is-loading">Loading</a>
+						<a class="button is-warning is-loading">Loading</a>
+						<a class="button is-danger is-loading">Loading</a>
+					</div>
+					<div class="message is-info">
+						<div class="message-body">
+							<p>
+								Load spinner : after를 사용해 구현되므로 &lt;input type = "submit"&gt; 요소에서는 지원하지 않습니다. 대신 &lt;button type = "submit"&gt;을 사용해보십시오.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					With icons
+				</p>
+
+				<div class="bd-snippet-preview">
+					<p class="buttons">
+						<a class="button">
+							<span class="icon is-small">
+								<svg
+									class="svg-inline--fa fa-bold fa-w-12"
+									aria-hidden="true"
+									data-prefix="fas"
+									data-icon="bold"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 384 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M304.793 243.891c33.639-18.537 53.657-54.16 53.657-95.693 0-48.236-26.25-87.626-68.626-104.179C265.138 34.01 240.849 32 209.661 32H24c-8.837 0-16 7.163-16 16v33.049c0 8.837 7.163 16 16 16h33.113v318.53H24c-8.837 0-16 7.163-16 16V464c0 8.837 7.163 16 16 16h195.69c24.203 0 44.834-1.289 66.866-7.584C337.52 457.193 376 410.647 376 350.014c0-52.168-26.573-91.684-71.207-106.123zM142.217 100.809h67.444c16.294 0 27.536 2.019 37.525 6.717 15.828 8.479 24.906 26.502 24.906 49.446 0 35.029-20.32 56.79-53.029 56.79h-76.846V100.809zm112.642 305.475c-10.14 4.056-22.677 4.907-31.409 4.907h-81.233V281.943h84.367c39.645 0 63.057 25.38 63.057 63.057.001 28.425-13.66 52.483-34.782 61.284z"
+									></path></svg
+								><!-- <i class="fas fa-bold"></i> -->
+							</span>
+						</a>
+						<a class="button">
+							<span class="icon is-small">
+								<svg
+									class="svg-inline--fa fa-italic fa-w-10"
+									aria-hidden="true"
+									data-prefix="fas"
+									data-icon="italic"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 320 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M204.758 416h-33.849l62.092-320h40.725a16 16 0 0 0 15.704-12.937l6.242-32C297.599 41.184 290.034 32 279.968 32H120.235a16 16 0 0 0-15.704 12.937l-6.242 32C96.362 86.816 103.927 96 113.993 96h33.846l-62.09 320H46.278a16 16 0 0 0-15.704 12.935l-6.245 32C22.402 470.815 29.967 480 40.034 480h158.479a16 16 0 0 0 15.704-12.935l6.245-32c1.927-9.88-5.638-19.065-15.704-19.065z"
+									></path></svg
+								><!-- <i class="fas fa-italic"></i> -->
+							</span>
+						</a>
+						<a class="button">
+							<span class="icon is-small">
+								<svg
+									class="svg-inline--fa fa-underline fa-w-14"
+									aria-hidden="true"
+									data-prefix="fas"
+									data-icon="underline"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 448 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M224.264 388.24c-91.669 0-156.603-51.165-156.603-151.392V64H39.37c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h137.39c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.813v172.848c0 53.699 28.314 79.444 76.317 79.444 46.966 0 75.796-25.434 75.796-79.965V64h-28.291c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h136.868c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.291v172.848c0 99.405-64.881 151.392-156.082 151.392zM16 448h416c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16z"
+									></path></svg
+								><!-- <i class="fas fa-underline"></i> -->
+							</span>
+						</a>
+					</p>
+					<p class="buttons">
+						<a class="button">
+							<span class="icon">
+								<svg
+									class="svg-inline--fa fa-github fa-w-16"
+									aria-hidden="true"
+									data-prefix="fab"
+									data-icon="github"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 496 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+									></path></svg
+								><!-- <i class="fab fa-github"></i> -->
+							</span>
+							<span>GitHub</span>
+						</a>
+						<a class="button is-primary">
+							<span class="icon">
+								<svg
+									class="svg-inline--fa fa-twitter fa-w-16"
+									aria-hidden="true"
+									data-prefix="fab"
+									data-icon="twitter"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 512 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+									></path></svg
+								><!-- <i class="fab fa-twitter"></i> -->
+							</span>
+							<span>Twitter</span>
+						</a>
+						<a class="button is-success">
+							<span class="icon is-small">
+								<svg
+									class="svg-inline--fa fa-check fa-w-16"
+									aria-hidden="true"
+									data-prefix="fas"
+									data-icon="check"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 512 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+									></path></svg
+								><!-- <i class="fas fa-check"></i> -->
+							</span>
+							<span>Save</span>
+						</a>
+						<a class="button is-danger is-outlined">
+							<span>Delete</span>
+							<span class="icon is-small">
+								<svg
+									class="svg-inline--fa fa-times fa-w-11"
+									aria-hidden="true"
+									data-prefix="fas"
+									data-icon="times"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 352 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+									></path></svg
+								><!-- <i class="fas fa-times"></i> -->
+							</span>
+						</a>
+					</p>
+					<p class="buttons">
+						<a class="button is-small">
+							<span class="icon is-small">
+								<svg
+									class="svg-inline--fa fa-github fa-w-16"
+									aria-hidden="true"
+									data-prefix="fab"
+									data-icon="github"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 496 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+									></path></svg
+								><!-- <i class="fab fa-github"></i> -->
+							</span>
+							<span>GitHub</span>
+						</a>
+						<a class="button">
+							<span class="icon">
+								<svg
+									class="svg-inline--fa fa-github fa-w-16"
+									aria-hidden="true"
+									data-prefix="fab"
+									data-icon="github"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 496 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+									></path></svg
+								><!-- <i class="fab fa-github"></i> -->
+							</span>
+							<span>GitHub</span>
+						</a>
+						<a class="button is-medium">
+							<span class="icon">
+								<svg
+									class="svg-inline--fa fa-github fa-w-16"
+									aria-hidden="true"
+									data-prefix="fab"
+									data-icon="github"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 496 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+									></path></svg
+								><!-- <i class="fab fa-github"></i> -->
+							</span>
+							<span>GitHub</span>
+						</a>
+						<a class="button is-large">
+							<span class="icon is-medium">
+								<svg
+									class="svg-inline--fa fa-github fa-w-16"
+									aria-hidden="true"
+									data-prefix="fab"
+									data-icon="github"
+									role="img"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 496 512"
+									data-fa-i2svg=""
+								>
+									<path
+										fill="currentColor"
+										d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+									></path></svg
+								><!-- <i class="fab fa-github"></i> -->
+							</span>
+							<span>GitHub</span>
+						</a>
+					</p>
+				</div>
+
+				<div class="bd-snippet-preview">
+					<p>버튼에 아이콘 만 있으면 button이나 아이콘의 크기에 상관없이 버튼이 사각형으로 유지됨</p>
+				</div>
+
+				<p class="buttons">
+					<a class="button is-small">
+						<span class="icon is-small">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading"></i> -->
+						</span>
+					</a>
+				</p>
+				<p class="buttons">
+					<a class="button">
+						<span class="icon is-small">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading"></i> -->
+						</span>
+					</a>
+					<a class="button">
+						<span class="icon">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16 fa-lg"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading fa-lg"></i> -->
+						</span>
+					</a>
+				</p>
+				<p class="buttons">
+					<a class="button is-medium">
+						<span class="icon is-small">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading"></i> -->
+						</span>
+					</a>
+					<a class="button is-medium">
+						<span class="icon">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16 fa-lg"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading fa-lg"></i> -->
+						</span>
+					</a>
+					<a class="button is-medium">
+						<span class="icon is-medium">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16 fa-2x"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading fa-2x"></i> -->
+						</span>
+					</a>
+				</p>
+				<p class="buttons">
+					<a class="button is-large">
+						<span class="icon is-small">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading"></i> -->
+						</span>
+					</a>
+					<a class="button is-large">
+						<span class="icon">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16 fa-lg"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading fa-lg"></i> -->
+						</span>
+					</a>
+					<a class="button is-large">
+						<span class="icon is-medium">
+							<svg
+								class="svg-inline--fa fa-heading fa-w-16 fa-2x"
+								aria-hidden="true"
+								data-prefix="fas"
+								data-icon="heading"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								data-fa-i2svg=""
+							>
+								<path
+									fill="currentColor"
+									d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"
+								></path></svg
+							><!-- <i class="fas fa-heading fa-2x"></i> -->
+						</span>
+					</a>
+				</p>
+
+				<p class="subtitle is-4">
+					Button group
+				</p>
+				<p>한 라인에서 버튼끼리 그룹화하려면 <code>field</code> 컨테이너에 <code>is-grouped</code> 를 사용.</p>
+				<div class="bd-snippet-preview">
+					<div class="field is-grouped">
+						<p class="control">
+							<a class="button is-link">
+								Save changes
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								Cancel
+							</a>
+						</p>
+						<p class="control">
+							<a class="button is-danger">
+								Delete post
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Button addons
+				</p>
+				<p>버튼을 add-on 형태로 붙여서 그룹화하려면 <code>field</code> 컨테이너에 <code>has-addons</code> 를 사용.</p>
+				<div class="bd-snippet-preview">
+					<div class="field has-addons">
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-align-left fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="align-left"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+										></path></svg
+									><!-- <i class="fas fa-align-left"></i> -->
+								</span>
+								<span>Left</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-align-center fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="align-center"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M352 44v40c0 8.837-7.163 16-16 16H112c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h224c8.837 0 16 7.163 16 16zM16 228h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm320-200H112c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h224c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+										></path></svg
+									><!-- <i class="fas fa-align-center"></i> -->
+								</span>
+								<span>Center</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-align-right fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="align-right"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M160 84V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H176c-8.837 0-16-7.163-16-16zM16 228h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm160-128h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H176c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+										></path></svg
+									><!-- <i class="fas fa-align-right"></i> -->
+								</span>
+								<span>Right</span>
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="bd-snippet-preview">
+					<div class="field has-addons">
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-bold fa-w-12"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="bold"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 384 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M304.793 243.891c33.639-18.537 53.657-54.16 53.657-95.693 0-48.236-26.25-87.626-68.626-104.179C265.138 34.01 240.849 32 209.661 32H24c-8.837 0-16 7.163-16 16v33.049c0 8.837 7.163 16 16 16h33.113v318.53H24c-8.837 0-16 7.163-16 16V464c0 8.837 7.163 16 16 16h195.69c24.203 0 44.834-1.289 66.866-7.584C337.52 457.193 376 410.647 376 350.014c0-52.168-26.573-91.684-71.207-106.123zM142.217 100.809h67.444c16.294 0 27.536 2.019 37.525 6.717 15.828 8.479 24.906 26.502 24.906 49.446 0 35.029-20.32 56.79-53.029 56.79h-76.846V100.809zm112.642 305.475c-10.14 4.056-22.677 4.907-31.409 4.907h-81.233V281.943h84.367c39.645 0 63.057 25.38 63.057 63.057.001 28.425-13.66 52.483-34.782 61.284z"
+										></path></svg
+									><!-- <i class="fas fa-bold"></i> -->
+								</span>
+								<span>Bold</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-italic fa-w-10"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="italic"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 320 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M204.758 416h-33.849l62.092-320h40.725a16 16 0 0 0 15.704-12.937l6.242-32C297.599 41.184 290.034 32 279.968 32H120.235a16 16 0 0 0-15.704 12.937l-6.242 32C96.362 86.816 103.927 96 113.993 96h33.846l-62.09 320H46.278a16 16 0 0 0-15.704 12.935l-6.245 32C22.402 470.815 29.967 480 40.034 480h158.479a16 16 0 0 0 15.704-12.935l6.245-32c1.927-9.88-5.638-19.065-15.704-19.065z"
+										></path></svg
+									><!-- <i class="fas fa-italic"></i> -->
+								</span>
+								<span>Italic</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-underline fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="underline"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M224.264 388.24c-91.669 0-156.603-51.165-156.603-151.392V64H39.37c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h137.39c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.813v172.848c0 53.699 28.314 79.444 76.317 79.444 46.966 0 75.796-25.434 75.796-79.965V64h-28.291c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h136.868c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.291v172.848c0 99.405-64.881 151.392-156.082 151.392zM16 448h416c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16z"
+										></path></svg
+									><!-- <i class="fas fa-underline"></i> -->
+								</span>
+								<span>Underline</span>
+							</a>
+						</p>
+					</div>
+
+					<div class="field has-addons">
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-align-left fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="align-left"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+										></path></svg
+									><!-- <i class="fas fa-align-left"></i> -->
+								</span>
+								<span>Left</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-align-center fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="align-center"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M352 44v40c0 8.837-7.163 16-16 16H112c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h224c8.837 0 16 7.163 16 16zM16 228h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm320-200H112c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h224c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"
+										></path></svg
+									><!-- <i class="fas fa-align-center"></i> -->
+								</span>
+								<span>Center</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button">
+								<span class="icon is-small">
+									<svg
+										class="svg-inline--fa fa-align-right fa-w-14"
+										aria-hidden="true"
+										data-prefix="fas"
+										data-icon="align-right"
+										role="img"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 448 512"
+										data-fa-i2svg=""
+									>
+										<path
+											fill="currentColor"
+											d="M160 84V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H176c-8.837 0-16-7.163-16-16zM16 228h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 256h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm160-128h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H176c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+										></path></svg
+									><!-- <i class="fas fa-align-right"></i> -->
+								</span>
+								<span>Right</span>
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					List of buttons
+				</p>
+				<p><code>.buttons</code> 컨테이너를 사용해 버튼 목록을 만들 수 있음.</p>
+				<div class="bd-example">
+					<div class="buttons">
+						<span class="button is-success">Save changes</span>
+						<span class="button is-info">Save and continue</span>
+						<span class="button is-danger">Cancel</span>
+					</div>
+				</div>
+
+				<div class="bd-example">
+					<div class="buttons">
+						<span class="button">One</span>
+						<span class="button">Two</span>
+						<span class="button">Three</span>
+						<span class="button">Four</span>
+						<span class="button">Five</span>
+						<span class="button">Six</span>
+						<span class="button">Seven</span>
+						<span class="button">Eight</span>
+						<span class="button">Nine</span>
+						<span class="button">Ten</span>
+						<span class="button">Eleven</span>
+						<span class="button">Twelve</span>
+						<span class="button">Thirteen</span>
+						<span class="button">Fourteen</span>
+						<span class="button">Fifteen</span>
+						<span class="button">Sixteen</span>
+						<span class="button">Seventeen</span>
+						<span class="button">Eighteen</span>
+						<span class="button">Nineteen</span>
+						<span class="button">Twenty</span>
+					</div>
+				</div>
+
+				<div class="bd-example">
+					<div class="buttons has-addons">
+						<span class="button">Yes</span>
+						<span class="button">Maybe</span>
+						<span class="button">No</span>
+					</div>
+				</div>
+
+				<div class="bd-example">
+					<div class="buttons has-addons is-centered">
+						<span class="button">Yes</span>
+						<span class="button">Maybe</span>
+						<span class="button">No</span>
+					</div>
+
+					<div class="buttons has-addons is-right">
+						<span class="button">Yes</span>
+						<span class="button">Maybe</span>
+						<span class="button">No</span>
+					</div>
+				</div>
+
+				<div class="bd-example">
+					<div class="buttons has-addons">
+						<span class="button is-success is-selected">Yes</span>
+						<span class="button">Maybe</span>
+						<span class="button">No</span>
+					</div>
+
+					<div class="buttons has-addons">
+						<span class="button">Yes</span>
+						<span class="button is-info is-selected">Maybe</span>
+						<span class="button">No</span>
+					</div>
+
+					<div class="buttons has-addons">
+						<span class="button">Yes</span>
+						<span class="button">Maybe</span>
+						<span class="button is-danger is-selected">No</span>
+					</div>
+				</div>
+
+				<div class="message is-info">
+					<div class="message-header">
+						<p><strong>form groups</strong> 과 <strong>buttons</strong> 리스트 차이</p>
+					</div>
+					<div class="message-body">
+						<div class="content">
+							<ul>
+								<li><code>buttons</code> 은 보다 간단한 마크업이며, 오직 <code>button</code> 요소만 내부에 포함</li>
+								<li><code>field is-grouped</code> 은 어떠한 <code>control</code> 요소도 포함될 수 있으며, 단일 라인에 모든 콘트롤 들을 맞추도록 강제함.</li>
+							</ul>
+							<p>버튼 리스트를 사용한다면 <code>buttons</code> 를 사용하고, 콘트롤과 여러 요소들을 같이 스타일링해야 한다면 <code>field is-grouped</code>을 사용.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Content</h2>
+
+				<div class="columns contents">
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="content">
+								<ol type="1">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol type="A">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol type="a">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol type="I">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol type="i">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="content">
+								<ol class="is-lower-alpha">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol class="is-lower-roman">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol class="is-upper-alpha">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+								<ol class="is-upper-roman">
+									<li>Coffee</li>
+									<li>Tea</li>
+									<li>Milk</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Sizes
+				</p>
+
+				<div class="bd-example">
+					<div class="content is-small">
+						<h1>Hello World</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut
+							vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+						</p>
+						<h2>Second level</h2>
+						<p>
+							Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus
+							venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
+						</p>
+						<ul>
+							<li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+							<li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+							<li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+							<li>Ut non enim metus.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="bd-example">
+					<div class="content is-medium">
+						<h1>Hello World</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut
+							vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+						</p>
+						<h2>Second level</h2>
+						<p>
+							Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus
+							venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
+						</p>
+						<ul>
+							<li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+							<li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+							<li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+							<li>Ut non enim metus.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="bd-example">
+					<div class="content is-large">
+						<h1>Hello World</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut
+							vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+						</p>
+						<h2>Second level</h2>
+						<p>
+							Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus
+							venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.
+						</p>
+						<ul>
+							<li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+							<li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+							<li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+							<li>Ut non enim metus.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Notification</h2>
+				<p class="subtitle is-4">
+					굵게 표시된 알림 블록으로 사용자에게 경고.
+				</p>
+
+				<div class="columns contents">
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="notification">
+								<button class="delete"></button>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum
+								rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+
+							<div class="notification is-primary">
+								<button class="delete"></button>
+								Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+								Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+
+							<div class="notification is-link">
+								<button class="delete"></button>
+								Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+								Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+
+							<div class="notification is-info">
+								<button class="delete"></button>
+								Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+								Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="notification is-success">
+								<button class="delete"></button>
+								Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+								Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+
+							<div class="notification is-warning">
+								<button class="delete"></button>
+								Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+								Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+
+							<div class="notification is-danger">
+								<button class="delete"></button>
+								Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+								Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a>
+								efficitur. Sit amet, consectetur adipiscing elit
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(function () {
+						$(document).on('click', '.notification .delete', function (e) {
+							e.preventDefault();
+							$(this).closest('.notification').hide();
+						});
+					});
+				</script>
+
+				<div id="notificationJsExample" class="message is-info">
+					<h4 class="message-header">Javascript delete notification 샘플</h4>
+					<div class="message-body">
+						<div class="content">
+							<pre>
+$(function(){
+	$(document).on('click','.notification .delete',function(e){
+		e.preventDefault();
+		$(this).closest('.notification').hide();
+	})
+});</pre
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Table</h2>
+
+				<div class="bd-snippet-preview">
+					<table class="table">
+						<thead>
+							<tr>
+								<th><abbr title="Position">Pos</abbr></th>
+								<th>Team</th>
+								<th><abbr title="Played">Pld</abbr></th>
+								<th><abbr title="Won">W</abbr></th>
+								<th><abbr title="Drawn">D</abbr></th>
+								<th><abbr title="Lost">L</abbr></th>
+								<th><abbr title="Goals for">GF</abbr></th>
+								<th><abbr title="Goals against">GA</abbr></th>
+								<th><abbr title="Goal difference">GD</abbr></th>
+								<th><abbr title="Points">Pts</abbr></th>
+								<th>Qualification or relegation</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<th><abbr title="Position">Pos</abbr></th>
+								<th>Team</th>
+								<th><abbr title="Played">Pld</abbr></th>
+								<th><abbr title="Won">W</abbr></th>
+								<th><abbr title="Drawn">D</abbr></th>
+								<th><abbr title="Lost">L</abbr></th>
+								<th><abbr title="Goals for">GF</abbr></th>
+								<th><abbr title="Goals against">GA</abbr></th>
+								<th><abbr title="Goal difference">GD</abbr></th>
+								<th><abbr title="Points">Pts</abbr></th>
+								<th>Qualification or relegation</th>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+								<th>1</th>
+								<td>
+									<a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a>
+									<strong>(C)</strong>
+								</td>
+								<td>38</td>
+								<td>23</td>
+								<td>12</td>
+								<td>3</td>
+								<td>68</td>
+								<td>36</td>
+								<td>+32</td>
+								<td>81</td>
+								<td>
+									Qualification for the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a>
+								</td>
+							</tr>
+							<tr>
+								<th>2</th>
+								<td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Arsenal F.C.">Arsenal</a></td>
+								<td>38</td>
+								<td>20</td>
+								<td>11</td>
+								<td>7</td>
+								<td>65</td>
+								<td>36</td>
+								<td>+29</td>
+								<td>71</td>
+								<td>
+									Qualification for the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a>
+								</td>
+							</tr>
+							<tr>
+								<th>3</th>
+								<td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Tottenham Hotspur F.C.">Tottenham Hotspur</a></td>
+								<td>38</td>
+								<td>19</td>
+								<td>13</td>
+								<td>6</td>
+								<td>69</td>
+								<td>35</td>
+								<td>+34</td>
+								<td>70</td>
+								<td>
+									Qualification for the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a>
+								</td>
+							</tr>
+							<tr class="is-selected">
+								<th>4</th>
+								<td><a href="https://en.wikipedia.org/wiki/Manchester_City_F.C." title="Manchester City F.C.">Manchester City</a></td>
+								<td>38</td>
+								<td>19</td>
+								<td>9</td>
+								<td>10</td>
+								<td>71</td>
+								<td>41</td>
+								<td>+30</td>
+								<td>66</td>
+								<td>
+									Qualification for the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Play-off_round" title="2016–17 UEFA Champions League"
+										>Champions League play-off round</a
+									>
+								</td>
+							</tr>
+							<tr>
+								<th>5</th>
+								<td><a href="https://en.wikipedia.org/wiki/Manchester_United_F.C." title="Manchester United F.C.">Manchester United</a></td>
+								<td>38</td>
+								<td>19</td>
+								<td>9</td>
+								<td>10</td>
+								<td>49</td>
+								<td>35</td>
+								<td>+14</td>
+								<td>66</td>
+								<td>
+									Qualification for the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Group_stage" title="2016–17 UEFA Europa League">Europa League group stage</a>
+								</td>
+							</tr>
+							<tr>
+								<th>6</th>
+								<td><a href="https://en.wikipedia.org/wiki/Southampton_F.C." title="Southampton F.C.">Southampton</a></td>
+								<td>38</td>
+								<td>18</td>
+								<td>9</td>
+								<td>11</td>
+								<td>59</td>
+								<td>41</td>
+								<td>+18</td>
+								<td>63</td>
+								<td>
+									Qualification for the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Group_stage" title="2016–17 UEFA Europa League">Europa League group stage</a>
+								</td>
+							</tr>
+
+							<tr>
+								<th>14</th>
+								<td><a href="https://en.wikipedia.org/wiki/West_Bromwich_Albion_F.C." title="West Bromwich Albion F.C.">West Bromwich Albion</a></td>
+								<td>38</td>
+								<td>10</td>
+								<td>13</td>
+								<td>15</td>
+								<td>34</td>
+								<td>48</td>
+								<td>−14</td>
+								<td>43</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>15</th>
+								<td><a href="https://en.wikipedia.org/wiki/Crystal_Palace_F.C." title="Crystal Palace F.C.">Crystal Palace</a></td>
+								<td>38</td>
+								<td>11</td>
+								<td>9</td>
+								<td>18</td>
+								<td>39</td>
+								<td>51</td>
+								<td>−12</td>
+								<td>42</td>
+								<td></td>
+							</tr>
+
+							<tr>
+								<th>18</th>
+								<td>
+									<a href="https://en.wikipedia.org/wiki/Newcastle_United_F.C." title="Newcastle United F.C.">Newcastle United</a>
+									<strong>(R)</strong>
+								</td>
+								<td>38</td>
+								<td>9</td>
+								<td>10</td>
+								<td>19</td>
+								<td>44</td>
+								<td>65</td>
+								<td>−21</td>
+								<td>37</td>
+								<td>
+									Relegation to the
+									<a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship" title="2016–17 Football League Championship">Football League Championship</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<hr class="hr" style="margin-bottom: 0;" />
+				<div class="bd-snippet-preview">
+					<div class="columns">
+						<div class="column">
+							<p>Add <strong>borders</strong> to all the cells.</p>
+						</div>
+						<div class="column">
+							<code>table is-bordered</code>
+						</div>
+						<div class="column is-half">
+							<table class="table is-bordered">
+								<thead>
+									<tr>
+										<th>One</th>
+										<th>Two</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Three</td>
+										<td>Four</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<p>Add <strong>stripes</strong> to the table.</p>
+						</div>
+						<div class="column">
+							<code>table is-striped</code>
+						</div>
+						<div class="column is-half">
+							<table class="table is-striped">
+								<thead>
+									<tr>
+										<th>One</th>
+										<th>Two</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Three</td>
+										<td>Four</td>
+									</tr>
+									<tr>
+										<td>Five</td>
+										<td>Six</td>
+									</tr>
+									<tr>
+										<td>Seven</td>
+										<td>Eight</td>
+									</tr>
+									<tr>
+										<td>Nine</td>
+										<td>Ten</td>
+									</tr>
+									<tr>
+										<td>Eleven</td>
+										<td>Twelve</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<p>Make the cells <strong>narrower</strong>.</p>
+						</div>
+						<div class="column">
+							<code>table is-narrow</code>
+						</div>
+						<div class="column is-half">
+							<table class="table is-narrow">
+								<thead>
+									<tr>
+										<th>One</th>
+										<th>Two</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Three</td>
+										<td>Four</td>
+									</tr>
+									<tr>
+										<td>Five</td>
+										<td>Six</td>
+									</tr>
+									<tr>
+										<td>Seven</td>
+										<td>Eight</td>
+									</tr>
+									<tr>
+										<td>Nine</td>
+										<td>Ten</td>
+									</tr>
+									<tr>
+										<td>Eleven</td>
+										<td>Twelve</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<p>You can add a <strong>hover effect</strong> on each row</p>
+						</div>
+						<div class="column">
+							<code>table is-hoverable</code>
+						</div>
+						<div class="column is-half">
+							<table class="table is-hoverable">
+								<thead>
+									<tr>
+										<th>One</th>
+										<th>Two</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Three</td>
+										<td>Four</td>
+									</tr>
+									<tr>
+										<td>Five</td>
+										<td>Six</td>
+									</tr>
+									<tr>
+										<td>Seven</td>
+										<td>Eight</td>
+									</tr>
+									<tr>
+										<td>Nine</td>
+										<td>Ten</td>
+									</tr>
+									<tr>
+										<td>Eleven</td>
+										<td>Twelve</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<p>You can have a <strong>fullwidth</strong> table.</p>
+						</div>
+						<div class="column">
+							<code>table is-fullwidth</code>
+						</div>
+						<div class="column is-half">
+							<table class="table is-fullwidth">
+								<thead>
+									<tr>
+										<th>One</th>
+										<th>Two</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Three</td>
+										<td>Four</td>
+									</tr>
+									<tr>
+										<td>Five</td>
+										<td>Six</td>
+									</tr>
+									<tr>
+										<td>Seven</td>
+										<td>Eight</td>
+									</tr>
+									<tr>
+										<td>Nine</td>
+										<td>Ten</td>
+									</tr>
+									<tr>
+										<td>Eleven</td>
+										<td>Twelve</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="columns">
+						<div class="column">
+							<p>You can <strong>combine</strong> all five modifiers.</p>
+						</div>
+						<div class="column">
+							<code>table is-bordered is-striped is-narrow is-hoverable is-fullwidth</code>
+						</div>
+						<div class="column is-half">
+							<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+								<thead>
+									<tr>
+										<th>One</th>
+										<th>Two</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Three</td>
+										<td>Four</td>
+									</tr>
+									<tr>
+										<td>Five</td>
+										<td>Six</td>
+									</tr>
+									<tr>
+										<td>Seven</td>
+										<td>Eight</td>
+									</tr>
+									<tr>
+										<td>Nine</td>
+										<td>Ten</td>
+									</tr>
+									<tr>
+										<td>Eleven</td>
+										<td>Twelve</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Title</h2>
+				<div class="columns">
+					<div class="column">
+						<div class="bd-example">
+							<h1 class="title">Title</h1>
+							<h2 class="subtitle">Subtitle</h2>
+						</div>
+						<p class="subtitle is-4">
+							title 과 subtitle을 결합할 때 크기 차이는 2를 사용하는 것이 좋음.
+						</p>
+						<p>예) <code>title is-1</code> <code>subtitle is-3</code></p>
+						<div class="bd-example">
+							<p class="title is-1">Title 1</p>
+							<p class="subtitle is-3">Subtitle 3</p>
+
+							<p class="title is-2">Title 2</p>
+							<p class="subtitle is-4">Subtitle 4</p>
+
+							<p class="title is-3">Title 3</p>
+							<p class="subtitle is-5">Subtitle 5</p>
+						</div>
+					</div>
+					<div class="column">
+						<p class="subtitle is-4">
+							Sizes
+						</p>
+						<div class="bd-example">
+							<h1 class="title is-1">Title 1</h1>
+							<h2 class="title is-2">Title 2</h2>
+							<h3 class="title is-3">Title 3</h3>
+							<h4 class="title is-4">Title 4</h4>
+							<h5 class="title is-5">Title 5</h5>
+							<h6 class="title is-6">Title 6</h6>
+							<hr class="hr" />
+							<h1 class="subtitle is-1">Subtitle 1</h1>
+							<h2 class="subtitle is-2">Subtitle 2</h2>
+							<h3 class="subtitle is-3">Subtitle 3</h3>
+							<h4 class="subtitle is-4">Subtitle 4</h4>
+							<h5 class="subtitle is-5">Subtitle 5</h5>
+							<h6 class="subtitle is-6">Subtitle 6</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

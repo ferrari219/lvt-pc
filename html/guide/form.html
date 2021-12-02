@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.0</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<style>
+			.button,
+			.file-cta,
+			.file-name,
+			.input,
+			.pagination-ellipsis,
+			.pagination-link,
+			.pagination-next,
+			.pagination-previous,
+			.select select,
+			.textarea {
+				border-width: 1px;
+			}
+
+			.bd-snippet-preview,
+			.bd-example {
+				margin-bottom: 1.5rem;
+			}
+
+			.mb3 {
+				margin-bottom: 3rem;
+			}
+
+			.mb4 {
+				margin-bottom: 4rem;
+			}
+
+			.subtitle + p {
+				font-size: 0.9rem;
+				margin-top: -1rem;
+				margin-bottom: 1.5rem;
+				color: #999;
+			}
+		</style>
+		<style type="text/css">
+			svg:not(:root).svg-inline--fa {
+				overflow: visible;
+			}
+			.svg-inline--fa {
+				display: inline-block;
+				font-size: inherit;
+				height: 1em;
+				overflow: visible;
+				vertical-align: -0.125em;
+			}
+			.svg-inline--fa.fa-lg {
+				vertical-align: -0.225em;
+			}
+			.svg-inline--fa.fa-w-1 {
+				width: 0.0625em;
+			}
+			.svg-inline--fa.fa-w-2 {
+				width: 0.125em;
+			}
+			.svg-inline--fa.fa-w-3 {
+				width: 0.1875em;
+			}
+			.svg-inline--fa.fa-w-4 {
+				width: 0.25em;
+			}
+			.svg-inline--fa.fa-w-5 {
+				width: 0.3125em;
+			}
+			.svg-inline--fa.fa-w-6 {
+				width: 0.375em;
+			}
+			.svg-inline--fa.fa-w-7 {
+				width: 0.4375em;
+			}
+			.svg-inline--fa.fa-w-8 {
+				width: 0.5em;
+			}
+			.svg-inline--fa.fa-w-9 {
+				width: 0.5625em;
+			}
+			.svg-inline--fa.fa-w-10 {
+				width: 0.625em;
+			}
+			.svg-inline--fa.fa-w-11 {
+				width: 0.6875em;
+			}
+			.svg-inline--fa.fa-w-12 {
+				width: 0.75em;
+			}
+			.svg-inline--fa.fa-w-13 {
+				width: 0.8125em;
+			}
+			.svg-inline--fa.fa-w-14 {
+				width: 0.875em;
+			}
+			.svg-inline--fa.fa-w-15 {
+				width: 0.9375em;
+			}
+			.svg-inline--fa.fa-w-16 {
+				width: 1em;
+			}
+			.svg-inline--fa.fa-w-17 {
+				width: 1.0625em;
+			}
+			.svg-inline--fa.fa-w-18 {
+				width: 1.125em;
+			}
+			.svg-inline--fa.fa-w-19 {
+				width: 1.1875em;
+			}
+			.svg-inline--fa.fa-w-20 {
+				width: 1.25em;
+			}
+			.svg-inline--fa.fa-pull-left {
+				margin-right: 0.3em;
+				width: auto;
+			}
+			.svg-inline--fa.fa-pull-right {
+				margin-left: 0.3em;
+				width: auto;
+			}
+			.svg-inline--fa.fa-border {
+				height: 1.5em;
+			}
+			.svg-inline--fa.fa-li {
+				width: 2em;
+			}
+			.svg-inline--fa.fa-fw {
+				width: 1.25em;
+			}
+			.fa-spin {
+				-webkit-animation: fa-spin 2s infinite linear;
+				animation: fa-spin 2s infinite linear;
+			}
+			.fa-pulse {
+				-webkit-animation: fa-spin 1s infinite steps(8);
+				animation: fa-spin 1s infinite steps(8);
+			}
+			@-webkit-keyframes fa-spin {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes fa-spin {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			.fa-rotate-90 {
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+			.fa-rotate-180 {
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+			.fa-rotate-270 {
+				-webkit-transform: rotate(270deg);
+				transform: rotate(270deg);
+			}
+			.fa-flip-horizontal {
+				-webkit-transform: scale(-1, 1);
+				transform: scale(-1, 1);
+			}
+			.fa-flip-vertical {
+				-webkit-transform: scale(1, -1);
+				transform: scale(1, -1);
+			}
+			.fa-flip-horizontal.fa-flip-vertical {
+				-webkit-transform: scale(-1, -1);
+				transform: scale(-1, -1);
+			}
+			:root .fa-flip-horizontal,
+			:root .fa-flip-vertical,
+			:root .fa-rotate-180,
+			:root .fa-rotate-270,
+			:root .fa-rotate-90 {
+				-webkit-filter: none;
+				filter: none;
+			}
+			.fa-stack {
+				display: inline-block;
+				height: 2em;
+				position: relative;
+				width: 2em;
+			}
+			.fa-stack-1x,
+			.fa-stack-2x {
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.svg-inline--fa.fa-stack-1x {
+				height: 1em;
+				width: 1em;
+			}
+			.svg-inline--fa.fa-stack-2x {
+				height: 2em;
+				width: 2em;
+			}
+			.fa-inverse {
+				color: #fff;
+			}
+			.sr-only {
+				border: 0;
+				clip: rect(0, 0, 0, 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+			.sr-only-focusable:active,
+			.sr-only-focusable:focus {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						Form
+					</h1>
+					<p class="subtitle">
+						input, form 관련 요소
+					</p>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="tabs is-centered">
+				<ul>
+					<li><a href="sample.html">샘플</a></li>
+					<li><a href="../common/unit.html">UNIT</a></li>
+					<li><a href="ui.html">UI요소</a></li>
+					<li><a href="modifiers.html">기본</a></li>
+					<li><a href="layout.html">Layout</a></li>
+					<li class="is-active"><a href="form.html">Form</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="demo.html">아이콘웹폰트</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Step Progress</h2>
+				<p class="subtitle is-4">
+					단계를 나타내는 코딩 구조
+				</p>
+				<div class="row">
+					<h3>링크 없는 일반 3 Step Progress</h3>
+					<div aria-label="progress" class="step-indicator">
+						<ol class="steps steps--3">
+							<li class="complete">1단계<span class="sr-only">완료</span><i class="ico-check"></i></li>
+							<li class="active" aria-current="true">2단계<span class="sr-only">미완료</span><i class="ico-check"></i></li>
+							<li>3단계<span class="sr-only">미완료</span><i class="ico-check"></i></li>
+						</ol>
+					</div>
+				</div>
+				<div class="row">
+					<h3>링크 없는 일반 Step Progress</h3>
+					<div aria-label="progress" class="step-indicator">
+						<ol class="steps">
+							<li class="complete">1단계<span class="sr-only">완료</span><i class="ico-check"></i></li>
+							<li class="complete">2단계<span class="sr-only">완료</span><i class="ico-check"></i></li>
+							<li class="active" aria-current="true">3단계<span class="sr-only">미완료</span><i class="ico-check"></i></li>
+							<li>4단계<span class="sr-only">미완료</span><i class="ico-check"></i></li>
+						</ol>
+					</div>
+				</div>
+				<div class="row">
+					<h3>링크 있는 Step Progress Nav</h3>
+					<nav aria-label="progress" class="step-indicator">
+						<ol class="steps">
+							<li class="complete">
+								<a href="#">1단계<span class="sr-only">완료</span><i class="ico-check"></i></a>
+							</li>
+							<li class="active" aria-current="true">
+								<a href="#">2단계<i class="ico-check"></i></a>
+							</li>
+							<li>
+								<a href="#">3단계<span class="sr-only">미완료</span><i class="ico-check"></i></a>
+							</li>
+							<li>
+								<a href="#">4단계<span class="sr-only">미완료</span><i class="ico-check"></i></a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+				<div class="row">
+					<h3>링크 없는 Step Progress Nav - var2</h3>
+					<nav aria-label="progress" class="step-indicator ver2">
+						<ol class="steps steps--3 clear">
+							<!-- complete,  active-->
+							<li class="complete">
+								<span class="step">STEP 1</span>
+								<span class="sr-only">진행중</span>
+								<span class="step-name">장바구니</span>
+							</li>
+							<li class="active" aria-current="true">
+								<span class="step">STEP 2</span>
+								<span class="sr-only">미완료</span>
+								<span class="step-name">주문결제</span>
+							</li>
+							<li>
+								<span class="step">STEP 2</span>
+								<span class="sr-only">미완료</span>
+								<span class="step-name">주문완료</span>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Form controls</h2>
+
+				<div class="columns">
+					<div class="column">
+						<p class="subtitle is-4">
+							.label, .input, .textarea, .select, .checkbox, .radio, .button, .help
+						</p>
+						<div class="bd-snippet-preview">
+							<div class="field">
+								<label class="label">Name</label>
+								<div class="control">
+									<input class="input" type="text" placeholder="Text input" />
+								</div>
+							</div>
+
+							<div class="field">
+								<label class="label">Username</label>
+								<div class="control">
+									<input class="input is-success" type="text" placeholder="Text input" value="bulma" />
+								</div>
+								<p class="help is-success">This username is available</p>
+							</div>
+
+							<div class="field">
+								<label class="label">Email</label>
+								<div class="control">
+									<input class="input is-danger" type="email" placeholder="Email input" value="hello@" />
+								</div>
+								<p class="help is-danger">This email is invalid</p>
+							</div>
+
+							<div class="field">
+								<label class="label">Subject</label>
+								<div class="control">
+									<div class="select">
+										<select>
+											<option>Select dropdown</option>
+											<option>With options</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<label class="label">Message</label>
+								<div class="control">
+									<textarea class="textarea" placeholder="Textarea"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Spinner box</label>
+								<div class="control">
+									<code>spinner-box</code>
+									<div class="spinner-box">
+										<button class="spinner-box__minus disabled"><i></i><span class="sr-only">빼기</span></button>
+										<span class="spinner-box__number"><input type="number" maxvalue="30" title="수량 설정" value="1" readonly /></span>
+										<button class="spinner-box__plus"><i></i><i></i><span class="sr-only">더하기</span></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="control">
+									<div class="checkbox">
+										<input type="checkbox" name="chk-01" id="chk-01" />
+										<label for="chk-01">체크박스 라벨길이 테스트 체크박스 라벨길이 테스트 체크박스 라벨길이 테스트 체크박스 라벨길이 테스트 체크박스 라벨길이 테스트 체크박스 라벨길이 테스트 </label>
+									</div>
+								</div>
+								<div class="control">
+									<div class="checkbox">
+										<input type="checkbox" name="chk-10" id="chk-10" disabled checked />
+										<label for="chk-10">I agree to the <a href="#">terms and conditions</a></label>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">라벨없이 표현되는 단독 체크박스</label>
+								<div class="control">
+									<div class="checkbox checkbox__one">
+										<input type="checkbox" name="chk-11" id="chk-11" />
+										<label for="chk-11"></label>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="onoff-switch-container">
+									<input type="checkbox" name="onoff-switch" id="onoff-switch1" />
+									<label for="onoff-switch1">
+										<span class="sr-only">자동로그인</span>
+									</label>
+									<div class="onoff-switch pull-right" aria-hidden="true">
+										<div class="onoff-switch-label">
+											<div class="onoff-switch-inner"></div>
+											<div class="onoff-switch-switch"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="control radio-list">
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-01" />
+										<label for="radio-01">라디오 라벨 길이 테스트 라디오 라벨 길이 테스트 라디오 라벨 길이 테스트 라디오 라벨 길이 테스트 라디오 라벨 길이 테스트 라디오 라벨 길이 테스트 </label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-02" />
+										<label for="radio-02">아니오</label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-03" />
+										<label for="radio-03">테스트1</label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-04" />
+										<label for="radio-04">테스트2</label>
+									</div>
+								</div>
+								<div class="control radio-list">
+									<div class="radio">
+										<input type="radio" name="radio-d" id="radio-10" disabled checked />
+										<label for="radio-10">Yes</label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="radio-d" id="radio-12" disabled />
+										<label for="radio-12">No</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="field is-grouped">
+								<div class="control">
+									<button class="button is-link">Submit</button>
+								</div>
+								<div class="control">
+									<button class="button is-text">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column is-1"></div>
+
+					<div class="column">
+						<p class="subtitle is-4">
+							Form field
+						</p>
+						<div class="bd-snippet-preview mb4">
+							<div class="field">
+								<label class="label">Name</label>
+								<div class="control">
+									<input class="input" type="text" placeholder="e.g Alex Smith" />
+								</div>
+							</div>
+
+							<div class="field">
+								<label class="label">Email</label>
+								<div class="control">
+									<input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" value="이메일주소@이메일.com" readonly />
+								</div>
+								<p class="help is-danger">readonly 속성 추가</p>
+							</div>
+						</div>
+
+						<p class="subtitle is-4">
+							Form control
+						</p>
+						<p>
+							컨트롤은 단일 폼 컨트롤을 향상시키는 다용도 컨테이너입니다. 컨트롤 요소와 높이가 같기 때문에 다음 요소 만 포함 할 수 있습니다. input, select, button, icon
+						</p>
+						<div class="bd-snippet-preview">
+							<div class="control">
+								<input class="input" type="text" placeholder="Text input" />
+							</div>
+						</div>
+						<div class="bd-snippet-preview">
+							<div class="control">
+								<div class="select">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="control">
+								<button class="button is-primary">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Form addons
+				</p>
+				<p>
+					컨트롤을 함께 연결하려면 필드 컨테이너에 has-addons 를 사용합니다.
+				</p>
+				<div class="columns">
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="field has-addons">
+								<div class="control">
+									<input class="input" type="text" placeholder="Find a repository" />
+								</div>
+								<div class="control">
+									<a class="button is-info">
+										Search
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="field has-addons">
+								<p class="control">
+									<input class="input" type="text" placeholder="Your email" />
+								</p>
+								<p class="control">
+									<a class="button is-static">
+										@gmail.com
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="field has-addons">
+								<p class="control">
+									<span class="select">
+										<select>
+											<option>$</option>
+											<option>£</option>
+											<option>€</option>
+										</select>
+									</span>
+								</p>
+								<p class="control">
+									<input class="input" type="text" placeholder="Amount of money" />
+								</p>
+								<p class="control">
+									<a class="button">
+										Transfer
+									</a>
+								</p>
+							</div>
+
+							<div class="field has-addons">
+								<p class="control">
+									<span class="select">
+										<select>
+											<option>$</option>
+											<option>£</option>
+											<option>€</option>
+										</select>
+									</span>
+								</p>
+								<p class="control is-expanded">
+									<input class="input" type="text" placeholder="Amount of money" />
+								</p>
+								<p class="control">
+									<a class="button">
+										Transfer
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="field has-addons">
+								<div class="control is-expanded">
+									<div class="select is-fullwidth">
+										<select name="country">
+											<option value="Argentina">Argentina</option>
+											<option value="Bolivia">Bolivia</option>
+											<option value="Brazil">Brazil</option>
+											<option value="Chile">Chile</option>
+											<option value="Colombia">Colombia</option>
+											<option value="Ecuador">Ecuador</option>
+											<option value="Guyana">Guyana</option>
+											<option value="Paraguay">Paraguay</option>
+											<option value="Peru">Peru</option>
+											<option value="Suriname">Suriname</option>
+											<option value="Uruguay">Uruguay</option>
+											<option value="Venezuela">Venezuela</option>
+										</select>
+									</div>
+								</div>
+								<div class="control">
+									<button type="submit" class="button is-primary">Choose</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="field has-addons has-addons-centered">
+								<p class="control">
+									<span class="select">
+										<select>
+											<option>$</option>
+											<option>£</option>
+											<option>€</option>
+										</select>
+									</span>
+								</p>
+								<p class="control">
+									<input class="input" type="text" placeholder="Amount of money" />
+								</p>
+								<p class="control">
+									<a class="button is-primary">
+										Transfer
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="field has-addons has-addons-right">
+								<p class="control">
+									<span class="select">
+										<select>
+											<option>$</option>
+											<option>£</option>
+											<option>€</option>
+										</select>
+									</span>
+								</p>
+								<p class="control">
+									<input class="input" type="text" placeholder="Amount of money" />
+								</p>
+								<p class="control">
+									<a class="button is-primary">
+										Transfer
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Form group
+				</p>
+				<p>
+					컨트롤을 함께 그룹화하려면 필드 컨테이너에서 is-grouped 를 사용합니다.
+				</p>
+				<div class="columns">
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="field is-grouped">
+								<p class="control">
+									<a class="button is-primary">
+										Submit
+									</a>
+								</p>
+								<p class="control">
+									<a class="button is-light">
+										Cancel
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="field is-grouped is-grouped-centered">
+								<p class="control">
+									<a class="button is-primary">
+										Submit
+									</a>
+								</p>
+								<p class="control">
+									<a class="button is-light">
+										Cancel
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="bd-snippet-preview">
+							<div class="field is-grouped is-grouped-right">
+								<p class="control">
+									<a class="button is-primary">
+										Submit
+									</a>
+								</p>
+								<p class="control">
+									<a class="button is-light">
+										Cancel
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="bd-snippet-preview">
+							<div class="field is-grouped">
+								<p class="control is-expanded">
+									<input class="input" type="text" placeholder="Find a repository" />
+								</p>
+								<p class="control">
+									<a class="button is-info">
+										Search
+									</a>
+								</p>
+							</div>
+						</div>
+						<div class="bd-snippet-preview">
+							<div class="field is-grouped is-grouped-multiline">
+								<p class="control">
+									<a class="button">
+										One
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Two
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Three
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Four
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Five
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Size
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Seven
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Eight
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Nine
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Ten
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Eleven
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Twelve
+									</a>
+								</p>
+								<p class="control">
+									<a class="button">
+										Thirteen
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Horizontal form
+				</p>
+				<p>
+					Horizontal form 이 필요한 경우 필드 컨테이너에 is-horizontal 를 사용합니다.
+				</p>
+				<div class="bd-snippet-preview">
+					<div class="field is-horizontal">
+						<div class="field-label is-normal">
+							<label class="label">From</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<p class="control is-expanded">
+									<input class="input" type="text" placeholder="Name" />
+								</p>
+							</div>
+							<div class="field">
+								<p class="control is-expanded has-icons-right">
+									<input class="input is-success" type="email" placeholder="Email" value="alex@smith.com" />
+									<span class="icon is-small is-right"><i class="ico-check" aria-hidden="true"></i></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label"></div>
+						<div class="field-body">
+							<div class="field is-expanded">
+								<div class="field has-addons">
+									<p class="control">
+										<a class="button is-static">
+											+44
+										</a>
+									</p>
+									<p class="control is-expanded">
+										<input class="input" type="tel" placeholder="Your phone number" />
+									</p>
+								</div>
+								<p class="help">Do not enter the first zero</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-normal">
+							<label class="label">Department</label>
+						</div>
+						<div class="field-body">
+							<div class="field is-narrow">
+								<div class="control">
+									<div class="select is-fullwidth">
+										<select>
+											<option>Business development</option>
+											<option>Marketing</option>
+											<option>Sales</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label">
+							<label class="label">Already a member?</label>
+						</div>
+						<div class="field-body">
+							<div class="field is-narrow">
+								<div class="control">
+									<label class="radio">
+										<input type="radio" name="member" />
+										Yes
+									</label>
+									<label class="radio">
+										<input type="radio" name="member" />
+										No
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-normal">
+							<label class="label">Subject</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity" />
+								</div>
+								<p class="help is-danger">
+									This field is required
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-normal">
+							<label class="label">Question</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label">
+							<!-- Left empty for spacing -->
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<button class="button is-primary">
+										Send message
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					세로 중앙 정렬
+				</p>
+				<p>
+					label 의 세로 정렬을 각 유형 및 컨트롤 크기와 함께 유지하기 위해 .field-label 에는 4 개의 크기 수정자가 제공됩니다.<br />
+					.is-small, .is-normal for any .input or .button, .is-medium, .is-large
+				</p>
+				<div class="bd-snippet-preview">
+					<div class="field is-horizontal">
+						<div class="field-label">
+							<label class="label">No padding</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<label class="checkbox">
+										<input type="checkbox" />
+										Checkbox
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-small">
+							<label class="label">Small padding</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<input class="input is-small" type="text" placeholder="Small sized input" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-normal">
+							<label class="label">Normal label</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<input class="input" type="text" placeholder="Normal sized input" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-medium">
+							<label class="label">Medium label</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<input class="input is-medium" type="text" placeholder="Medium sized input" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field is-horizontal">
+						<div class="field-label is-large">
+							<label class="label">Large label</label>
+						</div>
+						<div class="field-body">
+							<div class="field">
+								<div class="control">
+									<input class="input is-large" type="text" placeholder="Large sized input" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="subtitle is-4">
+					Disabled form
+				</p>
+				<p>
+					disabled 속성으로 필드 세트의 부분 또는 전체 양식을 비활성화 할 수 있습니다.
+				</p>
+				<div class="bd-snippet-preview">
+					<fieldset disabled="">
+						<div class="field">
+							<label class="label">Name</label>
+							<div class="control">
+								<input class="input" type="text" placeholder="e.g Alex Smith" />
+							</div>
+						</div>
+
+						<div class="field">
+							<label class="label">Email</label>
+							<div class="control">
+								<input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" />
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Input</h2>
+				<p class="subtitle is-4">
+					텍스트 입력 및 그 변형
+				</p>
+				<div class="columns">
+					<div class="column">
+						<p class="subtitle is-4">
+							Colors
+						</p>
+						<div class="field">
+							<div class="control">
+								<input class="input is-primary" type="text" placeholder="Primary input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input is-info" type="text" placeholder="Info input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input is-success" type="text" placeholder="Success input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input is-warning" type="text" placeholder="Warning input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input is-danger" type="text" placeholder="Danger input" />
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<p class="subtitle is-4">
+							Sizes
+						</p>
+
+						<div class="field">
+							<div class="control">
+								<input class="input is-small" type="text" placeholder="Small input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input" type="text" placeholder="Normal input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input is-medium" type="text" placeholder="Medium input" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input class="input is-large" type="text" placeholder="Large input" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="columns">
+					<div class="column">
+						<p class="subtitle is-4">
+							Styles
+						</p>
+						<div class="field">
+							<input class="input is-rounded" type="text" placeholder="Rounded input" />
+						</div>
+
+						<p class="subtitle is-4">
+							States
+						</p>
+						<h3 class="is-5">Normal</h3>
+						<div class="field">
+							<div class="control">
+								<input class="input" type="text" placeholder="Normal input" />
+							</div>
+						</div>
+						<h3 class="is-5">Hover</h3>
+						<div class="field">
+							<div class="control">
+								<input class="input is-hovered" type="text" placeholder="Hovered input" />
+							</div>
+						</div>
+						<h3 class="is-5">Focus</h3>
+						<div class="field">
+							<div class="control">
+								<input class="input is-focused" type="text" placeholder="Focused input" />
+							</div>
+						</div>
+						<h3 class="is-5">Loading</h3>
+						<div class="field">
+							<div class="control is-loading">
+								<input class="input" type="text" placeholder="Loading input" />
+							</div>
+						</div>
+						<h3 class="is-5">크기별</h3>
+						<div class="field">
+							<div class="control is-loading">
+								<input class="input" type="text" placeholder="Normal loading input" />
+							</div>
+						</div>
+
+						<h3 class="is-5">Disabled</h3>
+						<div class="field">
+							<div class="control">
+								<input class="input" type="text" value="This text is readonly" readonly="" />
+							</div>
+						</div>
+						<h3 class="is-5">Readonly and static inputs</h3>
+
+						<div class="bd-example">
+							<div class="field is-horizontal">
+								<div class="field-label is-normal">
+									<label class="label">From</label>
+								</div>
+								<div class="field-body">
+									<div class="field">
+										<p class="control">
+											<input class="input is-static" type="email" value="me@example.com" readonly="" />
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="field is-horizontal">
+								<div class="field-label is-normal">
+									<label class="label">To</label>
+								</div>
+								<div class="field-body">
+									<div class="field">
+										<p class="control">
+											<input class="input" type="email" placeholder="Recipient email" />
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Textarea</h2>
+				<p class="subtitle is-4">
+					The multiline textarea and its variations
+				</p>
+				<div class="columns">
+					<div class="column">
+						<p class="subtitle is-4">
+							Colors
+						</p>
+						<div class="bd-snippet-preview">
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea is-primary" placeholder="Primary textarea"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea is-info" placeholder="Info textarea"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea is-success" placeholder="Success textarea"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea is-warning" placeholder="Warning textarea"></textarea>
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<textarea class="textarea is-danger" placeholder="Danger textarea"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<p class="subtitle is-4">
+							States
+						</p>
+
+						<h3 class="is-5">Normal</h3>
+						<div class="bd-snippet-preview">
+							<div class="control">
+								<textarea class="textarea" placeholder="Normal textarea"></textarea>
+							</div>
+						</div>
+
+						<h3 class="is-5">Hover</h3>
+						<div class="bd-snippet-preview">
+							<div class="control">
+								<textarea class="textarea is-hovered" placeholder="Hovered textarea"></textarea>
+							</div>
+						</div>
+						<h3 class="is-5">Focus</h3>
+						<div class="bd-snippet-preview">
+							<div class="control">
+								<textarea class="textarea is-focused" placeholder="Focused textarea"></textarea>
+							</div>
+						</div>
+						<h3 class="is-5">Loading</h3>
+						<div class="bd-snippet-preview">
+							<div class="field">
+								<div class="control is-loading">
+									<textarea class="textarea" placeholder="Normal loading textarea"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Select</h2>
+				<p class="subtitle is-4">
+					브라우저 기본 제공 select 를 그대로 이용해 스타일링
+				</p>
+				<div class="columns">
+					<div class="column">
+						<div class="field">
+							<div class="select">
+								<select>
+									<option>Select dropdown</option>
+									<option>With options</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="select is-multiple">
+								<select multiple="" size="8">
+									<option value="Argentina">Argentina</option>
+									<option value="Bolivia">Bolivia</option>
+									<option value="Brazil">Brazil</option>
+									<option value="Chile">Chile</option>
+									<option value="Colombia">Colombia</option>
+									<option value="Ecuador">Ecuador</option>
+									<option value="Guyana">Guyana</option>
+									<option value="Paraguay">Paraguay</option>
+									<option value="Peru">Peru</option>
+									<option value="Suriname">Suriname</option>
+									<option value="Uruguay">Uruguay</option>
+									<option value="Venezuela">Venezuela</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="field">
+							<div class="control">
+								<div class="select">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-info">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-success">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-warning">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-danger">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<p class="subtitle is-4">
+							Style
+						</p>
+						<div class="field">
+							<div class="select is-rounded">
+								<select>
+									<option>Rounded dropdown</option>
+									<option>With options</option>
+								</select>
+							</div>
+						</div>
+
+						<p class="subtitle is-4">
+							Sizes
+						</p>
+
+						<div class="field">
+							<div class="control">
+								<div class="select is-small">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-medium">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-large">
+									<select>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<p class="subtitle is-4">
+							States
+						</p>
+
+						<div class="field">
+							<div class="select">
+								<select>
+									<option>[Normal] Select dropdown</option>
+									<option>With options</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="select">
+								<select class="is-hovered">
+									<option>[Hover] Select dropdown</option>
+									<option>With options</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="select">
+								<select class="is-focused">
+									<option>[Focus] Select dropdown</option>
+									<option>With options</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="select is-loading">
+								<select>
+									<option>[Loading] Select dropdown</option>
+									<option>With options</option>
+								</select>
+							</div>
+						</div>
+
+						<p class="subtitle is-4">
+							With icons
+						</p>
+						<div class="field">
+							<div class="control">
+								<div class="select is-small">
+									<select>
+										<option selected="">Country</option>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select">
+									<select>
+										<option selected="">Country</option>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-medium">
+									<select>
+										<option selected="">Country</option>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<div class="select is-large">
+									<select>
+										<option selected="">Country</option>
+										<option>Select dropdown</option>
+										<option>With options</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 공통 UI 정의 -->
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			// File upload 를 위한 스크립트
+			$(function () {
+				$('.file-input').on('change', function () {
+					if ($(this).length > 0) {
+						$(this).closest('.file').find('.file-name').text($(this)[0].files[0].name);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>커뮤니티 에디터 샘플</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/jodit.css" />
+		<link rel="stylesheet" href="../../assets/css/select2.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<style>
+			.jodit-toolbar__box:not(:empty) {
+				border-top: 1px solid #ccc;
+				position: fixed;
+				bottom: 0;
+			}
+			.jodit-toolbar__box {
+				left: 0;
+				right: 0;
+				width: 100%;
+				z-index: 10;
+				background-color: #fff;
+			}
+			.jodit-toolbar-editor-collection {
+				width: 1366px;
+				margin: 0 auto;
+			}
+			.jodit-toolbar__box:not(:empty) + .jodit-workplace {
+				border-top-width: 0px;
+			}
+			.select2-container {
+				width: 100% !important;
+				border-color: #ccc;
+			}
+			.select2-container--default .select2-selection--multiple {
+				border-color: #ccc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- S : #container -->
+		<main id="container" role="main">
+			<!-- S : 본문 -->
+			<section class="section">
+				<div class="container">
+					<form action="" onsubmit="editorSubmit();return false;">
+						<div class="field is-expanded">
+							<div class="control">
+								<select id="select" class="js-example-basic-multiple" name="select" multiple="multiple">
+									<option value="a">aaaa</option>
+									<option value="b" selected>bbbb</option>
+									<option value="c">cccc</option>
+									<option value="d" selected>dddd</option>
+									<option value="e">eeee</option>
+									<option value="f">ffff</option>
+									<option value="g">gggg</option>
+									<option value="h">hhhh</option>
+								</select>
+							</div>
+						</div>
+						<textarea id="editor"></textarea>
+						<button type="submit" class="button is-large is-primary">발행</button>
+					</form>
+				</div>
+			</section>
+			<!-- E : 본문 -->
+		</main>
+		<!-- E : #container -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/jodit.js"></script>
+		<script src="../../assets/js/select2.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('.js-example-basic-multiple').select2();
+			});
+
+			function editorSubmit() {
+				// console.log($('#editor').val());
+				console.log($('#select').val());
+			}
+
+			Jodit.plugins.pluginName = function (editor) {
+				editor.events.on('afterInit', function () {
+					// here you can insert your code
+				});
+			};
+			// You can write your own module for Jodit. For example create Dummy module, which will insert some code in editor Create file Dummy.js with this content
+			Jodit.modules.Dummy = function (editor) {
+				this.insertDummyImage = function (w, h, textcolor, bgcolor) {
+					var image = Jodit.modules.Dom.create('img', '', editor.ownerDocument);
+					image.setAttribute('src', 'http://dummyimage.com/' + w + 'x' + h + '/' + (textcolor || '000') + '/' + (bgcolor || 'fff'));
+					editor.selection.insertNode(image);
+					editor.setEditorValue(); // for syncronize value between source textarea and editor
+				};
+			};
+
+			// Jodit.plugins.stat = function (editor) {
+			// 	var statusbar = document.createElement('div');
+			// 	statusbar.style.backgroundColor = '#f8f8f8';
+			// 	statusbar.style.color = '#000';
+			// 	statusbar.style.fontSize = '11px';
+			// 	statusbar.style.padding = '1px 4px';
+
+			// 	function calcStat() {
+			// 		var text = editor.helper.trim(editor.editor.innerText),
+			// 			wordCount = text.split(/[\s\n\r\t]+/).filter(function (value) {
+			// 				return value;
+			// 			}).length,
+			// 			charCount = text.replace(/[\s\n\r\t]+/, '').length;
+
+			// 		statusbar.innerText = 'Words: ' + wordCount + ' Chars: ' + charCount;
+			// 	}
+
+			// 	editor.events.on('change afterInit', editor.helper.debounce(calcStat, 100)).on('afterInit', function () {
+			// 		editor.container.appendChild(statusbar);
+			// 	});
+			// };
+
+			var optionEditor = {
+				// preset: 'inline',
+				buttons: [
+					'bold',
+					'italic',
+					'image',
+					{
+						iconURL: 'images/dummy.png',
+						tooltip: 'insert Dummy Image',
+						exec: function (editor) {
+							editor.dummy.insertDummyImage(100, 100, 'f00', '000');
+						},
+					},
+				],
+				events: {
+					afterInit: function (editor) {
+						editor.dummy = new Jodit.modules.Dummy(editor);
+					},
+				},
+				uploader: {
+					insertImageAsBase64URI: true,
+				},
+				spellcheck: false,
+				toolbarButtonSize: 'large',
+				toolbarSticky: false,
+				showCharsCounter: false,
+				showWordsCounter: false,
+				showXPathInStatusbar: false,
+			};
+
+			var editor = new Jodit('#editor', optionEditor);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.01</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.min.js"></script>
+		<style>
+			.contents {
+				padding: 0 0 1.5rem;
+			}
+			.button {
+				border-width: 1px;
+			}
+			.table-container {
+				-webkit-overflow-scrolling: touch;
+				overflow: auto;
+				overflow-y: hidden;
+				max-width: 100%;
+				margin-bottom: 1.5rem;
+			}
+			.notification {
+				background-color: #f5f5f5;
+				border-radius: 4px;
+				padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+				position: relative;
+			}
+			.bd-color {
+				border-radius: 2px;
+				box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+				display: inline-block;
+				height: 24px;
+				margin-right: 8px;
+				width: 24px;
+			}
+			.notification.is-primary {
+				background-color: #00d1b2;
+				color: #fff;
+			}
+
+			#tooltip {
+				background-color: #333;
+				color: white;
+				padding: 5px 10px;
+				border-radius: 4px;
+				font-size: 13px;
+			}
+
+			.tooltip {
+				position: absolute;
+				z-index: 1070;
+				display: block;
+				margin: 0;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1.5;
+				text-align: left;
+				text-align: start;
+				text-decoration: none;
+				text-shadow: none;
+				text-transform: none;
+				letter-spacing: normal;
+				word-break: normal;
+				word-spacing: normal;
+				white-space: normal;
+				line-break: auto;
+				font-size: 0.875rem;
+				word-wrap: break-word;
+			}
+			.tooltip .arrow {
+				position: absolute;
+				display: block;
+				width: 0.8rem;
+				height: 0.4rem;
+			}
+
+			.tooltip .arrow::before {
+				position: absolute;
+				content: '';
+				border-color: transparent;
+				border-style: solid;
+			}
+
+			.tooltip,
+			.tooltip[x-placement^='bottom'] {
+				padding: 0.4rem 0;
+			}
+
+			.tooltip .arrow,
+			.tooltip[x-placement^='bottom'] .arrow {
+				top: 0;
+			}
+
+			.tooltip .arrow::before,
+			.tooltip[x-placement^='bottom'] .arrow::before {
+				bottom: 0;
+				border-width: 0 0.4rem 0.4rem;
+				border-bottom-color: #000;
+			}
+			.tooltip-inner {
+				max-width: 200px;
+				padding: 0.25rem 0.5rem;
+				color: #fff;
+				text-align: center;
+				background-color: #000;
+				border-radius: 0.25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="hero is-small is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						UI 요소
+					</h1>
+					<p class="subtitle">
+						프로젝트 공통 UI 정의
+					</p>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="tabs is-centered">
+				<ul>
+					<li><a href="sample.html">샘플</a></li>
+					<li><a href="../common/unit.html">UNIT</a></li>
+					<li class="is-active"><a href="ui.html">UI요소</a></li>
+					<li><a href="modifiers.html">기본</a></li>
+					<li><a href="layout.html">Layout</a></li>
+					<li><a href="form.html">Form</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="demo.html">아이콘웹폰트</a></li>
+					<li><a href="board.html">게시판</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">버튼</h2>
+				<p class="subtitle is-4">
+					is-primary, is-link, is-info, is-success, is-warning, is-danger : 컬러
+				</p>
+				<div class="columns">
+					<div class="column">
+						<a class="button is-primary">
+							상품 문의하기
+						</a>
+						<a class="button is-primary is-outlined">
+							고객센터 바로가기
+						</a>
+						<a class="button is-link">
+							상품 문의하기
+						</a>
+						<a class="button is-info">
+							상품 문의하기
+						</a>
+						<a class="button is-success">
+							상품 문의하기
+						</a>
+						<a class="button is-warning">
+							상품 문의하기
+						</a>
+						<a class="button is-danger">
+							상품 문의하기
+						</a>
+					</div>
+				</div>
+				<p class="subtitle is-4">
+					is-small, is-medium, is-large : 사이즈
+				</p>
+				<div class="columns">
+					<div class="column">
+						<a class="button is-small">
+							Button
+						</a>
+						<a class="button">
+							Button
+						</a>
+						<a class="button is-medium">
+							Button
+						</a>
+						<a class="button is-large">
+							Button
+						</a>
+					</div>
+				</div>
+				<p class="subtitle is-4">
+					is-outlined, is-loading, [disabled] : 스타일과 상태
+				</p>
+				<div class="columns">
+					<div class="column">
+						<a class="button is-primary is-outlined">
+							Button
+						</a>
+						<a class="button is-loading">
+							Button
+						</a>
+						<a class="button" disabled>
+							Button
+						</a>
+						<a class="button is-outlined is-primary" disabled>
+							Button
+						</a>
+						<a class="button is-primary" disabled>
+							Button
+						</a>
+						<a class="button is-dark" disabled>
+							Button
+						</a>
+					</div>
+				</div>
+				<p class="subtitle is-4">AJAX 로딩 상태 애니메이션 <code>loading</code></p>
+				<div class="columns">
+					<div class="column">
+						<div class="loading-container" style="display: inline-block; width: 100px; height: 100px; border: 1px solid tomato;">
+							<div class="loading"></div>
+						</div>
+						<div class="loading-container" style="display: inline-block; width: 100px; height: 100px; border: 1px solid tomato; background-color: #333;">
+							<div class="loading"></div>
+						</div>
+						<div class="loading-container" style="display: inline-block; width: 100px; height: 100px; border: 1px solid tomato; background-color: tomato;">
+							<div class="loading"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">jQuery 툴팁</h2>
+				<p class="subtitle is-4">
+					jQuery 툴팁
+				</p>
+				<div class="columns">
+					<div class="column">
+						<!-- HTML -->
+						<div style="width: 300px; height: 30px; position: relative; border: 1px solid #eee; overflow: hidden;">
+							<button
+								type="button"
+								class="btn btn-primary"
+								data-toggle="tooltip"
+								data-html="true"
+								data-placement="bottom"
+								title="
+							<em>Tooltip</em> <u>with</u> <b>HTML</b>
+							"
+							>
+								Tooltip with HTML on bottom
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Typography</h2>
+				<p class="subtitle is-4">
+					Size
+				</p>
+				<div class="columns">
+					<div class="column">
+						<span class="is-size-1">
+							is-size-1 사이즈1
+						</span>
+					</div>
+					<div class="column">
+						<span class="is-size-2">
+							is-size-2 사이즈2
+						</span>
+					</div>
+					<div class="column">
+						<span class="is-size-3">
+							is-size-3 사이즈3
+						</span>
+					</div>
+				</div>
+				<div class="columns">
+					<div class="column">
+						<span class="is-size-4">
+							is-size-4 사이즈4
+						</span>
+					</div>
+					<div class="column">
+						<span class="is-size-5">
+							is-size-5 사이즈5
+						</span>
+					</div>
+					<div class="column">
+						<span class="is-size-6">
+							is-size-6 사이즈6
+						</span>
+					</div>
+				</div>
+				<div class="columns">
+					<div class="column">
+						<span class="is-size-7">
+							is-size-7 사이즈7
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Product Item</h2>
+				<p class="subtitle is-size-4">
+					상품 목록형
+				</p>
+				<div class="columns">
+					<div class="column">
+						<h3 class="is-size-5">별 형태 리뷰</h3>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--00">
+									<span class="is-sr-only">상품평 : 0.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--05">
+									<span class="is-sr-only">상품평 : 0.5 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--10">
+									<span class="is-sr-only">상품평 : 1.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--15">
+									<span class="is-sr-only">상품평 : 1.5 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--20">
+									<span class="is-sr-only">상품평 : 2.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--25">
+									<span class="is-sr-only">상품평 : 2.5 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--30">
+									<span class="is-sr-only">상품평 : 3.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--35">
+									<span class="is-sr-only">상품평 : 3.5 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--40">
+									<span class="is-sr-only">상품평 : 4.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--45">
+									<span class="is-sr-only">상품평 : 4.5 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--50">
+									<span class="is-sr-only">상품평 : 5.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+
+						<span class="stats-rate-wrap">
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars stats-rate__star stats-rate__star--40">
+									<span class="is-sr-only">상품평 : 4.0 / 5 개의 별점</span>
+								</span>
+							</span>
+							<span class="stats-rate__num">4.0</span>
+						</span>
+
+						<div>
+							<span class="icon-stars_bg stats-rate">
+								<span class="icon-stars-red stats-rate__star stats-rate__star--50">
+									<span class="is-sr-only">상품평 : 5.0 / 5 개의 별점</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="column">
+						<!-- product item -->
+						<article class="product-item">
+							<a href="#">
+								<div class="product-item-image">
+									<img class="image" alt="" src="../assets/images/sample_product.jpg" />
+								</div>
+								<div class="product-item-content">
+									<h1 class="product-item-header">
+										<span class="product-item-header__brand">온라인 </span>
+										<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+									</h1>
+									<span class="product-item-price">
+										<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+										<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+									</span>
+								</div>
+							</a>
+						</article>
+						<!-- //product item -->
+					</div>
+					<div class="column">
+						<!-- product item -->
+						<article class="product-item">
+							<a href="#">
+								<div class="product-item-image">
+									<img class="image" alt="" src="../assets/images/sample_product.jpg" />
+									<div class="buttons has-addons">
+										<button class="button product-item-button__heart" type="button"><i class="product-item-icon icon-heart"></i><span class="is-sr-only">찜</span></button>
+										<button class="button product-item-button__share" type="button"><i class="product-item-icon icon-share"></i><span class="is-sr-only">공유</span></button>
+									</div>
+								</div>
+								<div class="product-item-content">
+									<h1 class="product-item-header">
+										<span class="product-item-header__brand">온라인 </span>
+										<span class="product-item-header__name">제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 제품명 </span>
+									</h1>
+									<span class="product-item-price">
+										<span class="product-item-price__price">1,485,000<span class="unit">원</span> </span>
+										<del class="product-item-price__price--del">1,950,800<span class="unit">원</span></del>
+									</span>
+									<p class="product-item-stats">
+										<span class="stats-rate">
+											<span class="stats-rate__star stats-rate__star--45">
+												<span class="is-sr-only">상품평 : 3.8 / 5 개의 별점</span>
+											</span>
+										</span>
+									</p>
+									<span class="product-item-badge-list"></span>
+								</div>
+							</a>
+						</article>
+						<!-- //product item -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Product Detail</h2>
+				<p class="subtitle is-size-4">
+					상품 상세 내용
+				</p>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<h3 class="is-size-4">상품탭</h3>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>UI 템플릿 ver 1.01</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/jquery-ui.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+	</head>
+	<body>
+		<!-- S : LNB -->
+		<aside class="left-menu section-category-left float-left">
+			<!-- S : 카테고리 -->
+			<section class="left-menu-section">
+				<a href="#collapsible-panel1" data-action="collapse" class="is-active">
+					<h3 class="panel-heading">카테고리<i></i></h3>
+				</a>
+				<div id="collapsible-panel1" class="is-collapsible is-active">
+					<!-- LNB 카테고리 -->
+					<nav class="lnb" role="navigation">
+						<ul class="lnb-list">
+							<li class="lnb-list-item">
+								<span class="lnb-list-item__head">
+									<a href="#">침실</a><button class="lnb-list-item__btn is-active"><i class="ico-down_arrow"></i></button>
+								</span>
+								<div class="lnb-list-item__content is-active">
+									<ul>
+										<li><a href="#">침대/매트세트</a></li>
+										<li><a href="#">침대</a></li>
+										<li><a href="#">매트리스</a></li>
+										<li><a href="#">침실소가구</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="lnb-list-item">
+								<span class="lnb-list-item__head">
+									<a href="#">옷장</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+								</span>
+								<div class="lnb-list-item__content">
+									<ul>
+										<li><a href="#">꼼므시리즈</a></li>
+										<li><a href="#">쮸(ZZOO) - 소파</a></li>
+										<li><a href="#">책상</a></li>
+										<li><a href="#">책장</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="lnb-list-item">
+								<span class="lnb-list-item__head">
+									<a href="#">거실/소파</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+								</span>
+								<div class="lnb-list-item__content">
+									<ul>
+										<li><a href="#">꼼므시리즈</a></li>
+										<li><a href="#">쮸(ZZOO) - 소파</a></li>
+										<li><a href="#">책상</a></li>
+										<li><a href="#">책장</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="lnb-list-item">
+								<span class="lnb-list-item__head">
+									<a href="#">다이닝</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+								</span>
+								<div class="lnb-list-item__content">
+									<ul>
+										<li><a href="#">꼼므시리즈</a></li>
+										<li><a href="#">쮸(ZZOO) - 소파</a></li>
+										<li><a href="#">책상</a></li>
+										<li><a href="#">책장</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="lnb-list-item">
+								<span class="lnb-list-item__head">
+									<a href="#">학생/서재</a><button class="lnb-list-item__btn"><i class="ico-down_arrow"></i></button>
+								</span>
+								<div class="lnb-list-item__content">
+									<ul>
+										<li><a href="#">꼼므시리즈</a></li>
+										<li><a href="#">쮸(ZZOO) - 소파</a></li>
+										<li><a href="#">책상</a></li>
+										<li><a href="#">책장</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="lnb-list-item">
+								<span class="lnb-list-item__head">
+									<a href="#">하위메뉴 없는 메뉴</a>
+								</span>
+							</li>
+						</ul>
+					</nav>
+					<!-- //Accordion -->
+				</div>
+			</section>
+			<!-- E : 카테고리 -->
+			<!-- S : 브랜드 -->
+			<section class="left-menu-section lnb-brand">
+				<a href="#collapsible-panel2" data-action="collapse" class="is-active">
+					<h3 class="panel-heading">브랜드<i></i></h3>
+				</a>
+				<div id="collapsible-panel2" class="is-collapsible is-active">
+					<!-- Wrapper Div to be able to collapse/expand Panel's content -->
+					<div class="panel-block">
+						<div class="lnb-brand-search">
+							<input type="text" class="lnb-brand-search-input" title="브랜드 검색" placeholder="검색어를 입력해 주세요" />
+							<button class="ico-search"><span class="hidden">검색</span></button>
+						</div>
+
+						<div class="lnb-brand-checkbox-list maxheight mt2">
+							<div class="scrollbar-container">
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-01" id="lnb-brand-01" checked="" />
+									<label for="lnb-chk-10">리바트</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-02" id="lnb-brand-02" />
+									<label for="lnb-chk-11">H.MONDO</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-03" id="lnb-brand-03" />
+									<label for="lnb-chk-12">리바트 하움</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-04" id="lnb-brand-04" />
+									<label for="lnb-chk-13">FM디자인</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-05" id="lnb-brand-05" />
+									<label for="lnb-chk-11">H.MONDO</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-06" id="lnb-brand-06" />
+									<label for="lnb-chk-12">리바트 하움</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-brand-07" id="lnb-brand-07" />
+									<label for="lnb-chk-13">FM디자인</label>
+								</div>
+							</div>
+						</div>
+
+						<button class="button lnb-brand-button modal-button mt3" data-target="modal-lnb-brand" aria-haspopup="true">
+							더보기
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- E : 브랜드 -->
+			<!-- S : 혜택 -->
+			<section class="left-menu-section">
+				<a href="#collapsible-panel3" data-action="collapse" class="is-active">
+					<h3 class="panel-heading">혜택<i></i></h3>
+				</a>
+				<div id="collapsible-panel3" class="is-collapsible is-active">
+					<!-- Wrapper Div to be able to collapse/expand Panel's content -->
+					<div class="panel-block">
+						<div class="lnb-brand-checkbox-list">
+							<div class="checkbox">
+								<input type="checkbox" name="lnb-chk-20" id="lnb-chk-20" checked="" />
+								<label for="lnb-chk-20">세일</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="lnb-chk-20" id="lnb-chk-21" />
+								<label for="lnb-chk-21">증정(사은품)</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="lnb-chk-20" id="lnb-chk-22" />
+								<label for="lnb-chk-22">쿠폰</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="lnb-chk-20" id="lnb-chk-23" />
+								<label for="lnb-chk-23">패키지</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 혜택 -->
+			<!-- S : 가격 -->
+			<section class="left-menu-section lnb-price">
+				<a href="#collapsible-panel4" data-action="collapse" class="is-active">
+					<h3 class="panel-heading">가격<i></i></h3>
+				</a>
+				<div id="collapsible-panel4" class="is-collapsible is-active">
+					<div id="slider-range" class="mb2"></div>
+					<div class="panel-block">
+						<div class="lnb-price-range">
+							<input type="text" value="200,000" readonly id="price-range__from" />
+							<span>~</span>
+							<input type="text" value="1,200,000" readonly id="price-range__to" />
+						</div>
+					</div>
+					<div class="row text-right mt1">
+						<button type="button" class="link" id="applyPriceRange">적용하기</button>
+					</div>
+				</div>
+			</section>
+			<!-- E : 가격 -->
+		</aside>
+		<!-- E : LNB -->
+
+		<script>
+			$(function () {
+				// LNB 아코디언 이벤트
+				// 카테고리 LNB 이벤트 작동
+				// 초기화
+				$('.lnb-list-item__btn').each(function () {
+					$(this).append('<span class="sr-only">메뉴펼치기</span>');
+				});
+				$('.lnb-list-item__content').each(function () {
+					if ($(this).hasClass('is-active')) {
+						$(this).attr({ 'aria-expanded': 'true' });
+					} else {
+						$(this).attr({ 'aria-expanded': 'false' }).css({ display: 'none' });
+					}
+				});
+				$('.lnb-list-item__btn').on('click', function (event) {
+					event = event || window.event;
+					event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+					if ($(this).hasClass('is-active')) {
+						$(this)
+							.closest('.lnb-list')
+							.find('.lnb-list-item__content')
+							.each(function () {
+								if ($(this).hasClass('is-active')) {
+									$(this).attr({ 'aria-expanded': 'false' }).removeClass('is-active').delay(10).slideUp('fast');
+								}
+							});
+						$(this).removeClass('is-active');
+						$(this).find('.sr-only').text('메뉴펼치기');
+					} else {
+						$(this).closest('.lnb-list').find('.lnb-list-item__btn').removeClass('is-active').find('.sr-only').text('메뉴펼치기');
+						$(this).addClass('is-active');
+						$(this).closest('.lnb-list').find('.lnb-list-item__content').removeClass('is-active').delay(10).slideUp('fast');
+						$(this).parent().next('.lnb-list-item__content').attr({ 'aria-expanded': 'true' }).addClass('is-active').stop().slideDown('fast');
+						$(this).find('.sr-only').text('메뉴접기');
+					}
+				});
+				// LNB 가격 슬라이드
+				$(function () {
+					$('#slider-range').slider({
+						range: true,
+						min: 0,
+						max: 1000000,
+						step: 100,
+						values: [0, 1000000],
+						slide: function (event, ui) {
+							// $('#amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
+							$('#price-range__from').val(ui.values[0].toLocaleString());
+							$('#price-range__to').val(ui.values[1].toLocaleString());
+						},
+					});
+					$('#price-range__from').val($('#slider-range').slider('values', 0).toLocaleString());
+					$('#price-range__to').val($('#slider-range').slider('values', 1).toLocaleString());
+				});
+			});
+			// 브랜드 체크박스 스크롤 : 20200528
+			$(document).ready(function () {
+				$('.scrollbar-container').scrollbar();
+			});
+		</script>
+	</body>
+</html>

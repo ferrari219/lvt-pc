@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<title>통합 검색결과</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" media="all" />
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- S : 통합검색 결과 -->
+			<section class="search-result container">
+				<h2 class="hidden">통합 검색결과</h2>
+				<!-- S : 통합검색 결과 상품 수 -->
+				<div class="search-result-top">
+					<p class="search-result-top-title"><strong>‘가구’</strong> 에 대한 검색결과 입니다.</p>
+					<p class="search-result-top-count"><span class="is-danger">189,999</span>개의 상품이 있습니다.</p>
+				</div>
+				<!-- E : 통합검색 결과 상품 수 -->
+
+				<div class="search-result-research">
+					<!-- S : 통합검색 재검색 -->
+					<form action="#">
+						<fieldset>
+							<legend>재검색</legend>
+							<div class="field is-grouped">
+								<div class="control">
+									<div class="select" title="재검색 방법 선택">
+										<select>
+											<option value="0">결과내 재검색</option>
+											<option value="1">검색어 제외</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="control">
+									<input class="input" type="text" placeholder="검색어를 입력하세요." title="검색어" />
+								</div>
+								<div class="control">
+									<button type="submit" class="button is-primary search-result-research-button">검색</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+					<!-- E : 통합검색 재검색 -->
+
+					<!-- S : 상품정렬 -->
+					<div class="dropdown">
+						<div class="dropdown-trigger">
+							<button type="button" class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+								<span>전체</span>
+								<span class="icon is-small"><i class="ico-down_arrow"></i></span>
+							</button>
+						</div>
+						<div class="dropdown-menu" id="dropdown-menu" role="menu">
+							<div class="dropdown-content">
+								<button type="button" class="dropdown-item">
+									전체
+								</button>
+								<button type="button" class="dropdown-item">
+									인기상품
+								</button>
+								<button type="button" class="dropdown-item is-active">
+									최신상품
+								</button>
+								<button type="button" class="dropdown-item">
+									낮은가격
+								</button>
+								<button type="button" class="dropdown-item">
+									높은가격
+								</button>
+								<button type="button" class="dropdown-item">
+									상품명
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- E : 상품정렬 -->
+				</div>
+
+				<div class="search-result-block">
+					<!-- S : 연관검색어 -->
+					<section class="search-result-relate">
+						<h3 class="search-result-title">연관검색어</h3>
+						<div class="search-result-relate-list">
+							<ul>
+								<li><a href="#">#침대</a></li>
+								<li><a href="#">#가구</a></li>
+								<li><a href="#">#화장대</a></li>
+								<li><a href="#">#거실장</a></li>
+								<li><a href="#">#TV장</a></li>
+								<li><a href="#">#아일랜드 식탁</a></li>
+								<li><a href="#">#렌지대</a></li>
+								<li><a href="#">#책상</a></li>
+								<li><a href="#">#서랍장</a></li>
+								<li><a href="#">#수납장</a></li>
+								<li><a href="#">#서랍</a></li>
+								<li><a href="#">#소파베드</a></li>
+							</ul>
+						</div>
+					</section>
+					<!-- E : 연관검색어 -->
+
+					<!-- S : 인기검색어 -->
+					<section class="search-result-ranking">
+						<h3 class="search-result-title">인기검색어</h3>
+						<div class="search-result-ranking-list is-active">
+							<ol>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order search-result-ranking-tit-order-top">1</em>
+											<strong class="search-result-ranking-tit-name">소파</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order search-result-ranking-tit-order-top">2</em>
+											<strong class="search-result-ranking-tit-name">책상</strong>
+										</span>
+										<span class="search-result-ranking-chang"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order search-result-ranking-tit-order-top">3</em>
+											<strong class="search-result-ranking-tit-name">화장대</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">4</em>
+											<strong class="search-result-ranking-tit-name">침대</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">5</em>
+											<strong class="search-result-ranking-tit-name">의자</strong>
+										</span>
+										<span class="search-result-ranking-change"><em>NEW</em><strong class="hidden">순위 진입</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">6</em>
+											<strong class="search-result-ranking-tit-name">서랍장</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">7</em>
+											<strong class="search-result-ranking-tit-name">매트릭스</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">8</em>
+											<strong class="search-result-ranking-tit-name">거실장</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">9</em>
+											<strong class="search-result-t-tit-name">의자</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="search-result-ranking-tit">
+											<em class="search-result-ranking-tit-order">10</em>
+											<strong class="search-result-ranking-tit-name">침대</strong>
+										</span>
+										<span class="search-result-ranking-change"><i class="icon-ranking_down"></i><strong class="hidden">순위 변동 하락</strong></span>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<!-- E : 인기검색어 -->
+				</div>
+
+				<!-- S : 통합검색 탭 -->
+				<div class="search-result-tabs-product mt4">
+					<div class="tabs is-centered is-boxed is-fullwidth">
+						<ul role="tablist" aria-label="Tabs">
+							<li class="is-active">
+								<button id="tab-1" class="tab" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
+									<span>전체</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-2" class="tab" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
+									<span>리모델링</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-3" class="tab" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
+									<span>온라인</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-4" class="tab" role="tab" aria-controls="tabpanel-4" aria-selected="false" tabindex="-1">
+									<span>매장가구</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-5" class="tab" role="tab" aria-controls="tabpanel-5" aria-selected="false" tabindex="-1">
+									<span>오피스</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-6" class="tab" role="tab" aria-controls="tabpanel-6" aria-selected="false" tabindex="-1">
+									<span>윌리엄스 소노마</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-7" class="tab" role="tab" aria-controls="tabpanel-7" aria-selected="false" tabindex="-1">
+									<span>포토리반</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-8" class="tab" role="tab" aria-controls="tabpanel-8" aria-selected="false" tabindex="-1">
+									<span>웨스트 엘름</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-9" class="tab" role="tab" aria-controls="tabpanel-9" aria-selected="false" tabindex="-1">
+									<span>포터리반 키즈</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div id="tabpanel-1" class="tabpanel" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+						<!-- S : 통합검색 탭별 컨텐츠 -->
+						<div class="search-result-tabs-content">
+							<!-- S : 리바트 입점 or 브랜드 선택 -->
+							<div class="search-result-choice">
+								<div>
+									<div class="checkbox">
+										<input type="checkbox" name="lnb-chk-20" id="lnb-chk-20" checked="" />
+										<label for="lnb-chk-20">리바트</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" name="lnb-chk-20" id="lnb-chk-21" />
+										<label for="lnb-chk-21">입정브랜드</label>
+									</div>
+								</div>
+								<p class="search-result-choice-text is-primary">고객님 혹시 이 상품을 찾으신건 아닌가요?</p>
+							</div>
+							<!-- E : 리바트 입점 or 브랜드 선택 -->
+						</div>
+					</div>
+				</div>
+				<!-- E : 통합검색 탭 -->
+			</section>
+			<!-- E : 통합검색 결과 -->
+		</div>
+	</body>
+</html>
