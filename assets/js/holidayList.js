@@ -1,0 +1,27 @@
+// 고정된 휴일
+var holidayList = {
+	  "0101":{type:0, title:"신정", year:""},
+	  "0301":{type:0, title:"삼일절", year:""},
+	  "0505":{type:0, title:"어린이날", year:""},
+	  "0606":{type:0, title:"현충일", year:""},
+	  "0815":{type:0, title:"광복절", year:""},
+	  "1003":{type:0, title:"개천절", year:""},
+	  "1009":{type:0, title:"한글날", year:""},
+	  "1225":{type:0, title:"크리스마스", year:""},
+	  "0920":{type:0, title:"추석", year:"2021"},
+	  "0921":{type:0, title:"추석", year:"2021"},
+	  "0922":{type:0, title:"추석", year:"2021"},
+	  "0201":{type:0, title:"설", year:"2022"},
+	  "0202":{type:0, title:"설", year:"2022"},
+	  "0203":{type:0, title:"설", year:"2022"},
+	  "0909":{type:0, title:"추석", year:"2022"},
+	  "0910":{type:0, title:"추석", year:"2022"},
+	  "0911":{type:0, title:"추석", year:"2022"},
+	  "0121":{type:0, title:"설", year:"2023"},
+	  "0122":{type:0, title:"설", year:"2023"},
+	  "0123":{type:0, title:"설", year:"2023"},
+	  "0526":{type:0, title:"석가탄신일", year:"2023"},
+	  "0928":{type:0, title:"추석", year:"2023"},
+	  "0929":{type:0, title:"추석", year:"2023"},
+	  "0930":{type:0, title:"추석", year:"2023"}
+}
