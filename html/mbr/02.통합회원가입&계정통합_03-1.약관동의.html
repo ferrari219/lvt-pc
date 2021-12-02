@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>약관동의</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/member.css" />
+	</head>
+
+	<body class="body-responsive">
+		<div class="skipnavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<header class="header-responsive">
+			<h1 class="header-responsive-logo"><img src="../../assets/images/mbr/logo.png" alt="LIVART" /></h1>
+		</header>
+		<!-- #container -->
+		<section id="container" class="section-responsive" role="main">
+			<div class="container">
+				<h2 class="section-responsive-title">약관동의</h2>
+				<section class="section-responsive-agree mt3">
+					<h3 class="section-responsive-agree-title">현대리바트 몰 약관</h3>
+
+					<div class="msg-box msg-box-gray mt2">
+						<p class="msg-box-title">H.Point서비스를 위한 제3자 제공 동의</p>
+						<ul class="dot-list">
+							<li>마케팅 정보 수신에 동의하시면 다양한 혜택을 받으실 수 있습니다.</li>
+							<li>필수항목에 동의하지 않으실 경우 서비스 가입이 불가 합니다. 선택항목에 동의하지 않으셔도 서비스 가입이 가능하나, 관련 서비스는 제공받으실 수 없습니다.</li>
+						</ul>
+					</div>
+
+					<div class="field mt2">
+						<div class="control checked-list-container">
+							<div class="checkbox">
+								<input type="checkbox" name="chk-10" id="chk-10" />
+								<label for="chk-10">현대리바트 몰 약관에 동의합니다.</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="agree-info mt2">
+						<p>※ 필수항목에 동의하지 않을실 경우 서비스 가입이 불가합니다.</p>
+						<p class="is-primary">선택항목에 동의하지 않으셔도 서비스 가입이 가능하나, 관련 서비스는 제공받으실 수 없습니다.</p>
+					</div>
+
+					<div class="field mt2">
+						<div class="control">
+							<div class="checkbox">
+								<input type="checkbox" name="checkedAll" id="checkedAll" />
+								<label for="checkedAll">위 내용에 모두 동의합니다.</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-responsive-inner mt3">
+						<div class="field is-grouped is-grouped--fixed">
+							<p class="control">
+								<a href="#" class="button is-dark">
+									취소
+								</a>
+							</p>
+							<p class="control">
+								<a href="#" class="button is-primary">
+									다음
+								</a>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+		<!-- #container -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			function allListCheckFunc(obj) {
+				$('.checked-list-container input').prop('checked', $(obj).prop('checked'));
+			}
+			// 전체 동의
+			function oneListCheckFunc(obj) {
+				var allObj = $('[name=checkedAll]');
+				var objName = $(obj).attr('name');
+
+				if ($(obj).prop('checked')) {
+					checkBoxLength = $('.checked-list-container input').length;
+					checkedLength = $('.checked-list-container input:checked').length;
+
+					if (checkBoxLength == checkedLength) {
+						allObj.prop('checked', true);
+					} else {
+						allObj.prop('checked', false);
+					}
+				} else {
+					allObj.prop('checked', false);
+				}
+			}
+			$(function () {
+				// 전체 동의
+				$('[name=checkedAll]').on('click', function () {
+					allListCheckFunc(this);
+				});
+				// 전체 동의 체크 리스트에 대한 개별 체크 여부
+				$('.checked-list-container input').each(function () {
+					$(this).on('click', function () {
+						oneListCheckFunc($(this));
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

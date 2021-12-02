@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>로그인/회원가입 template</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<link rel="stylesheet" href="../../assets/css/livart.css" />
+	</head>
+
+	<body class="body-responsive">
+		<div class="skipnavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<header class="header-responsive">
+			<h1 class="header-responsive-logo"><img src="../../assets/images/mbr/logo.png" alt="LIVART" /></h1>
+		</header>
+		<!-- #container -->
+		<section id="container" class="section-responsive" role="main">
+			<div class="container">
+				<!-- 디자인 상으로 제목이 표현되지 않는 경우라도 아래 h2 태그로 문서의 제목을 명시할 것 -->
+				<h2 class="sr-only">통합회원로그인</h2>
+				<!-- 디자인 상으로 제목이 표현되는 경우 기본 태그 -->
+				<h2 class="section-responsive-title">로그인</h2>
+				<div class="msg-box msg-box-blue">
+					<p class="msg-box-title">임직원 인증에 성공하였습니다.</p>
+				</div>
+				<ul class="dot-list mt1">
+					<li>로그인하시면 임직원의 혜택을 받으실 수 있습니다.</li>
+					<li>로그인하시면 임직원의 혜택을 받으실 수 있습니다.</li>
+				</ul>
+				<h3>font-size 구현시</h3>
+				<p>scss 내에서 다음의 변수 사용</p>
+				<ul class="dot-list mt1">
+					<li>$size-small: $size-6</li>
+					<li>$size-normal: $size-5</li>
+					<li>$size-medium: $size-4</li>
+					<li>$size-large: $size-3</li>
+					<li>사이즈 지정을 하지 않은 기본 크기는 14px</li>
+					<li>$size-1 : 3rem</li>
+					<li>$size-2 : 2rem</li>
+					<li>$size-3 : 1.8rem</li>
+					<li>$size-4 : 1.6rem</li>
+					<li>$size-5 : 1.5rem</li>
+					<li>$size-6 : 1.3rem</li>
+					<li>$size-7 : 1.2rem</li>
+				</ul>
+
+				<div class="tabs is-toggle is-fullwidth mt2">
+					<ul role="tablist" aria-label="Tabs">
+						<li class="is-active">
+							<button id="tab-01" class="tab" role="tab" aria-controls="tabpanel-01" aria-selected="true" tabindex="0">
+								<span>H.Point 통합회원</span>
+							</button>
+						</li>
+						<li>
+							<button id="tab-02" class="tab" role="tab" aria-controls="tabpanel-02" aria-selected="false" tabindex="-1">
+								<span>현대리바트 회원</span>
+							</button>
+						</li>
+						<li>
+							<button id="tab-03" class="tab" role="tab" aria-controls="tabpanel-03" aria-selected="false" tabindex="-1">
+								<span>비회원 주문조회</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="tabpanel-01" class="tabpanel" role="tabpanel" aria-labelledby="tab-01" tabindex="0">
+					<!-- 탭 1 내 콘텐츠 탭 -->
+					<div class="tabs is-centered is-boxed">
+						<ul role="tablist" aria-label="Tabs">
+							<li class="is-active">
+								<button id="tab-1-1" class="tab" role="tab" aria-controls="tabpanel-1-1" aria-selected="true" tabindex="0">
+									<span>Pictures 1</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-1-2" class="tab" role="tab" aria-controls="tabpanel-1-2" aria-selected="false" tabindex="-1">
+									<span>Pictures 2</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-1-3" class="tab" role="tab" aria-controls="tabpanel-1-3" aria-selected="false" tabindex="-1">
+									<span>Pictures 3</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div id="tabpanel-1-1" class="tabpanel" role="tabpanel" aria-labelledby="tab-1-1" tabindex="0">
+						<div class="section-responsive-inner">
+							<p>로그인 내부 버튼 및 인풋 영역같은 레이아웃</p>
+							<div class="buttons">
+								<a class="button is-primary is-fullwidth">Primary</a>
+								<button class="button is-primary is-fullwidth">Button</button>
+							</div>
+						</div>
+					</div>
+					<div id="tabpanel-1-2" class="tabpanel" role="tabpanel" aria-labelledby="tab-1-2" tabindex="0">
+						Pictures 2 Contents
+					</div>
+					<div id="tabpanel-1-3" class="tabpanel" role="tabpanel" aria-labelledby="tab-1-3" tabindex="0">
+						Pictures 3 Contents
+					</div>
+					<!-- //탭 1 내 콘텐츠 탭 -->
+				</div>
+				<div id="tabpanel-02" class="tabpanel" role="tabpanel" aria-labelledby="tab-02" tabindex="0" hidden>
+					<!-- 탭 2 내 콘텐츠 탭 -->
+					<div class="tabs is-centered is-boxed">
+						<ul role="tablist" aria-label="Tabs">
+							<li class="is-active">
+								<button id="tab-2-1" class="tab" role="tab" aria-controls="tabpanel-2-1" aria-selected="true" tabindex="0">
+									<span>Music 1</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-2-2" class="tab" role="tab" aria-controls="tabpanel-2-2" aria-selected="false" tabindex="-1">
+									<span>Music 2</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-2-3" class="tab" role="tab" aria-controls="tabpanel-2-3" aria-selected="false" tabindex="-1">
+									<span>Music 3</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div id="tabpanel-2-1" class="tabpanel" role="tabpanel" aria-labelledby="tab-2-1" tabindex="0">
+						Music 1 Contents
+					</div>
+					<div id="tabpanel-2-2" class="tabpanel" role="tabpanel" aria-labelledby="tab-2-2" tabindex="0">
+						Music 2 Contents
+					</div>
+					<div id="tabpanel-2-3" class="tabpanel" role="tabpanel" aria-labelledby="tab-2-3" tabindex="0">
+						Music 3 Contents
+					</div>
+					<!-- //탭 2 내 콘텐츠 탭 -->
+				</div>
+				<div id="tabpanel-03" class="tabpanel" role="tabpanel" aria-labelledby="tab-03" tabindex="0" hidden>
+					<!-- 탭 2 내 콘텐츠 탭 -->
+					<div class="tabs is-centered is-boxed">
+						<ul role="tablist" aria-label="Tabs">
+							<li class="is-active">
+								<button id="tab-3-1" class="tab" role="tab" aria-controls="tabpanel-3-1" aria-selected="true" tabindex="0">
+									<span>Videos 1</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-3-2" class="tab" role="tab" aria-controls="tabpanel-3-2" aria-selected="false" tabindex="-1">
+									<span>Videos 2</span>
+								</button>
+							</li>
+							<li>
+								<button id="tab-3-3" class="tab" role="tab" aria-controls="tabpanel-3-3" aria-selected="false" tabindex="-1">
+									<span>Videos 3</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div id="tabpanel-3-1" class="tabpanel" role="tabpanel" aria-labelledby="tab-3-1" tabindex="0">
+						Videos 1 Contents
+					</div>
+					<div id="tabpanel-3-2" class="tabpanel" role="tabpanel" aria-labelledby="tab-3-2" tabindex="0">
+						Videos 2 Contents
+					</div>
+					<div id="tabpanel-3-3" class="tabpanel" role="tabpanel" aria-labelledby="tab-3-3" tabindex="0">
+						Videos 3 Contents
+					</div>
+					<!-- //탭 2 내 콘텐츠 탭 -->
+				</div>
+			</div>
+		</section>
+		<!-- #container -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+	</body>
+</html>

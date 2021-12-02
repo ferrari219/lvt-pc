@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>현대리바트 간편 회원 가입안내 팝업</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/member.css" />
+	</head>
+
+	<body class="body-responsive">
+		<!-- S : 일반 레이어 팝업 -->
+		<div id="modal-default" class="modal is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">현대리바트 간편 회원 가입안내</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+				<section class="modal-card-body">
+					<h3 class="sr-only">간편 회원 가입안내</h3>
+					<div class="content">
+						<div class="msg-box msg-box-blue">
+							<p class="msg-box-title">앗! 잠시만요!</p>
+							<p class="msg-box-desc">간편 회원으로 가입하실 경우 H.Point의 적립 및 사용이 불가합니다.</p>
+						</div>
+
+						<div class="table-box table-box--fixed">
+							<table class="table is-fullwidth">
+								<caption class="sr-only">
+									항목, H.Point, 간편회원이 있는 현대리바트 몰 간편 회원 가입안내 표
+								</caption>
+								<colgroup>
+									<col />
+									<col style="width: 38%;" />
+									<col style="width: 38%;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><span class="hidden">항목</span></th>
+										<th align scope="col">H.Point</th>
+										<th align scope="col">간편회원</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th align scope="row" class="bold">H.Point</th>
+										<td class="has-text-centered">적립/사용가능</td>
+										<td class="has-text-centered">이용불가</td>
+									</tr>
+									<tr>
+										<th align scope="row" class="bold">사용처</th>
+										<td class="has-text-centered">현대백화점 그룹의 모든 서비스</td>
+										<td class="has-text-centered">현대리바트 몰</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<p class="section-responsive-text__info has-text-centered mt2">
+							※ 더 큰 혜택을 받기 위해서는 H.Point 통합회원으로 가입해 주세요.
+						</p>
+
+						<div class="field has-text-centered mt1">
+							<a href="https://www.h-point.co.kr/benefit/evntList.nhd" class="section-responsive-link" target="_blank" title="새창열림">
+								H.Point 가입 혜택 보러 가기
+							</a>
+						</div>
+
+						<div class="section-responsive-inner mt3">
+							<div class="buttons">
+								<a href="#" class="button is-primary is-fullwidth">간편 회원 가입</a>
+							</div>
+							<div class="buttons">
+								<a href="https://www.h-point.co.kr/cu/join/start.nhd" class="button is-light is-fullwidth" target="_blank" title="새창열림" onclick="$(this).closest('.modal').removeClass('is-active');">
+									H.Point 통합회원 가입
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- E : 일반 레이어 팝업 -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+	</body>
+</html>

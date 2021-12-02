@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>아이디 비밀번호 찾기</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/member.css" />
+	</head>
+
+	<body class="body-responsive">
+		<div class="skipnavi">
+			<a href="#container">본문 바로가기</a>
+		</div>
+		<header class="header-responsive">
+			<h1 class="header-responsive-logo"><img src="../../assets/images/mbr/logo.png" alt="LIVART" /></h1>
+		</header>
+		<!-- #container -->
+		<section id="container" class="section-responsive section-responsive-loginform" role="main">
+			<div class="container">
+				<h2 class="sr-only">통합회원로그인</h2>
+				<!-- 탭 -->
+				<div class="tabs is-toggle is-fullwidth">
+					<ul role="tablist" aria-label="Tabs">
+						<li class="is-active">
+							<button id="tab-01" class="tab" role="tab" aria-controls="tabpanel-01" aria-selected="true" tabindex="0">
+								<span>아이디 찾기</span>
+							</button>
+						</li>
+						<li>
+							<button id="tab-02" class="tab" role="tab" aria-controls="tabpanel-02" aria-selected="false" tabindex="-1">
+								<span>비밀번호 찾기</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<!-- //탭 -->
+				<!-- 아이디 찾기 -->
+				<div id="tabpanel-01" class="tabpanel" role="tabpanel" aria-labelledby="tab-01" tabindex="0">
+					<div class="section-responsive-inner">
+						<!-- 아이디 찾기 탭버튼 -->
+						<div class="tabs is-centered is-boxed is-fullwidth">
+							<ul role="tablist" aria-label="Tabs">
+								<li class="is-active">
+									<button id="tab-1-1" class="tab" role="tab" aria-controls="tabpanel-1-1" aria-selected="true" tabindex="0">
+										<span>간편회원</span>
+									</button>
+								</li>
+								<li>
+									<button id="tab-1-2" class="tab" role="tab" aria-controls="tabpanel-1-2" aria-selected="false" tabindex="-1">
+										<span>사업자회원</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!-- //아이디 찾기 탭버튼 -->
+					</div>
+
+					<!-- 간편회원 -->
+					<div id="tabpanel-1-1" class="tabpanel" role="tabpanel" aria-labelledby="tab-1-1" tabindex="0">
+						<div class="section-responsive-inner">
+							<form action="#">
+								<fieldset>
+									<legend>아이디 찾기 간편회원</legend>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="text" placeholder="이름 입력" title="이름" />
+										</div>
+									</div>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="birth" placeholder="생년월일 8자리" title="생년월일" />
+										</div>
+									</div>
+									<!-- 휴대폰번호 -->
+									<div class="field input-wrap">
+										<div class="horizontal-align is-centered items--3">
+											<div class="control select-item">
+												<div class="select">
+													<select id="phoneNumber">
+														<option>010</option>
+													</select>
+												</div>
+											</div>
+											<div class="control select-item">
+												<input class="input" type="tel" placeholder="" title="휴대폰 중간번호 입력" />
+											</div>
+											<div class="control select-item">
+												<input class="input" type="tel" placeholder="" title="휴대폰 마지막번호 입력" />
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<input type="submit" class="button is-primary is-fullwidth" value="아이디 찾기" />
+									</div>
+									<div class="field">
+										<a href="#" class="button is-light is-fullwidth" target="_blank" title="새창열림">휴대폰번호 인증으로 찾기</a>
+									</div>
+								</fieldset>
+							</form>
+
+							<!-- 200702 아이디 찾기 결과 기존 디자인변경, 문구 추가 -->
+							<!-- S : 검색결과 -->
+							<p class="section-responsive-loginform__desc mt5 is-primary">
+								고객님께서는 다음 정보로 가입되어 있습니다.
+							</p>
+
+							<div class="table-box">
+								<table class="table is-fullwidth">
+									<caption class="sr-only">
+										아이디 검색결과 표
+									</caption>
+									<colgroup>
+										<col style="width: 11rem;" />
+										<col />
+									</colgroup>
+									<thead class="sr-only">
+										<tr>
+											<th scope="col">항목</th>
+											<th scope="col">내용</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th align scope="row">아이디</th>
+											<td>hy******* (가입일자 : 2020.03.19)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<p class="section-responsive-text__info mt2">
+								아이디 전체보기를 원하시면 휴대폰 본인인증을 통해 아이디찾기를 해주세요.
+							</p>
+							<!-- E : 검색결과 -->
+
+							<!-- 200702 휴대폰번호 인증을 찾기 버튼 추가 -->
+							<p class="mt3"><a href="#" class="section-responsive-link" target="_blank" title="새창열림">휴대폰번호 인증으로 찾기</a></p>
+							<p class="mt1"><a href="#" class="section-responsive-link">로그인 바로가기</a></p>
+						</div>
+					</div>
+					<!-- //간편회원 -->
+					<!-- 사업자회원 -->
+					<div id="tabpanel-1-2" class="tabpanel" role="tabpanel" aria-labelledby="tab-1-2" tabindex="0" hidden>
+						<div class="section-responsive-inner">
+							<form action="#">
+								<fieldset>
+									<legend>아이디 찾기 사업자회원</legend>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="text" placeholder="사업자명 입력" title="사업자명" />
+										</div>
+									</div>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="tel" placeholder="사업자등록번호(-없이 입력)" title="사업자등록번호" />
+										</div>
+									</div>
+									<div class="field">
+										<input type="submit" class="button is-primary is-fullwidth" value="아이디 찾기" />
+									</div>
+									<div class="field">
+										<a href="#" class="button is-light is-fullwidth" target="_blank" title="새창열림">휴대폰번호 인증으로 찾기</a>
+									</div>
+								</fieldset>
+							</form>
+
+							<!-- 200702 아이디 찾기 결과 기존 디자인변경, 문구 추가 -->
+							<!-- S : 검색결과 -->
+							<p class="section-responsive-loginform__desc mt5 is-primary">
+								고객님께서는 다음 정보로 가입되어 있습니다.
+							</p>
+
+							<div class="table-box">
+								<table class="table is-fullwidth">
+									<caption class="sr-only">
+										아이디 검색결과 표
+									</caption>
+									<colgroup>
+										<col style="width: 11rem;" />
+										<col />
+									</colgroup>
+									<thead class="sr-only">
+										<tr>
+											<th scope="col">항목</th>
+											<th scope="col">내용</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th align scope="row">아이디</th>
+											<td>hy******* (가입일자 : 2020.03.19)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<p class="section-responsive-text__info mt2">
+								아이디 전체보기를 원하시면 휴대폰 본인인증을 통해 아이디찾기를 해주세요.
+							</p>
+							<!-- E : 검색결과 -->
+
+							<!-- 200702 휴대폰번호 인증을 찾기 버튼 추가 -->
+							<p class="mt3"><a href="#" class="section-responsive-link" target="_blank" title="새창열림">휴대폰번호 인증으로 찾기</a></p>
+							<p class="mt1"><a href="#" class="section-responsive-link">로그인 바로가기</a></p>
+						</div>
+					</div>
+					<!-- //사업자회원 -->
+				</div>
+				<!-- //아이디 찾기 -->
+				<!-- 비밀번호 찾기 -->
+				<div id="tabpanel-02" class="tabpanel" role="tabpanel" aria-labelledby="tab-02" tabindex="0" hidden>
+					<div class="section-responsive-inner">
+						<!-- 아이디 찾기 탭버튼 -->
+						<div class="tabs is-centered is-boxed is-fullwidth">
+							<ul role="tablist" aria-label="Tabs">
+								<li class="is-active">
+									<button id="tab-2-1" class="tab" role="tab" aria-controls="tabpanel-2-1" aria-selected="true" tabindex="0">
+										<span>간편회원</span>
+									</button>
+								</li>
+								<li>
+									<button id="tab-2-2" class="tab" role="tab" aria-controls="tabpanel-2-2" aria-selected="false" tabindex="-1">
+										<span>사업자회원</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!-- //아이디 찾기 탭버튼 -->
+					</div>
+
+					<!-- 간편회원 -->
+					<div id="tabpanel-2-1" class="tabpanel" role="tabpanel" aria-labelledby="tab-2-1" tabindex="0">
+						<div class="section-responsive-inner">
+							<form action="#">
+								<fieldset>
+									<legend>비밀번호 찾기 간편회원</legend>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="text" placeholder="아이디 입력" title="아이디" />
+										</div>
+									</div>
+									<div class="field">
+										<input type="submit" class="button is-primary is-fullwidth" value="휴대폰번호 인증하고 찾기" />
+									</div>
+								</fieldset>
+							</form>
+							<p class="word-wrap mt2">
+								입력하신 정보는 본인 확인을 위해 신용평가사에 제공되며, 본인확인 용도 외에 사용되거나 저장되지 않습니다.<br />
+								위 방법으로 비밀번호(주문번호조회)를 찾을 수 없는 고객님께서는
+								<span class="is-danger">고객센터(1577-3332)</span>로 연락 주시기 바랍니다.
+							</p>
+						</div>
+					</div>
+					<!-- //간편회원 -->
+					<!-- 사업자회원 -->
+					<div id="tabpanel-2-2" class="tabpanel" role="tabpanel" aria-labelledby="tab-2-2" tabindex="0" hidden>
+						<div class="section-responsive-inner">
+							<form action="#">
+								<fieldset>
+									<legend>비밀번호 찾기 사업자회원</legend>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="text" placeholder="아이디 입력" title="아이디" />
+										</div>
+									</div>
+									<div class="field">
+										<div class="control">
+											<input class="input" type="tel" placeholder="사업자등록번호(-없이 입력)" title="사업자등록번호" />
+										</div>
+									</div>
+									<div class="field">
+										<input type="submit" class="button is-primary is-fullwidth" value="휴대폰번호 인증하고 찾기" />
+									</div>
+								</fieldset>
+							</form>
+							<p class="word-wrap mt2">
+								입력하신 정보는 본인 확인을 위해 신용평가사에 제공되며, 본인확인 용도 외에 사용되거나 저장되지 않습니다.<br />
+								위 방법으로 비밀번호(주문번호조회)를 찾을 수 없는 고객님께서는
+								<span class="is-danger">고객센터(1577-3332)</span>로 연락 주시기 바랍니다.
+							</p>
+						</div>
+					</div>
+					<!-- //사업자회원 -->
+				</div>
+				<!-- //비밀번호 찾기 -->
+			</div>
+		</section>
+		<!-- #container -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- 툴팁 선언을 위한 스크립트 : 200701 -->
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+	</body>
+</html>
