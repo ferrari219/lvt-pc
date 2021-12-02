@@ -1,0 +1,407 @@
+<!-- header top -->
+<div class="header-top">
+	<!-- <div class="header-top"> -->
+	<div class="container">
+		<a href="home" class="gnb-brand-menu__home"><i class="ico-home"></i><span class="sr-only">홈으로</span></a>
+		<ul class="gnb-brand-menu">
+			<li class="gnb-brand-menu__li">
+				<a href="./cate.html" class="gnb-brand-menu__btn" style="width: 250px">온라인가구</a>
+			</li>
+			<li class="gnb-brand-menu__li">
+				<a href="#" class="gnb-brand-menu__btn" style="width: 238px">매장가구</a>
+			</li>
+			<li class="gnb-brand-menu__li">
+				<a href="#" class="gnb-brand-menu__btn" style="width: 238px">리모델링</a>
+			</li>
+			<li class="gnb-brand-menu__li">
+				<a href="#" class="gnb-brand-menu__btn" style="width: 238px">사무가구</a>
+			</li>
+			<li class="gnb-brand-menu__li gnb-brand-premium">
+				<span class="gnb-brand-menu__btn gnb-brand-premium__btn" style="width: 332px">해외 프리미엄 홈퍼니싱</span>
+				<i class="gnb-brand-premium__icon icon-arrow3"></i>
+				<ul class="gnb-brand-menu__sub gnb-brand-premium__sub">
+					<li class="gnb-brand-menu__sub-li gnb-brand-premium__sub-li">
+						<a href="#" class="gnb-brand-premium__sub-link">
+							<em class="gnb-brand-premium__sub-icon"><i class="icon-gnb-premium-ws"></i><i class="icon-gnb-premium-ws_over" hidden></i></em>윌리엄스 소노마
+						</a>
+					</li>
+					<li class="gnb-brand-menu__sub-li gnb-brand-premium__sub-li">
+						<a href="#" class="gnb-brand-premium__sub-link">
+							<em class="gnb-brand-premium__sub-icon"><i class="icon-gnb-premium-pk"></i><i class="icon-gnb-premium-pk_over" hidden></i></em>포터리반 키즈
+						</a>
+					</li>
+					<li class="gnb-brand-menu__sub-li gnb-brand-premium__sub-li">
+						<a href="#" class="gnb-brand-premium__sub-link">
+							<em class="gnb-brand-premium__sub-icon"><i class="icon-gnb-premium-pb"></i><i class="icon-gnb-premium-pb_over" hidden></i></em>포터리반
+						</a>
+					</li>
+					<li class="gnb-brand-menu__sub-li gnb-brand-premium__sub-li">
+						<a href="#" class="gnb-brand-premium__sub-link">
+							<em class="gnb-brand-premium__sub-icon"><i class="icon-gnb-premium-we"></i><i class="icon-gnb-premium-we_over" hidden></i></em>웨스트 엘름
+						</a>
+					</li>
+				</ul>
+				<i class="gnb-brand-premium-plusicon icon icon-plus"></i>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- //header top -->
+
+<!-- header logo -->
+<div class="header-logo">
+	<div class="container">
+		<a href="index.html" class="header-logo__title"><h1>LIVART</h1></a>
+		<a href="index.html" class="header-logo__title-sub"><h1>포터리반</h1></a>
+
+		<ul class="header-member-menu">
+			<li>
+				<a href="#" class="header-member-menu__btn icon"><i class="icon-gnb_mem1"></i><span>로그인</span></a>
+			</li>
+			<li>
+				<a href="#" class="header-member-menu__btn icon"><i class="icon-gnb_mem2"></i><span>회원가입</span></a>
+			</li>
+			<li>
+				<a href="#" class="header-member-menu__btn icon"><i class="icon-gnb_mem3"></i><span>장바구니</span></a>
+			</li>
+			<li>
+				<a href="#" class="header-member-menu__btn icon"><i class="icon-gnb_mem4"></i><span>매장찾기</span></a>
+			</li>
+			<li>
+				<a href="#" class="header-member-menu__btn icon"><i class="icon-gnb_mem5"></i><span>고객센터</span></a>
+			</li>
+		</ul>
+
+		<div class="header-search-wrap">
+			<form action="#">
+				<fieldset>
+					<legend>통합검색</legend>
+					<div class="header-search">
+						<div class="header-search__dropdown dropdown-wrap">
+							<div class="dropdown">
+								<div class="dropdown-trigger">
+									<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+										<span>온라인가구</span>
+										<!-- icon-arrow-down-small 클래스 변경 ico-down_arrow : 200812 -->
+										<span class="icon is-small"><i class="ico-down_arrow"></i></span>
+									</button>
+								</div>
+								<div class="dropdown-menu" role="menu">
+									<div class="dropdown-content">
+										<button type="button" class="dropdown-item">통합검색</button>
+										<button type="button" class="dropdown-item is-active">온라인</button>
+										<button type="button" class="dropdown-item">오프라인</button>
+										<button type="button" class="dropdown-item">리모델링</button>
+										<button type="button" class="dropdown-item">윌리엄스 소노마</button>
+										<button type="button" class="dropdown-item">포터리반</button>
+										<button type="button" class="dropdown-item">포터리반 키즈</button>
+										<button type="button" class="dropdown-item">웨스트엘름</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header-search__input-wrap">
+							<input type="text" id="search" autocomplete="off" class="header-search__input" placeholder="검색어를 입력하세요" title="검색어" />
+						</div>
+						<button type="submit" class="header-search__submit icon"><i class="ico-search"></i><span class="sr-only">검색</span></button>
+					</div>
+				</fieldset>
+			</form>
+
+			<!-- S : 최근검색어/인기검색어 -->
+			<div class="header-search-content" id="headerSearchContent">
+				<div class="header-search-content__header">
+					<ul>
+						<li class="is-active">
+							<button id="tab-search1" class="tab" role="tab" aria-controls="tabpanel-search1">
+								<span>최근 검색어</span>
+							</button>
+						</li>
+						<li>
+							<button id="tab-search2" class="tab" role="tab" aria-controls="tabpanel-search2">
+								<span>인기 검색어</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<!-- 최근 검색어 -->
+				<div id="tabpanel-search1" class="tabpanel is-active" role="tabpanel" aria-labelledby="tab-search1">
+					<div class="header-search-content__body">
+						<ul>
+							<li>
+								<a href="#">식탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">식탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">식탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">식탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+							<li>
+								<a href="#">협탁</a>
+								<button class="button-search-content__del"><i class="icon-del-small"></i><span class="sr-only">삭제</span></button>
+							</li>
+						</ul>
+					</div>
+					<div class="header-search-content__footer clear">
+						<div class="fl">
+							<button class="button-search-all__del">검색기록 전체삭제</button>
+						</div>
+						<div class="fr">
+							<button class="button-search-content__close">닫기 <i class="icon-del-small"></i></button>
+						</div>
+					</div>
+				</div>
+				<!-- //최근 검색어 -->
+				<!-- 인기검색어 -->
+				<div id="tabpanel-search2" class="tabpanel is-active" role="tabpanel" aria-labelledby="tab-search2" hidden>
+					<div class="header-search-content__body">
+						<ol class="header-search-content__popular">
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order search-result-ranking-tit-order-top">1</em>
+										<strong class="search-result-ranking-tit-name">소파</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order search-result-ranking-tit-order-top">2</em>
+										<strong class="search-result-ranking-tit-name">책상</strong>
+									</span>
+									<span class="search-result-ranking-chang"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order search-result-ranking-tit-order-top">3</em>
+										<strong class="search-result-ranking-tit-name">화장대</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">4</em>
+										<strong class="search-result-ranking-tit-name">침대</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">5</em>
+										<strong class="search-result-ranking-tit-name">의자</strong>
+									</span>
+									<span class="search-result-ranking-change"><em>NEW</em><strong class="hidden">순위 진입</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">6</em>
+										<strong class="search-result-ranking-tit-name">서랍장</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">7</em>
+										<strong class="search-result-ranking-tit-name">매트릭스</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_up"></i><strong class="hidden">순위 상승</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">8</em>
+										<strong class="search-result-ranking-tit-name">거실장</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">9</em>
+										<strong class="search-result-ranking-tit-name">의자</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_same"></i><strong class="hidden">순위 변동없음</strong></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="search-result-ranking-tit">
+										<em class="search-result-ranking-tit-order">10</em>
+										<strong class="search-result-ranking-tit-name">침대</strong>
+									</span>
+									<span class="search-result-ranking-change"><i class="icon-ranking_down"></i><strong class="hidden">순위 변동 하락</strong></span>
+								</a>
+							</li>
+						</ol>
+					</div>
+					<div class="header-search-content__footer">
+						<div class="fl">2020.03.25 기준</div>
+						<div class="fr">
+							<button class="button-search-content__close">닫기 <i class="icon-del-small"></i></button>
+						</div>
+					</div>
+				</div>
+				<!-- //인기검색어 -->
+			</div>
+			<!-- E : 최근검색어/인기검색어 -->
+
+			<!-- S : 자동완성 -->
+			<div class="header-search-content" id="headerSearchKeyword">
+				<div class="header-search-content__header">
+					<a href="#">리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서<i class="icon-arrow-right"></i></a>
+					<a href="#">리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서<i class="icon-arrow-right"></i></a>
+					<a href="#">리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서 리바트 가구 설명서<i class="icon-arrow-right"></i></a>
+				</div>
+				<div class="header-search-content__body">
+					<ul>
+						<li>
+							<a href="#">리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리모델링 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리모델링 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리모델링 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리모델링 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리모델링 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#">리모델링 <strong>가구</strong></a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-search-content__footer">
+					<ul class="header-search-content__footer--hash">
+						<li>
+							<a href="#"># 리바트 <strong>가구</strong></a>
+						</li>
+						<li>
+							<a href="#"># 리모델링 <strong>가구</strong></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- E : 자동완성 -->
+		</div>
+	</div>
+</div>
+<!-- //header logo -->
+
+<!-- s : #gnb -->
+<div id="gnb">
+	<!-- gnb category -->
+	<div class="gnb-category-wrap">
+		<div class="fullmenu-bar">
+			<div class="container clear">
+				<button type="button" class="fullmenu__btn icon"><i class="icon-fullmenu"></i><span class="hidden">풀메뉴 열기</span></button>
+				<!-- anime.js : svg line animation 처리 -->
+				<nav class="gnb-category">
+					<h2 class="hidden">카테고리 메뉴</h2>
+					<ul class="gnb-category__menu">
+						<li><a href="#">공동구매</a></li>
+						<li><a href="#">타임세일</a></li>
+						<li><a href="#">미디어쇼핑</a></li>
+						<li><a href="#">기획전</a></li>
+						<li><a href="#">이벤트</a></li>
+						<li><a href="#">쿠폰존</a></li>
+						<li><a href="#">베스트</a></li>
+						<li><a href="#">신상품</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="fullmenu-wrap">
+			<div class="container"></div>
+		</div>
+	</div>
+	<!-- //gnb category -->
+</div>
+<!-- e: gnb -->
