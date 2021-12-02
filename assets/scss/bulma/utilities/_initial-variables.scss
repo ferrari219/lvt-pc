@@ -1,0 +1,87 @@
+// Colors
+
+$black: #333 !default;
+$black-bis: hsl(0, 0%, 7%) !default;
+$black-ter: hsl(0, 0%, 14%) !default;
+
+$grey-darker: #333 !default;
+$grey-dark: #777 !default;
+$grey: hsl(0, 0%, 48%) !default;
+$grey-light: hsl(0, 0%, 71%) !default;
+$grey-lighter: #eee !default;
+$grey-lightest: hsl(0, 0%, 93%) !default;
+
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$orange: hsl(14, 100%, 53%) !default;
+$yellow: hsl(48, 100%, 67%) !default;
+$green: hsl(141, 53%, 53%) !default;
+$turquoise: hsl(171, 100%, 41%) !default;
+$cyan: hsl(204, 71%, 53%) !default;
+$blue: hsl(217, 71%, 53%) !default;
+$purple: hsl(271, 100%, 71%) !default;
+$red: #ed2650 !default;
+
+// Typography
+$family-sans-serif: Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', arial, sans-serif;
+// $family-sans-serif: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$size-1: 38px !default;
+$size-2: 36px !default;
+$size-3: 30px !default;
+$size-4: 20px !default;
+$size-5: 16px !default;
+$size-6: 14px !default;
+$size-7: 13px !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 600 !default;
+
+// Spacing
+
+$block-spacing: 15px !default;
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default;
+
+$mobile: 390px !default;
+$mobile-360: 360px !default;
+$mobile-420: 420px !default;
+$mobile-480: 480px !default;
+$mobile-640: 640px !default;
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default;
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default;
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+$fullhd: 1344px + 2 * $gap !default;
+$fullhd-enabled: true !default;
+
+// Miscellaneous
+
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 0px !default;
+$radius-large: 6px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;
+
+// Flags
+
+$variable-columns: true !default;

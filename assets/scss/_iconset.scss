@@ -1,0 +1,1348 @@
+@import 'iconset_variables';
+
+@font-face {
+	font-family: '#{$icomoon-font-family}';
+	src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?idp2xy');
+	src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?idp2xy#iefix') format('embedded-opentype'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?idp2xy') format('truetype'),
+		url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?idp2xy') format('woff'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?idp2xy##{$icomoon-font-family}') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^='ico-'],
+[class*=' ico-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: '#{$icomoon-font-family}' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ico-app-menu {
+	&:before {
+		content: $ico-app-menu;
+	}
+}
+.ico-app-search {
+	&:before {
+		content: $ico-app-search;
+	}
+}
+.ico-app-my {
+	&:before {
+		content: $ico-app-my;
+	}
+}
+.ico-app-recent {
+	&:before {
+		content: $ico-app-recent;
+	}
+}
+.ico-logout {
+	&:before {
+		content: $ico-logout;
+	}
+}
+.ico-config {
+	&:before {
+		content: $ico-config;
+	}
+}
+.ico-control-play {
+	&:before {
+		content: $ico-control-play;
+	}
+}
+.ico-control-pause {
+	&:before {
+		content: $ico-control-pause;
+	}
+}
+.ico-cross-thick {
+	&:before {
+		content: $ico-cross-thick;
+	}
+}
+.ico-move-handle {
+	&:before {
+		content: $ico-move-handle;
+	}
+}
+.ico-mo_arrow {
+	&:before {
+		content: $ico-mo_arrow;
+	}
+}
+.ico-mo_search {
+	&:before {
+		content: $ico-mo_search;
+	}
+}
+.ico-mo_share {
+	&:before {
+		content: $ico-mo_share;
+	}
+}
+.ico-back {
+	&:before {
+		content: $ico-back;
+	}
+}
+.ico-prev {
+	&:before {
+		content: $ico-prev;
+	}
+}
+.ico-shopbag {
+	&:before {
+		content: $ico-shopbag;
+	}
+}
+.ico-filter {
+	&:before {
+		content: $ico-filter;
+	}
+}
+.ico-store {
+	&:before {
+		content: $ico-store;
+	}
+}
+.ico-banner_open {
+	&:before {
+		content: $ico-banner_open;
+	}
+}
+.ico-banner_vrtour {
+	&:before {
+		content: $ico-banner_vrtour;
+	}
+}
+.ico-banner_coupon {
+	&:before {
+		content: $ico-banner_coupon;
+	}
+}
+.ico-comm_all {
+	&:before {
+		content: $ico-comm_all;
+	}
+}
+.ico-comm_bed {
+	&:before {
+		content: $ico-comm_bed;
+	}
+}
+.ico-comm_dress {
+	&:before {
+		content: $ico-comm_dress;
+	}
+}
+.ico-comm_livingroom {
+	&:before {
+		content: $ico-comm_livingroom;
+	}
+}
+.ico-comm_library {
+	&:before {
+		content: $ico-comm_library;
+	}
+}
+.ico-comm_kitchen {
+	&:before {
+		content: $ico-comm_kitchen;
+	}
+}
+.ico-comm_kids {
+	&:before {
+		content: $ico-comm_kids;
+	}
+}
+.ico-comm_digital {
+	&:before {
+		content: $ico-comm_digital;
+	}
+}
+.ico-comm_interior {
+	&:before {
+		content: $ico-comm_interior;
+	}
+}
+.ico-comm_entrance {
+	&:before {
+		content: $ico-comm_entrance;
+	}
+}
+.ico-comm_house {
+	&:before {
+		content: $ico-comm_house;
+	}
+}
+.ico-comm_exterior {
+	&:before {
+		content: $ico-comm_exterior;
+	}
+}
+.ico-comm_balcony {
+	&:before {
+		content: $ico-comm_balcony;
+	}
+}
+.ico-comm_bath {
+	&:before {
+		content: $ico-comm_bath;
+	}
+}
+.ico-comm_content {
+	&:before {
+		content: $ico-comm_content;
+	}
+}
+.ico-my_wait {
+	&:before {
+		content: $ico-my_wait;
+	}
+}
+.ico-my_payment {
+	&:before {
+		content: $ico-my_payment;
+	}
+}
+.ico-my_prep {
+	&:before {
+		content: $ico-my_prep;
+	}
+}
+.ico-my_deliver {
+	&:before {
+		content: $ico-my_deliver;
+	}
+}
+.ico-my_complete {
+	&:before {
+		content: $ico-my_complete;
+	}
+}
+.ico-fund_big {
+	&:before {
+		content: $ico-fund_big;
+	}
+}
+.ico-profit_big {
+	&:before {
+		content: $ico-profit_big;
+	}
+}
+.ico-specialist_big {
+	&:before {
+		content: $ico-specialist_big;
+	}
+}
+.ico-agency_big {
+	&:before {
+		content: $ico-agency_big;
+	}
+}
+.ico-cs_tools {
+	&:before {
+		content: $ico-cs_tools;
+	}
+}
+.ico-cs_map {
+	&:before {
+		content: $ico-cs_map;
+	}
+}
+.ico-parts {
+	&:before {
+		content: $ico-parts;
+	}
+}
+.ico-voc {
+	&:before {
+		content: $ico-voc;
+	}
+}
+.ico-catalog {
+	&:before {
+		content: $ico-catalog;
+	}
+}
+.ico-agency {
+	&:before {
+		content: $ico-agency;
+	}
+}
+.ico-transfer {
+	&:before {
+		content: $ico-transfer;
+	}
+}
+.ico-phone {
+	&:before {
+		content: $ico-phone;
+	}
+}
+.ico-cs_sofa {
+	&:before {
+		content: $ico-cs_sofa;
+	}
+}
+.ico-cs_furniture {
+	&:before {
+		content: $ico-cs_furniture;
+	}
+}
+.ico-cs_tops {
+	&:before {
+		content: $ico-cs_tops;
+	}
+}
+.ico-cs_digital {
+	&:before {
+		content: $ico-cs_digital;
+	}
+}
+.ico-cs_door {
+	&:before {
+		content: $ico-cs_door;
+	}
+}
+.ico-cs_bath {
+	&:before {
+		content: $ico-cs_bath;
+	}
+}
+.ico-cs_interior {
+	&:before {
+		content: $ico-cs_interior;
+	}
+}
+.ico-cs_kids {
+	&:before {
+		content: $ico-cs_kids;
+	}
+}
+.ico-attach {
+	&:before {
+		content: $ico-attach;
+	}
+}
+.ico-nodata {
+	&:before {
+		content: $ico-nodata;
+	}
+}
+.ico-cart {
+	&:before {
+		content: $ico-cart;
+	}
+}
+.ico-timesale {
+	&:before {
+		content: $ico-timesale;
+	}
+}
+.ico-play {
+	&:before {
+		content: $ico-play;
+	}
+}
+.ico-alarm {
+	&:before {
+		content: $ico-alarm;
+	}
+}
+.ico-gift {
+	&:before {
+		content: $ico-gift;
+	}
+}
+.ico-count {
+	&:before {
+		content: $ico-count;
+	}
+}
+.ico-calendar {
+	&:before {
+		content: $ico-calendar;
+	}
+}
+.ico-thumb {
+	&:before {
+		content: $ico-thumb;
+	}
+}
+.ico-thumb_up {
+	&:before {
+		content: $ico-thumb_up;
+	}
+}
+.ico-like {
+	&:before {
+		content: $ico-like;
+	}
+}
+.ico-like_on {
+	&:before {
+		content: $ico-like_on;
+	}
+}
+.ico-share {
+	&:before {
+		content: $ico-share;
+	}
+}
+.ico-clip_on {
+	&:before {
+		content: $ico-clip_on;
+	}
+}
+.ico-clip {
+	&:before {
+		content: $ico-clip;
+	}
+}
+.ico-trash {
+	&:before {
+		content: $ico-trash;
+	}
+}
+.ico-delete {
+	&:before {
+		content: $ico-delete;
+	}
+}
+.ico-recent {
+	&:before {
+		content: $ico-recent;
+	}
+}
+.ico-coupon {
+	&:before {
+		content: $ico-coupon;
+	}
+}
+.ico-chat {
+	&:before {
+		content: $ico-chat;
+	}
+}
+.ico-download1 {
+	&:before {
+		content: $ico-download1;
+	}
+}
+.ico-reset_2 {
+	&:before {
+		content: $ico-reset_2;
+	}
+}
+.ico-popup {
+	&:before {
+		content: $ico-popup;
+	}
+}
+.ico-tooltip {
+	&:before {
+		content: $ico-tooltip;
+	}
+}
+.ico-star-o {
+	&:before {
+		content: $ico-star-o;
+	}
+}
+.ico-star {
+	&:before {
+		content: $ico-star;
+	}
+}
+.ico-star_half {
+	&:before {
+		content: $ico-star_half;
+	}
+}
+.ico-lock {
+	&:before {
+		content: $ico-lock;
+	}
+}
+.ico-home {
+	&:before {
+		content: $ico-home;
+	}
+}
+.ico-mypage {
+	&:before {
+		content: $ico-mypage;
+	}
+}
+.ico-join {
+	&:before {
+		content: $ico-join;
+	}
+}
+.ico-basket {
+	&:before {
+		content: $ico-basket;
+	}
+}
+.ico-map {
+	&:before {
+		content: $ico-map;
+	}
+}
+.ico-cscenter {
+	&:before {
+		content: $ico-cscenter;
+	}
+}
+.ico-search1 {
+	&:before {
+		content: $ico-search1;
+	}
+}
+.ico-check {
+	&:before {
+		content: $ico-check;
+	}
+}
+.ico-alarm_check {
+	&:before {
+		content: $ico-alarm_check;
+	}
+}
+.ico-check-thick {
+	&:before {
+		content: $ico-check-thick;
+	}
+}
+.ico-wand-thinmagic {
+	&:before {
+		content: $ico-wand-thinmagic;
+	}
+}
+.ico-target {
+	&:before {
+		content: $ico-target;
+	}
+}
+.ico-bookmark {
+	&:before {
+		content: $ico-bookmark;
+	}
+}
+.ico-tablet-ios {
+	&:before {
+		content: $ico-tablet-ios;
+	}
+}
+.ico-banstop {
+	&:before {
+		content: $ico-banstop;
+	}
+}
+.ico-mobile {
+	&:before {
+		content: $ico-mobile;
+	}
+}
+.ico-plus-thin {
+	&:before {
+		content: $ico-plus-thin;
+	}
+}
+.ico-minus-thin {
+	&:before {
+		content: $ico-minus-thin;
+	}
+}
+.ico-plus {
+	&:before {
+		content: $ico-plus;
+	}
+}
+.ico-minus {
+	&:before {
+		content: $ico-minus;
+	}
+}
+.ico-arrow-right-wide {
+	&:before {
+		content: $ico-arrow-right-wide;
+	}
+}
+.ico-arrow-up {
+	&:before {
+		content: $ico-arrow-up;
+	}
+}
+.ico-arrow-right {
+	&:before {
+		content: $ico-arrow-right;
+	}
+}
+.ico-arrow-left {
+	&:before {
+		content: $ico-arrow-left;
+	}
+}
+.ico-arrow-down {
+	&:before {
+		content: $ico-arrow-down;
+	}
+}
+.ico-chainlink {
+	&:before {
+		content: $ico-chainlink;
+	}
+}
+.ico-key {
+	&:before {
+		content: $ico-key;
+	}
+}
+.ico-download {
+	&:before {
+		content: $ico-download;
+	}
+}
+.ico-chart {
+	&:before {
+		content: $ico-chart;
+	}
+}
+.ico-pcoutline {
+	&:before {
+		content: $ico-pcoutline;
+	}
+}
+.ico-cross {
+	&:before {
+		content: $ico-cross;
+	}
+}
+.ico-clipfileattach {
+	&:before {
+		content: $ico-clipfileattach;
+	}
+}
+.ico-down_arrow {
+	&:before {
+		content: $ico-down_arrow;
+	}
+}
+.ico-chevron-up-thin {
+	&:before {
+		content: $ico-chevron-up-thin;
+	}
+}
+.ico-chevron-right-thin {
+	&:before {
+		content: $ico-chevron-right-thin;
+	}
+}
+.ico-chevron-left-thin {
+	&:before {
+		content: $ico-chevron-left-thin;
+	}
+}
+.ico-chevron-down-thin {
+	&:before {
+		content: $ico-chevron-down-thin;
+	}
+}
+.ico-bag {
+	&:before {
+		content: $ico-bag;
+	}
+}
+.ico-presentation {
+	&:before {
+		content: $ico-presentation;
+	}
+}
+.ico-move-thin {
+	&:before {
+		content: $ico-move-thin;
+	}
+}
+.ico-arrowbothvertical {
+	&:before {
+		content: $ico-arrowbothvertical;
+	}
+}
+.ico-arrowbothhorizontal {
+	&:before {
+		content: $ico-arrowbothhorizontal;
+	}
+}
+.ico-zoom-thin {
+	&:before {
+		content: $ico-zoom-thin;
+	}
+}
+.ico-arrow-rightup {
+	&:before {
+		content: $ico-arrow-rightup;
+	}
+}
+.ico-arrow-leftup {
+	&:before {
+		content: $ico-arrow-leftup;
+	}
+}
+.ico-chevron-up-circle {
+	&:before {
+		content: $ico-chevron-up-circle;
+	}
+}
+.ico-chevron-right-circle {
+	&:before {
+		content: $ico-chevron-right-circle;
+	}
+}
+.ico-chevron-left-circle {
+	&:before {
+		content: $ico-chevron-left-circle;
+	}
+}
+.ico-chevron-down-circle {
+	&:before {
+		content: $ico-chevron-down-circle;
+	}
+}
+.ico-chevron-dd-up {
+	&:before {
+		content: $ico-chevron-dd-up;
+	}
+}
+.ico-chevron-dd-right {
+	&:before {
+		content: $ico-chevron-dd-right;
+	}
+}
+.ico-chevron-dd-left {
+	&:before {
+		content: $ico-chevron-dd-left;
+	}
+}
+.ico-chevron-dd-down {
+	&:before {
+		content: $ico-chevron-dd-down;
+	}
+}
+.ico-upload1 {
+	&:before {
+		content: $ico-upload1;
+	}
+}
+.ico-underline {
+	&:before {
+		content: $ico-underline;
+	}
+}
+.ico-chart-up {
+	&:before {
+		content: $ico-chart-up;
+	}
+}
+.ico-chart-down {
+	&:before {
+		content: $ico-chart-down;
+	}
+}
+.ico-directionvertical {
+	&:before {
+		content: $ico-directionvertical;
+	}
+}
+.ico-directionhorizontal {
+	&:before {
+		content: $ico-directionhorizontal;
+	}
+}
+.ico-brightness {
+	&:before {
+		content: $ico-brightness;
+	}
+}
+.ico-right {
+	&:before {
+		content: $ico-right;
+	}
+}
+.ico-left-end {
+	&:before {
+		content: $ico-left-end;
+	}
+}
+.ico-note {
+	&:before {
+		content: $ico-note;
+	}
+}
+.ico-server {
+	&:before {
+		content: $ico-server;
+	}
+}
+.ico-print-thin {
+	&:before {
+		content: $ico-print-thin;
+	}
+}
+.ico-setcontrolpanel {
+	&:before {
+		content: $ico-setcontrolpanel;
+	}
+}
+.ico-repetition {
+	&:before {
+		content: $ico-repetition;
+	}
+}
+.ico-list-bar-thin {
+	&:before {
+		content: $ico-list-bar-thin;
+	}
+}
+.ico-media-stop {
+	&:before {
+		content: $ico-media-stop;
+	}
+}
+.ico-cloud {
+	&:before {
+		content: $ico-cloud;
+	}
+}
+.ico-cloud-up {
+	&:before {
+		content: $ico-cloud-up;
+	}
+}
+.ico-cloud-down {
+	&:before {
+		content: $ico-cloud-down;
+	}
+}
+.ico-clipboard-o {
+	&:before {
+		content: $ico-clipboard-o;
+	}
+}
+.ico-book {
+	&:before {
+		content: $ico-book;
+	}
+}
+.ico-caution {
+	&:before {
+		content: $ico-caution;
+	}
+}
+.ico-move-both {
+	&:before {
+		content: $ico-move-both;
+	}
+}
+.ico-brackets-s {
+	&:before {
+		content: $ico-brackets-s;
+	}
+}
+.ico-move-right {
+	&:before {
+		content: $ico-move-right;
+	}
+}
+.ico-move-left {
+	&:before {
+		content: $ico-move-left;
+	}
+}
+.ico-receipt {
+	&:before {
+		content: $ico-receipt;
+	}
+}
+.ico-screen-zoom {
+	&:before {
+		content: $ico-screen-zoom;
+	}
+}
+.ico-screen-original {
+	&:before {
+		content: $ico-screen-original;
+	}
+}
+.ico-info-circle-o {
+	&:before {
+		content: $ico-info-circle-o;
+	}
+}
+.ico-question-circle {
+	&:before {
+		content: $ico-question-circle;
+	}
+}
+.ico-imgs {
+	&:before {
+		content: $ico-imgs;
+	}
+}
+.ico-credit-card {
+	&:before {
+		content: $ico-credit-card;
+	}
+}
+.ico-media-record {
+	&:before {
+		content: $ico-media-record;
+	}
+}
+.ico-inbox-out {
+	&:before {
+		content: $ico-inbox-out;
+	}
+}
+.ico-inbox-out1 {
+	&:before {
+		content: $ico-inbox-out1;
+	}
+}
+.ico-linkexternal {
+	&:before {
+		content: $ico-linkexternal;
+	}
+}
+.ico-list-bar-ordered {
+	&:before {
+		content: $ico-list-bar-ordered;
+	}
+}
+.ico-file-o1 {
+	&:before {
+		content: $ico-file-o1;
+	}
+}
+.ico-file-o2 {
+	&:before {
+		content: $ico-file-o2;
+	}
+}
+.ico-windows {
+	&:before {
+		content: $ico-windows;
+	}
+}
+.ico-apple {
+	&:before {
+		content: $ico-apple;
+	}
+}
+.ico-logo-facebook {
+	&:before {
+		content: $ico-logo-facebook;
+	}
+}
+.ico-logo-facebook-s {
+	&:before {
+		content: $ico-logo-facebook-s;
+	}
+}
+.ico-logo-facebook-b1 {
+	&:before {
+		content: $ico-logo-facebook-b1;
+	}
+}
+.ico-logo-twitter {
+	&:before {
+		content: $ico-logo-twitter;
+	}
+}
+.ico-logo-twitter-b1 {
+	&:before {
+		content: $ico-logo-twitter-b1;
+	}
+}
+.ico-logo-youtube {
+	&:before {
+		content: $ico-logo-youtube;
+	}
+}
+.ico-logo-instagram {
+	&:before {
+		content: $ico-logo-instagram;
+	}
+}
+.ico-logo-kakaotalk {
+	&:before {
+		content: $ico-logo-kakaotalk;
+	}
+}
+.ico-logo-naverblog {
+	&:before {
+		content: $ico-logo-naverblog;
+	}
+}
+.ico-logo-blogger-box {
+	&:before {
+		content: $ico-logo-blogger-box;
+	}
+}
+.ico-logo-blogger {
+	&:before {
+		content: $ico-logo-blogger;
+	}
+}
+.ico-logo-pinterest {
+	&:before {
+		content: $ico-logo-pinterest;
+	}
+}
+.ico-logo-pinterest-c {
+	&:before {
+		content: $ico-logo-pinterest-c;
+	}
+}
+.ico-logo-pinterest-b1 {
+	&:before {
+		content: $ico-logo-pinterest-b1;
+	}
+}
+.ico-logo-vimeo {
+	&:before {
+		content: $ico-logo-vimeo;
+	}
+}
+.ico-logo-naver {
+	&:before {
+		content: $ico-logo-naver;
+	}
+}
+.ico-logo-yahoo {
+	&:before {
+		content: $ico-logo-yahoo;
+	}
+}
+.ico-logo-amazon {
+	&:before {
+		content: $ico-logo-amazon;
+	}
+}
+.ico-mail-o {
+	&:before {
+		content: $ico-mail-o;
+	}
+}
+.ico-logo-kakaoplus {
+	&:before {
+		content: $ico-logo-kakaoplus;
+	}
+}
+.ico-img {
+	&:before {
+		content: $ico-img;
+	}
+}
+.ico-imgs1 {
+	&:before {
+		content: $ico-imgs1;
+	}
+}
+.ico-talksms3 {
+	&:before {
+		content: $ico-talksms3;
+	}
+}
+.ico-chevron-right-nav {
+	&:before {
+		content: $ico-chevron-right-nav;
+	}
+}
+.ico-chevron-left-nav {
+	&:before {
+		content: $ico-chevron-left-nav;
+	}
+}
+.ico-power1 {
+	&:before {
+		content: $ico-power1;
+	}
+}
+.ico-signal-cell {
+	&:before {
+		content: $ico-signal-cell;
+	}
+}
+.ico-document1 {
+	&:before {
+		content: $ico-document1;
+	}
+}
+.ico-loginlock2 {
+	&:before {
+		content: $ico-loginlock2;
+	}
+}
+.ico-flag3 {
+	&:before {
+		content: $ico-flag3;
+	}
+}
+.ico-camera1 {
+	&:before {
+		content: $ico-camera1;
+	}
+}
+.ico-uniF071 {
+	&:before {
+		content: $ico-uniF071;
+	}
+}
+.ico-talkblank {
+	&:before {
+		content: $ico-talkblank;
+	}
+}
+.ico-talksms4 {
+	&:before {
+		content: $ico-talksms4;
+	}
+}
+.ico-camera2 {
+	&:before {
+		content: $ico-camera2;
+	}
+}
+.ico-gear2 {
+	&:before {
+		content: $ico-gear2;
+	}
+}
+.ico-talksms6 {
+	&:before {
+		content: $ico-talksms6;
+	}
+}
+.ico-talksms5 {
+	&:before {
+		content: $ico-talksms5;
+	}
+}
+.ico-logo-github-c1 {
+	&:before {
+		content: $ico-logo-github-c1;
+	}
+}
+.ico-git-branch {
+	&:before {
+		content: $ico-git-branch;
+	}
+}
+.ico-rsswifi {
+	&:before {
+		content: $ico-rsswifi;
+	}
+}
+.ico-storageserver2 {
+	&:before {
+		content: $ico-storageserver2;
+	}
+}
+.ico-alarm1 {
+	&:before {
+		content: $ico-alarm1;
+	}
+}
+.ico-print {
+	&:before {
+		content: $ico-print;
+	}
+}
+.ico-file-o {
+	&:before {
+		content: $ico-file-o;
+	}
+}
+.ico-dashboardguage1 {
+	&:before {
+		content: $ico-dashboardguage1;
+	}
+}
+.ico-angle-dd-left {
+	&:before {
+		content: $ico-angle-dd-left;
+	}
+}
+.ico-angle-dd-right {
+	&:before {
+		content: $ico-angle-dd-right;
+	}
+}
+.ico-angle-dd-up {
+	&:before {
+		content: $ico-angle-dd-up;
+	}
+}
+.ico-angle-dd-down {
+	&:before {
+		content: $ico-angle-dd-down;
+	}
+}
+.ico-angle-left {
+	&:before {
+		content: $ico-angle-left;
+	}
+}
+.ico-angle-right {
+	&:before {
+		content: $ico-angle-right;
+	}
+}
+.ico-angle-up {
+	&:before {
+		content: $ico-angle-up;
+	}
+}
+.ico-angle-down {
+	&:before {
+		content: $ico-angle-down;
+	}
+}
+.ico-monitor-1 {
+	&:before {
+		content: $ico-monitor-1;
+	}
+}
+.ico-notebook {
+	&:before {
+		content: $ico-notebook;
+	}
+}
+.ico-tablet {
+	&:before {
+		content: $ico-tablet;
+	}
+}
+.ico-mobile2 {
+	&:before {
+		content: $ico-mobile2;
+	}
+}
+.ico-circle-o {
+	&:before {
+		content: $ico-circle-o;
+	}
+}
+.ico-loading {
+	&:before {
+		content: $ico-loading;
+	}
+}
+.ico-folder-o {
+	&:before {
+		content: $ico-folder-o;
+	}
+}
+.ico-folder-open-o {
+	&:before {
+		content: $ico-folder-open-o;
+	}
+}
+.ico-keyboard {
+	&:before {
+		content: $ico-keyboard;
+	}
+}
+.ico-plusbox1 {
+	&:before {
+		content: $ico-plusbox1;
+	}
+}
+.ico-setcontrolpanel1 {
+	&:before {
+		content: $ico-setcontrolpanel1;
+	}
+}
+.ico-cc {
+	&:before {
+		content: $ico-cc;
+	}
+}
+.ico-registeredmark {
+	&:before {
+		content: $ico-registeredmark;
+	}
+}
+.ico-cc1 {
+	&:before {
+		content: $ico-cc1;
+	}
+}
+.ico-logo-safari {
+	&:before {
+		content: $ico-logo-safari;
+	}
+}
+.ico-logo-chrome {
+	&:before {
+		content: $ico-logo-chrome;
+	}
+}
+.ico-logo-firefox {
+	&:before {
+		content: $ico-logo-firefox;
+	}
+}
+.ico-logo-opera {
+	&:before {
+		content: $ico-logo-opera;
+	}
+}
+.ico-logo-explorer {
+	&:before {
+		content: $ico-logo-explorer;
+	}
+}
+.ico-flag6 {
+	&:before {
+		content: $ico-flag6;
+	}
+}
+.ico-search {
+	&:before {
+		content: $ico-search;
+	}
+}
+.ico-reset {
+	&:before {
+		content: $ico-reset;
+	}
+}
+.ico-menu {
+	&:before {
+		content: $ico-menu;
+	}
+}
+.ico-best {
+	&:before {
+		content: $ico-best;
+	}
+}
+.ico-bak {
+	&:before {
+		content: $ico-bak;
+	}
+}

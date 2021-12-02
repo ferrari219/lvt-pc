@@ -1,0 +1,190 @@
+/*******************************************************************
+Delete button
+********************************************************************/
+.breadcrumb,
+.button,
+.delete,
+.file,
+.is-unselectable,
+.modal-close,
+.modal-close-this,
+.pagination-ellipsis,
+.pagination-link,
+.pagination-next,
+.pagination-previous,
+.tabs {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.delete,
+.modal-close,
+.modal-close-this {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	pointer-events: auto;
+	width: 25px;
+	height: 25px;
+	max-height: 25px;
+	max-width: 25px;
+	min-height: 25px;
+	min-width: 25px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	border: none;
+	border-radius: 100%;
+	background-color: transparent;
+	font-size: 0;
+	outline: 0;
+	vertical-align: top;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.delete::after,
+.delete::before,
+.modal-close::after,
+.modal-close::before,
+.modal-close-this::after,
+.modal-close-this::before {
+	background-color: #fff;
+	content: '';
+	display: block;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+
+.delete::before,
+.modal-close::before,
+.modal-close-this::before {
+	height: 1px;
+	width: 50%;
+}
+
+.delete::after,
+.modal-close::after,
+.modal-close-this::after {
+	height: 50%;
+	width: 1px;
+}
+
+.delete:focus,
+.delete:hover,
+.modal-close:focus,
+.modal-close:hover,
+.modal-close-this:focus,
+.modal-close-this:hover {
+	background-color: transparentrgba(10, 10, 10, 0.3);
+}
+
+.delete:active,
+.modal-close:active,
+.modal-close-this:active {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.is-small.delete,
+.is-small.modal-close,
+.is-small.modal-close-this {
+	height: 16px;
+	max-height: 16px;
+	max-width: 16px;
+	min-height: 16px;
+	min-width: 16px;
+	width: 16px;
+}
+
+.is-medium.delete,
+.is-medium.modal-close,
+.is-medium.modal-close-this {
+	height: 24px;
+	max-height: 24px;
+	max-width: 24px;
+	min-height: 24px;
+	min-width: 24px;
+	width: 24px;
+}
+
+.is-large.delete,
+.is-large.modal-close,
+.is-large.modal-close-this {
+	width: 36px;
+	height: 36px;
+	max-width: 36px;
+	max-height: 36px;
+	min-width: 36px;
+	min-height: 36px;
+}
+.is-xlarge.delete,
+.is-xlarge.modal-close,
+.is-xlarge.modal-close-this {
+	width: 46px;
+	height: 46px;
+	max-width: 46px;
+	max-height: 46px;
+	min-width: 46px;
+	min-height: 46px;
+}
+
+.modal-card-head .delete {
+	&::before,
+	&::after {
+		background-color: #333;
+	}
+
+	&:focus,
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	&:active {
+		background-color: rgba(0, 0, 0, 0.7);
+
+		&::before,
+		&::after {
+			background-color: #fff;
+		}
+	}
+}
+
+.button-delete {
+	display: inline-block;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	border-radius: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	&:after,
+	&:before {
+		display: inline-block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 1px;
+		height: 15px;
+		background-color: #fff;
+		transform-origin: 50% 50%;
+	}
+	&:after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	&:before {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	&.is-dark {
+		&:after,
+		&:before {
+			background-color: #333;
+		}
+	}
+}

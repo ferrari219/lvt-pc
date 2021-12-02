@@ -1,0 +1,28 @@
+.brandstory {
+	&-pk {
+		.section-contents-wrap {
+			&:first-child {
+				.text-wrap {
+					margin-top: 40px;
+				}
+			}
+			&:not(:first-child) {
+				position: relative;
+				.text-wrap {
+					position: absolute;
+					top: 330px;
+					left: 440px;
+					width: 400px;
+					font-size: 14px;
+					color: #000;
+					line-height: 26px;
+				}
+			}
+			.text-wrap {
+				font-size: 16px;
+				color: #666;
+				text-align: center;
+			}
+		}
+	}
+}

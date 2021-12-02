@@ -1,0 +1,27 @@
+$collapse-transition-speed: 0.2s !default;
+$collapse-transition-style: ease !default;
+$message-body-padding: 1.25em 1.5em !default;
+
+.is-collapsible {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	// &.is-active {
+	// 	display: block;
+	// }
+	&.message-body {
+		padding: 0 !important;
+		.message-body-content {
+			padding: $message-body-padding;
+		}
+	}
+}
+[data-action='collapse'] {
+	.icon {
+		transform: rotate(0);
+	}
+	&.is-active {
+		.icon {
+			transform: rotate(180deg);
+		}
+	}
+}

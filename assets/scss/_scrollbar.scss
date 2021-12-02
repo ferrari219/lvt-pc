@@ -1,0 +1,186 @@
+/*************** SCROLLBAR BASE CSS ***************/
+.scroll-wrapper {
+	position: relative;
+	overflow: hidden !important;
+	// padding: 0 !important;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	> .scroll-content {
+		max-height: none;
+		max-width: none !important;
+		width: auto !important;
+		height: auto;
+		margin: 0 auto !important;
+		overflow: scroll !important;
+		overflow-x: hidden;
+		padding: 0;
+		position: relative !important;
+		border: none !important;
+		top: 0;
+		left: 0;
+		box-sizing: content-box !important;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			height: 0;
+			width: 0;
+		}
+	}
+}
+.scroll-element {
+	display: none;
+	&,
+	div {
+		box-sizing: content-box;
+	}
+	&.scroll-x.scroll-scrollx_visible,
+	&.scroll-y.scroll-scrolly_visible {
+		display: block;
+	}
+
+	.scroll-bar,
+	.scroll-arrow {
+		cursor: default;
+	}
+}
+
+.scroll-textarea {
+	border: 1px solid #cccccc;
+	border-top-color: #999999;
+	> .scroll-content {
+		overflow: hidden !important;
+		> textarea {
+			border: none !important;
+			box-sizing: border-box;
+			height: 100% !important;
+			margin: 0;
+			max-height: none !important;
+			max-width: none !important;
+			overflow: scroll !important;
+			outline: none;
+			padding: 2px;
+			position: relative !important;
+			top: 0;
+			width: 100% !important;
+			&::-webkit-scrollbar {
+				height: 0;
+				width: 0;
+			}
+		}
+	}
+}
+
+/*************** SCROLLBAR DYNAMIC ***************/
+.scrollbar-container {
+	> .scroll-element {
+		&,
+		div {
+			background: none;
+			border: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			z-index: 10;
+		}
+		div {
+			display: block;
+			height: 100%;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+		&.scroll-x {
+			bottom: 2px;
+			height: 7px;
+			left: 0;
+			min-width: 100%;
+			width: 100%;
+			.scroll-bar {
+				bottom: 0;
+				height: 7px;
+				min-width: 24px;
+				top: auto;
+			}
+			.scroll-element_outer {
+				bottom: 0;
+				top: auto;
+				left: 2px;
+				transition: height 0.2s;
+			}
+			.scroll-element_size {
+				left: -4px;
+			}
+		}
+		&.scroll-y {
+			height: 100%;
+			min-height: 100%;
+			right: 1px;
+			top: 0;
+			width: 7px;
+			.scroll-bar {
+				left: auto;
+				min-height: 24px;
+				right: 0;
+				width: 7px;
+			}
+			.scroll-element_outer {
+				left: auto;
+				right: 0;
+				top: 2px;
+				transition: width 0.2s;
+			}
+			.scroll-element_size {
+				top: -4px;
+			}
+		}
+		.scroll-element_outer {
+			opacity: 0.3;
+			border-radius: 12px;
+		}
+		.scroll-element_size {
+			background-color: #cccccc;
+			opacity: 0;
+			border-radius: 12px;
+			transition: opacity 0.2s;
+		}
+		.scroll-bar {
+			background-color: #6c6e71;
+			border-radius: 7px;
+		}
+		&.scroll-x.scroll-scrolly_visible .scroll-element_size {
+			left: -11px;
+		}
+		&.scroll-y.scroll-scrollx_visible .scroll-element_size {
+			top: -11px;
+		}
+		&:hover .scroll-element_outer,
+		&.scroll-draggable .scroll-element_outer {
+			overflow: hidden;
+			-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+			filter: alpha(opacity=70);
+			opacity: 0.7;
+		}
+		&:hover .scroll-element_outer .scroll-element_size,
+		&.scroll-draggable .scroll-element_outer .scroll-element_size {
+			opacity: 1;
+		}
+		&:hover .scroll-element_outer .scroll-bar,
+		&.scroll-draggable .scroll-element_outer .scroll-bar {
+			height: 100%;
+			width: 100%;
+			border-radius: 12px;
+		}
+		&.scroll-x:hover .scroll-element_outer,
+		&.scroll-x.scroll-draggable .scroll-element_outer {
+			height: 14px;
+			min-height: 7px;
+		}
+		&.scroll-y:hover .scroll-element_outer,
+		&.scroll-y.scroll-draggable .scroll-element_outer {
+			min-width: 7px;
+			width: 14px;
+		}
+	}
+}
