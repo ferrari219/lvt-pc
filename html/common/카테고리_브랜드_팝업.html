@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko" class="is-clipped">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>카테고리_브랜드_팝업</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+
+	<body>
+		<div class="skipnavi">
+			<a href="#container">본문 바로가기</a>
+			<a href="#gnb">주메뉴 바로가기</a>
+		</div>
+
+		<!-- S :브랜드 팝업 -->
+		<div id="modal-lnb-brand" class="modal is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">브랜드</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+				<!-- 200820, [<div class="modal-card-body scrollbar-container">] 추가-->
+				<div class="modal-card-body scrollbar-container">
+					<!-- S : 자음으로 선택 -->
+					<div class="brand-popup">
+						<div class="brand-popup-select">
+							<button type="button" id="viewBrandAll" class="button is-primary">전체</button>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-10" id="pop-chk-10" />
+								<label for="pop-chk-10">리바트 브랜드만 보기</label>
+							</div>
+						</div>
+						<div class="brand-popup-button-list">
+							<!-- S : 한글 -->
+							<div>
+								<button type="button" class="button">ㄱ</button>
+								<button type="button" class="button">ㄴ</button>
+								<button type="button" class="button">ㄷ</button>
+								<button type="button" class="button">ㄹ</button>
+								<button type="button" class="button">ㅁ</button>
+								<button type="button" class="button">ㅂ</button>
+								<button type="button" class="button">ㅅ</button>
+								<button type="button" class="button">ㅇ</button>
+								<button type="button" class="button">ㅈ</button>
+								<button type="button" class="button">ㅊ</button>
+								<button type="button" class="button">ㅋ</button>
+								<button type="button" class="button">ㅌ</button>
+								<button type="button" class="button">ㅍ</button>
+								<button type="button" class="button">ㅎ</button>
+							</div>
+							<!-- E : 한글 -->
+							<!-- S : 영문 -->
+							<div>
+								<button type="button" class="button">A</button>
+								<button type="button" class="button">B</button>
+								<button type="button" class="button">C</button>
+								<button type="button" class="button">E</button>
+								<button type="button" class="button">F</button>
+								<button type="button" class="button">G</button>
+								<button type="button" class="button">H</button>
+								<button type="button" class="button">I</button>
+								<button type="button" class="button">J</button>
+								<button type="button" class="button">K</button>
+								<button type="button" class="button">L</button>
+								<button type="button" class="button">M</button>
+								<button type="button" class="button">N</button>
+								<button type="button" class="button">O</button>
+								<button type="button" class="button">P</button>
+								<button type="button" class="button">Q</button>
+								<button type="button" class="button">R</button>
+								<button type="button" class="button">S</button>
+								<button type="button" class="button">T</button>
+								<button type="button" class="button">U</button>
+								<button type="button" class="button">V</button>
+								<button type="button" class="button">W</button>
+								<button type="button" class="button">X</button>
+								<button type="button" class="button">Y</button>
+								<button type="button" class="button">Z</button>
+							</div>
+							<!-- E : 영문 -->
+						</div>
+					</div>
+
+					<!-- 브랜드팝업 검색 추가 : 200616 -->
+					<!-- 200820, 검색바 수정-->
+					<div class="brand-popup-search">
+						<div class="field">
+							<label class="label sr-only">브랜드 검색</label>
+							<div class="control">
+								<input type="text" class="input brand-popup-search__input" title="브랜드 검색" placeholder="검색어를 입력해 주세요" />
+							</div>
+						</div>
+
+						<button class="ico-search"><span class="sr-only">검색</span></button>
+					</div>
+					<!-- E : 자음으로 선택 -->
+					<div class="brand-popup-info">
+						<span class="brand-popup-info-select"><!--ㄹ--></span>
+						<span class="brand-popup-info-align">가나다순</span>
+					</div>
+					<div class="modal-card-body brand-modal-card-body">
+						<!-- S : 체크박스 리스트 -->
+						<div class="brand-popup-box">
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-21" checked="" />
+								<label for="pop-chk-21">리바트</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-22" />
+								<label for="pop-chk-22">리바트</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-23" />
+								<label for="pop-chk-23">리바트</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-24" />
+								<label for="pop-chk-24">리바트</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-25" />
+								<label for="pop-chk-25">H.MONDO</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-26" />
+								<label for="pop-chk-26">H.MONDO</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-27" />
+								<label for="pop-chk-27">H.MONDO</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-28" />
+								<label for="pop-chk-28">H.MONDO</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-29" />
+								<label for="pop-chk-29">리바트 하움</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-30" />
+								<label for="pop-chk-30">리바트 하움</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-31" />
+								<label for="pop-chk-31">리바트 하움</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-32" />
+								<label for="pop-chk-32">리바트 하움</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-33" />
+								<label for="pop-chk-33">리첸</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-34" />
+								<label for="pop-chk-34">리첸</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-35" />
+								<label for="pop-chk-35">리첸</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-36" />
+								<label for="pop-chk-36">리첸</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-37" />
+								<label for="pop-chk-37">리바트 엔슬립</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-38" />
+								<label for="pop-chk-38">리바트 엔슬립</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-39" />
+								<label for="pop-chk-39">리바트 엔슬립</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-40" />
+								<label for="pop-chk-40">리바트 엔슬립</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-41" />
+								<label for="pop-chk-41">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-42" />
+								<label for="pop-chk-42">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-43" />
+								<label for="pop-chk-43">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-44" />
+								<label for="pop-chk-44">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-45" />
+								<label for="pop-chk-45">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-46" />
+								<label for="pop-chk-46">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-47" />
+								<label for="pop-chk-47">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-48" />
+								<label for="pop-chk-48">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-49" />
+								<label for="pop-chk-49">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-50" />
+								<label for="pop-chk-50">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-51" />
+								<label for="pop-chk-51">FM디자인</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="pop-chk-20" id="pop-chk-52" />
+								<label for="pop-chk-52">FM디자인</label>
+							</div>
+						</div>
+						<!-- E : 체크박스 리스트 -->
+					</div>
+				</div>
+				<footer class="modal-card-foot mt1 mb2">
+					<button type="button" class="button button-modal-close is-dark">취소</button>
+					<button type="button" class="button is-primary" id="addFilterBrandPopup">확인</button>
+				</footer>
+			</div>
+		</div>
+		<!-- E : 브랜드 팝업 -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/swiper.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/jquery-ui.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			// 하단은 퍼블리싱 용 코드로 공통헤더와 공통 푸터를 로드합니다. 개발시는 삭제해도 되며, 개발용 웹서버 환경에서 작동합니다.
+			$(function () {
+				$('#header').load('../include/header.html');
+				$('#footer').load('../include/footer.html');
+			});
+
+			// S : LNB UI
+			// LNB 아코디언 이벤트 : 20200528
+			$('.lnb-list-item__btn').each(function () {
+				$(this).append('<span class="sr-only">메뉴펼치기</span>');
+			});
+			$('.lnb-list-item__content').each(function () {
+				if ($(this).hasClass('is-active')) {
+					$(this).attr({ 'aria-expanded': 'true' });
+				} else {
+					$(this).attr({ 'aria-expanded': 'false' }).css({ display: 'none' });
+				}
+			});
+			$('.lnb-list-item__btn').on('click', function (event) {
+				event = event || window.event;
+				event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+				if ($(this).hasClass('is-active')) {
+					$(this)
+						.closest('.lnb-list')
+						.find('.lnb-list-item__content')
+						.each(function () {
+							if ($(this).hasClass('is-active')) {
+								$(this).attr({ 'aria-expanded': 'false' }).removeClass('is-active').delay(10).slideUp('fast');
+							}
+						});
+					$(this).removeClass('is-active');
+					$(this).find('.sr-only').text('메뉴펼치기');
+				} else {
+					$(this).closest('.lnb-list').find('.lnb-list-item__btn').removeClass('is-active').find('.sr-only').text('메뉴펼치기');
+					$(this).addClass('is-active');
+					$(this).closest('.lnb-list').find('.lnb-list-item__content').removeClass('is-active').delay(10).slideUp('fast');
+					$(this).parent().next('.lnb-list-item__content').attr({ 'aria-expanded': 'true' }).addClass('is-active').stop().slideDown('fast');
+					$(this).find('.sr-only').text('메뉴접기');
+				}
+			});
+			// LNB 가격 슬라이드
+			$(function () {
+				$('#slider-range').slider({
+					range: true,
+					min: 0,
+					max: 1000000,
+					step: 100,
+					values: [0, 1000000],
+					slide: function (event, ui) {
+						// $('#amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
+						$('#price-range__from').val(ui.values[0].toLocaleString());
+						$('#price-range__to').val(ui.values[1].toLocaleString());
+					},
+				});
+				$('#price-range__from').val($('#slider-range').slider('values', 0).toLocaleString());
+				$('#price-range__to').val($('#slider-range').slider('values', 1).toLocaleString());
+			});
+			// 브랜드 체크박스 스크롤 : 20200528
+			$(document).ready(function () {
+				$('.scrollbar-container').scrollbar();
+			});
+			// E : LNB UI
+
+			// 메인 제목 탭 블록
+			$('.tab-block-item').on('click', function (e) {
+				e.preventDefault();
+				$(this).addClass('is-active').siblings().removeClass('is-active');
+			});
+
+			// S : 스와이퍼 Slider
+			$('.one-page-swiper').on('click', '.__state-swiper-pause, .visual03-pause', function () {
+				console.log('멈춤');
+				oneSwiperV01.autoplay.stop();
+				oneSwiperV02.autoplay.stop();
+			});
+			$('.one-page-swiper').on('click', '.swiper-button-prev, .swiper-button-next', function () {
+				console.log('시작');
+				oneSwiperV01.autoplay.start();
+				oneSwiperV02.autoplay.start();
+			});
+			var swiperListV01 = $('.swiper-container-visual01 .swiper-slide'),
+				swiperControlWrapV01 = $('.control-wrap-visual01'),
+				swiperListV02 = $('.swiper-container-visual03 .swiper-slide'),
+				swiperControlWrapV02 = $('.control-wrap-visual03');
+
+			//컨텐츠의 갯수가 1개 이하일때 swiper를 호출하지 않는다.
+			if (swiperListV01.length > 1) {
+				var oneSwiperV01 = new Swiper('.swiper-container-visual01', {
+					simulateTouch: false,
+					autoplay: {
+						delay: 4000,
+					},
+					loop: true,
+					navigation: {
+						nextEl: '.visual01-next',
+						prevEl: '.visual01-prev',
+					},
+					pagination: {
+						el: '.visual01-pagination',
+						type: 'fraction',
+					},
+				});
+			} else {
+				swiperListV01.show();
+				swiperControlWrapV01.hide();
+			}
+
+			//컨텐츠의 갯수가 1개 이하일때 swiper를 호출하지 않는다.
+			if (swiperListV02.length > 1) {
+				var oneSwiperV02 = new Swiper('.swiper-container-visual03', {
+					simulateTouch: false,
+					autoplay: {
+						delay: 4000,
+					},
+					loop: true,
+					navigation: {
+						nextEl: '.visual03-next',
+						prevEl: '.visual03-prev',
+					},
+					pagination: {
+						el: '.visual03-pagination',
+						type: 'fraction',
+					},
+				});
+			} else {
+				swiperListV02.show();
+				swiperControlWrapV02.hide();
+			}
+
+			function multiPageSwiper(name) {
+				var swiper = new Swiper('.swiper-container-' + name, {
+					simulateTouch: false,
+					slidesPerView: 3,
+					spaceBetween: 30,
+					navigation: {
+						nextEl: '.' + name + '-next',
+						prevEl: '.' + name + '-prev',
+					},
+					pagination: {
+						el: '.' + name + '-pagination',
+						type: 'fraction',
+					},
+				});
+			}
+			$(document).ready(function () {
+				multiPageSwiper('visual02');
+			});
+			// E : 스와이퍼 Slider
+
+			// S : 카테고리 필터 동작 UI
+			// 체크해서 검색리스트 목록 추가
+			function addFilterList(target, name) {
+				var listItem =
+					'<li class="section-category-item__relation--list relation-list" data-target="' + target + '"><span class="search-text">' + name + '</span><button type="button" class="btn-del"><i class="icon-del"></i><span class="sr-only">삭제</span></button></li>';
+				$('#categoryChkList').append(listItem);
+			}
+			// 체크해제해서 검색리스트 목록 제거
+			function delFilterList(target) {
+				$('#categoryChkList')
+					.find('[data-target=' + target + ']')
+					.remove();
+			}
+			// 초기화 버튼
+			$(document).on('click', '.btn-reset-list', function () {
+				var filter_checks = $('#categoryChkList li');
+				filter_checks.remove();
+				// LNB 필터 checkbox 체크해제
+				$('.lnb-brand-checkbox-list .checkbox').each(function () {
+					var input = $(this).find('input');
+					input.prop('checked', false);
+				});
+				// 브랜드 팝업 checkbox 체크해제
+				// $('.brand-popup-box input[type=checkbox]').each(function () {
+				// 	$(this).prop('checked', false);
+				// });
+				$('.brand-popup-box input[type=checkbox]').prop('checked', false);
+			});
+			// 검색리스트에서 항목 삭제
+			$(document).on('click', '#categoryChkList .btn-del', function () {
+				var thisTarget = $(this).closest('li').data('target');
+				var chkList = $('.lnb-brand-checkbox-list .checkbox');
+				$(this).closest('.relation-list').remove();
+				$('#' + thisTarget).prop('checked', false);
+			});
+			// LNB 체크리스트 삭제/추가 동작
+			$(document).on('click', '.lnb-brand-checkbox-list input[type=checkbox]', function () {
+				var thisName = $(this).next('label').text(),
+					thisTarget = $(this).attr('id'),
+					isChecked = $(this).prop('checked'),
+					isSearchListDel = false;
+				isChecked ? addFilterList(thisTarget, thisName) : delFilterList(thisTarget);
+			});
+			// 브랜드팝업 확인 버튼 추가
+			$(document).on('click', '#addFilterBrandPopup', function () {
+				$(this)
+					.closest('.modal-card')
+					.children('.modal-card-body')
+					.find('input[type=checkbox]')
+					.each(function () {
+						var thisName = $(this).next('label').text(),
+							thisTarget = $(this).attr('id'),
+							isChecked = $(this).prop('checked');
+						isChecked ? addFilterList(thisTarget, thisName) : delFilterList(thisTarget);
+					});
+			});
+			// 가격 슬라이드 적용 버튼
+			$(document).on('click', '#applyPriceRange', function (e) {
+				e.preventDefault();
+				var thisVal = $('#price-range__from').val() + ' ~ ' + $('#price-range__to').val();
+				var thisTarget = $(this).attr('id');
+				var thisExist = $('#categoryChkList').find('[data-target=' + thisTarget + ']');
+				if (thisExist.length > 0 || !thisExist === undefined) {
+					$('#categoryChkList')
+						.find('[data-target=' + thisTarget + ']')
+						.children('.search-text')
+						.text(thisVal);
+				} else {
+					addFilterList(thisTarget, thisVal);
+				}
+			});
+			// E : 카테고리 필터 동작 UI
+
+			// 브랜드검색 팝업 자음 & 알파벳 선택
+			$(document).on('click', '.brand-popup-button-list button', function () {
+				var selectText = $(this).text(),
+					addTxtPoint = $('.brand-popup-info-select'),
+					check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/; // 한글체크
+
+				check_kor.test(selectText) ? addTxtPoint.text(selectText).css('margin-left', -10) : addTxtPoint.text(selectText).css('margin-left', 0);
+				// 클릭시 브랜드팝업 내 버튼 is-active 처리 : 200619
+				$(this).closest('.brand-popup-button-list').find('.button').removeClass('is-active');
+				$(this).addClass('is-active');
+				// 브랜드검색 팝업 전체 보기 버튼
+			});
+			$(document).on('click', '#viewBrandAll', function () {
+				var blurPoint = $('.brand-popup-button-list'),
+					removeTxtPoint = $('.brand-popup-info-select');
+
+				removeTxtPoint.text('').css('margin-left', '');
+				blurPoint.find('button').blur();
+			});
+		</script>
+	</body>
+</html>

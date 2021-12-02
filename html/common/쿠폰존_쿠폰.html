@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>쿠폰 팝업</title>
+		<meta name="robots" content="index,follow" />
+		<meta name="referrer" contents="always" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<meta name="keywords" content="리바트, 가구, 종합가구, 사무가구, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름" />
+		<meta name="description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:title" content="현대 리바트 통합 쇼핑몰" />
+		<meta property="og:site_name" content="리바트몰" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://mall.hyundailivart.co.kr" />
+		<meta property="og:description" content="현대 리바트 가구 쇼핑몰, 온라인, 매장가구, 리모델링, 사무가구, 윌리엄스 소노마, 포터리반 키즈, 포터리반, 웨스트엘름 등 종합 브랜드 통합 쇼핑몰" />
+		<meta property="og:image" content="/assets/images/common/livart.svg" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/livart.ico" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+
+	<body class="body-responsive">
+		<!-- S : 쿠폰 팝업 -->
+		<div id="modal-coupon" class="modal is-active">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">쿠폰</p>
+					<button type="button" class="delete is-large" aria-label="close"></button>
+				</header>
+				<!-- S : 탭 네비게이션 container -->
+				<div class="modal-card-tabs-container">
+					<h3 class="hidden">쿠폰</h3>
+					<p class="modal-coupon-info">쿠폰을 다운로드 받으신 후 선택하여 적용하실 수 있습니다.</p>
+					<!-- S : 탭 네비게이션 -->
+					<!-- 태그 수정 : 200626-->
+					<div class="tabs is-toggle is-fullwidth popup-tab">
+						<ul role="tablist" aria-label="Tabs">
+							<li class="is-active">
+								<button id="tabcoupon-modal-1" class="tab" role="tab" aria-controls="tabcoupon-panel-1" aria-selected="true" tabindex="0">
+									<span>쿠폰 다운로드<span>(4)</span></span>
+								</button>
+							</li>
+							<li>
+								<button id="tabcoupon-modal-2" class="tab" role="tab" aria-controls="tabcoupon-panel-2" aria-selected="false" tabindex="-1">
+									<span>쿠폰조회 및 적용</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 탭 네비게이션 -->
+				</div>
+				<!-- E : 탭 네비게이션 container -->
+				<section class="modal-card-body scrollbar-container">
+					<!-- <div class="scrollbar-container"> -->
+					<!-- S : 탭 내용 -->
+					<!-- tabcoupon-panel-1 -->
+					<div id="tabcoupon-panel-1" class="tabpanel" role="tabpanel" aria-labelledby="tabcoupon-modal-1" tabindex="0">
+						<!-- 쿠폰없음 
+								<section class="no-coupon modal-coupon-line">
+									<h4 class="hidden">적용 가능한 상품 쿠폰</h4>
+									<i class="icon-no_coupon"></i>
+									<p>다운로드 할 수 있는 쿠폰이 없습니다.</p>
+								</section>
+								//쿠폰없음 -->
+						<ul>
+							<li class="coupon-card">
+								<!-- 쿠폰 내용 -->
+								<section class="coupon-card-section">
+									<div class="coupon-card-left">
+										<!-- 20200708 [문구변경 APP, PC, PC / APP, PC / 모바일웹] -->
+										<span class="coupon-card-left__flag">PC / 모바일웹</span>
+										<strong class="coupon-card-left__discount">10%</strong>
+									</div>
+									<div class="coupon-card-center">
+										<h4 class="modal-coupon-title">홈데코페어 10% 할인쿠폰 홈데코페어 10% 할인쿠폰 홈데코페어 10% 할인쿠폰 홈데코페어 10% 할인쿠폰</h4>
+										<dl class="coupon-card-contents">
+											<dt class="coupon-card-contents__title">사용한도</dt>
+											<dd class="coupon-card-contents__list">
+												최소 2개 이상 구매 시<br />
+												최소 300,000원 이상 구매 시 최대 5,000원 할인
+											</dd>
+											<dt class="coupon-card-contents__title">사용기간</dt>
+											<dd class="coupon-card-contents__list">다운로드 즉시 사용 가능 (~2021.02.28)</dd>
+										</dl>
+									</div>
+									<!-- 20200708 [tag 변경] -->
+									<div class="coupon-card-button__wrap">
+										<button type="button" class="coupon-card-button">
+											<span>쿠폰 다운로드</span>
+											<i class="icon-down-white"></i>
+										</button>
+									</div>
+									<!-- //20200708 [tag 변경] -->
+								</section>
+								<!-- //쿠폰 내용 -->
+							</li>
+
+							<li class="coupon-card">
+								<!-- 쿠폰 내용 -->
+								<section class="coupon-card-section">
+									<div class="coupon-card-left">
+										<!-- 20200708 [문구변경 APP, PC, PC / APP, PC / 모바일웹] -->
+										<span class="coupon-card-left__flag">PC / APP</span>
+										<strong class="coupon-card-left__discount">5,000</strong>
+									</div>
+									<div class="coupon-card-center mt1">
+										<h4 class="modal-coupon-title">선착순 5,000원 할인쿠폰</h4>
+										<dl class="coupon-card-contents">
+											<dt class="coupon-card-contents__title">사용한도</dt>
+											<dd class="coupon-card-contents__list">최소 300,000원 이상 구매 시 최대 5,000원 할인</dd>
+											<dt class="coupon-card-contents__title">사용기간</dt>
+											<dd class="coupon-card-contents__list">다운로드 즉시 사용 가능 (~2021.02.28)</dd>
+										</dl>
+									</div>
+									<!-- 20200708 [tag 변경] -->
+									<div class="coupon-card-button__wrap">
+										<button type="button" class="coupon-card-button">
+											<span>선착순 <br /><em>999</em>개 남음</span>
+											<i class="icon-down-white"></i>
+										</button>
+									</div>
+									<!-- //20200708 [tag 변경] -->
+								</section>
+								<!-- //쿠폰 내용 -->
+							</li>
+
+							<li class="coupon-card">
+								<!-- 쿠폰 내용 -->
+								<section class="coupon-card-section">
+									<div class="coupon-card-left">
+										<!-- 20200708 [문구변경 APP, PC, PC / APP, PC / 모바일웹] -->
+										<span class="coupon-card-left__flag">PC</span>
+										<strong class="coupon-card-left__discount">10,000</strong>
+									</div>
+									<div class="coupon-card-center">
+										<h4 class="modal-coupon-title">함께 사면 10,000원 할인 쿠폰</h4>
+										<dl class="coupon-card-contents">
+											<dt class="coupon-card-contents__title">사용한도</dt>
+											<dd class="coupon-card-contents__list">최소 300,000원 이상 구매 시 최대 5,000원 할인</dd>
+											<dt class="coupon-card-contents__title">사용기간</dt>
+											<dd class="coupon-card-contents__list">다운로드 즉시 사용 가능 (~2021.02.28)</dd>
+										</dl>
+										<p class="coupon-card-contents-info">※ 장바구니,주문서에서 적용하실 수 있습니다.</p>
+									</div>
+									<button type="button" class="coupon-card-button" disabled>
+										<span>선착순마감</span>
+									</button>
+								</section>
+								<!-- //쿠폰 내용 -->
+
+								<!-- 적용상품 Collapsible Card -->
+								<div class="card card-coupon-card">
+									<header class="card-header">
+										<a href="#collapsible-card" data-action="collapse" class="card-header-icon" aria-label="more options">
+											<strong>적용상품을 확인해 보세요</strong>
+											<span class="icon">
+												<i class="icon-arrow-down" aria-hidden="true"></i>
+											</span>
+										</a>
+									</header>
+									<div id="collapsible-card" class="is-collapsible">
+										<div class="card-content">
+											<dl class="card-content-coupon-card">
+												<dt class="card-content-coupon-card__title">구매 대상 상품</dt>
+												<dd class="modal-coupon-list-link">
+													<span>
+														<a href="#" class="link">
+															홈데코 란테 LED침대 8종
+															<i class="icon-arrow2"></i>
+														</a>
+													</span>
+													<span>
+														<a href="#" class="link">
+															로넌 각도높이조절 전면책상
+															<i class="icon-arrow2"></i>
+														</a>
+													</span>
+													<span>
+														<a href="#" class="link">
+															홈데코 란테 LED침대 8종
+															<i class="icon-arrow2"></i>
+														</a>
+													</span>
+												</dd>
+											</dl>
+											<dl class="card-content-coupon-card">
+												<dt class="card-content-coupon-card__title">할인 가능 상품</dt>
+												<dd class="modal-coupon-list-link">
+													<span>
+														<a href="#" class="link">
+															홈데코 란테 의자
+															<i class="icon-arrow2"></i>
+														</a>
+													</span>
+													<span>
+														<a href="#" class="link">
+															로넌 각도높이조절 스마트 의자
+															<i class="icon-arrow2"></i>
+														</a>
+													</span>
+													<span>
+														<a href="#" class="link">
+															홈데코 간이 테이블
+															<i class="icon-arrow2"></i>
+														</a>
+													</span>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<!-- //적용상품 Collapsible Card -->
+							</li>
+
+							<li class="coupon-card">
+								<!-- 쿠폰 내용 -->
+								<section class="coupon-card-section">
+									<div class="coupon-card-left">
+										<!-- 20200708 [문구변경 APP, PC, PC / APP, PC / 모바일웹] -->
+										<span class="coupon-card-left__flag">APP</span>
+										<strong class="coupon-card-left__discount">10%</strong>
+									</div>
+									<div class="coupon-card-center">
+										<h4 class="modal-coupon-title">홈데코페어 10% 할인쿠폰</h4>
+										<dl class="coupon-card-contents">
+											<dt class="coupon-card-contents__title">사용한도</dt>
+											<dd class="coupon-card-contents__list">
+												최소 2개 이상 구매 시<br />
+												최소 300,000원 이상 구매 시 최대 5,000원 할인
+											</dd>
+											<dt class="coupon-card-contents__title">사용기간</dt>
+											<dd class="coupon-card-contents__list">다운로드 즉시 사용 가능 (~2021.02.28)</dd>
+										</dl>
+									</div>
+									<!-- 20200708 [tag 변경] -->
+									<div class="coupon-card-button__wrap">
+										<button type="button" class="coupon-card-button">
+											<span>10개</span>
+											<i class="icon-down-white"></i>
+										</button>
+									</div>
+									<!-- //20200708 [tag 변경] -->
+								</section>
+								<!-- //쿠폰 내용 -->
+							</li>
+
+							<li class="coupon-card">
+								<!-- 쿠폰 내용 -->
+								<section class="coupon-card-section">
+									<div class="coupon-card-left">
+										<!-- 20200708 [문구변경 APP, PC, PC / APP, PC / 모바일웹] -->
+										<span class="coupon-card-left__flag">PC / 모바일웹</span>
+										<strong class="coupon-card-left__discount">5,000</strong>
+									</div>
+									<div class="coupon-card-center">
+										<h4 class="modal-coupon-title">선착순 5,000원 할인쿠폰</h4>
+										<dl class="coupon-card-contents">
+											<dt class="coupon-card-contents__title">사용한도</dt>
+											<dd class="coupon-card-contents__list">최소 300,000원 이상 구매 시 최대 5,000원 할인</dd>
+											<dt class="coupon-card-contents__title">사용기간</dt>
+											<dd class="coupon-card-contents__list">다운로드 즉시 사용 가능 (~2021.02.28)</dd>
+										</dl>
+									</div>
+									<button type="button" class="coupon-card-button" disabled>
+										<span>다운로드 완료</span>
+									</button>
+								</section>
+								<!-- //쿠폰 내용 -->
+							</li>
+						</ul>
+
+						<div class="modal-card-foot modal-coupon-button">
+							<button type="button" class="button is-primary">전체 다운로드</button>
+						</div>
+					</div>
+					<!-- //tabcoupon-panel-1 -->
+
+					<!-- tabcoupon-panel-2 -->
+					<div id="tabcoupon-panel-2" class="tabpanel" role="tabpanel" aria-labelledby="tabcoupon-modal-2" tabindex="0" hidden>
+						<!-- 쿠폰없음 
+								<section class="no-coupon modal-coupon-line">
+									<h4 class="hidden">적용 가능한 상품 쿠폰</h4>
+									<i class="icon-no_coupon"></i>
+									<p>적용 할 수 있는 쿠폰이 없습니다.</p>
+								</section>
+								//쿠폰없음 -->
+
+						<!-- 적용 가능한 상품 쿠폰 -->
+						<section class="has-coupon">
+							<div class="has-coupon-top-area">
+								<!-- 20200709 [is-size-4 클래스 추가] -->
+								<h4 class="modal-coupon-title is-size-4">적용 가능한 상품 쿠폰</h4>
+								<div class="checkbox">
+									<input type="checkbox" name="lnb-chk-10" id="lnb-chk-10" checked="" />
+									<label for="lnb-chk-10">최대 할인 쿠폰 선택</label>
+								</div>
+							</div>
+
+							<!-- 리스트 -->
+							<!-- 20200709 [div >> ul li 변경] -->
+							<ul class="has-coupon-list radio-list">
+								<!-- 활성화시 -->
+								<li class="has-coupon-list-box is-active">
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-01" checked />
+										<label for="radio-01">
+											<strong class="has-coupon-list__title">-10,000원 할인</strong>
+											<!-- 20200709 [구조 변경] -->
+											<div class="has-coupon-list__text--wrap">
+												<span class="has-coupon-list__text">홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰</span>
+												<ul class="has-coupon-list__text--list">
+													<li>
+														<span><em>10,000</em>원 할인</span>
+													</li>
+													<li>
+														<span>~<em>2020.07.09</em></span>
+													</li>
+												</ul>
+											</div>
+											<!-- //20200709 [구조 변경] -->
+										</label>
+									</div>
+									<button type="button" class="has-coupon-list-box-info">
+										<i class="icon-delete"></i>
+										<span>적용취소</span>
+									</button>
+								</li>
+
+								<!-- 불능시 -->
+								<!-- 20200708 [disabled 삭제] -->
+								<li class="has-coupon-list-box">
+									<div class="radio">
+										<!-- 20200708 [disabled 삭제] -->
+										<input type="radio" name="radio-name" id="radio-02" />
+										<label for="radio-02">
+											<strong class="has-coupon-list__title">-7,000원 할인</strong>
+											<!-- 20200709 [구조 변경] -->
+											<div class="has-coupon-list__text--wrap">
+												<span class="has-coupon-list__text">홈데코페어 할인쿠폰</span>
+												<ul class="has-coupon-list__text--list">
+													<li>
+														<span><em>99</em>% 할인</span>
+													</li>
+													<li>
+														<span>~<em>2020.07.09</em></span>
+													</li>
+												</ul>
+											</div>
+											<!-- //20200709 [구조 변경] -->
+										</label>
+									</div>
+									<span class="has-coupon-list-box-info is-danger">
+										<span>다른 상품 적용중</span>
+									</span>
+								</li>
+
+								<!-- 평상시 -->
+								<li class="has-coupon-list-box">
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-03" />
+										<label for="radio-03">
+											<strong class="has-coupon-list__title">-5,000원 할인</strong>
+											<!-- 20200709 [구조 변경] -->
+											<div class="has-coupon-list__text--wrap">
+												<span class="has-coupon-list__text">홈데코페어 할인쿠폰</span>
+												<ul class="has-coupon-list__text--list">
+													<li>
+														<span><em>3</em>% 할인</span>
+													</li>
+													<li>
+														<span>~<em>2020.07.09</em></span>
+													</li>
+												</ul>
+											</div>
+											<!-- //20200709 [구조 변경] -->
+										</label>
+									</div>
+								</li>
+
+								<!-- 평상시 -->
+								<li class="has-coupon-list-box">
+									<div class="radio">
+										<input type="radio" name="radio-name" id="radio-04" />
+										<label for="radio-04">
+											<strong class="has-coupon-list__title">-1,000원 할인</strong>
+											<!-- 20200709 [구조 변경] -->
+											<div class="has-coupon-list__text--wrap">
+												<span class="has-coupon-list__text">홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰 홈데코페어 할인쿠폰</span>
+												<ul class="has-coupon-list__text--list">
+													<li>
+														<span><em>1,000</em>원 할인</span>
+													</li>
+													<li>
+														<span>~<em>2020.07.09</em></span>
+													</li>
+												</ul>
+											</div>
+											<!-- //20200709 [구조 변경] -->
+										</label>
+									</div>
+								</li>
+							</ul>
+							<!-- //리스트 -->
+
+							<!-- 계산 -->
+							<div class="coupon-calculate">
+								<dl class="coupon-calculate-div">
+									<dt class="coupon-calculate-div__title">주문상품금액</dt>
+									<dd class="coupon-calculate-div__text">
+										<strong>690,000</strong>
+										<span>원</span>
+									</dd>
+								</dl>
+								<!-- 20200709 [discount 클래스 추가] -->
+								<dl class="coupon-calculate-div discount">
+									<dt class="coupon-calculate-div__title">할인금액</dt>
+									<dd class="coupon-calculate-div__text">
+										<strong class="is-danger">- 10,000</strong>
+										<span>원</span>
+									</dd>
+								</dl>
+								<dl class="coupon-calculate-div mt2">
+									<dt class="coupon-calculate-div__title-tatal">총 쿠폰 할인금액</dt>
+									<dd class="coupon-calculate-div__text-tatal">
+										<strong>1,268,000</strong>
+										<span>원</span>
+									</dd>
+								</dl>
+							</div>
+							<!-- //계산 -->
+						</section>
+						<!-- //적용 가능한 상품 쿠폰 -->
+
+						<div class="modal-card-foot modal-coupon-button">
+							<button type="button" class="button is-primary">적용하기</button>
+							<button type="button" class="button is-dark">취소</button>
+						</div>
+					</div>
+					<!-- //tabcoupon-panel-2 -->
+					<!-- E : 탭 내용 -->
+					<!-- </div> -->
+				</section>
+			</div>
+		</div>
+		<!-- E : 쿠폰 팝업 -->
+
+		<!-- script -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/js.cookie-2.2.1.min.js"></script>
+		<script src="../../assets/js/jquery.scrollbar.min.js"></script>
+		<script src="../../assets/js/popper.min.js"></script>
+		<script src="../../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../../assets/js/common-ui.js"></script>
+		<script>
+			/* S: 적용 가능한 상품 쿠폰 클릭시 : 20200615 */
+			$(document).on('click', '.has-coupon-list-box', function (e) {
+				if (!$(e.target).closest('.has-coupon-list-box-info').length > 0) {
+					$(this).find('input[type=radio]').click();
+					$(this).closest('.has-coupon-list').find('.has-coupon-list-box').removeClass('is-active');
+					$(this).addClass('is-active');
+				}
+			});
+			/* E: 적용 가능한 상품 쿠폰 클릭시 */
+
+			// 커스텀 스크롤
+			$('.scrollbar-container').scrollbar();
+
+			$(window).resize(function () {
+				// 커스텀 스크롤
+				$('.scrollbar-container').scrollbar();
+			});
+		</script>
+	</body>
+</html>
